@@ -42,8 +42,7 @@ export class AddDetailsComponent implements OnInit {
    let docs={package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array};
 
    this._db.collection("packages").doc(package_name).set(docs).then(function(doc){
-
-
+     console.log(doc);
    }).catch(function(err){
      console.log(err);
    })
