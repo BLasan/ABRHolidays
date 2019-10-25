@@ -16,7 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../Modules/Admin/upgrade/upgrade.component';
 import { SettingsComponent } from '../../Modules/Admin/settings/settings.component';
 import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details.component';
-
+import {MatSnackBarModule} from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,6 +24,8 @@ import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details
     FormsModule,
     ChartsModule,
     NgbModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
     ToastrModule.forRoot()
   ],
   declarations: [
