@@ -354,6 +354,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Layouts/admin-layout/admin-layout.component */ "./src/app/Layouts/admin-layout/admin-layout.component.ts");
 /* harmony import */ var _Layouts_customer_layout_customer_layout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Layouts/customer-layout/customer-layout.component */ "./src/app/Layouts/customer-layout/customer-layout.component.ts");
 /* harmony import */ var _Modules_Customer_customer_home_customer_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Modules/Customer/customer-home/customer-home.component */ "./src/app/Modules/Customer/customer-home/customer-home.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
 
 
 
@@ -368,6 +372,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
+    authDomain: "hotel-management-5b661.firebaseapp.com",
+    databaseURL: "https://hotel-management-5b661.firebaseio.com",
+    projectId: "hotel-management-5b661",
+    storageBucket: "hotel-management-5b661.appspot.com",
+    messagingSenderId: "337942867698",
+    appId: "1:337942867698:web:760aa0a20effceef066a6b",
+    measurementId: "G-VGP3TWJ9K7"
+};
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -381,7 +399,11 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrModule"].forRoot()
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrModule"].forRoot(),
+                _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(firebaseConfig),
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_17__["AngularFireAuthModule"],
+                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_16__["AngularFireStorageModule"] // storage
             ],
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
@@ -908,7 +930,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/benura/Desktop/Hotel/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/benura/Desktop/Hotel-Management/Hotel-Management/src/main.ts */"./src/main.ts");
 
 
 /***/ })

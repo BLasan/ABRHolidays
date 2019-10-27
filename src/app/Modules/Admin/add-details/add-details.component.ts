@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { disable_create_new_destination} from '../../../../scripts/frontend/disable_href_links';
+import {  disable_package_image_uploader} from '../../../../scripts/frontend/disable_href_links';
+import { package_image_uploader} from '../../../../scripts/frontend/image_uploader';
+import { remove_package_image} from '../../../../scripts/frontend/image_uploader';
 @Component({
   selector: 'app-add-details',
   templateUrl: './add-details.component.html',
@@ -12,6 +16,9 @@ export class AddDetailsComponent implements OnInit {
   day_count:number;
   arrayTemp:Array<number>=[];
   form:any;
+  package_index:number=0;
+  isModified:boolean=false;
+  destination_drive_count:number=1;
   isEmptyDay:boolean=false;
   isEmptyDest:boolean=false;
   isEmptyOvernight:boolean=false;
@@ -33,6 +40,22 @@ export class AddDetailsComponent implements OnInit {
       // drive:new FormControl('',Validators.required),
       // description:new FormControl('',Validators.required),
     });
+  }
+
+  create_new_destination(index:number){
+    this.destination_drive_count+=1;
+    this.package_index=index;
+    this.isModified=true;
+    disable_create_new_destination(index);
+  }
+
+  image_uploader(){
+    disable_package_image_uploader();
+    package_image_uploader();
+  }
+
+  remove_image(){
+    remove_package_image();
   }
 
   create_package(){
