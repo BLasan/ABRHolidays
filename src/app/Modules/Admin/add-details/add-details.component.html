@@ -3,7 +3,7 @@
 <div class="main-content">
   <div class="row">
     <div class="col-md-8">
-      <div class="card">
+      <div class="card" [ngClass]="{'list-group':day_count>4}">
         <div class="card-header">
           <h5 class="title">Add New Package</h5>
         </div>
@@ -25,16 +25,18 @@
                   <div class="col-md-4 pl-1">
                     <div class="form-group" [ngClass]="{'has-success':form.controls.package_category.valid && (form.controls.package_category.dirty || form.controls.package_category.touched),'has-danger':form.controls.package_category.invalid && (form.controls.package_category.dirty || form.controls.package_category.touched)}">
                       <label for="email">Category</label>
-                      <input name="category" id="category" type="text" class="form-control" placeholder="package category" formControlName="package_category" [ngClass]="{'form-control-success':form.controls.package_category.valid && (form.controls.package_category.dirty || form.controls.package_category.touched),'form-control-danger':form.controls.package_category.invalid && (form.controls.package_category.dirty || form.controls.package_category.touched)}">
+                      <select name="category" id="category" class="form-control" style="height:35px;">
+                        <option *ngFor="let category of package_category_array">{{category}}</option>
+                      </select>
                     </div>
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-md-6 pr-1">
-                    <div class="form-group" [ngClass]="{'has-success':form.controls.day_counts.valid && (form.controls.day_counts.dirty || form.controls.day_counts.touched),'has-danger':form.controls.day_counts.invalid && (form.controls.day_counts.dirty || form.controls.day_counts.touched)}">
+                    <div class="form-group">
                       <label>Number of Days</label>
-                      <input type="number" class="form-control" [(ngModel)]="day_count" id="day_counts" formControlName="day_counts" [ngClass]="{'form-control-success':form.controls.day_counts.valid && (form.controls.day_counts.dirty || form.controls.day_counts.touched),'form-control-danger':form.controls.day_counts.invalid && (form.controls.day_counts.dirty || form.controls.day_counts.touched)}">
+                      <input disabled type="number" class="form-control" [(ngModel)]="day_count" id="day_counts" [ngModelOptions]="{standalone: true}">
                     </div>
                   </div>
                 </div>
@@ -118,6 +120,7 @@
                   </div> -->
 
                   <div *ngFor="let i of [].constructor(day_count);let index=index">
+                      <hr class="new4" *ngIf="day_count>1">
                       <div class="row">
                         <div class="col-md-6 pr-1">
                           <div class="form-group" id="valid_day{{index}}">
@@ -176,6 +179,10 @@
                       </div>
                     </div>
                     <input type="file" id="package_image_file_uploader" style="display:none" accept="image/*"> 
+                    <div>
+                      <hr class="new4">
+                      <button type="button" class="btn btn-primary btn-just-round add-more" (click)="add_new_package_detail()"><i class="fa fa-plus" ></i></button>
+                    </div>
                 <button type="button" class="btn btn-success" [disabled]="!form.valid" (click)="create_package()">Create</button>
                 <!-- <div class="row">
                   <div class="col-md-12">

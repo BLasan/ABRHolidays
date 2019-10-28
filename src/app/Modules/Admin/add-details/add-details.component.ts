@@ -6,6 +6,7 @@ import { disable_create_new_destination} from '../../../../scripts/frontend/disa
 import {  disable_package_image_uploader} from '../../../../scripts/frontend/disable_href_links';
 import { package_image_uploader} from '../../../../scripts/frontend/image_uploader';
 import { remove_package_image} from '../../../../scripts/frontend/image_uploader';
+import { categories} from '../../../../scripts/frontend/package_categories';
 @Component({
   selector: 'app-add-details',
   templateUrl: './add-details.component.html',
@@ -13,7 +14,7 @@ import { remove_package_image} from '../../../../scripts/frontend/image_uploader
 })
 export class AddDetailsComponent implements OnInit {
 
-  day_count:number;
+  day_count:number=1;
   arrayTemp:Array<number>=[];
   form:any;
   package_index:number=0;
@@ -25,6 +26,7 @@ export class AddDetailsComponent implements OnInit {
   isEmptyDrive:boolean=false;
   isEmptyDesc:boolean=false;
   isValid:boolean=true;
+  package_category_array:any;
   package_details_array:Array<{day:number,destination:String,overnight_stay:String,drive:String,description:String}>=[];
   constructor(private _db:AngularFirestore,private snackBar:MatSnackBar) { }
 
@@ -33,13 +35,15 @@ export class AddDetailsComponent implements OnInit {
     this.form=new FormGroup({
       package_name:new FormControl('',Validators.required),
       package_category:new FormControl('',Validators.required),
-      day_counts:new FormControl('',Validators.required),
+      // day_counts:new FormControl('',Validators.required),
       // day_no:new FormControl('',Validators.required),
       // destination:new FormControl('',Validators.required),
       // overnight:new FormControl('',Validators.required),
       // drive:new FormControl('',Validators.required),
       // description:new FormControl('',Validators.required),
     });
+
+    this.package_category_array=categories;
   }
 
   create_new_destination(index:number){
@@ -56,6 +60,10 @@ export class AddDetailsComponent implements OnInit {
 
   remove_image(){
     remove_package_image();
+  }
+
+  add_new_package_detail(){
+    this.day_count+=1;
   }
 
   create_package(){
@@ -117,8 +125,10 @@ export class AddDetailsComponent implements OnInit {
    let form=this.form;
    
    if(this.isValid){
-    let docs={package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array};
-    this._db.collection("packages").doc(package_name).set(docs).then(function(doc){
+    var date=new Date();
+    var package_id=this.generate_package_id(package_name,category);
+    let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date};
+    this._db.collection("packages").doc(package_id).set(docs).then(function(doc){
       form.reset();
       snackBar.open("Successfully Created","OK",{
         duration:2000,
@@ -131,7 +141,12 @@ export class AddDetailsComponent implements OnInit {
     });
 
    }
+   
+  }
 
+
+  generate_package_id(package_name:string,package_category:string){
+    return package_category+"@"+package_name;
   }
 
 }

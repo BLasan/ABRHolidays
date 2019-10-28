@@ -1,3 +1,45 @@
-<p>
-  settings works!
-</p>
+<div class="panel-header panel-header-sm">
+  </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Reset Password</h5>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group">
+                    <label>Old Password</label>
+                    <input type="password" class="form-control" disabled value="">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'has-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}">
+                    <label>New Password</label>
+                    <input type="password" class="form-control" id="new_password" placeholder="New Password" name="new_password" formControlName="new_password" [ngClass]="{'form-control-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'form-control-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'has-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}">
+                    <label>Re-Enter Password</label>
+                    <input type="password" class="form-control" placeholder="Re-Enter Password" formControlName="re_enter_password" [ngClass]="{'form-control-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'form-control-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <button type="button" style="margin-left:150px" [disabled]="!form.valid" class="btn btn-success" (click)="reset_password()">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
