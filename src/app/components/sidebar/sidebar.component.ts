@@ -9,15 +9,17 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
-   // { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
+  //  { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
     // { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
-    { path: '/add-details', title: 'Add Details',  icon:'ui-1_simple-add', class: '' }, 
+    { path: '/manage_news_feed', title: 'News Feed',  icon:'education_paper', class: '' },
+    { path: '/add-package_details', title: 'Add Package',  icon:'ui-1_simple-add', class: '' }, 
     { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
     { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
     { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
+
     // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
+    // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
 
 ];
 

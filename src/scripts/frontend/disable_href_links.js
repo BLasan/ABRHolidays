@@ -10,3 +10,10 @@ export function disable_package_image_uploader(){
     e.preventDefault();
   })
 }
+
+export function disable_delete_news_feed(){
+  $(document).on('click','#delete_news_feed',function(e){
+    e.preventDefault();
+  })
+}
+

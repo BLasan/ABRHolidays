@@ -28,6 +28,8 @@ export class SettingsComponent implements OnInit {
     let docs={user_email:'benuraab@gmail.com',password:hash};
     this._db.collection('admin').doc('benuraab@gmail.com').set(docs).then(function(docs){
       console.log("Done");
+      (<HTMLInputElement>document.getElementById('new_password')).value="";
+      (<HTMLInputElement>document.getElementById('re_enter_password')).value="";
     }).catch(function(error){
       console.log(error);
     })

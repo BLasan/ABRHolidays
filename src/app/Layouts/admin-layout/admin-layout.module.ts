@@ -17,6 +17,7 @@ import { UpgradeComponent } from '../../Modules/Admin/upgrade/upgrade.component'
 import { SettingsComponent } from '../../Modules/Admin/settings/settings.component';
 import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details.component';
 import {MatSnackBarModule} from '@angular/material';
+import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -38,7 +39,8 @@ import {MatSnackBarModule} from '@angular/material';
     MapsComponent,
     NotificationsComponent,
     SettingsComponent,
-    AddDetailsComponent
+    AddDetailsComponent,
+    ManageNewsFeedComponent
   ]
 })
 

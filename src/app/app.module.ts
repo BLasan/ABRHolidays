@@ -19,7 +19,8 @@ import { AddDetailsComponent } from './Modules/Admin/add-details/add-details.com
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
