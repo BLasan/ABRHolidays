@@ -17,7 +17,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'settings',       component:   SettingsComponent },
-    { path: 'add-details',     component: AddDetailsComponent },
+    { path: 'add-package_details',     component: AddDetailsComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
     // { path: 'maps',           component: MapsComponent },

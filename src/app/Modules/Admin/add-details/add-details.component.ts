@@ -34,7 +34,7 @@ export class AddDetailsComponent implements OnInit {
     
     this.form=new FormGroup({
       package_name:new FormControl('',Validators.required),
-      package_category:new FormControl('',Validators.required),
+      // package_category:new FormControl('',Validators.required),
       // day_counts:new FormControl('',Validators.required),
       // day_no:new FormControl('',Validators.required),
       // destination:new FormControl('',Validators.required),
@@ -69,20 +69,25 @@ export class AddDetailsComponent implements OnInit {
   create_package(){
    let package_name=(<HTMLInputElement>document.getElementById("package_name")).value; 
    let category=(<HTMLInputElement>document.getElementById("category")).value;
+   console.log(category)
    let no_of_days=this.day_count;
 
    for(var i=0;i<this.day_count;i++){
      var day_id="day"+i;
-     var dest_id="destination"+i;
+     var dest_id="destination"+i+0;
      var overnight_id="overnight"+i;
-     var drive_id="drive"+i;
+     var drive_id="drive"+i+0;
      var desc_id="description"+i;
      console.log(day_id);
 
      let day_no=parseInt((<HTMLInputElement>document.getElementById(day_id)).value);
-     let destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
      let overnight=(<HTMLInputElement>document.getElementById(overnight_id)).value;
-     let drive=(<HTMLInputElement>document.getElementById(drive_id)).value;
+     let destination;
+     let drive;
+     if(this.destination_drive_count==1){
+      destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
+      drive=(<HTMLInputElement>document.getElementById(drive_id)).value;
+     }
      let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
      console.log(description);
      
@@ -125,7 +130,8 @@ export class AddDetailsComponent implements OnInit {
    let form=this.form;
    
    if(this.isValid){
-    var date=new Date();
+    var today=new Date();
+    var date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     var package_id=this.generate_package_id(package_name,category);
     let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date};
     this._db.collection("packages").doc(package_id).set(docs).then(function(doc){

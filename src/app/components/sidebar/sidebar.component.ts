@@ -15,7 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/manage_news_feed', title: 'News Feed',  icon:'education_paper', class: '' },
     { path: '/add-package_details', title: 'Add Package',  icon:'ui-1_simple-add', class: '' }, 
     { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
+    { path: '/table-list', title: 'View Details',  icon:'design_bullet-list-67', class: '' },
     { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
 
     // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },

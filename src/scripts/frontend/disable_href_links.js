@@ -17,3 +17,9 @@ export function disable_delete_news_feed(){
   })
 }
 
+export function disable_delete_package(){
+  $(document).on('click','#delete_package_data',function(e){
+    e.preventDefault();
+  })
+}
+

@@ -38,7 +38,7 @@
                   <td>{{data.views}}</td>
                   <td>{{data.date}}</td>
                   <td><a href="#" title="edit"><i class="fa fa-list" style="color:green"></i></a></td>
-                  <td><a href="#" title="delete"><i class="fa fa-trash" style="color:red!important"></i></a></td>
+                  <td><a href="#" title="delete" id="delete_package_data" (click)="delete(data.package_id)"><i class="fa fa-trash" style="color:red!important"></i></a></td>
                   <td><a href="#" title="view"><i class="fa fa-bars"></i></a></td>
                 </tr>
               </tbody>
