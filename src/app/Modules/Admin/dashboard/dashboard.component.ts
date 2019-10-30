@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { disable_image_slider} from '../../../../scripts/frontend/disable_href_links';
+import { image_slider_uploader} from '../../../../scripts/frontend/image_uploader';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
+import {file_array} from '../../../../scripts/frontend/image_uploader';
+import { parse } from 'url';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +13,7 @@ import * as Chartist from 'chartist';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  public file_list:FileList;
   public lineBigDashboardChartType;
   public gradientStroke;
   public chartColor;
@@ -57,7 +64,7 @@ export class DashboardComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor() { }
+  constructor(private storage:AngularFireStorage,private _db:AngularFirestore) { }
 
   ngOnInit() {
     this.chartColor = "#FFFFFF";
@@ -256,7 +263,7 @@ export class DashboardComponent implements OnInit {
     };
 
     this.canvas = document.getElementById("lineChartExample");
-    this.ctx = this.canvas.getContext("2d");
+   // this.ctx = this.canvas.getContext("2d");
 
     this.gradientStroke = this.ctx.createLinearGradient(500, 0, 100, 0);
     this.gradientStroke.addColorStop(0, '#80b6f4');
@@ -292,7 +299,7 @@ export class DashboardComponent implements OnInit {
     this.lineChartType = 'line';
 
     this.canvas = document.getElementById("lineChartExampleWithNumbersAndGrid");
-    this.ctx = this.canvas.getContext("2d");
+  //  this.ctx = this.canvas.getContext("2d");
 
     this.gradientStroke = this.ctx.createLinearGradient(500, 0, 100, 0);
     this.gradientStroke.addColorStop(0, '#18ce0f');
@@ -331,7 +338,7 @@ export class DashboardComponent implements OnInit {
 
 
     this.canvas = document.getElementById("barChartSimpleGradientsNumbers");
-    this.ctx = this.canvas.getContext("2d");
+   // this.ctx = this.canvas.getContext("2d");
 
     this.gradientFill = this.ctx.createLinearGradient(0, 170, 0, 50);
     this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
@@ -406,4 +413,36 @@ export class DashboardComponent implements OnInit {
 
     this.lineChartGradientsNumbersType = 'bar';
   }
+
+  image_uploader(){
+    disable_image_slider();
+    image_slider_uploader();
+   
+  }
+
+  get_files(event){
+   console.log(event.target.files);
+   this.file_list=event.target.files;
+  }
+
+  upload_images(){
+    let database=this._db;
+    for(var i=0;i<this.file_list.length;i++){
+      var imageId="image_carousal/image"+i;
+      let storageRef=this.storage.ref(imageId);
+      storageRef.put(this.file_list.item(i)).then(function(snapshot){
+        console.log(snapshot);
+        // storageRef.getDownloadURL().subscribe(url=>{
+        //   database.collection('image_corousals').doc(imageId).set({image_url:url}).then(function(docs){
+        //   }).catch(function(error){
+        //     console.log(error)
+        //   })
+        // })
+      }).catch(function(error){
+        console.log(error)
+      })
+    }
+
+  }
+
 }

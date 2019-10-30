@@ -23,3 +23,9 @@ export function disable_delete_package(){
   })
 }
 
+export function disable_image_slider(){
+  $(document).on('click','#image_slider',function(e){
+    e.preventDefault();
+  })
+}
+
