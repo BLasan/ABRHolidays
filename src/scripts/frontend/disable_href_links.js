@@ -29,3 +29,9 @@ export function disable_image_slider(){
   })
 }
 
+export function disable_edit_news_feed(){
+  $(document).on('click','#edit_news_feed',function(e){
+    e.preventDefault();
+  })
+}
+

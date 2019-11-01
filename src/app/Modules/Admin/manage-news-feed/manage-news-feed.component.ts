@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { formatDate } from '@angular/common';
-import { disable_delete_news_feed} from '../../../../scripts/frontend/disable_href_links';
+import { disable_delete_news_feed,disable_edit_news_feed} from '../../../../scripts/frontend/disable_href_links';
 @Component({
   selector: 'app-manage-news-feed',
   templateUrl: './manage-news-feed.component.html',
@@ -10,6 +10,8 @@ import { disable_delete_news_feed} from '../../../../scripts/frontend/disable_hr
 export class ManageNewsFeedComponent implements OnInit {
 
   newsFeed_data:any=[];
+  filtered_news_feed:any=[];
+  news_feed_id:any;
   constructor(private _db:AngularFirestore) { }
 
   ngOnInit() {
@@ -39,6 +41,7 @@ export class ManageNewsFeedComponent implements OnInit {
   }
 
   load_news_feed(){
+    this.newsFeed_data=[];
     var docRef=this._db.firestore.collection('news_feed');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
@@ -60,6 +63,24 @@ export class ManageNewsFeedComponent implements OnInit {
   delete(id:any){
     disable_delete_news_feed();
     this._db.collection('news_feed').doc(id).update({status:'deleted'});
+    this.load_news_feed();
+  }
+
+  load_modal(id:any){
+    disable_edit_news_feed();
+    this.filtered_news_feed=[];
+    this.filtered_news_feed=this.newsFeed_data.filter(x=>x.id==id);
+    this.news_feed_id=id;
+  }
+
+  edit_news_feed(){
+    let id=this.news_feed_id;
+    let news=(<HTMLInputElement>document.getElementById('edit_news')).value;
+    let title=(<HTMLInputElement>document.getElementById('edit_title')).value;
+    let today=new Date();
+    let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
+    let obj={news:news,date:date,title:title};
+    this._db.collection('news_feed').doc(id).update(obj);
     this.load_news_feed();
   }
 
