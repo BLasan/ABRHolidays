@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
 import { disable_image_slider} from '../../../../scripts/frontend/disable_href_links';
 import { image_slider_uploader} from '../../../../scripts/frontend/image_uploader';
+import { remove_image_slider} from '../../../../scripts/frontend/image_uploader';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {file_array} from '../../../../scripts/frontend/image_uploader';
@@ -10,7 +11,7 @@ import { parse } from 'url';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
   public file_list:FileList;
@@ -427,22 +428,32 @@ export class DashboardComponent implements OnInit {
 
   upload_images(){
     let database=this._db;
+    let collection=database.collection('image_corousals');
     for(var i=0;i<this.file_list.length;i++){
       var imageId="image_carousal/image"+i;
       let storageRef=this.storage.ref(imageId);
       storageRef.put(this.file_list.item(i)).then(function(snapshot){
-        console.log(snapshot);
-        // storageRef.getDownloadURL().subscribe(url=>{
-        //   database.collection('image_corousals').doc(imageId).set({image_url:url}).then(function(docs){
-        //   }).catch(function(error){
-        //     console.log(error)
-        //   })
-        // })
+        storageRef.getDownloadURL().subscribe(url=>{
+          let fileName=snapshot.metadata.name;
+          let fileContentType=snapshot.metadata.contentType;
+          let fileSize=snapshot.metadata.size;
+          let fileUrl=url;
+          let fileTimeCreated=snapshot.metadata.timeCreated;
+          let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
+          collection.doc(snapshot.metadata.name).set(obj).then(function(docs){
+            console.log("Success");
+          }).catch(function(error){
+            console.log(error)
+          })
+        })
       }).catch(function(error){
         console.log(error)
       })
     }
+  }
 
+  remove_images(){
+    remove_image_slider(this.file_list.length);
   }
 
 }

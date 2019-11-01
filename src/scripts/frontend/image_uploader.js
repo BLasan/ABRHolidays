@@ -35,9 +35,26 @@ export function image_slider_uploader(){
     if (input.files || input.files[i]) {
       size+=input.files[0].size;
       var reader = new FileReader();
+      let column_id="column"+i;
+      // var overlay=document.createElement('div');
+      // overlay.setAttribute('class','overlays');
+
       var column=document.createElement("div");
       column.setAttribute('class','col-md-4');
-      row.appendChild(column);
+      column.setAttribute('id',column_id);
+      // var container=document.createElement("div");
+      // container.setAttribute('class','img');
+      // column.appendChild(container);
+
+      // var delete_button=document.createElement('button');
+      // var delete_button_id="delete"+i;
+      // delete_button.setAttribute('type','button');
+      // delete_button.setAttribute('class','btn');
+      // delete_button.setAttribute('class','btn-danger');
+      // delete_button.setAttribute('class','remove');
+      // delete_button.setAttribute('id',delete_button_id);
+      // overlay.appendChild(delete_button);
+
       var image_src=document.createElement('img');
 
       reader.onload = function (e) {
@@ -45,6 +62,8 @@ export function image_slider_uploader(){
         var image_id="image"+i;
         image_src.setAttribute('id',image_id);
         column.appendChild(image_src);
+        // column.appendChild(overlay);
+        row.appendChild(column); 
       };
   
       reader.readAsDataURL(input.files[i]); 
@@ -60,7 +79,18 @@ export function image_slider_uploader(){
     for(var i=0;i<this.files.length;i++){
       readURL(this,i);
     }
-    document.getElementById('file_size').innerHTML=size+" bytes";
+    document.getElementById('file_size').innerHTML=size/1024+"KB";
     console.log(file_array);
   });
+}
+
+export function remove_image_slider(length){
+  $('#image_slider_file_uploader').val("");
+  for(var i=0;i<length;i++){
+    let column_id="#column"+i;
+    $(column_id).remove();
+  }
+
+  document.getElementById('file_size').innerHTML="";
+  // $('#image_slider_file_uploader').attr('src', '');
 }

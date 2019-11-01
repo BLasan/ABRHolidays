@@ -125,7 +125,14 @@
         </div>
         <form>
           <input type="file" id="image_slider_file_uploader" style="display: none;" (change)=get_files($event)  accept="image/*" multiple>
-          <button type="button" class="btn btn-success" style="margin-left:150px" (click)="upload_images()">Upload</button>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-success" style="margin-left:40px" (click)="upload_images()">Upload</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-danger" (click)="remove_images()">Remove</button>
+            </div>
+          </div>
         </form>
         <div class="card-footer ">
           <hr>
@@ -237,6 +244,14 @@
     </div> -->
   </div>
   <div class="row" id="image_slider_content">
-
+      <!-- <div class="col-md-4 img">
+          <div class="overlays" id="overlay">
+              <button class="btn btn-primary" id="image_uploader" (click)="upload_image()">Add</button>
+              <button class="btn btn-danger" id="remove" (click)="remove_image()">Remove</button>
+          </div>
+          <a href="#">
+              <img src="assets/img/bg5.jpg" id="profile_pic" style="height:200px;width:200px"/>
+            </a>
+      </div> -->
   </div>
 </div>
