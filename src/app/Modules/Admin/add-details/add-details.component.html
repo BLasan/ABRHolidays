@@ -135,31 +135,43 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row" *ngFor="let i of [].constructor(destination_drive_count);let index1=index;">
-                        <div class="col-md-6 pr-1" *ngIf="isModified && index==package_index">
+                      <div class="row" *ngFor="let i of [].constructor(destination_array[index]);let index1=index;">
+                        <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>Destination</label>
                             <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
                           </div>
                         </div>
-                        <div class="col-md-6 pr-1" *ngIf="!isModified && index==package_index">
+                        <!-- <div class="col-md-6 pr-1" *ngIf="!isModified && index==package_index">
                           <div class="form-group">
                             <label>Destination</label>
                             <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
                           </div>
-                        </div>
-                        <div class="col-md-6 pl-1" *ngIf="isModified && index==package_index">
+                        </div> -->
+                        <!-- <div class="col-md-6 pr-1" *ngIf="isModified && index!=package_index">
+                          <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
+                          </div>
+                        </div> -->
+                        <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Drive</label>
                             <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
                           </div>
                         </div>
-                        <div class="col-md-6 pl-1" *ngIf="!isModified && index==package_index">
+                        <!-- <div class="col-md-6 pl-1" *ngIf="!isModified && index==package_index">
                           <div class="form-group">
                             <label>Drive</label>
                             <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
                           </div>
                         </div>
+                        <div class="col-md-6 pl-1" *ngIf="isModified && index!=package_index">
+                          <div class="form-group">
+                            <label>Drive</label>
+                            <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
+                          </div>
+                        </div> -->
                       </div>
                       <div class="row">
                         <div class="col-md-6 pr-1"></div>

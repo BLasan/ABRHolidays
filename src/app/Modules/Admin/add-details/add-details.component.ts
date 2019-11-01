@@ -16,6 +16,7 @@ export class AddDetailsComponent implements OnInit {
 
   day_count:number=1;
   arrayTemp:Array<number>=[];
+  destination_array:number[]=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
   form:any;
   package_index:number=0;
   isModified:boolean=false;
@@ -27,7 +28,7 @@ export class AddDetailsComponent implements OnInit {
   isEmptyDesc:boolean=false;
   isValid:boolean=true;
   package_category_array:any;
-  package_details_array:Array<{day:number,destination:String,overnight_stay:String,drive:String,description:String}>=[];
+  package_details_array:Array<{day:number,destination_drive:number[],overnight_stay:String,description:String}>=[];
   constructor(private _db:AngularFirestore,private snackBar:MatSnackBar) { }
 
   ngOnInit() {
@@ -42,14 +43,15 @@ export class AddDetailsComponent implements OnInit {
       // drive:new FormControl('',Validators.required),
       // description:new FormControl('',Validators.required),
     });
-
     this.package_category_array=categories;
+    console.log(this.destination_array[0])
   }
 
   create_new_destination(index:number){
-    this.destination_drive_count+=1;
-    this.package_index=index;
-    this.isModified=true;
+    this.destination_array[index]+=1;
+    // this.destination_drive_count+=1;
+    // this.package_index=index;
+    // this.isModified=true;
     disable_create_new_destination(index);
   }
 
@@ -74,9 +76,7 @@ export class AddDetailsComponent implements OnInit {
 
    for(var i=0;i<this.day_count;i++){
      var day_id="day"+i;
-     var dest_id="destination"+i+0;
      var overnight_id="overnight"+i;
-     var drive_id="drive"+i+0;
      var desc_id="description"+i;
      console.log(day_id);
 
@@ -84,10 +84,23 @@ export class AddDetailsComponent implements OnInit {
      let overnight=(<HTMLInputElement>document.getElementById(overnight_id)).value;
      let destination;
      let drive;
-     if(this.destination_drive_count==1){
+    //  if(this.destination_drive_count==1){
+    //   destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
+    //   drive=(<HTMLInputElement>document.getElementById(drive_id)).value;
+    //  }
+
+     let destination_count=this.destination_array[i];
+     let drive_destination_array=[];
+
+     for(var j=0;j<destination_count;j++){
+      var dest_id="destination"+i+j;
+      var drive_id="drive"+i+j;
       destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
       drive=(<HTMLInputElement>document.getElementById(drive_id)).value;
+      var package_destination_obj={destination:destination,drive:drive};
+      drive_destination_array.push(package_destination_obj);
      }
+
      let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
      console.log(description);
      
@@ -121,9 +134,9 @@ export class AddDetailsComponent implements OnInit {
       break;
      }
 
-     let obj={day:day_no,destination:destination,overnight_stay:overnight,drive:drive,description:description};
+     let obj={day:day_no,destination_drive:drive_destination_array,overnight_stay:overnight,description:description};
      this.package_details_array.push(obj);
-
+     drive_destination_array=[];
    }
 
    let snackBar=this.snackBar;
@@ -133,7 +146,7 @@ export class AddDetailsComponent implements OnInit {
     var today=new Date();
     var date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     var package_id=this.generate_package_id(package_name,category);
-    let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date};
+    let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date,views:0};
     this._db.collection("packages").doc(package_id).set(docs).then(function(doc){
       form.reset();
       snackBar.open("Successfully Created","OK",{
