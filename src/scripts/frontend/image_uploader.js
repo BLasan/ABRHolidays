@@ -80,7 +80,7 @@ export function image_slider_uploader(){
       readURL(this,i);
     }
     document.getElementById('file_size').innerHTML=size/1024+"KB";
-    console.log(file_array);
+    //console.log(file_array);
   });
 }
 

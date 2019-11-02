@@ -428,12 +428,14 @@ export class DashboardComponent implements OnInit {
 
   upload_images(){
     let database=this._db;
+    let this_function=this;
     let collection=database.collection('image_corousals');
     for(var i=0;i<this.file_list.length;i++){
       var imageId="image_carousal/image"+i;
       let storageRef=this.storage.ref(imageId);
       storageRef.put(this.file_list.item(i)).then(function(snapshot){
         storageRef.getDownloadURL().subscribe(url=>{
+          // document.querySelector('img').src = url;
           let fileName=snapshot.metadata.name;
           let fileContentType=snapshot.metadata.contentType;
           let fileSize=snapshot.metadata.size;
@@ -442,6 +444,7 @@ export class DashboardComponent implements OnInit {
           let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
           collection.doc(snapshot.metadata.name).set(obj).then(function(docs){
             console.log("Success");
+            this_function.remove_images();
           }).catch(function(error){
             console.log(error)
           })

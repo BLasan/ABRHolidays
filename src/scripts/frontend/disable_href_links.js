@@ -1,5 +1,5 @@
 export function disable_create_new_destination(index){
-  alert(index)
+ // alert(index)
   $(document).on('click','#drive_link',function(e){
     e.preventDefault();
   })

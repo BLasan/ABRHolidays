@@ -7,6 +7,7 @@ import {  disable_package_image_uploader} from '../../../../scripts/frontend/dis
 import { package_image_uploader} from '../../../../scripts/frontend/image_uploader';
 import { remove_package_image} from '../../../../scripts/frontend/image_uploader';
 import { categories} from '../../../../scripts/frontend/package_categories';
+import { AngularFireStorage } from '@angular/fire/storage';
 @Component({
   selector: 'app-add-details',
   templateUrl: './add-details.component.html',
@@ -15,12 +16,13 @@ import { categories} from '../../../../scripts/frontend/package_categories';
 export class AddDetailsComponent implements OnInit {
 
   day_count:number=1;
-  arrayTemp:Array<number>=[];
+  image_file:FileList;
+  // arrayTemp:Array<number>=[];
   destination_array:number[]=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
   form:any;
-  package_index:number=0;
-  isModified:boolean=false;
-  destination_drive_count:number=1;
+  // package_index:number=0;
+  // isModified:boolean=false;
+  // destination_drive_count:number=1;
   isEmptyDay:boolean=false;
   isEmptyDest:boolean=false;
   isEmptyOvernight:boolean=false;
@@ -28,8 +30,8 @@ export class AddDetailsComponent implements OnInit {
   isEmptyDesc:boolean=false;
   isValid:boolean=true;
   package_category_array:any;
-  package_details_array:Array<{day:number,destination_drive:number[],overnight_stay:String,description:String}>=[];
-  constructor(private _db:AngularFirestore,private snackBar:MatSnackBar) { }
+  package_details_array:Array<{day:number,destination_drive:number[],overnight_stay:String}>=[];
+  constructor(private _db:AngularFirestore,private snackBar:MatSnackBar,private storage:AngularFireStorage) { }
 
   ngOnInit() {
     
@@ -44,7 +46,7 @@ export class AddDetailsComponent implements OnInit {
       // description:new FormControl('',Validators.required),
     });
     this.package_category_array=categories;
-    console.log(this.destination_array[0])
+    //console.log(this.destination_array[0])
   }
 
   create_new_destination(index:number){
@@ -58,6 +60,29 @@ export class AddDetailsComponent implements OnInit {
   image_uploader(){
     disable_package_image_uploader();
     package_image_uploader();
+  }
+
+  get_uploaded_image(event){
+    this.image_file=event.target.files;
+    console.log(this.image_file);
+  }
+
+  upload_image(id){
+    var imageId="image_package/"+id;
+    let storageRef=this.storage.ref(imageId);
+    var database=this._db;
+
+    storageRef.put(this.image_file[0]).then(function(snapshot){
+      storageRef.getDownloadURL().subscribe(url=>{
+        // document.querySelector('img').src = url;
+        // let fileName=snapshot.metadata.name;
+        // let fileContentType=snapshot.metadata.contentType;
+        // let fileSize=snapshot.metadata.size;
+        // let fileUrl=url;
+        // let fileTimeCreated=snapshot.metadata.timeCreated;
+        database.collection('packages').doc(id).update({image_url:url});
+        });
+      });
   }
 
   remove_image(){
@@ -77,12 +102,12 @@ export class AddDetailsComponent implements OnInit {
    for(var i=0;i<this.day_count;i++){
      var day_id="day"+i;
      var overnight_id="overnight"+i;
-     var desc_id="description"+i;
      console.log(day_id);
 
      let day_no=parseInt((<HTMLInputElement>document.getElementById(day_id)).value);
      let overnight=(<HTMLInputElement>document.getElementById(overnight_id)).value;
      let destination;
+     let description;
      let drive;
     //  if(this.destination_drive_count==1){
     //   destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
@@ -95,13 +120,15 @@ export class AddDetailsComponent implements OnInit {
      for(var j=0;j<destination_count;j++){
       var dest_id="destination"+i+j;
       var drive_id="drive"+i+j;
+      var desc_id="description"+i+j;
       destination=(<HTMLInputElement>document.getElementById(dest_id)).value;
       drive=(<HTMLInputElement>document.getElementById(drive_id)).value;
-      var package_destination_obj={destination:destination,drive:drive};
+      description=(<HTMLInputElement>document.getElementById(desc_id)).value;
+      var package_destination_obj={destination:destination,drive:drive,description:description};
       drive_destination_array.push(package_destination_obj);
      }
 
-     let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
+    //  let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
      console.log(description);
      
      if(day_no==0 || destination==null || overnight==null || drive==null || description==null){
@@ -134,7 +161,7 @@ export class AddDetailsComponent implements OnInit {
       break;
      }
 
-     let obj={day:day_no,destination_drive:drive_destination_array,overnight_stay:overnight,description:description};
+     let obj={day:day_no,destination_drive:drive_destination_array,overnight_stay:overnight};
      this.package_details_array.push(obj);
      drive_destination_array=[];
    }
@@ -144,11 +171,15 @@ export class AddDetailsComponent implements OnInit {
    
    if(this.isValid){
     var today=new Date();
+    this.reset_form();
+    var remove_image=this;
     var date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     var package_id=this.generate_package_id(package_name,category);
+    this.upload_image(package_id);
     let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date,views:0};
     this._db.collection("packages").doc(package_id).set(docs).then(function(doc){
       form.reset();
+      remove_image.remove_image();
       snackBar.open("Successfully Created","OK",{
         duration:2000,
       });
@@ -161,6 +192,21 @@ export class AddDetailsComponent implements OnInit {
 
    }
    
+  }
+
+  reset_form(){
+    this.day_count=1;
+    var day_id="day"+0;
+    var overnight_id="overnight"+0;
+    (<HTMLInputElement>document.getElementById(day_id)).value="";
+    let overnight=(<HTMLInputElement>document.getElementById(overnight_id)).value="";
+
+    var dest_id="destination"+0+0;
+    var drive_id="drive"+0+0;
+    var desc_id="description"+0+0;
+    (<HTMLInputElement>document.getElementById(dest_id)).value="";
+    (<HTMLInputElement>document.getElementById(drive_id)).value="";
+    (<HTMLInputElement>document.getElementById(desc_id)).value="";
   }
 
 
