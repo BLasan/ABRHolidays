@@ -1,0 +1,49 @@
+.zoom {
+  
+    transition: transform .2s;
+   
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+  
+
+input{
+  height: 35px;
+}
+
+
+a{
+  text-decoration: none!important;
+}
+
+hr.new4 {
+  border: 1px solid black;
+}
+
+// .wrapper:before,.wrapper:after{
+//   content:" ";
+//   width: 400px;
+//   height: 1px;
+//   position: absolute;
+//   background-color:grey;
+//   display:inline-block;
+// }
+
+.add-more{
+ border-radius: 60%; 
+ align-content: center;
+ margin-left: 260px;
+ border-left: black 2px;
+ margin-top:-47px;
+}
+
+.list-group{
+  max-height: 400px;
+  margin-bottom: 10px;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
+}

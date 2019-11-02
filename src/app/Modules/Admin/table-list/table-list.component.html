@@ -5,123 +5,41 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title"> Simple Table</h4>
+          <h4 class="card-title"><b>Package Detailss</b></h4>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
-              <thead class=" text-primary">
+              <thead class="text-primary">
                 <th>
-                  Name
-                </th>
-                <th>
-                  Country
+                  Package Name
                 </th>
                 <th>
-                  City
+                  Category
                 </th>
-                <th class="text-right">
-                  Salary
+                <th>
+                  No Of Days
                 </th>
+                <th>
+                  Views
+                </th>
+                <th>
+                  Date Created
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    Dakota Rice
-                  </td>
-                  <td>
-                    Niger
-                  </td>
-                  <td>
-                    Oud-Turnhout
-                  </td>
-                  <td class="text-right">
-                    $36,738
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Minerva Hooper
-                  </td>
-                  <td>
-                    Curaçao
-                  </td>
-                  <td>
-                    Sinaai-Waas
-                  </td>
-                  <td class="text-right">
-                    $23,789
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Sage Rodriguez
-                  </td>
-                  <td>
-                    Netherlands
-                  </td>
-                  <td>
-                    Baileux
-                  </td>
-                  <td class="text-right">
-                    $56,142
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Philip Chaney
-                  </td>
-                  <td>
-                    Korea, South
-                  </td>
-                  <td>
-                    Overland Park
-                  </td>
-                  <td class="text-right">
-                    $38,735
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Doris Greene
-                  </td>
-                  <td>
-                    Malawi
-                  </td>
-                  <td>
-                    Feldkirchen in Kärnten
-                  </td>
-                  <td class="text-right">
-                    $63,542
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Mason Porter
-                  </td>
-                  <td>
-                    Chile
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $78,615
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Jon Porter
-                  </td>
-                  <td>
-                    Portugal
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $98,615
-                  </td>
+                <tr *ngFor="let data of package_data">
+                  <td>{{data.package_name}}</td>
+                  <td>{{data.package_category}}</td>
+                  <td>{{data.no_of_days}}</td>
+                  <td>{{data.views}}</td>
+                  <td>{{data.date}}</td>
+                  <td><a href="#" title="edit"><i class="fa fa-list" style="color:green"></i></a></td>
+                  <td><a href="#" title="delete" id="delete_package_data" (click)="delete(data.package_id)"><i class="fa fa-trash" style="color:red!important"></i></a></td>
+                  <td><a href="#" title="view" (click)="load_modal(data.package_id)" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-bars"></i></a></td>
                 </tr>
               </tbody>
             </table>
@@ -129,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-12">
+    <!-- <div class="col-md-12">
       <div class="card card-plain">
         <div class="card-header">
           <h4 class="card-title"> Table on Plain Background</h4>
@@ -256,6 +174,51 @@
           </div>
         </div>
       </div>
+    </div> -->
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><b style="color:green">View Package</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngFor="let package of package_data">
+          <p><b>Package Name : </b>{{package.package_name}}</p>
+          <p><b>Package Category : </b>{{package.package_category}}</p>
+          <p><b>Date Created : </b>{{package.date}}</p>
+          <p><b>No of days : </b>{{package.no_of_days}}</p>
+          <p><b>Views : </b>{{package.views}}</p>
+          <hr>
+          <div *ngFor="let details of package.details">
+            <h4 style="color:blue"><b>Day : {{details.day}}</b></h4>
+            <div *ngFor="let destination_details of details.destination_drive">
+              <div class="row">
+                <div class="col-md-6">
+                  <p><b>Destination : </b>{{destination_details.destination}}</p>
+                </div>
+                <div class="col-md-6">
+                  <p><b>Drive : </b>{{destination_details.drive}}</p>
+                </div>
+              </div>
+              <p><b>Description : </b>{{destination_details.description}}</p>
+              <!-- <p>Destination : {{destination_details.destination}}</p> -->
+              <!-- <p>Drive : {{destination_details.drive}}</p> -->
+            </div>
+            <p><b>Overnight Stay : </b>{{details.overnight_stay}}</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
+  

@@ -10,16 +10,18 @@ import { NotificationsComponent } from '../../Modules/Admin/notifications/notifi
 import { UpgradeComponent } from '../../Modules/Admin/upgrade/upgrade.component';
 import { SettingsComponent } from '../..//Modules/Admin/settings/settings.component';
 import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details.component';
+import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'settings',       component:   SettingsComponent },
-    { path: 'add-details',     component: AddDetailsComponent },
+    { path: 'add-package_details',     component: AddDetailsComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
     // { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent }
+    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'manage_news_feed' , component:ManageNewsFeedComponent},
 ];

@@ -3,97 +3,229 @@
 <div class="main-content">
   <div class="row">
     <div class="col-md-8">
-      <div class="card">
+      <div class="card" [ngClass]="{'list-group':day_count>4}">
         <div class="card-header">
           <h5 class="title">Add New Package</h5>
         </div>
         <div class="card-body">
-          <form>
-            <div class="row">
-              <div class="col-md-5 pr-1">
-                <div class="form-group">
-                  <label>Hotel Name (disabled)</label>
-                  <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-                </div>
-              </div>
-              <div class="col-md-3 px-1">
-                <div class="form-group">
-                  <label>Package Name</label>
-                  <input type="text" class="form-control" placeholder="package name" id="package_name">
-                </div>
-              </div>
-              <div class="col-md-4 pl-1">
-                <div class="form-group">
-                  <label for="email">Category</label>
-                  <input name="category" id="category" type="text" class="form-control" placeholder="package category">
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-6 pr-1">
-                <div class="form-group">
-                  <label>Number of Days</label>
-                  <input type="number" class="form-control" [(ngModel)]="day_count" [ngModelOptions]="{standalone: true}" id="day_counts">
-                </div>
-              </div>
-              <!-- <div class="col-md-6 pl-1">
-                <div class="form-group">
-                  <label>Destination</label>
-                  <input type="text" class="form-control" placeholder="Destination">
-                </div>
-              </div> -->
-            </div>
-            <hr>
-            <div *ngFor="let i of [].constructor(day_count)">
-              <div class="row">
-                <div class="col-md-6 pr-1">
-                  <div class="form-group">
-                    <label>Day Number</label>
-                    <input type="number" class="form-control" id="day{{i}}">
+            <form [formGroup]="form">
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>Hotel Name (disabled)</label>
+                      <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
+                    </div>
+                  </div>
+                  <div class="col-md-3 px-1">
+                    <div class="form-group" [ngClass]="{'has-success':form.controls.package_name.valid && (form.controls.package_name.dirty || form.controls.package_name.touched),'has-danger':form.controls.package_name.invalid && (form.controls.package_name.dirty || form.controls.package_name.touched)}">
+                      <label>Package Name</label>
+                      <input type="text" class="form-control" placeholder="package name" id="package_name" formControlName="package_name" [ngClass]="{'form-control-success':form.controls.package_name.valid && (form.controls.package_name.dirty || form.controls.package_name.touched),'form-control-danger':form.controls.package_name.invalid && (form.controls.package_name.dirty || form.controls.package_name.touched)}">
+                    </div>
+                  </div>
+                  <div class="col-md-4 pl-1">
+                    <div class="form-group">
+                      <label for="email">Category</label>
+                      <select name="category" id="category" class="form-control" style="height:35px;">
+                        <option *ngFor="let category of package_category_array" value="{{category}}">{{category}}</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6 pl-1">
-                  <div class="form-group">
-                    <label>Destination</label>
-                    <input type="text" class="form-control" placeholder="Destination" id="destination{{i}}">
+                <hr>
+                <div class="row">
+                  <div class="col-md-6 pr-1">
+                    <div class="form-group">
+                      <label>Number of Days</label>
+                      <input disabled type="number" class="form-control" [(ngModel)]="day_count" id="day_counts" [ngModelOptions]="{standalone: true}">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 pr-1">
-                  <div class="form-group">
-                    <label>Overnight Stay</label>
-                    <input type="text" class="form-control" placeholder="Overnight Stay" id="overnight{{i}}">
+                <hr>
+                <!-- <div *ngFor="let i of [].constructor(day_count);let index=index">
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group" [ngClass]="{'has-success':form.controls['day']valid && (form.controls.day.dirty || form.controls.day.touched),'has-danger':form.controls.day.invalid && (form.controls.day.dirty || form.controls.day.touched)}">
+                        <label>Day Number</label>
+                        <input type="number" class="form-control" id="day{{index}}" formControlName="day" [ngClass]="{'form-control-success':form.controls.day.valid && (form.controls.day.dirty || form.controls.day.touched),'form-control-danger':form.controls.day.invalid && (form.controls.day.dirty || form.controls.day.touched)}">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group" [ngClass]="{'has-success':form.controls.overnight.valid && (form.controls.overnight.dirty || form.controls.overnight.touched),'has-danger':form.controls.overnight.invalid && (form.controls.overnight.dirty || form.controls.overnight.touched)}">
+                        <label>Overnight Stay</label>
+                        <input type="text" class="form-control" placeholder="Overnight Stay" id="overnight{{index}}" formControlName="overnight" [ngClass]="{'form-control-success':form.controls.overnight.valid && (form.controls.overnight.dirty || form.controls.overnight.touched),'form-control-danger':form.controls.overnight.invalid && (form.controls.overnight.dirty || form.controls.overnight.touched)}">
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6 pl-1">
-                  <div class="form-group">
-                    <label>Drive</label>
-                    <input type="text" class="form-control" placeholder="Drive" id="drive{{i}}">
+                  <div class="row">
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group" [ngClass]="{'has-success':form.controls.drive.valid && (form.controls.drive.dirty || form.controls.drive.touched),'has-danger':form.controls.drive.invalid && (form.controls.drive.dirty || form.controls.drive.touched)}">
+                        <label>Drive</label>
+                        <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}" formControlName="drive" [ngClass]="{'form-control-success':form.controls.drive.valid && (form.controls.drive.dirty || form.controls.drive.touched),'form-control-danger':form.controls.overnight.invalid && (form.controls.drive.dirty || form.controls.drive.touched)}">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group" [ngClass]="{'has-success':form.controls.destination.valid && (form.controls.destination.dirty || form.controls.destination.touched),'has-danger':form.controls.destination.invalid && (form.controls.destination.dirty || form.controls.destination.touched)}">
+                        <label>Destination</label>
+                        <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}" formControlName="day" [ngClass]="{'form-control-success':form.controls.destination.valid && (form.controls.destination.dirty || form.controls.destination.touched),'form-control-danger':form.controls.destination.invalid && (form.controls.destination.dirty || form.controls.destination.touched)}">
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label>Description</label>
-                    <textarea class="form-control" name="description{{i}}" id="description{{i}}" rows="20" cols="80" placeholder="Enter Description"></textarea>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group" [ngClass]="{'has-success':form.controls.description.valid && (form.controls.description.dirty || form.controls.description.touched),'has-danger':form.controls.description.invalid && (form.controls.description.dirty || form.controls.description.touched)}">
+                        <label>Description</label>
+                        <textarea class="form-control" name="description{{index}}" id="description" rows="20" cols="80" placeholder="Enter Description" formControlName="description" [ngClass]="{'form-control-success':form.controls.description.valid && (form.controls.description.dirty || form.controls.description.touched),'form-control-danger':form.controls.description.invalid && (form.controls.description.dirty || form.controls.description.touched)}"></textarea>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <button type="button" class="btn btn-success" (click)="create_package()">Create</button>
-            <!-- <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label>About Me</label>
-                  <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                </div>
-              </div>
-            </div> -->
-          </form>
+                </div> -->
+
+                <!-- <div *ngFor="let i of [].constructor(day_count);let index=index">
+                    <div class="row">
+                      <div class="col-md-6 pr-1">
+                        <div class="form-group" id="valid_day{{index}}">
+                          <label>Day Number</label>
+                          <input type="number" class="form-control" id="day{{index}}">
+                        </div>
+                      </div>
+                      <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                          <label>Destination</label>
+                          <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                          <label>Overnight Stay</label>
+                          <input type="text" class="form-control" placeholder="Overnight Stay" id="overnight{{index}}">
+                        </div>
+                      </div>
+                      <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                          <label>Drive</label>
+                          <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Description</label>
+                          <textarea class="form-control" name="description{{index}}" id="description{{index}}" rows="20" cols="80" placeholder="Enter Description"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <div *ngFor="let i of [].constructor(day_count);let index=index">
+                      <hr class="new4" *ngIf="day_count>1">
+                      <div class="row">
+                        <div class="col-md-6 pr-1">
+                          <div class="form-group" id="valid_day{{index}}">
+                            <label>Day Number</label>
+                            <input type="number" class="form-control" id="day{{index}}">
+                          </div>
+                        </div>
+                        <div class="col-md-6 pl-1">
+                          <div class="form-group">
+                            <label>Overnight Stay</label>
+                            <input type="text" class="form-control" placeholder="Overnight Stay" id="overnight{{index}}">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" *ngFor="let i of [].constructor(destination_array[index]);let index1=index;">
+                        <div class="col-md-6 pr-1">
+                          <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
+                          </div>
+                        </div>
+                        <!-- <div class="col-md-6 pr-1" *ngIf="!isModified && index==package_index">
+                          <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
+                          </div>
+                        </div> -->
+                        <!-- <div class="col-md-6 pr-1" *ngIf="isModified && index!=package_index">
+                          <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" class="form-control" placeholder="Destination" id="destination{{index}}{{index1}}">
+                          </div>
+                        </div> -->
+                        <div class="col-md-6 pl-1">
+                          <div class="form-group">
+                            <label>Drive</label>
+                            <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" name="description{{index}}{{index1}}" id="description{{index}}{{index1}}" rows="20" cols="80" placeholder="Enter Description"></textarea>
+                          </div>
+                        </div>
+                        <!-- <div class="col-md-6 pl-1" *ngIf="!isModified && index==package_index">
+                          <div class="form-group">
+                            <label>Drive</label>
+                            <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
+                          </div>
+                        </div>
+                        <div class="col-md-6 pl-1" *ngIf="isModified && index!=package_index">
+                          <div class="form-group">
+                            <label>Drive</label>
+                            <input type="text" class="form-control" placeholder="Drive" id="drive{{index}}{{index1}}">
+                          </div>
+                        </div> -->
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 pr-1"></div>
+                        <div class="col-md-6 pr-1">
+                          <div class="row" style="margin-left:180px">
+                            <a href="" id="drive_link" style="align-content:center;" (click)="create_new_destination(index)"><i class="material-icons">add</i>Add New</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" name="description{{index}}" id="description{{index}}" rows="20" cols="80" placeholder="Enter Description"></textarea>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                    <input type="file" id="package_image_file_uploader" style="display:none" (change)="get_uploaded_image($event)" accept="image/*"> 
+                    <div>
+                      <hr class="new4">
+                      <button type="button" class="btn btn-primary btn-just-round add-more" (click)="add_new_package_detail()"><i class="fa fa-plus" ></i></button>
+                    </div>
+                <button type="button" class="btn btn-success" [disabled]="!form.valid" (click)="create_package()">Create</button>
+                <!-- <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>About Me</label>
+                      <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                    </div>
+                  </div>
+                </div> -->
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="card-body">
+          <div class="card-header">
+            <h5 class="title">UPLOAD IMAGE</h5>
+          </div>
+          <div class="card-body">
+            <a href="" id="package_image_uploader" (click)="image_uploader()">
+              <img src="assets/img/image_uploader.png" id="package_image" class="zoom" style="height:250px;width:250px">
+            </a>
+            <button type="button" class="btn btn-danger" style="margin-left:50px;" (click)="remove_image()">Remove</button>
+          </div>
         </div>
       </div>
     </div>

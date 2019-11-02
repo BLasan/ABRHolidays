@@ -1,0 +1,113 @@
+<div class="panel-header panel-header-sm">
+  </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Add News Feed</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group">
+                    <label>Title</label>
+                    <input class="form-control" placeholder="Enter title here" id="title">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group">
+                    <label>Enter News</label>
+                    <textarea class="form-control" cols="80" rows="50" placeholder="Enter text here" id="news"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <button type="button" style="margin-left:120px" class="btn btn-success" (click)="create_news_feed()">Create New</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-plain">
+              <div class="card-header">
+                <h4 class="card-title">News Feeds</h4>
+                <p class="category">All news feeds</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Date
+                      </th>
+                      <th>
+                        Title
+                      </th>
+                      <th>
+                        News
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of newsFeed_data">
+                        <td>{{data.date}}</td>
+                        <td>{{data.title}}</td>
+                        <td>{{data.news}}</td>
+                        <td><a href="#" title="edit" (click)="load_modal(data.id)" id="edit_news_feed" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-list" style="color:green"></i></a></td>
+                        <td><a href="#" title="delete" (click)="delete(data.id)" id="delete_news_feed"><i class="fa fa-trash" style="color:red!important"></i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit News-Feed</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form *ngFor="let edit_items of filtered_news_feed">
+          <div class="row">
+            <div class="col-md-12 pr-1">
+              <div class="form-group">
+                <label>Title</label>
+                <input class="form-control" placeholder="Enter title here" id="edit_title" value="{{edit_items.title}}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 pr-1">
+              <div class="form-group">
+                <label>Enter News</label>
+                <textarea class="form-control" cols="80" rows="50" placeholder="Enter text here" id="edit_news">{{edit_items.news}}</textarea>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <button type="button" style="margin-left:120px" class="btn btn-success" (click)="edit_news_feed(edit_items.id)">Create New</button>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" (click)="edit_news_feed()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

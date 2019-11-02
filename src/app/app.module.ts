@@ -19,14 +19,15 @@ import { AddDetailsComponent } from './Modules/Admin/add-details/add-details.com
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
   authDomain: "hotel-management-5b661.firebaseapp.com",
   databaseURL: "https://hotel-management-5b661.firebaseio.com",
   projectId: "hotel-management-5b661",
-  storageBucket: "hotel-management-5b661.appspot.com",
+  storageBucket: "gs://hotel-management-5b661.appspot.com/",
   messagingSenderId: "337942867698",
   appId: "1:337942867698:web:760aa0a20effceef066a6b",
   measurementId: "G-VGP3TWJ9K7"
