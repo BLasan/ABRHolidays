@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 @Component({
   selector: 'app-notifications',
   templateUrl: './notifications.component.html',
@@ -64,6 +64,7 @@ export class NotificationsComponent implements OnInit {
       }
   }
   ngOnInit() {
+    disable_search_bar();
   }
 
 }

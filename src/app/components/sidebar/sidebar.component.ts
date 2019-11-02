@@ -16,7 +16,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/add-package_details', title: 'Add Package',  icon:'ui-1_simple-add', class: '' }, 
     // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
     { path: '/table-list', title: 'View Details',  icon:'design_bullet-list-67', class: '' },
-    { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
+    // { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
 
     // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
     // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }

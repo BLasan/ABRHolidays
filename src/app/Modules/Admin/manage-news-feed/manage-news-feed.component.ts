@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { formatDate } from '@angular/common';
 import { disable_delete_news_feed,disable_edit_news_feed} from '../../../../scripts/frontend/disable_href_links';
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 @Component({
   selector: 'app-manage-news-feed',
   templateUrl: './manage-news-feed.component.html',
@@ -15,6 +16,7 @@ export class ManageNewsFeedComponent implements OnInit {
   constructor(private _db:AngularFirestore) { }
 
   ngOnInit() {
+    enable_search_bar();
     this.load_news_feed()
   }
 

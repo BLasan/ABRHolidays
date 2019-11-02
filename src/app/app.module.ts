@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,7 +20,10 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component'
+import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component';
+import { LoginComponent } from './Modules/Admin/login/login.component'
+import { AuthGuardAdminService } from './services/AuthGuardAdmin.service';
+import { PageNotFoundComponent } from './Modules/page-not-found/page-not-found.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -41,6 +44,7 @@ const firebaseConfig = {
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgbModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
@@ -53,8 +57,10 @@ const firebaseConfig = {
     AdminLayoutComponent,
     CustomerLayoutComponent,
     CustomerHomeComponent,
+    LoginComponent,
+    PageNotFoundComponent,
   ],
-  providers: [],
+  providers: [AuthGuardAdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

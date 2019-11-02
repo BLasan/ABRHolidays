@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {file_array} from '../../../../scripts/frontend/image_uploader';
 import { parse } from 'url';
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 
 @Component({
   selector: 'app-dashboard',
@@ -68,6 +69,7 @@ export class DashboardComponent implements OnInit {
   constructor(private storage:AngularFireStorage,private _db:AngularFirestore) { }
 
   ngOnInit() {
+    disable_search_bar();
     this.chartColor = "#FFFFFF";
     this.canvas = document.getElementById("bigDashboardChart");
     this.ctx = this.canvas.getContext("2d");

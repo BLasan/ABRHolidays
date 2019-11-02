@@ -35,3 +35,25 @@ export function disable_edit_news_feed(){
   })
 }
 
+export function disable_notification_dropdown(){
+  $(document).on('click','#dropdownBasic1',function(e){
+    e.preventDefault();
+  })
+}
+
+export function disable_user_profile_dropdown(){
+  $(document).on('click','#dropdownBasic2',function(e){
+    e.preventDefault();
+  })
+
+  // $(document).on('click','#signout',function(e){
+  //   e.preventDefault();
+  // })
+
+  // $(document).on('click','#user_profile',function(e){
+  //   e.preventDefault();
+  // })
+}
+
+
+

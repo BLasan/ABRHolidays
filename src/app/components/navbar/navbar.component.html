@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
           <form>
             <div class="input-group no-border">
-              <input type="text" value="" class="form-control" placeholder="Search...">
+              <input type="text" value="" id="search_bar" class="form-control" placeholder="Search...">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <i class="now-ui-icons ui-1_zoom-bold"></i>
@@ -37,8 +37,8 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item" ngbDropdown>
-              <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
+            <!-- <li class="nav-item" ngbDropdown>
+              <a class="nav-link" href="#" id="dropdownBasic1" ngbDropdownToggle>
                 <i class="now-ui-icons location_world"></i>
                 <p>
                   <span class="d-lg-none d-md-block">Some Actions</span>
@@ -49,14 +49,18 @@
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pablo">
+            </li> -->
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" href="#pablo" id="dropdownBasic2" ngbDropdownToggle>
                 <i class="now-ui-icons users_single-02"></i>
                 <p>
                   <span class="d-lg-none d-md-block">Account</span>
                 </p>
               </a>
+              <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                <a class="dropdown-item" href="/settings" id="user_profile"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+                <a class="dropdown-item" href="/login" id="signout" (click)="signout()"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
+              </div>
             </li>
           </ul>
         </div>
