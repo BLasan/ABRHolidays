@@ -24,6 +24,15 @@ import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage
 import { LoginComponent } from './Modules/Admin/login/login.component'
 import { AuthGuardAdminService } from './services/AuthGuardAdmin.service';
 import { PageNotFoundComponent } from './Modules/page-not-found/page-not-found.component';
+import { CustomerNavbarComponent } from './components/customer-navbar/customer-navbar.component';
+import { AboutUsComponent } from './Modules/Customer/about-us/about-us.component';
+import { ContactUsComponent } from './Modules/Customer/contact-us/contact-us.component';
+import { FaqComponent } from './Modules/Customer/faq/faq.component';
+import { DiscoverWorldComponent } from './Modules/Customer/discover-world/discover-world.component';
+import { InboundPackagesComponent } from './Modules/Customer/inbound-packages/inbound-packages.component';
+import { AccomodationComponent } from './Modules/Customer/accomodation/accomodation.component';
+import { TransfersComponent } from './Modules/Customer/transfers/transfers.component';
+import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -56,11 +65,12 @@ const firebaseConfig = {
     AppComponent,
     AdminLayoutComponent,
     CustomerLayoutComponent,
-    CustomerHomeComponent,
     LoginComponent,
     PageNotFoundComponent,
+    CustomerNavbarComponent,
+  
   ],
-  providers: [AuthGuardAdminService],
+  providers: [AuthGuardAdminService,AuthGuardCustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,9 @@ import { AdminLayoutComponent } from './Layouts/admin-layout/admin-layout.compon
 import { LoginComponent } from './Modules/Admin/login/login.component';
 import { AuthGuardAdminService } from './services/AuthGuardAdmin.service';
 import { PageNotFoundComponent } from './Modules/page-not-found/page-not-found.component';
+import { CustomerLayoutRoutes } from './Layouts/customer-layout/customer-layout.routing';
+import { CustomerLayoutComponent } from './Layouts/customer-layout/customer-layout.component';
+import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
 
 const routes: Routes =[
   {
@@ -15,9 +18,10 @@ const routes: Routes =[
   },
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full',
-  }, {
+  },
+   {
     path: '',
     component: AdminLayoutComponent,
     canActivate:[AuthGuardAdminService],
@@ -27,12 +31,21 @@ const routes: Routes =[
       loadChildren: './Layouts/admin-layout/admin-layout.module#AdminLayoutModule'
   }]},
   {
+    path: '',
+    component: CustomerLayoutComponent,
+    canActivate:[AuthGuardCustomerService],
+    children: [
+        {
+      path: '',
+      loadChildren: './Layouts/customer-layout/customer-layout.module#CustomerLayoutModule'
+  }]},
+  {
     path:'page-not-found',
     component:PageNotFoundComponent
   },
   {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'page-not-found'
   }
 ];
 

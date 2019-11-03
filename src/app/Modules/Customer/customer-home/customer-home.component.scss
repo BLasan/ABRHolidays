@@ -1,0 +1,100 @@
+// .transfer{
+//     margin-bottom: 15px;
+//     height: 212px;
+//     background-color:yellow;
+// }
+
+// .transfer, .accommodation, .faq {
+//     color: #FFF;
+// }
+
+// * {
+//     padding: 0;
+//     margin: 0;
+//     text-align: justify;
+// }
+
+
+// * {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+
+.block {
+    height: 100px;
+    width:400px;
+    background-color:yellow;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+img.d-block{
+    height: 390px;
+}
+
+// .myHalfCol .col-md-6{
+//     padding:0 10px;
+//     width:100%;
+//     margin:0 1% 
+// }
+
+.zoom {
+  
+    transition: transform .2s;
+   
+  }
+  
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+  
+h2{
+ color: black; 
+//  font-family: "Courier";
+//  font-size: 20px;
+ margin: 0 auto;
+ text-align: center;
+ white-space: nowrap;
+ overflow: hidden;
+ width: 25em;
+ animation: type 4s steps(60, end); 
+}
+  
+h2:nth-child(2){
+    animation: type2 8s steps(60, end);
+}
+  
+span{
+  animation: blink 1s infinite;
+}
+  
+@keyframes type{ 
+    from { width: 0; } 
+} 
+  
+@keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+} 
+  
+@keyframes blink{
+    to{opacity: .0;}
+}
+  
+::selection{
+    background: black;
+}
+
+.heading{
+    width:100%;
+    height:120px;
+    background-color: chartreuse;
+}
