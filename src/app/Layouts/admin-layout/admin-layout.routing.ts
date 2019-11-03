@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../Modules/Admin/upgrade/upgrade.component'
 import { SettingsComponent } from '../..//Modules/Admin/settings/settings.component';
 import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details.component';
 import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
+import { AccomodationTransferComponent } from '../../Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -18,6 +19,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'table-list',     component: TableListComponent },
     { path: 'settings',       component:   SettingsComponent },
     { path: 'add-package_details',     component: AddDetailsComponent },
+    // { path: 'accomodation-transfer',     component: AccomodationTransferComponent},
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
     // { path: 'maps',           component: MapsComponent },

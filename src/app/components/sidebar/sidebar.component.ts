@@ -13,7 +13,8 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
     { path: '/manage_news_feed', title: 'News Feed',  icon:'education_paper', class: '' },
-    { path: '/add-package_details', title: 'Add Package',  icon:'ui-1_simple-add', class: '' }, 
+    { path: '/add-package_details', title: 'Add Package',  icon:'ui-1_simple-add', class: '' },
+    // { path: '/accomodation-transfer', title: 'Accomodation',  icon:'business_bank', class: '' }, 
     // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
     { path: '/table-list', title: 'View Details',  icon:'design_bullet-list-67', class: '' },
     // { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
@@ -27,7 +28,7 @@ export const ROUTES: RouteInfo[] = [
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
