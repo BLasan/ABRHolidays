@@ -9,12 +9,12 @@ import { InboundPackagesComponent } from '../../Modules/Customer/inbound-package
 import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.component';
 
 export const CustomerLayoutRoutes: Routes = [
-    { path: 'home',component: CustomerHomeComponent },
+    { path: 'home',component:CustomerHomeComponent},
     { path: 'about-us',component:AboutUsComponent},
     { path: 'accomodation',component:AccomodationComponent},
     { path: 'contact-us',component:ContactUsComponent},
     { path: 'discover-world',component:DiscoverWorldComponent},
     { path:'faq',component:FaqComponent},
-    { path:'inbound-packages',component:InboundPackagesComponent},
+    { path:'inbound-packages/:code',component:InboundPackagesComponent},
     { path: 'transfers',component:TransfersComponent}
 ];

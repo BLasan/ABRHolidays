@@ -1,0 +1,64 @@
+h2{
+    color: black; 
+   //  font-family: "Courier";
+   //  font-size: 20px;
+    margin: 0 auto;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 25em;
+    animation: type 4s steps(60, end); 
+   }
+     
+   h2:nth-child(2){
+       animation: type2 8s steps(60, end);
+   }
+     
+   span{
+     animation: blink 1s infinite;
+   }
+     
+   @keyframes type{ 
+       from { width: 0; } 
+   } 
+     
+   @keyframes type2{
+       0%{width: 0;}
+       50%{width: 0;}
+       100%{ width: 100; } 
+   } 
+     
+   @keyframes blink{
+       to{opacity: .0;}
+   }
+     
+   ::selection{
+       background: black;
+   }
+   
+   .heading{
+       width:100%;
+       height:120px;
+       background-color: chartreuse;
+   }
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: greenyellow;
+}
+
+li:hover{
+    background-color: greenyellow;
+}
+

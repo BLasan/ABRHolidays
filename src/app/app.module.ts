@@ -69,6 +69,7 @@ const firebaseConfig = {
     LoginComponent,
     PageNotFoundComponent,
     CustomerNavbarComponent,  
+    // CustomerHomeComponent
   ],
   providers: [AuthGuardAdminService,AuthGuardCustomerService],
   bootstrap: [AppComponent]
