@@ -7,6 +7,7 @@ import { DiscoverWorldComponent } from '../../Modules/Customer/discover-world/di
 import { FaqComponent } from '../../Modules/Customer/faq/faq.component';
 import { InboundPackagesComponent } from '../../Modules/Customer/inbound-packages/inbound-packages.component';
 import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.component';
+import { PackageCategoryComponent } from '../../Modules/Customer/package-category/package-category.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -16,5 +17,6 @@ export const CustomerLayoutRoutes: Routes = [
     { path: 'discover-world',component:DiscoverWorldComponent},
     { path:'faq',component:FaqComponent},
     { path:'inbound-packages/:code',component:InboundPackagesComponent},
+    { path:'package-category/:category',component:PackageCategoryComponent},
     { path: 'transfers',component:TransfersComponent}
 ];

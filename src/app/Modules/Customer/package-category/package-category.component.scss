@@ -1,0 +1,62 @@
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.padding-left{
+    padding-right:0;
+
+}
+
+.padding-right{
+    padding-right:0;
+    padding-left:0;
+
+}
+
+.col-md-3{
+    padding-right: 0px;
+}
+#details{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.rectangle{
+    width: 100%;
+    height:300px;
+    background-color: grey;
+    // background-color: black;
+}
+
+img{
+    display: block;
+    width:100%;
+    height: 300px;
+    padding-right: 0px!important;
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    height:50px;
+    padding-left:10px
+}
+
+#custom_img{
+    height: 70px;
+    width:70px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: greenyellow;
+}
+
+li:hover{
+    background-color: greenyellow;
+}
+
+
+

@@ -13,6 +13,7 @@ import { DiscoverWorldComponent } from '../../Modules/Customer/discover-world/di
 import { InboundPackagesComponent } from '../../Modules/Customer/inbound-packages/inbound-packages.component';
 import { AccomodationComponent } from '../../Modules/Customer/accomodation/accomodation.component';
 import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.component';
+import { PackageCategoryComponent } from '../../Modules/Customer/package-category/package-category.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -30,7 +31,8 @@ import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.c
     DiscoverWorldComponent,
     InboundPackagesComponent,
     AccomodationComponent,
-    TransfersComponent
+    TransfersComponent,
+    PackageCategoryComponent
   ],
 })
 export class CustomerLayoutModule { }
