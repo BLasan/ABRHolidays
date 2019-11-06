@@ -1,3 +1,97 @@
-<p>
-  contact-us works!
-</p>
+<div class="row">
+  <div class="col-md-12" style="height:65px;background-color:grey;">
+    <h3 class="card-title" style="padding:10px;color:white"><b>CONTACT US</b></h3>
+  </div>
+</div>  
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card color-card">
+      <div class="card-body">
+        <p><b>CEYLON TOURS LIMITED</b></p>
+        <p>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>
+            8A,Gamoaha Road,Angoda
+          </span>
+        </p>
+        <p><b>SRI LANKA</b></p>
+        <p>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>
+            (+94) 112 774 323
+          </span>
+        </p>
+        <p><b>FAX</b></p>
+        <p>
+          <i class="fa fa-fax" aria-hidden="true"></i>
+          <span>
+            (+94) 112 34 2 234
+          </span>
+        </p>
+        <p><b>EMAIL</b></p>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>
+           info@ceylontours.com
+        </span>
+      </div>
+    </div>  
+  </div>
+  <div class="col-md-6">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+      <iframe width="500px" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=gampaha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2" scrolling="no" marginheight="0" marginwidth="0">
+      </iframe>
+      <a href="https://www.embedgooglemap.net/blog/booking.com-coupon/">
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card" style="background-color:black;">
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="row">
+            <div class="col-md-6" style="padding-left:0">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
+                <label>Subject</label>
+                <input type="text" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
+              </div>
+              <div class="form-group" [ngClass]="{'has-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'has-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="First Name" required formControlName="f_name" [ngClass]="{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
+              </div>
+              <div class="form-group" [ngClass]="{'has-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'has-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" required formControlName="l_name" [ngClass]="{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
+              </div>
+              <div class="form-group">
+                <label>Country</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+              </div>
+              <div class="form-group" [ngClass]="{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter email" required formControlName="email" [ngClass]="{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'has-danger':form.controls.email.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
+                <label>Telephone No</label>
+                <input type="number"  class="form-control" formControlName="tel" [ngClass]="{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
+              </div>
+              <div class="form-group" [ngClass]="{'has-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'has-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}">
+                <label>Message</label>
+                <textarea class="form-control" rows="3" formControlName="message" [ngClass]="{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}"></textarea>
+              </div>
+              <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

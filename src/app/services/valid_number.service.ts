@@ -2,22 +2,19 @@ import { Validator, NG_VALIDATORS, AbstractControl, ValidatorFn, ValidationError
 import {Directive, Input} from '@angular/core';
 import { Subscription } from 'rxjs';
 
-export function confirmPassword(controlNameToCompare:string):ValidatorFn{
+export function validNumber():ValidatorFn{
     return (c:AbstractControl):ValidationErrors|null=>{
         if(c.value==null||c.value.length==0){
             return null;
         }
 
-       // console.log(c.value)
-
-        const controlToCompare=c.root.get(controlNameToCompare);
-        if(controlToCompare){
-            const subscription:Subscription=controlToCompare.valueChanges.subscribe((x)=>{
-                // console.log(x)
+        console.log(c.value)
+        const subscription:Subscription=c.valueChanges.subscribe((x)=>{
+                 console.log(x)
                 c.updateValueAndValidity();
                 subscription.unsubscribe();
             });
-        }
-        return controlToCompare && controlToCompare.value!==c.value?{'notequal':true}:null;
+
+        return c.value.length>0?{'notequal':true}:null;
     }
 }
