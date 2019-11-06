@@ -98,3 +98,37 @@ span{
     height:120px;
     background-color: chartreuse;
 }
+
+.rect{
+    width: 100%;
+    background-color:orange;
+    height:90px;
+}
+
+.carousel .carousal-item {
+    height: 90px;
+  }
+  
+.carousal-item img {
+    position: absolute;
+    min-height: 90px;
+}
+
+.news{
+    width:10%;
+    justify-content:left;
+    align-content: left!important;
+    // margin-left:-50px
+}
+
+.carousel-control-prev{
+    width:5%;
+}
+
+.carousel-control-next{
+    width: 5%;
+}
+
+#news_feed{
+    margin-left:-75px;
+}
