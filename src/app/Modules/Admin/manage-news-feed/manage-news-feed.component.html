@@ -26,6 +26,13 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-6">
+                  <button type="button" id="news_feed_img_btn" (click)="upload_image()" title="add-image" style="border-radius:40%;"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></button>
+                  <input type="file" style="display:none;" id="news_feed_img_uploader" (change)=get_files($event)  accept="image/*">
+                  <span id="file_name" style="float:right;"></span>
+                </div>
+              </div>
+              <div class="row">
                 <button type="button" style="margin-left:120px" class="btn btn-success" (click)="create_news_feed()">Create New</button>
               </div>
             </form>

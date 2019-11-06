@@ -194,7 +194,6 @@
           <p><b>Date Created : </b>{{package.date}}</p>
           <p><b>No of days : </b>{{package.no_of_days}}</p>
           <p><b>Views : </b>{{package.views}}</p>
-          <hr>
           <div *ngFor="let details of package.details">
             <h4 style="color:blue"><b>Day : {{details.day}}</b></h4>
             <div *ngFor="let destination_details of details.destination_drive">

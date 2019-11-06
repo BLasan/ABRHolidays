@@ -3,6 +3,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { formatDate } from '@angular/common';
 import { disable_delete_news_feed,disable_edit_news_feed} from '../../../../scripts/frontend/disable_href_links';
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
+import { news_feed_image_uploader} from '../../../../scripts/frontend/image_uploader';
+import { AngularFireStorage } from '@angular/fire/storage';
 @Component({
   selector: 'app-manage-news-feed',
   templateUrl: './manage-news-feed.component.html',
@@ -13,7 +15,8 @@ export class ManageNewsFeedComponent implements OnInit {
   newsFeed_data:any=[];
   filtered_news_feed:any=[];
   news_feed_id:any;
-  constructor(private _db:AngularFirestore) { }
+  file_list:any=[];
+  constructor(private _db:AngularFirestore,private storage:AngularFireStorage) { }
 
   ngOnInit() {
     enable_search_bar();
@@ -27,14 +30,25 @@ export class ManageNewsFeedComponent implements OnInit {
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     console.log(date);
     let id=this.generate_news_feed_id(date,title);
-    let news_details={news:news,date:date,title:title,id:id,status:""};
-    this._db.collection('news_feed').doc(id).set(news_details).then(function(docs){
-      console.log("Done");
-      (<HTMLInputElement>document.getElementById('news')).value="";
-      (<HTMLInputElement>document.getElementById('title')).value="";
-    }).catch(function(error){
-      console.log(error)
-    });
+    var imageId="news_feed/image"+today.getTime();
+    let storageRef=this.storage.ref(imageId);
+    var _this=this;
+    storageRef.put(this.file_list.item(0)).then(function(snapshot){
+      storageRef.getDownloadURL().subscribe(url=>{
+      let news_details={news:news,date:date,title:title,id:id,status:"",image_url:url};
+
+      _this._db.collection('news_feed').doc(id).set(news_details).then(function(docs){
+          console.log("Done");
+          (<HTMLInputElement>document.getElementById('news')).value="";
+          (<HTMLInputElement>document.getElementById('title')).value="";
+          (<HTMLInputElement>document.getElementById('file_name')).innerHTML="";
+          (<HTMLInputElement>document.getElementById('news_feed_img_uploader')).value="";
+        }).catch(function(error){
+          console.log(error)
+        });
+      })
+    })
+
     this.load_news_feed();
   }
 
@@ -85,5 +99,17 @@ export class ManageNewsFeedComponent implements OnInit {
     this._db.collection('news_feed').doc(id).update(obj);
     this.load_news_feed();
   }
+
+  upload_image(){
+    news_feed_image_uploader();
+  }
+
+  get_files(event){
+    console.log(event.target.files);
+    this.file_list=event.target.files;
+  }
+
+
+ 
 
 }

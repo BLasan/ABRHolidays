@@ -37,7 +37,7 @@ export class NewsEventsComponent implements OnInit {
       }  
 
       snapshot.forEach(doc=>{
-        if(doc.data().delete===false){
+        if(doc.data().status===""){
           this.news_feed_array.push(doc.data());
         }
       })

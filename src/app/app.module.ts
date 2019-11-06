@@ -36,6 +36,7 @@ import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
 import { AccomodationTransferComponent } from './Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 import { PackageCategoryComponent } from './Modules/Customer/package-category/package-category.component';
 import { NewsEventsComponent } from './Modules/Customer/news-events/news-events.component';
+import { TestimonialsComponent } from './Modules/Customer/testimonials/testimonials.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -70,7 +71,7 @@ const firebaseConfig = {
     CustomerLayoutComponent,
     LoginComponent,
     PageNotFoundComponent,
-    CustomerNavbarComponent,
+    CustomerNavbarComponent
     // CustomerHomeComponent
   ],
   providers: [AuthGuardAdminService,AuthGuardCustomerService],
