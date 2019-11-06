@@ -35,6 +35,7 @@ import { TransfersComponent } from './Modules/Customer/transfers/transfers.compo
 import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
 import { AccomodationTransferComponent } from './Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 import { PackageCategoryComponent } from './Modules/Customer/package-category/package-category.component';
+import { NewsEventsComponent } from './Modules/Customer/news-events/news-events.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",

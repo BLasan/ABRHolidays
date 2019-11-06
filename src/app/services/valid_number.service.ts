@@ -10,7 +10,7 @@ export function validNumber():ValidatorFn{
 
         console.log(c.value)
         const subscription:Subscription=c.valueChanges.subscribe((x)=>{
-                 console.log(x)
+                console.log(x)
                 c.updateValueAndValidity();
                 subscription.unsubscribe();
             });

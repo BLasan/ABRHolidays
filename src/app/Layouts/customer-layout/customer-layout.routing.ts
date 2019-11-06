@@ -8,6 +8,7 @@ import { FaqComponent } from '../../Modules/Customer/faq/faq.component';
 import { InboundPackagesComponent } from '../../Modules/Customer/inbound-packages/inbound-packages.component';
 import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.component';
 import { PackageCategoryComponent } from '../../Modules/Customer/package-category/package-category.component';
+import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-events.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -16,6 +17,7 @@ export const CustomerLayoutRoutes: Routes = [
     { path: 'contact-us',component:ContactUsComponent},
     { path: 'discover-world',component:DiscoverWorldComponent},
     { path:'faq',component:FaqComponent},
+    { path:'news-events/:news_id',component:NewsEventsComponent},
     { path:'inbound-packages/:code',component:InboundPackagesComponent},
     { path:'package-category/:category',component:PackageCategoryComponent},
     { path: 'transfers',component:TransfersComponent}

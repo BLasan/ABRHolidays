@@ -14,6 +14,7 @@ import { InboundPackagesComponent } from '../../Modules/Customer/inbound-package
 import { AccomodationComponent } from '../../Modules/Customer/accomodation/accomodation.component';
 import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.component';
 import { PackageCategoryComponent } from '../../Modules/Customer/package-category/package-category.component';
+import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-events.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -32,7 +33,8 @@ import { PackageCategoryComponent } from '../../Modules/Customer/package-categor
     InboundPackagesComponent,
     AccomodationComponent,
     TransfersComponent,
-    PackageCategoryComponent
+    PackageCategoryComponent,
+    NewsEventsComponent
   ],
 })
 export class CustomerLayoutModule { }
