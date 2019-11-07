@@ -18,6 +18,8 @@ import { SettingsComponent } from '../../Modules/Admin/settings/settings.compone
 import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details.component';
 import {MatSnackBarModule} from '@angular/material';
 import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
+import { AccomodationTransferComponent } from '../../Modules/Admin/accomodation-transfer/accomodation-transfer.component';
+import { EditPackagesComponent } from '../../Modules/Admin/edit-packages/edit-packages.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -40,7 +42,9 @@ import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/ma
     NotificationsComponent,
     SettingsComponent,
     AddDetailsComponent,
-    ManageNewsFeedComponent
+    ManageNewsFeedComponent,
+    AccomodationTransferComponent,
+    EditPackagesComponent
   ]
 })
 

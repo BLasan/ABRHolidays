@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,7 +20,24 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component'
+import { ManageNewsFeedComponent } from './Modules/Admin/manage-news-feed/manage-news-feed.component';
+import { LoginComponent } from './Modules/Admin/login/login.component'
+import { AuthGuardAdminService } from './services/AuthGuardAdmin.service';
+import { PageNotFoundComponent } from './Modules/page-not-found/page-not-found.component';
+import { CustomerNavbarComponent } from './components/customer-navbar/customer-navbar.component';
+import { AboutUsComponent } from './Modules/Customer/about-us/about-us.component';
+import { ContactUsComponent } from './Modules/Customer/contact-us/contact-us.component';
+import { FaqComponent } from './Modules/Customer/faq/faq.component';
+import { DiscoverWorldComponent } from './Modules/Customer/discover-world/discover-world.component';
+import { InboundPackagesComponent } from './Modules/Customer/inbound-packages/inbound-packages.component';
+import { AccomodationComponent } from './Modules/Customer/accomodation/accomodation.component';
+import { TransfersComponent } from './Modules/Customer/transfers/transfers.component';
+import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
+import { AccomodationTransferComponent } from './Modules/Admin/accomodation-transfer/accomodation-transfer.component';
+import { PackageCategoryComponent } from './Modules/Customer/package-category/package-category.component';
+import { NewsEventsComponent } from './Modules/Customer/news-events/news-events.component';
+import { TestimonialsComponent } from './Modules/Customer/testimonials/testimonials.component';
+import { EditPackagesComponent } from './Modules/Admin/edit-packages/edit-packages.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -41,6 +58,7 @@ const firebaseConfig = {
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgbModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
@@ -52,9 +70,12 @@ const firebaseConfig = {
     AppComponent,
     AdminLayoutComponent,
     CustomerLayoutComponent,
-    CustomerHomeComponent,
+    LoginComponent,
+    PageNotFoundComponent,
+    CustomerNavbarComponent,
+    // CustomerHomeComponent
   ],
-  providers: [],
+  providers: [AuthGuardAdminService,AuthGuardCustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:green;">
+    <h2 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_name}}</h2>
+  </div>
+    <!-- <div class="heading" align="center">
+        <h2 align="center" id="txt" *ngFor="let package_data of package_data"><b>{{package_data.package_name}}</b></h2>
+    </div> -->
+</div>  
+
+
+<div class="row" style="margin-top:10px">
+  <div class="col-md-8">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col" style="font-family: 'Times New Roman', Times, serif;"><b>Destination</b></th>
+          <th scope="col" style="font-family: 'Times New Roman', Times, serif;">{{destination_string}}</th>
+        </tr>
+        <tr>
+          <th scope="col" style="font-family: 'Times New Roman', Times, serif;"><b>Duration</b></th>
+          <th scope="col" style="font-family: 'Times New Roman', Times, serif;">
+            <img src="https://www.ceylontours.com/images/day.png">{{duration}}
+            <img src="https://www.ceylontours.com/images/night.png">{{duration-1}}
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="col-md-4" style="width:20rem;">
+    <div class="card">
+      <h4 class="card-title" style="font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px"><b>TOUR CATEGORIES</b></h4>
+      <div class="card-body">
+        <ul class="list-group">
+          <a href="package-category/{{category}}" *ngFor="let category of package_category_array"><li class="list-group-item">{{category}}</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let package_data of package_data" style="margin-top:-340px;">
+  <div class="row" *ngFor="let details of package_data.details;let index=index">
+    <div class="col-md-8">
+      <div class="card">
+        <h4 class="card-title font" style="background-color: blue;margin-top:0px"><b>Day {{details.day}}</b></h4>
+        <div class="card-body" *ngFor="let destinations of details.destination_drive">
+          <div class="row">
+            <div class="col-md-6">
+              <b>Destination : {{destinations.destination}}</b>
+            </div>
+            <div class="col-md-6">
+              <b>Drive : {{destinations.drive}}</b>
+            </div>
+          </div>
+          <!-- <p class="card-text">Destination : {{destinations.destination}}</p>
+          <p class="card-text">Drive : {{destinations.drive}}</p> -->
+          <p class="card-text" style="margin-top:20px;margin-left:20px">{{destinations.description}}</p>
+          <div class="row">
+            <div class="col-md-12">
+              <b>Overnight Stay : {{details.overnight_stay}}</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

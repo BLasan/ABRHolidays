@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {confirmPassword} from '../../../services/confirm_password.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import CryptoJS from 'crypto-js';
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -14,6 +15,7 @@ export class SettingsComponent implements OnInit {
   constructor(private _db:AngularFirestore) { }
 
   ngOnInit() {
+    disable_search_bar();
     this.form=new FormGroup({
       new_password:new FormControl('',[Validators.required,Validators.minLength(6)]),
       re_enter_password:new FormControl('',[Validators.required,confirmPassword('new_password')])

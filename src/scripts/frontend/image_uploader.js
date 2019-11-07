@@ -94,3 +94,25 @@ export function remove_image_slider(length){
   document.getElementById('file_size').innerHTML="";
   // $('#image_slider_file_uploader').attr('src', '');
 }
+
+export function news_feed_image_uploader(){
+  $('#news_feed_img_uploader').val("");
+  document.getElementById('file_name').innerHTML="";
+  $('#news_feed_img_uploader').click();
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+       document.getElementById('file_name').innerHTML=input.files[0].name;
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    } else alert("Upload an image");
+  }
+
+  $("#news_feed_img_uploader").change(function () {
+    readURL(this);
+  });
+}

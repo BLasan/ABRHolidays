@@ -1,7 +1,7 @@
 import {filter} from 'rxjs/operators';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy, PopStateEvent } from '@angular/common';
-
+import { enable_search_bar,disable_search_bar} from '../../../scripts/frontend/disable_enable_search_bar.js';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription ,  Observable } from 'rxjs';
@@ -20,6 +20,7 @@ export class AdminLayoutComponent implements OnInit {
   constructor( public location: Location, private router: Router) {}
 
   ngOnInit() {
+     // this.disable_enable_navbar_search_bar();
       const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
       if (isWindows && !document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
@@ -82,6 +83,42 @@ export class AdminLayoutComponent implements OnInit {
           bool = true;
       }
       return bool;
+  }
+
+  disable_enable_navbar_search_bar(){
+    var titlee = this.location.prepareExternalUrl(this.location.path());
+    console.log(titlee)
+    if(titlee.charAt(0) === '#'){
+      titlee = titlee.slice( 2 );
+    }
+
+    if(titlee==="/dashboard"){
+      disable_search_bar();
+    }
+
+    if(titlee==="/notifications"){
+      disable_search_bar();
+    }
+
+    if(titlee==="/manage_news_feed"){
+      disable_search_bar();
+    }
+
+    if(titlee==="/settings"){
+      disable_search_bar();
+    }
+
+    if(titlee==="/manage_news_feed"){
+      enable_search_bar();
+    }
+
+    if(titlee==="/table-list"){
+      disable_search_bar();
+    }
+
+    if(titlee==="/add-package_details"){
+      disable_search_bar();
+    }
   }
 
 }

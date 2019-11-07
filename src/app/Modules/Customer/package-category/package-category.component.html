@@ -1,0 +1,104 @@
+<div *ngIf="package_data.length==0">
+  <h1 style="color:red"><b>NO PACKAGES FOUND</b></h1>
+</div>
+
+
+
+<div *ngIf="package_data.length>0">
+  <div class="row">
+    <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:purple;">
+      <h2 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_category}}</h2>
+    </div>
+  </div>  
+      
+  <div class="row" *ngFor="let package_data of package_data">
+    <div class="col-md-3">
+      <img src="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_package%2FDISCOVERY%40abc?alt=media&token=04440897-e87d-409a-a037-3487b74fb019" alt="Card image cap">
+    </div>
+    <div class="col-md-5 padding-right">
+      <div class="rectangle">
+        <h3 style="background-color: blue;margin-top:0px"><b>{{package_data.package_name}}</b></h3>
+        <div class="row">
+          <img id="custom_img" src="https://www.ceylontours.com/images/day.png"><h3><b>{{package_data.no_of_days}}</b></h3> 
+          <img id="custom_img" style="margin-left:40px" src="https://www.ceylontours.com/images/night.png"><h3><b>{{package_data.no_of_days-1}}</b></h3>
+        </div>
+        <div class="row" id="details" style="margin-top:20px">
+          <div class="col-md-4">
+            <b>Destinations</b>
+          </div>
+          <div class="col-md-8">
+            {{destination_string}}
+          </div>
+        </div>
+        <div class="row" style="margin-top:20px">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-info" style="margin-left:-20px"><b>MORE INFO</b></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="width:20rem;">
+        <div class="card">
+          <h4 class="card-title" style="font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px"><b>TOUR CATEGORIES</b></h4>
+          <div class="card-body">
+            <ul class="list-group">
+              <a href="package-category/{{category}}" *ngFor="let category of package_category_array"><li class="list-group-item">{{category}}</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>    
+</div>
+
+
+
+<!-- <div class="row" *ngFor="let package_data of package_data">
+    <div class="col-md-4 padding-left">
+      <div class="card">
+        <img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_package%2FDISCOVERY%40abc?alt=media&token=04440897-e87d-409a-a037-3487b74fb019" alt="Card image cap">
+      </div>
+    </div>
+    <div class="col-md-6 padding-right">
+        <h4 class="card-title" style="background-color: blue;margin-top:0px">{{package_data.package_name}}</h4>
+        <div class="card-body">
+          <div class="row">
+            <img src="https://www.ceylontours.com/images/day.png"><h3><b>{{package_data.no_of_days}}</b></h3> 
+            <img src="https://www.ceylontours.com/images/night.png"><h3><b>{{package_data.no_of_days-1}}</b></h3>
+          </div>
+          <div class="row" id="details" style="margin-top:20px">
+            <div class="col-md-4">
+              <b>Destinations</b>
+            </div>
+            <div class="col-md-8">
+              {{destination_string}}
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div> -->
+
+
+
+
+    <!-- <div class="row">
+        <div class="col-md-6">
+            <img src="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_package%2FDISCOVERY%40abc?alt=media&token=04440897-e87d-409a-a037-3487b74fb019">
+          </div>
+          <div class="col-md-6">
+            <h4 class="card-title" style="background-color: blue;margin-top:0px">{{package_data.package_name}}</h4>
+            <div class="card-body">
+              <img src="https://www.ceylontours.com/images/day.png"> {{package_data.no_of_days}}
+              <img src="https://www.ceylontours.com/images/night.png"> {{package_data.no_of_days-1}}
+              <div class="row">
+                <div class="col-md-6">
+                  <b>Destinations</b>
+                </div>
+                <div class="col-md-6">
+                  {{destination_string}}
+                </div>
+              </div>
+            </div>
+          </div>
+    </div> -->

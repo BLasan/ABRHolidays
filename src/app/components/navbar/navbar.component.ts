@@ -3,7 +3,7 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 import Chart from 'chart.js';
-
+import { disable_notification_dropdown,disable_user_profile_dropdown} from '../../../scripts/frontend/disable_href_links';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -24,6 +24,8 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit(){
+      disable_notification_dropdown();
+      disable_user_profile_dropdown();
       this.listTitles = ROUTES.filter(listTitle => listTitle);
       const navbar: HTMLElement = this.element.nativeElement;
       this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
@@ -150,5 +152,9 @@ export class NavbarComponent implements OnInit {
           }
       }
       return 'Dashboard';
+    }
+
+    signout(){
+      localStorage.removeItem('login');
     }
 }

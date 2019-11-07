@@ -37,7 +37,7 @@
                   <td>{{data.no_of_days}}</td>
                   <td>{{data.views}}</td>
                   <td>{{data.date}}</td>
-                  <td><a href="#" title="edit"><i class="fa fa-list" style="color:green"></i></a></td>
+                  <td><a href="edit-package/{{data.package_id}}" title="edit"><i class="fa fa-list" style="color:green"></i></a></td>
                   <td><a href="#" title="delete" id="delete_package_data" (click)="delete(data.package_id)"><i class="fa fa-trash" style="color:red!important"></i></a></td>
                   <td><a href="#" title="view" (click)="load_modal(data.package_id)" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-bars"></i></a></td>
                 </tr>
@@ -188,13 +188,12 @@
         </button>
       </div>
       <div class="modal-body">
-        <div *ngFor="let package of package_data">
+        <div *ngFor="let package of filtered_data">
           <p><b>Package Name : </b>{{package.package_name}}</p>
           <p><b>Package Category : </b>{{package.package_category}}</p>
           <p><b>Date Created : </b>{{package.date}}</p>
           <p><b>No of days : </b>{{package.no_of_days}}</p>
           <p><b>Views : </b>{{package.views}}</p>
-          <hr>
           <div *ngFor="let details of package.details">
             <h4 style="color:blue"><b>Day : {{details.day}}</b></h4>
             <div *ngFor="let destination_details of details.destination_drive">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { disable_delete_package} from '../../../../scripts/frontend/disable_href_links';
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 @Component({
   selector: 'app-table-list',
   templateUrl: './table-list.component.html',
@@ -9,9 +10,11 @@ import { disable_delete_package} from '../../../../scripts/frontend/disable_href
 export class TableListComponent implements OnInit {
 
   package_data:any=[];
+  filtered_data:any=[];
   constructor(private _db:AngularFirestore) { }
 
   ngOnInit() {
+    enable_search_bar();
     this.load_package_data();
   }
 
@@ -46,6 +49,10 @@ export class TableListComponent implements OnInit {
       console.log(error);
     })
   
+  }
+
+  load_modal(id:any){
+    this.filtered_data=this.package_data.filter(x=> x.package_id==id);
   }
 
 }

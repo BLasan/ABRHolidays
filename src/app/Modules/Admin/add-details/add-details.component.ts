@@ -8,6 +8,7 @@ import { package_image_uploader} from '../../../../scripts/frontend/image_upload
 import { remove_package_image} from '../../../../scripts/frontend/image_uploader';
 import { categories} from '../../../../scripts/frontend/package_categories';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 @Component({
   selector: 'app-add-details',
   templateUrl: './add-details.component.html',
@@ -34,7 +35,7 @@ export class AddDetailsComponent implements OnInit {
   constructor(private _db:AngularFirestore,private snackBar:MatSnackBar,private storage:AngularFireStorage) { }
 
   ngOnInit() {
-    
+    disable_search_bar();
     this.form=new FormGroup({
       package_name:new FormControl('',Validators.required),
       // package_category:new FormControl('',Validators.required),
