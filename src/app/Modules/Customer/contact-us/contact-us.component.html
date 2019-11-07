@@ -58,35 +58,37 @@
             <div class="col-md-6" style="padding-left:0">
               <div class="form-group" [ngClass]="{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
                 <label>Subject</label>
-                <input type="text" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
+                <input type="text" id="subject" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
               </div>
               <div class="form-group" [ngClass]="{'has-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'has-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
                 <label>First Name</label>
-                <input type="text" class="form-control" placeholder="First Name" required formControlName="f_name" [ngClass]="{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
+                <input type="text" id="f_name" class="form-control" placeholder="First Name" required formControlName="f_name" [ngClass]="{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
               </div>
               <div class="form-group" [ngClass]="{'has-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'has-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
                 <label>Last Name</label>
-                <input type="text" class="form-control" placeholder="Last Name" required formControlName="l_name" [ngClass]="{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
+                <input type="text" id="l_name" class="form-control" placeholder="Last Name" required formControlName="l_name" [ngClass]="{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
               </div>
               <div class="form-group">
-                <label>Country</label>
-                <input type="email" class="form-control" placeholder="Enter email">
+                <label for="email">Country</label>
+                <select name="country" id="country" class="form-control" style="height:38px;">
+                  <option *ngFor="let category of country_array_list" value="{{category}}">{{category}}</option>
+                </select>
               </div>
               <div class="form-group" [ngClass]="{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
                 <label>Email</label>
-                <input type="email" class="form-control" placeholder="Enter email" required formControlName="email" [ngClass]="{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
+                <input type="email" id="email" class="form-control" placeholder="Enter email" required formControlName="email" [ngClass]="{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group" [ngClass]="{'has-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'has-danger':form.controls.email.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
                 <label>Telephone No</label>
-                <input type="number"  class="form-control" formControlName="tel" [ngClass]="{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
+                <input type="number" id="tel_no"  class="form-control" formControlName="tel" [ngClass]="{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
               </div>
               <div class="form-group" [ngClass]="{'has-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'has-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}">
                 <label>Message</label>
-                <textarea class="form-control" rows="3" formControlName="message" [ngClass]="{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}"></textarea>
+                <textarea class="form-control" id="message" rows="3" formControlName="message" [ngClass]="{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}"></textarea>
               </div>
-              <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+              <button type="button" [disabled]="!form.valid" class="btn btn-primary" (click)="submit_form()">Submit</button>
             </div>
           </div>
         </form>

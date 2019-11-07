@@ -1,46 +1,40 @@
 <div class="panel-header">
   <div class="header text-center">
     <h2 class="title">Notifications</h2>
-    <p class="category">Please checkout the
-      <a href="https://scttcper.github.io/ngx-toastr/" target="_blank">full documentation.</a>
+    <p class="category">User
+      <a href="https://scttcper.github.io/ngx-toastr/" target="_blank">Notifications</a>
     </p>
   </div>
 </div>
 <div class="main-content">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Notifications Style</h4>
+          <h4 class="card-title">My Notifications</h4>
         </div>
-        <div class="card-body">
-          <div class="alert alert-info">
+        <div class="card-body" id="notification_card">
+          <!-- <div class="alert alert-info">
             <span>This is a plain notification</span>
-          </div>
-          <div class="alert alert-info">
+          </div> -->
+          <!-- <div class="alert alert-info">
             <button type="button" aria-hidden="true" class="close">
               <i class="now-ui-icons ui-1_simple-remove"></i>
             </button>
             <span>This is a notification with close button.</span>
-          </div>
-          <div class="alert alert-info alert-with-icon" data-notify="container">
-            <button type="button" aria-hidden="true" class="close">
+          </div> -->
+
+          <div class="alert alert-info alert-with-icon" data-notify="container" *ngFor="let notifications of notification_array">
+            <button type="button" aria-hidden="true" class="close" (click)="mark_view(notifications.id)" >
               <i class="now-ui-icons ui-1_simple-remove"></i>
             </button>
             <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
-            <span data-notify="message">This is a notification with close button and icon.</span>
-          </div>
-          <div class="alert alert-info alert-with-icon" data-notify="container">
-            <button type="button" aria-hidden="true" class="close">
-              <i class="now-ui-icons ui-1_simple-remove"></i>
-            </button>
-            <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
-            <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
+            <span data-notify="message" style="text-transform: uppercase;font-weight: bolder;">YOU HAVE 1 MESSAGE FROM {{notifications.first_name+' '+notifications.last_name}} from {{notifications.country}}. Click <a href="#" (click)="open_modal(notifications.id)" id="view_message" data-toggle="modal" data-target="#exampleModal">here</a> to view message</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Notification states</h4>
@@ -83,8 +77,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-12">
+    </div> -->
+    <!-- <div class="col-md-12">
       <div class="card">
         <div class="card-body">
           <div class="places-buttons">
@@ -129,6 +123,27 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
+
+  
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color:red"><b style="text-transform: uppercase;">{{subject}}</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align: justify;"><b>{{message}}</b></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

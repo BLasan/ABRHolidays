@@ -55,5 +55,12 @@ export function disable_user_profile_dropdown(){
   // })
 }
 
+export function disable_view_notification(){
+  $(document).on('click','#view_message',function(e){
+    e.preventDefault();
+  })
+
+}
+
 
 

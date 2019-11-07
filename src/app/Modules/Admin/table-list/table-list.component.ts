@@ -10,6 +10,7 @@ import { enable_search_bar,disable_search_bar} from '../../../../scripts/fronten
 export class TableListComponent implements OnInit {
 
   package_data:any=[];
+  filtered_data:any=[];
   constructor(private _db:AngularFirestore) { }
 
   ngOnInit() {
@@ -48,6 +49,10 @@ export class TableListComponent implements OnInit {
       console.log(error);
     })
   
+  }
+
+  load_modal(id:any){
+    this.filtered_data=this.package_data.filter(x=> x.package_id==id);
   }
 
 }
