@@ -5,6 +5,8 @@ import { disable_delete_news_feed,disable_edit_news_feed} from '../../../../scri
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 import { news_feed_image_uploader} from '../../../../scripts/frontend/image_uploader';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-manage-news-feed',
   templateUrl: './manage-news-feed.component.html',
@@ -16,11 +18,19 @@ export class ManageNewsFeedComponent implements OnInit {
   filtered_news_feed:any=[];
   news_feed_id:any;
   file_list:any=[];
-  constructor(private _db:AngularFirestore,private storage:AngularFireStorage) { }
+  constructor(private _db:AngularFirestore,private storage:AngularFireStorage,private route:ActivatedRoute) { }
 
   ngOnInit() {
+    // this.route.params.subscribe(params => {
+    //   let parameter=params.search_text;
+    //   if(parameter=="news")
+    //   this.load_news_feed();
+    //   else
+    //   this.filter_news_feed(parameter);
+    // });
     enable_search_bar();
-    this.load_news_feed()
+    this.load_news_feed();
+    //this.filter_news_feed();
   }
 
   create_news_feed(){
@@ -76,6 +86,29 @@ export class ManageNewsFeedComponent implements OnInit {
       });
   }
 
+  // filter_news_feed(){
+  //   this.searchText.get_search_text().subscribe((data:Search)=>{
+  //     console.log(data)
+  //   })
+  //   this.newsFeed_data=[];
+  //   var docRef=this._db.firestore.collection('news_feed');
+  //   docRef.get().then(snapshot=>{
+  //     if (snapshot.empty) {
+  //       console.log('No matching documents.');
+  //       return;
+  //     }  
+  
+  //     snapshot.forEach(doc => {
+  //       console.log(doc.id, '=>', doc.data());
+  //       if(doc.data().status!='deleted')
+  //       this.newsFeed_data.push(doc.data());
+  //     });
+
+  //     }).catch(err => {
+  //       console.log('Error getting documents', err);
+  //     });
+  // }
+
   delete(id:any){
     disable_delete_news_feed();
     this._db.collection('news_feed').doc(id).update({status:'deleted'});
@@ -108,8 +141,5 @@ export class ManageNewsFeedComponent implements OnInit {
     console.log(event.target.files);
     this.file_list=event.target.files;
   }
-
-
- 
 
 }

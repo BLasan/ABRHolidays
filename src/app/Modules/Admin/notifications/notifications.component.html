@@ -1,7 +1,7 @@
 <div class="panel-header">
   <div class="header text-center">
     <h2 class="title">Notifications</h2>
-    <p class="category">User
+    <p class="category">User {{subject}}
       <a href="https://scttcper.github.io/ngx-toastr/" target="_blank">Notifications</a>
     </p>
   </div>
@@ -9,7 +9,7 @@
 <div class="main-content">
   <div class="row">
     <div class="col-md-12">
-      <div class="card">
+      <div class="card" *ngIf="notification_array.length>0">
         <div class="card-header">
           <h4 class="card-title">My Notifications</h4>
         </div>

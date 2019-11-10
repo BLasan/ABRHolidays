@@ -62,5 +62,12 @@ export function disable_view_notification(){
 
 }
 
+export function disable_search_text(){
+  $(document).on('click','#search_text',function(e){
+    e.preventDefault();
+  })
+
+}
+
 
 

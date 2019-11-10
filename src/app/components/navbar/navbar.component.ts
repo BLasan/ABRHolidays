@@ -3,7 +3,7 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 import Chart from 'chart.js';
-import { disable_notification_dropdown,disable_user_profile_dropdown} from '../../../scripts/frontend/disable_href_links';
+import { disable_notification_dropdown,disable_user_profile_dropdown,disable_search_text} from '../../../scripts/frontend/disable_href_links';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,8 +11,10 @@ import { disable_notification_dropdown,disable_user_profile_dropdown} from '../.
 })
 export class NavbarComponent implements OnInit {
     private listTitles: any[];
+    search_text:String;
     location: Location;
-      mobile_menu_visible: any = 0;
+    category:String;
+    mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
 
@@ -157,4 +159,22 @@ export class NavbarComponent implements OnInit {
     signout(){
       localStorage.removeItem('login');
     }
+
+    search(){
+      disable_search_text();
+      var path = this.location.prepareExternalUrl(this.location.path());
+      if(path==="/manage-news-feed"){
+        let nav_route='/filter-data/'+"news/"+this.search_text;
+        this.category="news"
+        this.router.navigateByUrl(nav_route);
+        this.search_text="";
+      }
+      else if(path==="/view-details"){
+        let nav_route='/filter-data/'+"packages/"+this.search_text;
+        this.category="packages";
+        this.router.navigateByUrl(nav_route);
+        this.search_text="";
+      }
+    }
 }
+

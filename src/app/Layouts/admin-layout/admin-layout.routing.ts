@@ -13,11 +13,12 @@ import { AddDetailsComponent } from '../../Modules/Admin/add-details/add-details
 import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
 import { AccomodationTransferComponent } from '../../Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 import { EditPackagesComponent } from '../../Modules/Admin/edit-packages/edit-packages.component';
+import { FilterDataComponent } from '../../Modules/Admin/filter-data/filter-data.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
+    { path: 'view-details',     component: TableListComponent },
     { path: 'settings',       component:   SettingsComponent },
     { path: 'add-package_details',     component: AddDetailsComponent },
     // { path: 'accomodation-transfer',     component: AccomodationTransferComponent},
@@ -27,5 +28,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'edit-package/:package_id' , component:EditPackagesComponent},
-    { path: 'manage_news_feed' , component:ManageNewsFeedComponent},
+    { path: 'manage-news-feed' , component:ManageNewsFeedComponent},
+    { path: 'filter-data/:category/:search_text' , component:FilterDataComponent}
 ];
