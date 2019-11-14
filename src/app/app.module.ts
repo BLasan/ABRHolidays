@@ -64,6 +64,7 @@ const firebaseConfig = {
     ReactiveFormsModule,
     NgbModule,
     ToastrModule.forRoot(),
+    // admin.initializeApp(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule.enablePersistence(), // firestore
     AngularFireAuthModule, // auth

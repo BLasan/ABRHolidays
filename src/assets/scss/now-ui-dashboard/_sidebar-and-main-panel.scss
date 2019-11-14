@@ -276,7 +276,7 @@
     &[data-color="orange"]{
       @include sidebar-color($orange-color);
     }
-    &[data-color="red"]{
+    &[data-color="black"]{
       @include sidebar-color($danger-color);
     }
     &[data-color="yellow"]{

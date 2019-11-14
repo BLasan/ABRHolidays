@@ -17,12 +17,14 @@ import { PackageCategoryComponent } from '../../Modules/Customer/package-categor
 import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-events.component';
 import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testimonials.component';
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
+import { MatSnackBarModule } from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(CustomerLayoutRoutes),
     FormsModule,
     NgbModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     ToastrModule.forRoot()
   ],

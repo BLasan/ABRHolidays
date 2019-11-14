@@ -551,7 +551,16 @@ Created using IcoMoon - icomoon.io
       text-align: center;
       display: block;
       color: #B8B8B8;
+      // color: black;
       padding:0 10px;
       font-size: 0.7142em;
   }
-  
+
+  b{
+    font-family: sans-serif;
+    color:black
+  }
+
+  .sidebar{
+    background-color: grey;
+  }

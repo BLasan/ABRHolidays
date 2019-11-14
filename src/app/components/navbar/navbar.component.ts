@@ -153,7 +153,9 @@ export class NavbarComponent implements OnInit {
               return this.listTitles[item].title;
           }
       }
-      return 'Dashboard';
+
+      if(titlee.indexOf('/filter-data')>-1)
+      return 'Searched Data';
     }
 
     signout(){
