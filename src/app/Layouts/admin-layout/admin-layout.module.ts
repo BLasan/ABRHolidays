@@ -20,6 +20,7 @@ import {MatSnackBarModule} from '@angular/material';
 import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/manage-news-feed.component';
 import { AccomodationTransferComponent } from '../../Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 import { EditPackagesComponent } from '../../Modules/Admin/edit-packages/edit-packages.component';
+import { FilterDataComponent } from '../../Modules/Admin/filter-data/filter-data.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -44,7 +45,8 @@ import { EditPackagesComponent } from '../../Modules/Admin/edit-packages/edit-pa
     AddDetailsComponent,
     ManageNewsFeedComponent,
     AccomodationTransferComponent,
-    EditPackagesComponent
+    EditPackagesComponent,
+    FilterDataComponent
   ]
 })
 

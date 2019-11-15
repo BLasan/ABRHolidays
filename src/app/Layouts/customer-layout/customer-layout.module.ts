@@ -16,12 +16,15 @@ import { TransfersComponent } from '../../Modules/Customer/transfers/transfers.c
 import { PackageCategoryComponent } from '../../Modules/Customer/package-category/package-category.component';
 import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-events.component';
 import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testimonials.component';
+import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
+import { MatSnackBarModule } from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(CustomerLayoutRoutes),
     FormsModule,
     NgbModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
@@ -36,7 +39,8 @@ import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testi
     TransfersComponent,
     PackageCategoryComponent,
     NewsEventsComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    DestinationsComponent
   ],
 })
 export class CustomerLayoutModule { }

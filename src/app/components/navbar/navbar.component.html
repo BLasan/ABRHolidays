@@ -9,7 +9,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#pablo">{{getTitle()}}</a>
+            <a class="navbar-brand" href="#pablo"><b>{{getTitle()}}</b></a>
         </div>
         <button class="navbar-toggler" type="button" (click)="collapse()"
           [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
@@ -20,10 +20,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
           <form>
             <div class="input-group no-border">
-              <input type="text" value="" id="search_bar" class="form-control" placeholder="Search...">
+              <input type="text" value="" id="search_bar" [(ngModel)]="search_text" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..." (keyup.enter)="search()">
               <div class="input-group-append">
                 <div class="input-group-text">
-                  <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  <a href="#" (click)="search()" id="search_text"><i class="now-ui-icons ui-1_zoom-bold"></i></a>
                 </div>
               </div>
             </div>

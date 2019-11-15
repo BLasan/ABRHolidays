@@ -38,6 +38,9 @@ import { PackageCategoryComponent } from './Modules/Customer/package-category/pa
 import { NewsEventsComponent } from './Modules/Customer/news-events/news-events.component';
 import { TestimonialsComponent } from './Modules/Customer/testimonials/testimonials.component';
 import { EditPackagesComponent } from './Modules/Admin/edit-packages/edit-packages.component';
+import { DestinationsComponent } from './Modules/Customer/destinations/destinations.component';
+import { CustomerFooterComponent } from './components/customer-footer/customer-footer.component';
+import { FilterDataComponent } from './Modules/Admin/filter-data/filter-data.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -61,8 +64,9 @@ const firebaseConfig = {
     ReactiveFormsModule,
     NgbModule,
     ToastrModule.forRoot(),
+    // admin.initializeApp(),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule, // firestore
+    AngularFirestoreModule.enablePersistence(), // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule // storage
   ],
@@ -73,6 +77,9 @@ const firebaseConfig = {
     LoginComponent,
     PageNotFoundComponent,
     CustomerNavbarComponent,
+    CustomerFooterComponent,
+    // FilterDataComponent
+    // DestinationsComponent,
     // CustomerHomeComponent
   ],
   providers: [AuthGuardAdminService,AuthGuardCustomerService],

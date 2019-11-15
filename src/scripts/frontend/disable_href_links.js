@@ -62,5 +62,21 @@ export function disable_view_notification(){
 
 }
 
+export function disable_search_text(){
+  $(document).on('click','#search_text',function(e){
+    e.preventDefault();
+  })
+}
+
+
+  export function disable_dropdowns(){
+   for(var i=1;i<=14;i++){
+    var _id="#ref"+i;
+    $(document).on('click',_id,function(e){
+      e.preventDefault();
+    })
+   }
+  }
+
 
 

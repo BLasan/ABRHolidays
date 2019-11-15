@@ -14,3 +14,5 @@ export function load_hotel_name(){
         }
     }, 1000);
 }
+
+
