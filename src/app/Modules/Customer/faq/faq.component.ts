@@ -10,7 +10,7 @@ import { show_hide} from '../../../../scripts/frontend/faq';
 export class FaqComponent implements OnInit {
 
   emergency_details:any;
-  isOpened:boolean=true;
+  isOpened:boolean=false;
   constructor() { }
 
   ngOnInit() {
