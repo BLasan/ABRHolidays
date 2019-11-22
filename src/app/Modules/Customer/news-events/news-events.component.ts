@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
-
+import { adjust_mobile_view_about_us} from '../../../../scripts/frontend/mobile_view';
 @Component({
   selector: 'app-news-events',
   templateUrl: './news-events.component.html',
@@ -15,7 +15,7 @@ export class NewsEventsComponent implements OnInit {
   constructor(private _db:AngularFirestore,private route:ActivatedRoute) { }
 
   ngOnInit() {
-
+    adjust_mobile_view_about_us();
     this.route.params.subscribe(params => {
       let parameter=params.news_id;
       if(parameter=="my_news")

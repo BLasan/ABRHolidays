@@ -431,7 +431,7 @@ export class DashboardComponent implements OnInit {
   upload_images(){
     let database=this._db;
     let this_function=this;
-    let collection=database.collection('image_corousals');
+    let collection=database.collection('image_carousals');
     for(var i=0;i<this.file_list.length;i++){
       var imageId="image_carousal/image"+i;
       let storageRef=this.storage.ref(imageId);

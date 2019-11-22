@@ -1,15 +1,15 @@
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="margin-top:-20px">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="margin-top:-20px" *ngIf="image_carousal_array.length>0    ">
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <img [src]="_init_image" style="height:400px;" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" *ngFor="let images of image_carousal_array">
+            <img [src]="images.fileUrl" class="d-block w-100" style="height:400px;" alt="...">
+        </div>
+        <!-- <div class="carousel-item">
             <img src="assets/img/bg.jpg" style="height:400px;" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/bg.jpg" class="d-block w-100" style="height:400px;" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/bg.jpg" style="height:400px;" class="d-block w-100" alt="...">
-        </div>
+        </div> -->
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -23,17 +23,17 @@
 
 <br>
 
-<div class="row">
+<div class="row row-center">
     <div class="heading" align="center">
-        <h2 align="center" id="txt"><b>Welcome to ABR Tours</b></h2>
+        <h2 id="txt"><b>Welcome to ABR Tours</b></h2>
         <img style="border-radius: 50%;height:150px;" src="assets/img/mike.jpg" >
     </div>
 </div>  
 
 
-<div class="row" style="margin-top:80px">
+<div class="row row-center" style="margin-top:80px">
     <div class="col-md-8">
-        <div class="card" style="background-color: lightblue;">
+        <div class="card" style="background-color:chartreuse;">
             <h4 class="card-title" align="center"><b>INBOUND PACKAGES</b></h4>
             <div class="card-body card-img-top">
                 <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
@@ -92,19 +92,19 @@
     </div>
 </div>     
 
-<div class="row">
+<div class="row row-center">
     <div class="col-md-12">
         <div class="card" style="height:90px;">
-            <div class="row">
+            <div class="row row-center">
                 <div class="col-md-4 rect">
-                    <div class="row">
+                    <div class="row" style="padding-left:10px">
                         <i class="fa fa-newspaper-o fa-5x" style="margin-top:10px" aria-hidden="true"></i>
                         <div style="float:left;margin-left:20px;margin-top:-8px">
-                            <h4><b>NEWS FEED</b></h4>
+                            <h4><b style="font-family: serif;">NEWS FEED</b></h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8" style="padding: 0 0;">  
+                <div class="col-md-8 news-container" id="news_containers">  
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel" *ngIf="news_feed_data_array.length>0">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -146,7 +146,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row row-center">
     <div class="col-md-4">
         <div class="card" style="background-color: greenyellow;">
             <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">

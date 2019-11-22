@@ -6,8 +6,8 @@
 
 <div *ngIf="package_data.length>0">
   <div class="row">
-    <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:purple;">
-      <h2 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_category}}</h2>
+    <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:lightblue;">
+      <h3 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_category}}</h3>
     </div>
   </div>  
       
@@ -34,7 +34,9 @@
                 </div>
                 <div class="row" style="margin-top:20px">
                   <div class="col-md-4"></div>
-                  <div class="col-md-4"></div>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-danger"><b>ENQUIRY</b></button>
+                  </div>
                   <div class="col-md-4">
                     <button type="button" class="btn btn-info" style="margin-left:-20px"><b>MORE INFO</b></button>
                   </div>

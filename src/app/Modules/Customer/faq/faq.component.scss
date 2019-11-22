@@ -1,8 +1,8 @@
 h3{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
-.row{
+.row-center{
     margin-left: 0;
     margin-right: 0;
     padding: 10px 100px 20px 100px;
@@ -10,24 +10,29 @@ h3{
 
 a:hover{
     text-decoration: none;
+    font-family: sans-serif;
 }
 
 h5{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     text-transform: uppercase;
 }
 
 p{
     text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
 a{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
 li{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
+}
+
+.faq-height{
+    height: 40px;
 }
 
 
