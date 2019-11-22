@@ -1,7 +1,7 @@
 <div class="panel-header panel-header-sm">
   </div>
   <div class="main-content">
-    <div class="row">
+    <div class="row" *ngIf="isLoaded">
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
@@ -11,9 +11,17 @@
             <form [formGroup]="form">
               <div class="row">
                 <div class="col-md-12 pr-1">
-                  <div class="form-group">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'has-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}">
                     <label>Old Password</label>
-                    <input type="password" class="form-control" disabled value="">
+                    <input type="password" id="old_password" class="form-control" placeholder="Old Password" formControlName="old_password" [ngClass]="{'form-control-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'form-control-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.new_user_name.valid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched),'has-danger':form.controls.new_user_name.invalid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched)}">
+                    <label>New User Name</label>
+                    <input type="text" class="form-control" id="new_user_name" placeholder="New User Name" name="new_user_name" formControlName="new_user_name" [ngClass]="{'form-control-success':form.controls.new_user_name.valid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched),'form-control-danger':form.controls.new_user_name.invalid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched)}">
                   </div>
                 </div>
               </div>
@@ -29,7 +37,7 @@
                 <div class="col-md-12">
                   <div class="form-group" [ngClass]="{'has-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'has-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}">
                     <label>Re-Enter Password</label>
-                    <input type="password" class="form-control" placeholder="Re-Enter Password" formControlName="re_enter_password" [ngClass]="{'form-control-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'form-control-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}">
+                    <input type="password" id="re_enter_password" class="form-control" placeholder="Re-Enter Password" formControlName="re_enter_password" [ngClass]="{'form-control-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'form-control-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}">
                   </div>
                 </div>
               </div>
@@ -40,6 +48,36 @@
           </div>
         </div>
       </div>
+      <!-- <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Reset User Name</h5>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form1">
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group" [ngClass]="{'has-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'has-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}">
+                    <label>Old Password</label>
+                    <input type="password" id="old_password1" class="form-control" placeholder="Old Password" formControlName="old_password1" [ngClass]="{'form-control-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'form-control-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pr-1">
+                  <div class="form-group" [ngClass]="{'has-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'has-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}">
+                    <label>New User Name</label>
+                    <input type="text" class="form-control" id="new_user_name" placeholder="New User Name" name="new_user_name" formControlName="new_user_name" [ngClass]="{'form-control-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'form-control-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <button type="button" style="margin-left:150px" [disabled]="!form1.valid" class="btn btn-success" (click)="reset_email()">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
     </div>
   </div>
   

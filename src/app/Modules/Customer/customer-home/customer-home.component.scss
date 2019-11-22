@@ -27,9 +27,14 @@
     background-color:yellow;
 }
 
-.row{
+// .row{
+//     margin-left: 0;
+//     margin-right: 0;
+// }
+
+.row-center{
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 0;  
 }
 
 img.d-block{
@@ -60,10 +65,10 @@ h2{
 //  font-family: "Courier";
 //  font-size: 20px;
  margin: 0 auto;
- text-align: center;
+//  text-align: center;
  white-space: nowrap;
  overflow: hidden;
- width: 25em;
+ width: 12em;
  animation: type 4s steps(60, end); 
 }
   
@@ -96,7 +101,7 @@ span{
 .heading{
     width:100%;
     height:120px;
-    background-color: chartreuse;
+    background-color:lightblue;
 }
 
 .rect{
@@ -131,4 +136,28 @@ span{
 
 #news_feed{
     margin-left:-75px;
+}
+
+#txt{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-family:sans-serif;
+}
+
+h3{
+    font-family: sans-serif;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+#news_feed{
+    font-family: sans-serif;;
+}
+
+.news-container{
+    padding: 0 0;
 }

@@ -19,7 +19,7 @@
 }
 
 #details{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     font-size: 20px;
 }
 
@@ -38,7 +38,7 @@ img{
 }
 
 h3{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     height:50px;
     padding-left:10px
 }
@@ -51,12 +51,13 @@ h3{
 a{
     text-decoration: none;
     color:black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     background-color: greenyellow;
 }
 
 li:hover{
     background-color: greenyellow;
+    font-family: sans-serif;
 }
 
 

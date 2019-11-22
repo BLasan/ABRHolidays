@@ -10,12 +10,12 @@
 var map = {
 	"./Layouts/admin-layout/admin-layout.module": [
 		"./src/app/Layouts/admin-layout/admin-layout.module.ts",
-		"common",
+		"default~Layouts-admin-layout-admin-layout-module~Layouts-customer-layout-customer-layout-module",
 		"Layouts-admin-layout-admin-layout-module"
 	],
 	"./Layouts/customer-layout/customer-layout.module": [
 		"./src/app/Layouts/customer-layout/customer-layout.module.ts",
-		"common",
+		"default~Layouts-admin-layout-admin-layout-module~Layouts-customer-layout-customer-layout-module",
 		"Layouts-customer-layout-customer-layout-module"
 	]
 };
@@ -724,7 +724,7 @@ var ComponentsModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Tour</a>.\n    </div>\n  </div>\n</footer>\n"
+module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/contact-us\">\n            ABR TOURS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            ABOUT US\n          </a>\n        </li>\n        <li>\n          <a href=\"/home\">\n            BLOG\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"#\" target=\"_blank\">Super Softwares</a>. Coded by\n      <a href=\"#\" target=\"_blank\">Super Softwares</a>.\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -780,7 +780,7 @@ var CustomerFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/home\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/about-us\">About Us</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/services\">Services</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/news-events/my_news\">News & Events</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/destinations\">Destinations</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/testimonials\">Testimonials</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/faq\">FAQ</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"contact-us\">Contact Us</a>\n        </li>\n      </ul>\n    </div>\n  </nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" style=\"height:38px;margin-right:5px\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\" style=\"margin-top:0px;margin-left:-8px;\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/home\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/about-us\">About Us</a>\n        </li>\n        <!-- <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/services\">Services</a>\n        </li> -->\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/news-events/my_news\">News & Events</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/destinations\">Destinations</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/testimonials\">Testimonials</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/faq\">FAQ</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"contact-us\">Contact Us</a>\n        </li>\n      </ul>\n    </div>\n  </nav>"
 
 /***/ }),
 
@@ -1367,7 +1367,7 @@ function enable_search_bar(){
 /*!****************************************************!*\
   !*** ./src/scripts/frontend/disable_href_links.js ***!
   \****************************************************/
-/*! exports provided: disable_create_new_destination, disable_package_image_uploader, disable_delete_news_feed, disable_delete_package, disable_image_slider, disable_edit_news_feed, disable_notification_dropdown, disable_user_profile_dropdown, disable_view_notification, disable_search_text */
+/*! exports provided: disable_create_new_destination, disable_package_image_uploader, disable_delete_news_feed, disable_delete_package, disable_image_slider, disable_edit_news_feed, disable_notification_dropdown, disable_user_profile_dropdown, disable_view_notification, disable_search_text, disable_dropdowns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1382,6 +1382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disable_user_profile_dropdown", function() { return disable_user_profile_dropdown; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disable_view_notification", function() { return disable_view_notification; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disable_search_text", function() { return disable_search_text; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disable_dropdowns", function() { return disable_dropdowns; });
 function disable_create_new_destination(index){
  // alert(index)
   $(document).on('click','#drive_link',function(e){
@@ -1450,8 +1451,17 @@ function disable_search_text(){
   $(document).on('click','#search_text',function(e){
     e.preventDefault();
   })
-
 }
+
+
+  function disable_dropdowns(){
+   for(var i=1;i<=14;i++){
+    var _id="#ref"+i;
+    $(document).on('click',_id,function(e){
+      e.preventDefault();
+    })
+   }
+  }
 
 
 

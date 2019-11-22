@@ -4,6 +4,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 import { Router } from '@angular/router';
 import Chart from 'chart.js';
 import { disable_notification_dropdown,disable_user_profile_dropdown,disable_search_text} from '../../../scripts/frontend/disable_href_links';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -20,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
     public isCollapsed = true;
 
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
+    constructor(location: Location,  private element: ElementRef, private router: Router,private auth:AngularFireAuth) {
       this.location = location;
           this.sidebarVisible = false;
     }
@@ -44,7 +45,7 @@ export class NavbarComponent implements OnInit {
     collapse(){
       this.isCollapsed = !this.isCollapsed;
       const navbar = document.getElementsByTagName('nav')[0];
-      console.log(navbar);
+      // console.log(navbar);
       if (!this.isCollapsed) {
         navbar.classList.remove('navbar-transparent');
         navbar.classList.add('bg-white');
@@ -159,6 +160,9 @@ export class NavbarComponent implements OnInit {
     }
 
     signout(){
+      // alert(this.auth.auth.currentUser)
+      // alert(this.auth.auth.currentUser.displayName)
+      this.auth.auth.signOut();
       localStorage.removeItem('login');
     }
 

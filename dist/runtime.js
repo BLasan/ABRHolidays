@@ -63,7 +63,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"common":"common","Layouts-admin-layout-admin-layout-module":"Layouts-admin-layout-admin-layout-module","Layouts-customer-layout-customer-layout-module":"Layouts-customer-layout-customer-layout-module"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"default~Layouts-admin-layout-admin-layout-module~Layouts-customer-layout-customer-layout-module":"default~Layouts-admin-layout-admin-layout-module~Layouts-customer-layout-customer-layout-module","Layouts-admin-layout-admin-layout-module":"Layouts-admin-layout-admin-layout-module","Layouts-customer-layout-customer-layout-module":"Layouts-customer-layout-customer-layout-module"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function

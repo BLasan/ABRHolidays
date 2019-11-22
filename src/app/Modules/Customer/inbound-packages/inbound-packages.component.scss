@@ -8,6 +8,7 @@ h2{
     overflow: hidden;
     width: 25em;
     animation: type 4s steps(60, end); 
+    font-family: sans-serif;
    }
      
    h2:nth-child(2){
@@ -48,17 +49,21 @@ h2{
 }
 
 .font{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
 a{
     text-decoration: none;
     color:black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     background-color: greenyellow;
 }
 
 li:hover{
     background-color: greenyellow;
+}
+
+b{
+    font-family: sans-serif;
 }
 
