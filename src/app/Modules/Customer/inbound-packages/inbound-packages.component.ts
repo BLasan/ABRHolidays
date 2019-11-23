@@ -36,22 +36,23 @@ export class InboundPackagesComponent implements OnInit {
       _this.duration=doc.data().no_of_days;
       _this.filter_destination_details(_this.package_data);
     }).catch(function(ex){
-       console.log(ex);
+      alert("Error");
+      //  console.log(ex);
     })
   }
 
   filter_destination_details(package_data){
     var length=package_data.length;
-    console.log(length)
+    // console.log(length)
     for(var i=0;i<length;i++){
       var details_len=package_data[i].details.length;
-      console.log(details_len)
+      // console.log(details_len)
       for(var j=0;j<details_len;j++){
         var destinations_length=package_data[i].details[j].destination_drive.length;
-        console.log(destinations_length)
+        // console.log(destinations_length)
         for(var k=0;k<destinations_length;k++){
           this.destination_string=this.destination_string+package_data[i].details[j].destination_drive[k].destination+" / ";
-          console.log(this.destination_string)
+          // console.log(this.destination_string)
         }
       }
     }

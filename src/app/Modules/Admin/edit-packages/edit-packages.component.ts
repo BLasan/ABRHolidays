@@ -39,7 +39,7 @@ export class EditPackagesComponent implements OnInit {
   }
 
   _init_(){
-    console.log(this.package_details[0])
+    // console.log(this.package_details[0])
     this.form=new FormGroup({
         package_name:new FormControl(this.package_details[0].package_name,Validators.required),
         package_category:new FormControl(this.package_details[0].package_category,Validators.required),
@@ -60,7 +60,7 @@ export class EditPackagesComponent implements OnInit {
         _this._init_();
       }
     }).catch(err=>{
-
+      alert("Error");
     })
   }
 

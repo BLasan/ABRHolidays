@@ -65,7 +65,7 @@ export class AddDetailsComponent implements OnInit {
 
   get_uploaded_image(event){
     this.image_file=event.target.files;
-    console.log(this.image_file);
+    // console.log(this.image_file);
   }
 
   upload_image(id){
@@ -97,13 +97,13 @@ export class AddDetailsComponent implements OnInit {
   create_package(){
    let package_name=(<HTMLInputElement>document.getElementById("package_name")).value; 
    let category=(<HTMLInputElement>document.getElementById("category")).value;
-   console.log(category)
+  //  console.log(category)
    let no_of_days=this.day_count;
 
    for(var i=0;i<this.day_count;i++){
      var day_id="day"+i;
      var overnight_id="overnight"+i;
-     console.log(day_id);
+    //  console.log(day_id);
 
      let day_no=parseInt((<HTMLInputElement>document.getElementById(day_id)).value);
      let overnight=(<HTMLInputElement>document.getElementById(overnight_id)).value;
@@ -130,7 +130,7 @@ export class AddDetailsComponent implements OnInit {
      }
 
     //  let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
-     console.log(description);
+    //  console.log(description);
      
      if(day_no==0 || destination==null || overnight==null || drive==null || description==null){
       // if(day_no==0){
@@ -185,7 +185,7 @@ export class AddDetailsComponent implements OnInit {
         duration:2000,
       });
     }).catch(function(err){
-      console.log(err);
+      // console.log(err);
       snackBar.open(err,"Re-Submit",{
         duration:2000,
       });

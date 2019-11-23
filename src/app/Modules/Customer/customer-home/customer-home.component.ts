@@ -30,19 +30,21 @@ export class CustomerHomeComponent implements OnInit {
     var doc_inbound=this._db.firestore.collection('packages');
     doc_inbound.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
 
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status!='deleted'){
           _this.package_data.push(doc.data());
         }
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 
@@ -51,19 +53,21 @@ export class CustomerHomeComponent implements OnInit {
     var doc_newsFeed=this._db.firestore.collection('news_feed');
     doc_newsFeed.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
 
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status==''){
           _this.news_feed_data_array.push(doc.data());
         }
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 
@@ -72,24 +76,26 @@ export class CustomerHomeComponent implements OnInit {
     var doc_image_carousal=this._db.firestore.collection('image_carousals');
     doc_image_carousal.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
 
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.id!="image0"){
-          console.log(doc.data().fileUrl)
+          // console.log(doc.data().fileUrl)
           _this.image_carousal_array.push(doc.data());
         }
         else if(doc.id=="image0"){
           _this._init_image=doc.data().fileUrl;
-          console.log(_this._init_image)
+          // console.log(_this._init_image)
         }
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 

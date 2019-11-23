@@ -30,13 +30,13 @@ export class LoginComponent implements OnInit {
     let email=(<HTMLInputElement>document.getElementById('user_name')).value;
     let password=(<HTMLInputElement>document.getElementById('user_password')).value;
     var hash= CryptoJS.SHA256(password).toString();
-    console.log(hash);
+    // console.log(hash);
     var _this=this;
     var docRef=this._db.firestore.collection('admin').doc(email)
     docRef.get().then(async function(doc){
-      console.log(doc.data().password===hash && doc.data().active)
+      // console.log(doc.data().password===hash && doc.data().active)
       if(doc.data().password==hash){
-        console.log("Hello")
+        // console.log("Hello")
         localStorage.setItem('login','true');
         _this._auth.auth.signInWithEmailAndPassword(email,hash).then(value=>{
           // alert(value.user.metadata.lastSignInTime);
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
           }
           _this.service.sendEmail(email_message).subscribe(data=>{
             _this.data=data;
-            console.log(_this.data.success)
+            // console.log(_this.data.success)
             if(_this.data.success)
             redirect_to_admin();
             else
@@ -58,7 +58,8 @@ export class LoginComponent implements OnInit {
           });
     
         }).catch(err=>{
-          console.log(err);
+          alert("Error");
+          // console.log(err);
         });
       }
       else{
@@ -66,7 +67,8 @@ export class LoginComponent implements OnInit {
       }
     }).catch(function(error){
       warning_message();
-      console.log(error);
+      alert("Error");
+      // console.log(error);
     });
   }
 

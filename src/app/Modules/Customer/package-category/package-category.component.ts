@@ -19,7 +19,7 @@ export class PackageCategoryComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.package_category=params.category;
-      console.log(this.package_category)
+      // console.log(this.package_category)
       this.load_packages(this.package_category);
     });
 
@@ -30,16 +30,17 @@ export class PackageCategoryComponent implements OnInit {
     var collection=this._db.firestore.collection('packages');
     collection.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
   
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data().package_category);
+        // console.log(doc.id, '=>', doc.data().package_category);
         if(doc.data().status!='deleted' && doc.data().package_category==category){
           this.package_data.push(doc.data());
           var length=doc.data().details.length;
-          console.log(length)
+          // console.log(length)
           for(var j=0;j<length;j++){
             var des_len=doc.data().details[j].destination_drive.length;
             for(var k=0;k<des_len;k++){
@@ -50,7 +51,8 @@ export class PackageCategoryComponent implements OnInit {
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 

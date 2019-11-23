@@ -49,11 +49,11 @@ export class DashboardComponent implements OnInit {
   public lineChartGradientsNumbersColors:Array<any>
   // events
   public chartClicked(e:any):void {
-    console.log(e);
+    // console.log(e);
   }
 
   public chartHovered(e:any):void {
-    console.log(e);
+    // console.log(e);
   }
   public hexToRGB(hex, alpha) {
     var r = parseInt(hex.slice(1, 3), 16),
@@ -424,7 +424,7 @@ export class DashboardComponent implements OnInit {
   }
 
   get_files(event){
-   console.log(event.target.files);
+  //  console.log(event.target.files);
    this.file_list=event.target.files;
   }
 
@@ -445,14 +445,16 @@ export class DashboardComponent implements OnInit {
           let fileTimeCreated=snapshot.metadata.timeCreated;
           let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
           collection.doc(snapshot.metadata.name).set(obj).then(function(docs){
-            console.log("Success");
+            // console.log("Success");
             this_function.remove_images();
           }).catch(function(error){
-            console.log(error)
+            alert("Error");
+            // console.log(error)
           })
         })
       }).catch(function(error){
-        console.log(error)
+        alert("Error");
+        // console.log(error)
       })
     }
   }

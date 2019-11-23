@@ -1,5 +1,5 @@
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="margin-top:-20px" *ngIf="image_carousal_array.length>0    ">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="margin-top:-20px" *ngIf="image_carousal_array.length>0">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img [src]="_init_image" style="height:400px;" class="d-block w-100" alt="...">
@@ -19,6 +19,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+</div>
+
+<div class="row row-center" *ngIf="image_carousal_array.length==0">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="loader"></div>
+        <span style="color:red"><b>LOADING IMAGES</b></span>
+    </div>
 </div>
 
 <br>
@@ -83,10 +91,10 @@
     <div class="col-md-4">
         <div class="card" style="background-color:red">
             <h4 class="card-title" align="center"><b>DISCOVER THE WORLD</b></h4>
-            <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">
+            <img class="card-img-top" src="https://www.ceylontours.com/images/discover-the-world.jpg" alt="Card image cap">
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button type="button" class="btn btn-primary">Warning</button>
+                <p class="card-text" style="font-size: 20px;color:white"><b>If you were looking for a holiday, we have the perfect agenda for you</b></p>
+                <button type="button" class="btn btn-primary"><b>READ MORE</b></button>
             </div>
         </div>
     </div>
@@ -149,21 +157,21 @@
 <div class="row row-center">
     <div class="col-md-4">
         <div class="card" style="background-color: greenyellow;">
-            <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">
+            <img class="card-img-top" src="https://www.ceylontours.com/images/faq.jpg" height="300px" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"><b>FAQ</b></h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <p class="card-text" style="font-size: 20px;color:white"><b>“Have some question? We'll help you...”</b></p>
+                <a href="#" class="btn btn-primary"><b>READ MORE</b></a>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card" style="background-color: orange;">
-            <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">
+            <img class="card-img-top" src="assets/img/transfers/transfer12.jpg" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"><b>TRANSFERS</b></h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/transfers" class="btn btn-primary">Read More</a>
+                <p class="card-text" style="font-size: 20px;color:white"><b>“Let us take you there, where you can leave your footprints”</b></p>
+                <a href="/transfers" class="btn btn-primary"><b>READ MORE</b></a>
             </div>
         </div>
     </div>
@@ -201,7 +209,7 @@
                         <i class="fa fa-chevron-right fa-2x" style="color:black" aria-hidden="true"></i>
                     </a>
                 </div>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary"><b>READ MORE</b></a>
             </div>
         </div>
         <!-- </div> -->

@@ -8,7 +8,7 @@ export function validNumber():ValidatorFn{
             return null;
         }
 
-        console.log(c.value)
+        // console.log(c.value)
         const subscription:Subscription=c.valueChanges.subscribe((x)=>{
                 console.log(x)
                 c.updateValueAndValidity();
