@@ -1,0 +1,81 @@
+h3{
+    font-family: sans-serif;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 100px 20px 100px;
+}
+
+.height-class{
+    height: 500px!important;
+}
+
+.description{
+    font-family:sans-serif;
+    font-size: 20px;
+    color:blue;
+}
+
+p{
+    font-family: sans-serif;
+    color:white;
+}
+
+h3 .card-title{
+    vertical-align: center;
+}
+
+.square {
+    width:auto;
+    background-color: green;
+}
+
+.p-title{
+    font-family: sans-serif;
+    color: white;
+    // padding: 30px 20px;
+}
+
+i{
+    color:red;  
+}
+
+.color-card{
+    background-color:green;  
+}
+
+span{
+    font-family: 'Open Sans',sans-serif;
+    text-align: justify;
+    color:white;
+    padding-left:10px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    margin-left:-130px;
+    width:700px;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
+
+label{
+    color:white;    
+    font-weight: bold;
+}
+
+input{
+    color:white;
+}
+
+textarea{
+    color:white;
+}

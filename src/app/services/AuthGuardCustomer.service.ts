@@ -28,6 +28,8 @@ export class AuthGuardCustomerService implements CanActivate {
     return true;
     else if(path.indexOf('/package-category')>-1)
     return true;
+    else if(path.indexOf('/enquiry')>-1)
+    return true;
     else if(path==="/transfers")
     return true;
     else if(path==="/destinations")

@@ -3,6 +3,7 @@ import { load_hotel_name} from '../../../../scripts/frontend/load_hotel_name'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { first } from 'rxjs/operators';
 import { adjust_mobile_view_home} from '../../../../scripts/frontend/mobile_view';
+import { click_carousal_button} from '../../../../scripts/frontend/home_page';
 @Component({
   selector: 'app-customer-home',
   templateUrl: './customer-home.component.html',
@@ -19,10 +20,12 @@ export class CustomerHomeComponent implements OnInit {
 
   ngOnInit() {
     // load_hotel_name()
+
     adjust_mobile_view_home();
     this.load_image_carousal();
     this.load_inbound_data();
     this.load_news_feed();
+
   }
 
   load_inbound_data(){
@@ -86,9 +89,11 @@ export class CustomerHomeComponent implements OnInit {
         if(doc.id!="image0"){
           // console.log(doc.data().fileUrl)
           _this.image_carousal_array.push(doc.data());
+          // click_carousal_button();
         }
         else if(doc.id=="image0"){
           _this._init_image=doc.data().fileUrl;
+          // click_carousal_button();
           // console.log(_this._init_image)
         }
       });
@@ -97,6 +102,10 @@ export class CustomerHomeComponent implements OnInit {
         alert("Error");
         // console.log('Error getting documents', err);
       });
+  }
+
+  printH(){
+    return "Hello";
   }
 
 }

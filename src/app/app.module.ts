@@ -41,6 +41,7 @@ import { EditPackagesComponent } from './Modules/Admin/edit-packages/edit-packag
 import { DestinationsComponent } from './Modules/Customer/destinations/destinations.component';
 import { CustomerFooterComponent } from './components/customer-footer/customer-footer.component';
 import { FilterDataComponent } from './Modules/Admin/filter-data/filter-data.component';
+import { EnquiryComponent } from './Modules/Customer/enquiry/enquiry.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
