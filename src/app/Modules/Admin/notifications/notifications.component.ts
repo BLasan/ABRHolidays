@@ -77,6 +77,7 @@ export class NotificationsComponent implements OnInit {
   }
 
   get_realtime_updates(){
+    this.notification_array=[];
     var _this=this;
     this._db.firestore.collection("customer_message").get().then(function(snapshot) {
         snapshot.forEach(element => {

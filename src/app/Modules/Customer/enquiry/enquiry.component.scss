@@ -2,7 +2,7 @@ h3{
     font-family: sans-serif;
 }
 
-.row{
+.row-center{
     margin-left: 0;
     margin-right: 0;
     padding: 10px 100px 20px 100px;
@@ -70,12 +70,58 @@ span{
 label{
     color:white;    
     font-weight: bold;
+    font-family: sans-serif;
 }
 
 input{
-    color:white;
+   
+    font-family: sans-serif;
 }
 
 textarea{
-    color:white;
+    font-family: sans-serif;
 }
+
+input, textarea, select {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    font-family: sans-serif;
+}
+
+.col-md-3{
+    padding-top:5px;
+    font-family: sans-serif;
+}
+
+.col-md-6{
+    font-family: sans-serif;
+}
+
+.col-md-7{
+    font-family: sans-serif;
+}
+
+.col-md-2{
+    font-family: sans-serif;
+}
+
+.col-md-4{
+    font-family: sans-serif;
+}
+
+.col-md-5{
+    font-family: sans-serif;
+}
+
+.form-control{
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow:        1px 1px 1px 1px #ccc;
+}
+
+div{
+    font-family: sans-serif;
+}
+
+// @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"); /* Using a url */

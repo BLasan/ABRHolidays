@@ -12,6 +12,7 @@ import { categories} from '../../../../scripts/frontend/package_categories';
 export class InboundPackagesComponent implements OnInit {
 
   package_id:any;
+  package_name:string;
   package_data:any=[];
   destination_string:String="";
   destination_details:any=[];
@@ -34,6 +35,7 @@ export class InboundPackagesComponent implements OnInit {
     this._db.firestore.collection('packages').doc(package_id).get().then(function(doc){
       _this.package_data.push(doc.data());
       _this.duration=doc.data().no_of_days;
+      _this.package_name=doc.data().package_name;
       _this.filter_destination_details(_this.package_data);
     }).catch(function(ex){
       alert("Error");

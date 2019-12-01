@@ -14,6 +14,7 @@ import { ManageNewsFeedComponent } from '../../Modules/Admin/manage-news-feed/ma
 import { AccomodationTransferComponent } from '../../Modules/Admin/accomodation-transfer/accomodation-transfer.component';
 import { EditPackagesComponent } from '../../Modules/Admin/edit-packages/edit-packages.component';
 import { FilterDataComponent } from '../../Modules/Admin/filter-data/filter-data.component';
+import { EnquiriesComponent } from '../../Modules/Admin/enquiries/enquiries.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -29,5 +30,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'edit-package/:package_id' , component:EditPackagesComponent},
     { path: 'manage-news-feed' , component:ManageNewsFeedComponent},
+    { path: 'enquiry' , component:EnquiriesComponent},
     { path: 'filter-data/:category/:search_text' , component:FilterDataComponent}
 ];

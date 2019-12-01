@@ -42,6 +42,7 @@ import { DestinationsComponent } from './Modules/Customer/destinations/destinati
 import { CustomerFooterComponent } from './components/customer-footer/customer-footer.component';
 import { FilterDataComponent } from './Modules/Admin/filter-data/filter-data.component';
 import { EnquiryComponent } from './Modules/Customer/enquiry/enquiry.component';
+import { EnquiriesComponent } from './Modules/Admin/enquiries/enquiries.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -78,7 +79,7 @@ const firebaseConfig = {
     LoginComponent,
     PageNotFoundComponent,
     CustomerNavbarComponent,
-    CustomerFooterComponent,
+    CustomerFooterComponent
     // FilterDataComponent
     // DestinationsComponent,
     // CustomerHomeComponent

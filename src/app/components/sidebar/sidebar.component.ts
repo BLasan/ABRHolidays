@@ -17,6 +17,7 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/accomodation-transfer', title: 'Accomodation',  icon:'business_bank', class: '' }, 
     // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
     { path: '/view-details', title: 'View Details',  icon:'design_bullet-list-67', class: '' },
+    { path: '/enquiry', title: 'View Enquiries',  icon:'business_bank', class: '' },
     // { path: '/settings', title: 'Settings',  icon:'loader_gear', class: '' },
 
     // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },

@@ -1,101 +1,596 @@
-<div class="row">
-  <div class="col-md-12" style="height:65px;background-color:lightblue;">
-    <h3 class="card-title" style="padding:10px;color:white"><b>CONTACT US</b></h3>
+<div class="row row-center" id="row1">
+  <div class="col-md-12 card" style="height:65px;background-color:lightblue;">
+    <h3 class="card-title" style="margin:auto;padding:5px;color:white"><b>ENQUIRY</b></h3>
   </div>
 </div>  
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="card color-card">
-      <div class="card-body">
-        <p><b>CEYLON TOURS LIMITED</b></p>
-        <p>
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-          <span>
-            8A,Gamoaha Road,Angoda
-          </span>
-        </p>
-        <p><b>SRI LANKA</b></p>
-        <p>
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>
-            (+94) 112 774 323
-          </span>
-        </p>
-        <p><b>FAX</b></p>
-        <p>
-          <i class="fa fa-fax" aria-hidden="true"></i>
-          <span>
-            (+94) 112 34 2 234
-          </span>
-        </p>
-        <p><b>EMAIL</b></p>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span>
-           info@ceylontours.com
-        </span>
-      </div>
-    </div>  
-  </div>
-  <div class="col-md-6">
-    <div class="mapouter">
-      <div class="gmap_canvas">
-      <iframe width="500px" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=gampaha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2" scrolling="no" marginheight="0" marginwidth="0">
-      </iframe>
-      <a href="https://www.embedgooglemap.net/blog/booking.com-coupon/">
-      </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <div class="card" style="background-color:black;">
+<div class="row row-center" style="margin-top:10px">
+  <div class="col-md-8">
+    <div class="card">
+      <h4 class="card-title"><b style="padding-left:20px">TOUR INFORMATION</b></h4>
       <div class="card-body">
         <form [formGroup]="form">
           <div class="row">
-            <div class="col-md-6" style="padding-left:0">
-              <div class="form-group" [ngClass]="{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
-                <label>Subject</label>
-                <input type="text" id="subject" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
+            <div class="col-md-3">Tour Name :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.tour_name.valid && (form.controls.tour_name.dirty || form.controls.tour_name.touched),'has-danger':form.controls.tour_name.invalid && (form.controls.tour_name.dirty || form.controls.tour_name.touched)}">
+                <input type="text" class="form-control" id="tour_name" placeholder="Tour Name" formControlName="tour_name">
               </div>
-              <div class="form-group" [ngClass]="{'has-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'has-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
-                <label>First Name</label>
-                <input type="text" id="f_name" class="form-control" placeholder="First Name" required formControlName="f_name" [ngClass]="{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}">
-              </div>
-              <div class="form-group" [ngClass]="{'has-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'has-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
-                <label>Last Name</label>
-                <input type="text" id="l_name" class="form-control" placeholder="Last Name" required formControlName="l_name" [ngClass]="{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}">
-              </div>
-              <div class="form-group">
-                <label for="email">Country</label>
-                <select name="country" id="country" class="form-control" style="height:38px;">
-                  <option *ngFor="let category of country_array_list" value="{{category}}">{{category}}</option>
-                </select>
-              </div>
-              <div class="form-group" [ngClass]="{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
-                <label>Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter email" required formControlName="email" [ngClass]="{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4">Arrival :</div>
+                <div class="col-md-8">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.arrival.valid && (form.controls.arrival.dirty || form.controls.arrival.touched),'has-danger':form.controls.arrival.invalid && (form.controls.arrival.dirty || form.controls.arrival.touched)}">
+                    <input type="date" class="form-control" id="arrival" formControlName="arrival">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group" [ngClass]="{'has-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'has-danger':form.controls.email.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
-                <label>Telephone No</label>
-                <input type="number" id="tel_no"  class="form-control" formControlName="tel" [ngClass]="{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}">
+              <div class="row">
+                <div class="col-md-4" style="padding-top:5px;">Departure :</div>
+                <div class="col-md-8">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.departure.valid && (form.controls.departure.dirty || form.controls.departure.touched),'has-danger':form.controls.departure.invalid && (form.controls.departure.dirty || form.controls.departure.touched)}">
+                    <input type="date" class="form-control" id="departure" formControlName="departure">
+                  </div>
+                </div>
               </div>
-              <div class="form-group" [ngClass]="{'has-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'has-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}">
-                <label>Message</label>
-                <textarea class="form-control" id="message" rows="3" formControlName="message" [ngClass]="{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}"></textarea>
-              </div>
-              <button type="button" [disabled]="!form.valid" class="btn btn-primary" (click)="submit_form()">Submit</button>
             </div>
           </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-7" style="padding-top:6px">Would you like a quote for airfare ?</div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="radio" name="airfare_Radios" id="airfare_Radios_yes" value="yes" checked (change)="radioCheck1($event)">
+                        Yes
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label"  style="color: black;">
+                      <input class="form-check-input" type="radio" name="airfare_Radios" id="airfare_Radios_yes" value="no" (change)="radioCheck1($event)">
+                        No
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">No. of Persons :</div> 
+            <div class="col-md-9" style="padding-left:-20px">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.no_of_adults.valid && (form.controls.no_of_adults.dirty || form.controls.no_of_adults.touched),'has-danger':form.controls.no_of_adults.invalid && (form.controls.no_of_adults.dirty || form.controls.no_of_adults.touched)}">
+                    <input type="number" class="form-control" id="no_of_adults" placeholder="Number Of Adults" formControlName="no_of_adults">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.no_of_children.valid && (form.controls.no_of_children.dirty || form.controls.no_of_children.touched),'has-danger':form.controls.no_of_children.invalid && (form.controls.no_of_children.dirty || form.controls.no_of_children.touched)}">
+                    <input type="number" class="form-control" id="no_of_children" placeholder="Number Of Children" formControlName="no_of_children">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">Accomodation :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.accomodations.valid && (form.controls.accomodations.dirty || form.controls.accomodations.touched),'has-danger':form.controls.accomodations.invalid && (form.controls.accomodations.dirty || form.controls.accomodations.touched)}">
+                <select name="country" id="accomodations" class="form-control" style="height:38px;" formControlName="accomodations">
+                  <option *ngFor="let accomodations of accomodation_options" value="{{accomodations}}">{{accomodations}}</option>
+                </select>
+              </div>  
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">Meal Plan :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.meals.valid && (form.controls.meals.dirty || form.controls.meals.touched),'has-danger':form.controls.meals.invalid && (form.controls.meals.dirty || form.controls.meals.touched)}">
+                <select name="country" id="meals" class="form-control" style="height:38px;" formControlName="meals">
+                  <option *ngFor="let meals of meal_plan_option" value="{{meals}}">{{meals}}</option>
+                </select>
+              </div>   
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-5" style="padding-top:5px;">Approximate Budget Per Person :</div>
+            <div class="col-md-7">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.budget.valid && (form.controls.budget.dirty || form.controls.budget.touched),'has-danger':form.controls.budget.invalid && (form.controls.budget.dirty || form.controls.budget.touched)}">
+                <input type="number" class="form-control" id="budget" placeholder="Enter Budget" formControlName="budget">
+              </div>   
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Do you have an interest in active travel (hiking, biking, kayaking, etc.) ?</div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="radio" name="active_travel" id="active_travel_yes" value="yes" checked (change)="radioCheck2($event)">
+                        Yes
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="radio" name="active_travel" id="active_travel_no" value="no" (change)="radioCheck2($event)">
+                        No
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Disired/capable level of physical activity :</div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Very Active(Trekking, Hiking, Biking etc…)" id="activity_1">
+                    Very Active(Trekking, Hiking, Biking etc…)
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="padding-top:5px">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Moderate (Some Trekking, light physical activities)" id="activity_2">
+                    Moderate (Some Trekking, light physical activities)
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Light (No activities or climbing stairs, only light walking)" id="activity_3">
+                    Light (No activities or climbing stairs, only light walking)
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6" style="padding-top:5px;">Desired level of adventure :</div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="High Adventure (experience unique activities and venues, “off the beaten track”)" id="ad_activity_1">
+                    High Adventure (experience unique activities and venues, “off the beaten track”)
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Medium Adventure" id="ad_activity_2">
+                    Medium Adventure
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Well-visited Venues" id="ad_activity_3">
+                    Well-visited Venues
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Do you like to have activities planned sun up to sun down, or do you prefer some downtime? </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Highly Active" id="sun_activity_1">
+                    Highly Active
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="padding-top:5px">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Mix of Activity & Leisure" id="sun_activity_2">
+                    Mix of Activity & Leisure
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check">
+                  <label class="form-check-label" style="color:black">
+                    <input class="form-check-input" type="checkbox" value="Relaxation & Leisure" id="sun_activity_3">
+                    Relaxation & Leisure
+                    <span class="form-check-sign"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Any destinations or experiences you would not want to miss out on?</div>
+            <div class="col-md-6">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.destinations_experience.valid && (form.controls.destinations_experience.dirty || form.controls.destinations_experience.touched),'has-danger':form.controls.destinations_experience.invalid && (form.controls.destinations_experience.dirty || form.controls.destinations_experience.touched)}">
+                <input type="text" class="form-control" id="destinations_experience" placeholder="Destinations & Experience" formControlName="destinations_experience">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Do you have specific interests that you would like to pursue such as:</div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Art" id="interest_1">
+                        Art
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Spas" id="interest_2">
+                        Spas
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="height:42px;padding-left: 0;">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Architecture" id="interest_3">
+                        Architecture
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Ayurveda" id="interest_4">
+                        Ayurveda
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Wildlife" id="interest_5">
+                        Wildlife
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Culinary" id="interest_6">
+                        Culinary
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Birding" id="interest_7">
+                        Birding
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Religion" id="interest_8">
+                        Religion
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Nature" id="interest_9">
+                        Nature
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Sports" id="interest_10">
+                        Sports
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Culture" id="interest_11">
+                        Culture
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Spiritual" id="interest_12">
+                        Spiritual
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left:0">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Yoga" id="interest_13">
+                        Yoga
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Diving" id="interest_14">
+                        Diving
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Are you celebrating a special occasion on this holiday?</div>
+            <div class="col-md-6">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.special_occasion.valid && (form.controls.special_occasion.dirty || form.controls.special_occasion.touched),'has-danger':form.controls.special_occasion.invalid && (form.controls.special_occasion.dirty || form.controls.special_occasion.touched)}">
+                <input type="text" class="form-control" id="special_occasion" placeholder="Enter Text" formControlName="special_occasion">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-6">Any other special requirements or requests you would like us to keep in mind?</div>
+            <div class="col-md-6">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.special_requirements.valid && (form.controls.special_requirements.dirty || form.controls.special_requirements.touched),'has-danger':form.controls.special_requirements.invalid && (form.controls.special_requirements.dirty || form.controls.special_requirements.touched)}">
+                <input type="text" class="form-control" id="special_requirements" placeholder="Enter Text" formControlName="special_requirements">
+              </div>  
+            </div>
+          </div>
+          <div class="row" style="padding-top:15px">
+            <h4 style="padding-left: 10px;"><b>CONTACT INFORMATION</b></h4>
+          </div>
+          <hr>
+          <div class="row" style="padding-top:10px">
+            <div class="col-md-2" style="padding-top: 5px;">Name :</div>
+            <div class="col-md-5">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.first_name.valid && (form.controls.first_name.dirty || form.controls.first_name.touched),'has-danger':form.controls.first_name.invalid && (form.controls.first_name.dirty || form.controls.first_name.touched)}">
+                <input type="text" class="form-control" id="first_name" placeholder="First Name" formControlName="first_name">
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.second_name.valid && (form.controls.second_name.dirty || form.controls.second_name.touched),'has-danger':form.controls.second_name.invalid && (form.controls.second_name.dirty || form.controls.second_name.touched)}">
+                <input type="text" class="form-control" id="second_name" placeholder="Second Name" formControlName="second_name">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-2" style="padding-top: 5px;">Address :</div>
+            <div class="col-md-10">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.address.valid && (form.controls.address.dirty || form.controls.address.touched),'has-danger':form.controls.address.invalid && (form.controls.address.dirty || form.controls.address.touched)}">
+                <input type="text" class="form-control" id="address" placeholder="Address" formControlName="address">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4" style="padding-top: 5px;">City :</div>
+                <div class="col-md-8">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.city.valid && (form.controls.city.dirty || form.controls.city.touched),'has-danger':form.controls.city.invalid && (form.controls.city.dirty || form.controls.city.touched)}">
+                    <input type="text" class="form-control" id="city" placeholder="City" formControlName="city">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-5" style="padding-top: 5px;">State/Province :</div>
+                <div class="col-md-7">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.state.valid && (form.controls.state.dirty || form.controls.state.touched),'has-danger':form.controls.state.invalid && (form.controls.state.dirty || form.controls.state.touched)}">
+                    <input type="text" class="form-control" id="state" placeholder="State" formControlName="state">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4">DOB :</div>
+                <div class="col-md-8">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.dob.valid && (form.controls.dob.dirty || form.controls.dob.touched),'has-danger':form.controls.dob.invalid && (form.controls.dob.dirty || form.controls.dob.touched)}">
+                    <input type="date" class="form-control" id="dob" placeholder="Date Of Birth" formControlName="dob">
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-5" style="padding-top: 5px;">Country :</div>
+                <div class="col-md-7">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.country.valid && (form.controls.country.dirty || form.controls.country.touched),'has-danger':form.controls.country.invalid && (form.controls.country.dirty || form.controls.country.touched)}">
+                    <select name="country" id="country" class="form-control" style="height:38px;" formControlName="country">
+                      <option *ngFor="let country_name of country_array" value="{{country_name}}">{{country_name}}</option>
+                    </select>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4" style="padding-top: 5px;">Phone :</div>
+                <div class="col-md-8">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.phone.valid && (form.controls.phone.dirty || form.controls.phone.touched),'has-danger':form.controls.phone.invalid && (form.controls.phone.dirty || form.controls.phone.touched)}">
+                    <input type="text" class="form-control" id="phone" placeholder="Contact No:" formControlName="phone">
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-5" style="padding-top: 5px;">Nationality :</div>
+                <div class="col-md-7">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.nationality.valid && (form.controls.nationality.dirty || form.controls.nationality.touched),'has-danger':form.controls.nationality.invalid && (form.controls.nationality.dirty || form.controls.nationality.touched)}">
+                    <input type="text" class="form-control" id="nationality" placeholder="Nationality" formControlName="nationality">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-2" style="padding-top: 5px;">Email :</div>
+            <div class="col-md-10">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-6">How did you learn about ABR Tours?</div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-3" style="padding-top: 10px;">Search Engine :</div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Google" id="search_engine_1">
+                        Google
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="Yahoo" id="search_engine_2">
+                        Yahoo
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="MSL" id="search_engine_3">
+                        MSL
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <label class="form-check-label" style="color:black">
+                      <input class="form-check-input" type="checkbox" value="AOl" id="search_engine_4">
+                        AOl
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div> 
+                </div>
+                <div class="col-md-4" style="padding-top:5px;">
+                  <div class="form-group" [ngClass]="{'has-success':form.controls.other_link.valid && (form.controls.other_link.dirty || form.controls.other_link.touched),'has-danger':form.controls.other_link.invalid && (form.controls.other_link.dirty || form.controls.other_link.touched)}">
+                    <input type="text" class="form-control" id="other_link" placeholder="Other Link" formControlName="other_link">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">Website Link :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.website_link.valid && (form.controls.website_link.dirty || form.controls.website_link.touched),'has-danger':form.controls.website_link.invalid && (form.controls.website_link.dirty || form.controls.website_link.touched)}">
+                <input type="text" class="form-control" id="website_link" placeholder="Website Link" formControlName="website_link">
+              </div> 
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">Keywords Used :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.keywords.valid && (form.controls.keywords.dirty || form.controls.keywords.touched),'has-danger':form.controls.keywords.invalid && (form.controls.keywords.dirty || form.controls.keywords.touched)}">
+                <input type="text" class="form-control" id="keywords" placeholder="Keywords Used" formControlName="keywords">
+              </div> 
+            </div>
+          </div>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-3">Referral/Other :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.refferal.valid && (form.controls.refferal.dirty || form.controls.refferal.touched),'has-danger':form.controls.refferal.invalid && (form.controls.refferal.dirty || form.controls.refferal.touched)}">
+                <input type="text" class="form-control" id="refferal" placeholder="Referral" formControlName="refferal">
+              </div> 
+            </div>
+          </div>
+          <div class="row" style="padding-top:15px;">
+            <h4 style="padding-left: 10px;"><b>ADDITIONAL REQUESTS</b></h4>
+          </div>
+          <hr>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-md-3" style="padding-top: 5px;">Description :</div>
+            <div class="col-md-9">
+              <div class="form-group" [ngClass]="{'has-success':form.controls.description.valid && (form.controls.description.dirty || form.controls.description.touched),'has-danger':form.controls.description.invalid && (form.controls.description.dirty || form.controls.description.touched)}">
+                <textarea class="form-control" id="description" name="description" rows="4" cols="80" placeholder="Enter your description here..." formControlName="description"></textarea>
+              </div>   
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <button (click)="send_email()">yy</button> -->
-
