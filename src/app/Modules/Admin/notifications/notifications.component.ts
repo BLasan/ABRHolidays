@@ -77,10 +77,11 @@ export class NotificationsComponent implements OnInit {
   }
 
   get_realtime_updates(){
+    this.notification_array=[];
     var _this=this;
     this._db.firestore.collection("customer_message").get().then(function(snapshot) {
         snapshot.forEach(element => {
-            console.log(element.data());
+            // console.log(element.data());
             if(element.data().view==false)
             _this.notification_array.push(element.data());
       
@@ -131,7 +132,7 @@ export class NotificationsComponent implements OnInit {
   }
 
   mark_view(id){
-    console.log(id);
+    // console.log(id);
     this._db.firestore.collection('customer_message').doc(id).update({view:true});
     this.get_realtime_updates();
   }

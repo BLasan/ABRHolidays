@@ -18,7 +18,7 @@ export class FaqComponent implements OnInit {
     adjust_mobile_view_faq();
     disable_dropdowns();
     this.emergency_details=details;
-    console.log(this.emergency_details)
+    // console.log(this.emergency_details)
   }
 
   show_close(id:any){

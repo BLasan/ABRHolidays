@@ -32,7 +32,8 @@ export class NewsEventsComponent implements OnInit {
     var docRef=this._db.firestore.collection('news_feed');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
 
@@ -43,7 +44,8 @@ export class NewsEventsComponent implements OnInit {
       })
   
     }).catch(function(err){
-      console.log(err);
+      alert("Error")
+      // console.log(err);
     })
   }
 
@@ -55,7 +57,8 @@ export class NewsEventsComponent implements OnInit {
       _this.news_title=doc.data().title;
   
     }).catch(function(ex){
-       console.log(ex);
+      alert("Error");
+      //  console.log(ex);
     })
   }
 

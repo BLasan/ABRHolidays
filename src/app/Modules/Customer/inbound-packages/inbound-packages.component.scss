@@ -6,7 +6,7 @@ h2{
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
-    width: 25em;
+    width: 11em;
     animation: type 4s steps(60, end); 
     font-family: sans-serif;
    }
@@ -43,9 +43,10 @@ h2{
        background-color: chartreuse;
    }
 
-.row{
+.row-center{
     margin-left: 0;
     margin-right: 0;
+    // padding: 10px 100px 20px 100px;
 }
 
 .font{

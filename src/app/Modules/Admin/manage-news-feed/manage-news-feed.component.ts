@@ -38,7 +38,7 @@ export class ManageNewsFeedComponent implements OnInit {
     let title=(<HTMLInputElement>document.getElementById('title')).value;
     let today=new Date();
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
-    console.log(date);
+    // console.log(date);
     let id=this.generate_news_feed_id(date,title);
     var imageId="news_feed/image"+today.getTime();
     let storageRef=this.storage.ref(imageId);
@@ -54,7 +54,8 @@ export class ManageNewsFeedComponent implements OnInit {
           (<HTMLInputElement>document.getElementById('file_name')).innerHTML="";
           (<HTMLInputElement>document.getElementById('news_feed_img_uploader')).value="";
         }).catch(function(error){
-          console.log(error)
+          alert("Error");
+          // console.log(error)
         });
       })
     })
@@ -71,18 +72,20 @@ export class ManageNewsFeedComponent implements OnInit {
     var docRef=this._db.firestore.collection('news_feed');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
   
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status!='deleted')
         this.newsFeed_data.push(doc.data());
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 
@@ -138,7 +141,7 @@ export class ManageNewsFeedComponent implements OnInit {
   }
 
   get_files(event){
-    console.log(event.target.files);
+    // console.log(event.target.files);
     this.file_list=event.target.files;
   }
 

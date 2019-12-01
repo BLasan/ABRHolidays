@@ -34,10 +34,10 @@ export class SettingsComponent implements OnInit {
     let email=(<HTMLInputElement>document.getElementById('new_user_name')).value;
     let password=(<HTMLInputElement>document.getElementById('new_password')).value;
     var hash= CryptoJS.SHA256(password).toString();
-    console.log(hash);
+    // console.log(hash);
     let docs={user_email:this.admin_user_name,password:hash,active:true};
     this._db.collection('admin').doc(email).set(docs).then(function(docs){
-      console.log("Done");
+      // console.log("Done");
       _this._db.collection('admin').doc(_this.admin_user_name).update({active:false});
       _this.admin_user_name=email;
       (<HTMLInputElement>document.getElementById('old_password')).value="";
@@ -48,7 +48,8 @@ export class SettingsComponent implements OnInit {
         duration:300
       })
     }).catch(function(error){
-      console.log(error);
+      // console.log(error);
+      alert("Error");
       _this._snackbar.open('Not Updated!','OK',{
         duration:300
       })
@@ -66,7 +67,7 @@ export class SettingsComponent implements OnInit {
           if(doc.data().active===true){
             _this.admin_user_name=doc.data().user_email;
             _this.admin_password=doc.data().password;
-            console.log(_this.admin_password);
+            // console.log(_this.admin_password);
 
             _this.form=new FormGroup({
               new_user_name:new FormControl('',[Validators.required,Validators.email]),
@@ -129,14 +130,16 @@ export class SettingsComponent implements OnInit {
         _this.auth.auth.signOut();
         _this.router.navigate(['/login']);
       }).catch(err=>{
-        console.log(err);
+        alert("Error");
+        // console.log(err);
       })
     }).catch(err=>{
-      console.log(err);
+      alert("Error");
+      // console.log(err);
     })
   
     this.auth.auth.currentUser.updateProfile({displayName:'Ravindu'});
-    console.log(this.auth.auth.currentUser);
+    // console.log(this.auth.auth.currentUser);
     // this.auth.auth.signInWithEmailAndPassword(email,hash).then(value=>{
     //   console.log(value.user.displayName)
     // }).catch(err=>{

@@ -33,19 +33,21 @@ export class FilterDataComponent implements OnInit {
     var docRef=this._db.firestore.collection('news_feed');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('Empty Data');
         return;
       }  
   
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status!='deleted' && doc.data().title==search_text)
         _this.data.push(doc.data());
         
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   }
 
@@ -55,18 +57,20 @@ export class FilterDataComponent implements OnInit {
     var docRef=this._db.firestore.collection('packages');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
   
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status!='deleted' && doc.data().package_name==search_text)
         _this.data.push(doc.data());
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error")
+        // console.log('Error getting documents', err);
       });
   }
 
@@ -76,7 +80,8 @@ export class FilterDataComponent implements OnInit {
     this._db.collection('packages').doc(id).update({status:'deleted'}).then(function(docs){
       variable_this.filter_packages(variable_this.searchedText);
     }).catch(function(error){
-      console.log(error);
+      alert("Error");
+      // console.log(error);
     }) 
   }
 

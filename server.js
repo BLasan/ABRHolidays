@@ -11,8 +11,8 @@ app.use(body.urlencoded({
 }));
 app.use(body.json());
 app.post('/send_mail',urlencodedParser,function(req,res){
-console.log(req.body[0]);
-console.log("Hello")
+// console.log(req.body[0]);
+// console.log("Hello")
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey("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");
 
@@ -27,7 +27,8 @@ const msg={
   sgMail.send(msg).then(()=>{
     res.send({success:true})
   }).catch(err=>{
-    console.log(err);
+    alert("Error");
+    // console.log(err);
     res.send({success:false});
   })
 

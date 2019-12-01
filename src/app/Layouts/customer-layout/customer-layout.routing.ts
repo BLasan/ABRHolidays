@@ -11,6 +11,7 @@ import { PackageCategoryComponent } from '../../Modules/Customer/package-categor
 import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-events.component';
 import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testimonials.component';
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
+import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -24,5 +25,6 @@ export const CustomerLayoutRoutes: Routes = [
     { path:'package-category/:category',component:PackageCategoryComponent},
     { path: 'transfers',component:TransfersComponent},
     { path: 'testimonials',component:TestimonialsComponent},
-    { path:'destinations',component:DestinationsComponent}
+    { path:'destinations',component:DestinationsComponent},
+    { path: 'enquiry/:package' ,component:EnquiryComponent}
 ];

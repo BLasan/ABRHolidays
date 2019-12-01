@@ -23,18 +23,20 @@ export class TableListComponent implements OnInit {
     var docRef=this._db.firestore.collection('packages');
     docRef.get().then(snapshot=>{
       if (snapshot.empty) {
-        console.log('No matching documents.');
+        alert("Empty Data");
+        // console.log('No matching documents.');
         return;
       }  
   
       snapshot.forEach(doc => {
-        console.log(doc.id, '=>', doc.data());
+        // console.log(doc.id, '=>', doc.data());
         if(doc.data().status!='deleted')
         this.package_data.push(doc.data());
       });
 
       }).catch(err => {
-        console.log('Error getting documents', err);
+        alert("Error");
+        // console.log('Error getting documents', err);
       });
   
   }

@@ -11,7 +11,7 @@ export class AuthGuardCustomerService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     var path = this.location.prepareExternalUrl(this.location.path());
-    console.log(path)
+    // console.log(path)
     if(path==="/about-us")
     return true;
     else if(path==="/accomodation")
@@ -27,6 +27,8 @@ export class AuthGuardCustomerService implements CanActivate {
     else if(path.indexOf('/inbound-packages')>-1)
     return true;
     else if(path.indexOf('/package-category')>-1)
+    return true;
+    else if(path.indexOf('/enquiry')>-1)
     return true;
     else if(path==="/transfers")
     return true;

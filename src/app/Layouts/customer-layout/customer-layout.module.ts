@@ -18,6 +18,7 @@ import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-eve
 import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testimonials.component';
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
 import { MatSnackBarModule } from '@angular/material';
+import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -40,7 +41,8 @@ import { MatSnackBarModule } from '@angular/material';
     PackageCategoryComponent,
     NewsEventsComponent,
     TestimonialsComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    EnquiryComponent
   ],
 })
 export class CustomerLayoutModule { }

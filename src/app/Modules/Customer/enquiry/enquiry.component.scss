@@ -1,0 +1,127 @@
+h3{
+    font-family: sans-serif;
+}
+
+.row-center{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 100px 20px 100px;
+}
+
+.height-class{
+    height: 500px!important;
+}
+
+.description{
+    font-family:sans-serif;
+    font-size: 20px;
+    color:blue;
+}
+
+p{
+    font-family: sans-serif;
+    color:white;
+}
+
+h3 .card-title{
+    vertical-align: center;
+}
+
+.square {
+    width:auto;
+    background-color: green;
+}
+
+.p-title{
+    font-family: sans-serif;
+    color: white;
+    // padding: 30px 20px;
+}
+
+i{
+    color:red;  
+}
+
+.color-card{
+    background-color:green;  
+}
+
+span{
+    font-family: 'Open Sans',sans-serif;
+    text-align: justify;
+    color:white;
+    padding-left:10px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    margin-left:-130px;
+    width:700px;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
+
+label{
+    color:white;    
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+input{
+   
+    font-family: sans-serif;
+}
+
+textarea{
+    font-family: sans-serif;
+}
+
+input, textarea, select {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    font-family: sans-serif;
+}
+
+.col-md-3{
+    padding-top:5px;
+    font-family: sans-serif;
+}
+
+.col-md-6{
+    font-family: sans-serif;
+}
+
+.col-md-7{
+    font-family: sans-serif;
+}
+
+.col-md-2{
+    font-family: sans-serif;
+}
+
+.col-md-4{
+    font-family: sans-serif;
+}
+
+.col-md-5{
+    font-family: sans-serif;
+}
+
+.form-control{
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow:        1px 1px 1px 1px #ccc;
+}
+
+div{
+    font-family: sans-serif;
+}
+
+// @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"); /* Using a url */
