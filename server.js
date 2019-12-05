@@ -22,7 +22,7 @@ const msg={
     subject: req.body[2],
     text: req.body[3],
     html: req.body[4],
-    templateId:'d-1930c09d411f4d479cb8d1a372bbe931'
+    // templateId:'d-1930c09d411f4d479cb8d1a372bbe931'
 }
 //console.log(msg);
   sgMail.send(msg).then(()=>{
