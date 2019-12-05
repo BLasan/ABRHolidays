@@ -12,6 +12,7 @@ import { NewsEventsComponent } from '../../Modules/Customer/news-events/news-eve
 import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testimonials.component';
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
 import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
+import { TransferContactUsComponent } from '../../Modules/Customer/transfer-contact-us/transfer-contact-us.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -26,5 +27,6 @@ export const CustomerLayoutRoutes: Routes = [
     { path: 'transfers',component:TransfersComponent},
     { path: 'testimonials',component:TestimonialsComponent},
     { path:'destinations',component:DestinationsComponent},
-    { path: 'enquiry/:package' ,component:EnquiryComponent}
+    { path: 'enquiry/:package' ,component:EnquiryComponent},
+    { path: 'transfer-contactUs/:transfers' , component:TransferContactUsComponent}
 ];

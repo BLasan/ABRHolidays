@@ -43,6 +43,7 @@ import { CustomerFooterComponent } from './components/customer-footer/customer-f
 import { FilterDataComponent } from './Modules/Admin/filter-data/filter-data.component';
 import { EnquiryComponent } from './Modules/Customer/enquiry/enquiry.component';
 import { EnquiriesComponent } from './Modules/Admin/enquiries/enquiries.component';
+import { TransferContactUsComponent } from './Modules/Customer/transfer-contact-us/transfer-contact-us.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",

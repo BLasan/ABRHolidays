@@ -19,6 +19,7 @@ import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testi
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
 import { MatSnackBarModule } from '@angular/material';
 import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
+import { TransferContactUsComponent } from '../../Modules/Customer/transfer-contact-us/transfer-contact-us.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +43,8 @@ import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.compone
     NewsEventsComponent,
     TestimonialsComponent,
     DestinationsComponent,
-    EnquiryComponent
+    EnquiryComponent,
+    TransferContactUsComponent
   ],
 })
 export class CustomerLayoutModule { }

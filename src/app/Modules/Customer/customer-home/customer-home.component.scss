@@ -38,7 +38,9 @@
 }
 
 img.d-block{
-    height: 390px;
+    height: 400px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 // .myHalfCol .col-md-6{
@@ -100,7 +102,7 @@ span{
 
 .heading{
     width:100%;
-    height:120px;
+    height:90px;
     background-color:lightblue;
 }
 
@@ -183,3 +185,29 @@ p{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+//   .circle {
+//     height: 200px;
+//     width: 200px;
+//     border-radius: 50%;
+//     border:1px solid red;    
+//   }
+
+  .brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: yellow;
+    padding: 10px;
+    text-align: center;
+    border:5px solid black;
+}
+.brand_logo {
+    margin-top:-15px;
+    height: 150px;
+    width: 150px;
+    // border-radius: 50%;
+    // border: 2px solid white;
+}

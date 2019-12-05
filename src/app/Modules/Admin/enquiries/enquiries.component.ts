@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { disable_view_notification} from '../../../../scripts/frontend/disable_href_links';
 import { disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
+ 
 @Component({
   selector: 'app-enquiries',
   templateUrl: './enquiries.component.html',
