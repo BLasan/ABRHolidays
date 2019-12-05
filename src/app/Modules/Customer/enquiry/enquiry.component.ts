@@ -6,6 +6,8 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { country_array} from '../../../../scripts/frontend/load_country';
 import CryptoJS from 'crypto-js';
+import * as jspdf from 'jspdf';  
+import html2canvas from 'html2canvas'; 
 @Component({
   selector: 'app-enquiry',
   templateUrl: './enquiry.component.html',
@@ -20,10 +22,16 @@ export class EnquiryComponent implements OnInit {
   airfare_check:any="Yes";
   travel_interest_check:any="Yes";
   physical_activities:any=[];
+  physical_activities_string:string="";
   sun_activities:any=[];
+  sun_activities_string:string="";
   adventure_activities:any=[];
+  adventure_activities_string:string="";
   specific_interests:any=[];
+  specific_interests_string:string="";
   search_engines:any=[];
+  search_engines_string:string="";
+  data_obj_array:any=[];
   isSelected:boolean=true;
   accomodation_options:any=["Please Select....","Three Star","Four Star","Five Star","Botique/villa"];
   meal_plan_option:any=["Please Select....","Bed & Breakfirst","Half Board","Full Board","All inclusive"];
@@ -101,25 +109,35 @@ export class EnquiryComponent implements OnInit {
     let activity_count=0;
     let ad_activity_count=0;
     let sun_activity_count=0;
+
     for(var i=1;i<=3;i++){
       var id="activity_"+i;
       let activity=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!activity) activity_count++;
-      if(activity) this.physical_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+      if(activity){
+        this.physical_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+        this.physical_activities_string+=((<HTMLInputElement>document.getElementById(id)).value)+" / ";
+      }
     }
 
     for(var i=1;i<=3;i++){
       var id="ad_activity_"+i;
       let activity=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!activity) ad_activity_count++;
-      if(activity) this.adventure_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+      if(activity){
+        this.adventure_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+        this.adventure_activities_string+=(<HTMLInputElement>document.getElementById(id)).value+" / ";
+      }
     }
 
     for(var i=1;i<=3;i++){
       var id="sun_activity_"+i;
       let activity=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!activity) sun_activity_count++;
-      if(activity) this.sun_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+      if(activity){
+        this.sun_activities.push(((<HTMLInputElement>document.getElementById(id)).value));
+        this.sun_activities_string+=(<HTMLInputElement>document.getElementById(id)).value+" / ";
+      }
     }
 
     var interest_count=0;
@@ -127,7 +145,10 @@ export class EnquiryComponent implements OnInit {
       var id="interest_"+i;
       let interest=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!interest) interest_count++;
-      if(interest) this.specific_interests.push(((<HTMLInputElement>document.getElementById(id)).value))
+      if(interest){
+        this.specific_interests.push(((<HTMLInputElement>document.getElementById(id)).value));
+        this.specific_interests_string+=(<HTMLInputElement>document.getElementById(id)).value+" / ";
+      } 
     }
 
     var search_count=0;
@@ -136,14 +157,54 @@ export class EnquiryComponent implements OnInit {
       let search_engine=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!search_engine) search_count++;
       console.log(((<HTMLInputElement>document.getElementById(id)).value))
-      if(search_engine) this.search_engines.push(((<HTMLInputElement>document.getElementById(id)).value));
+      if(search_engine){
+        this.search_engines.push(((<HTMLInputElement>document.getElementById(id)).value));
+        this.search_engines_string+=(<HTMLInputElement>document.getElementById(id)).value+" / "
+      }
     }
+
+    const message="<div>"+
+    "<p><b>Name :</b>"+first_name+""+second_name+"</p>"+
+    "<p><b>City :</b>"+city+"</p>"+
+    "<p><b>Country :</b>"+country+"</p>"+
+    "<p><b>Address :</b>"+address+"</p>"+
+    "<p><b>Email :</b>"+email+"</p>"+
+    "<p><b>Date Of Birth :</b>"+dob+"</p>"+
+    "<p><b>State :</b>"+state+"</p>"+
+    "<p><b>Nationality :</b>"+nationality+"</p>"+
+    "<p><b>Tel :</b>"+phone+"</p>"+
+    "<p><b>Tour Name :</b>"+tour_name+"</p>"+
+    "<p><b>Accomodations :</b>"+accomodations+"</p>"+
+    "<p><b>Meal Plan :</b>"+meals+"</p>"+
+    "<p><b>Quote For Airfare :</b>"+this.airfare_check+"</p>"+
+    "<p><b>Arrival :</b>"+arrival+"</p>"+
+    "<p><b>Departure :</b>"+departure+"</p>"+
+    "<p><b>No of Adults :</b>"+no_of_adults+"</p>"+
+    "<p><b>No of Children :</b>"+no_of_children+"</p>"+
+    "<p><b>Approximate Budget Per Person :</b>"+budget+"</p>"+
+    "<p><b>Interest in Active Travelling :</b>"+interest_in_travel+"</p>"+
+    "<p><b>Destination Experience :</b> </p>"+
+    "<p><b>Special Occasions :</b>"+special_occasion+"</p>"+
+    "<p><b>Special Requirements :</b>"+special_requirements+"</p>"+
+    "<p><b>Search Engines :</b>"+this.search_engines_string+"</p>"+
+    "<p><b>Website Link :</b></p>"+
+    "<p><b>KeyWords :</b>"+keywords+"</p>"+
+    "<p><b>Referral :</b>"+refferal+"</p>"+
+    "<p><b>Description :</b>"+description+"</p>"+
+    "<p><b>Desired Physical Activities :</b>"+this.physical_activities_string+"</p>"+
+    "<p><b>Adventure Activities :</b>"+this.adventure_activities_string+"</p>"+
+    "<p><b>Sun Activities :</b>"+this.sun_activities_string+"</p>"+
+    "<p><b>Specific Interests :</b>"+this.specific_interests_string+"</p>"+
+  "</div>";
+
+
     console.log(search_count+"->S")
     if(search_count==4 || interest_count==14 || activity_count==9) this.isSelected=false;
 
     let date=new Date();
     let today=date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()+"--"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
     var id=email+"@"+today;
+    let pdf_name=first_name+"_"+second_name+today+".pdf";
     var hash= CryptoJS.SHA256(id).toString();
     let user_enquiry={tour_name:tour_name,arrival:arrival,departure:departure,no_of_adults:no_of_adults,no_of_children:no_of_children,accomodations:accomodations,
                       meals:meals,destinations_experience:destinations_experience,special_occasion:special_occasion,special_requirements:special_requirements,first_name:first_name,
@@ -151,9 +212,11 @@ export class EnquiryComponent implements OnInit {
                       nationality:nationality,email:email,website_link:website_link,keywords:keywords,refferal:refferal,description:description,
                       airfare_check:aifareRadio,interest_in_travel:interest_in_travel,physical_activities:this.physical_activities,specific_interests:this.specific_interests,
                       search_engines:this.search_engines,date:today,id:hash,view:false,adventure_activities:this.adventure_activities,sun_activities:this.sun_activities,referral:refferal};
-   
+    this.data_obj_array.push(user_enquiry);
+    console.log(this.data_obj_array[0].tour_name)
     var _this=this;
     this._db.collection('enquiry').doc(hash).set(user_enquiry).then(()=>{
+      _this.sendEmail(message);
       _this._snackbar.open("Successfully Submitted!","OK",{
         duration:300
       });
@@ -223,6 +286,50 @@ export class EnquiryComponent implements OnInit {
       var id="search_engine_"+i;
       ((<HTMLInputElement>document.getElementById(id)).checked)=false;
     }
+  }
+
+  covertToPDF(pdf_name){
+    var data = document.getElementById('contentToConvert');  
+    html2canvas(data).then(canvas => {  
+      // Few necessary setting options  
+      var imgWidth = 208;   
+      var pageHeight = 295;    
+      var imgHeight = canvas.height * imgWidth / canvas.width;  
+      var heightLeft = imgHeight;  
+  
+      const contentDataURL = canvas.toDataURL('image/png')  
+      let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+      var position = 0;  
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+      pdf.save(pdf_name); // Generated PDF   
+      
+    }); 
+  }
+
+  sendEmail(message){
+    console.log(message)
+    const email_message={
+      to: 'benuraab@gmail.com',
+      from: 'developerbenura@gmail.com',
+      subject: 'User Enquiry',
+      text: message,
+      html: message,
+    }
+
+    //console.log(email_message.html)
+
+    this.service.sendEmail(email_message).subscribe((data)=>{
+      this.data=data;
+      if(this.data.success){
+        this._snackbar.open("Successfully Sent!","OK",{
+          duration:300
+        });
+      }
+      else
+      this._snackbar.open("Error Sending.Please retry!","OK",{
+        duration:300
+      });
+    });
   }
 
 }

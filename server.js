@@ -15,13 +15,14 @@ app.post('/send_mail',urlencodedParser,function(req,res){
 // console.log("Hello")
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey("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");
-
+// console.log(req.body[4]);
 const msg={
     to: req.body[0],
     from: req.body[1],
     subject: req.body[2],
     text: req.body[3],
     html: req.body[4],
+    templateId:'d-1930c09d411f4d479cb8d1a372bbe931'
 }
 //console.log(msg);
   sgMail.send(msg).then(()=>{

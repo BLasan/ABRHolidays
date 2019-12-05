@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { validNumber } from '../../../services/valid_number.service';
 import { country_array} from '../../../../scripts/frontend/load_country'
@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-
+  @Input() subject:string;
   form:any;
   country_array_list:any=[];
   data:any;
@@ -19,7 +19,7 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit() {
     this.form=new FormGroup({
-      subject:new FormControl('',Validators.required),
+      subject:new FormControl(this.subject,Validators.required),
       f_name:new FormControl('',Validators.required),
       l_name:new FormControl('',Validators.required),
       message:new FormControl('',Validators.required),
@@ -51,7 +51,7 @@ export class ContactUsComponent implements OnInit {
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     var _this=this;
     const email_message={
-      to: 'benuraab@gmail.com',
+      to: 'kavindu@gmail.com',
       from: email,
       subject: subject,
       text: message,
