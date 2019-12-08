@@ -22,8 +22,8 @@
 
 
 <div class="row row-center" *ngIf="image_carousal_array.length==0">
-    <div class="col-md-4"></div>
-    <div class="col-md-4" style="padding-left:120px">
+    <div class="col-md-4 col-sm-4"></div>
+    <div class="col-md-4 col-sm-4" style="padding-left:120px">
         <div class="loader"></div>
         <span style="color:red"><b>LOADING IMAGES</b></span>
     </div>
@@ -33,11 +33,11 @@
 
 <div class="row row-center">
     <div class="heading">
-        <h2 id="txt" style="padding-top:20px"><b>Welcome to ABR Tours</b></h2>
+        <h2 id="txt" style="padding-top:20px">Welcome to ABR Holidays</h2>
     </div>
 </div>  
 
-<div class="row row-center" style="padding-top:80px;padding-left:120px">
+<!-- <div class="row row-center" style="padding-top:10px;padding-left:120px">
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <div class="brand_logo_container">
@@ -45,15 +45,15 @@
         </div>
     </div>
     <div class="col-md-4"></div>
-</div>
+</div> -->
 
 
-<div class="row row-center" style="margin-top:100px">
-    <div class="col-md-8">
-        <div class="card" style="background-color:blue">
-            <h4 class="card-title" style="padding-left:50px"><b>INBOUND PACKAGES</b></h4>
+<div class="row row-center" style="margin-top:20px">
+    <div class="col-md-8 col-sm-12">
+        <div class="card" style="background-color:#3498db!important">
+            <h4 class="card-title" style="padding-left:50px;color:white"><b>INBOUND PACKAGES</b></h4>
             <div class="card-body card-img-top">
-                <div class="row">
+                <div class="row" style="margin-top:-13px">
                     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="margin-bottom:-15px;">
                         <div class="carousel-inner">
                             <!-- <div > -->
@@ -88,31 +88,37 @@
             </div>
         </div>               
     </div>
-    <div class="col-md-4">
-        <div class="card" style="background-color:blue">
-            <h4 class="card-title" align="center"><b>DISCOVER THE WORLD</b></h4>
+    <div class="col-md-4 col-sm-12">
+        <div class="card" style="background-color:#E74C3C">
+            <h4 class="card-title" align="center" style="color:white"><b>DISCOVER THE WORLD</b></h4>
             <img class="card-img-top" src="https://www.ceylontours.com/images/discover-the-world.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text" style="font-size: 20px;color:white"><b>If you were looking for a holiday, we have the perfect agenda for you</b></p>
-                <button type="button" class="btn btn-primary"><b>READ MORE</b></button>
+            <div class="card-body" style="height:152px">
+                <p class="card-text" style="font-size: 16px;color:white;margin-top:20px">If you were looking for a holiday, we have the perfect agenda for you</p>
+                <div class="row" id="discover_row" style="padding-right:8px;margin-top:-2px">
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4">
+                        <button type="button" class="btn btn-primary"><b>READ MORE</b></button>    
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>     
 
 <div class="row row-center">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12">
         <div class="card" style="height:90px;">
             <div class="row row-center">
-                <div class="col-md-4 rect">
+                <div class="col-md-4 col-sm-12 rect">
                     <div class="row" style="padding-left:10px">
                         <i class="fa fa-newspaper-o fa-5x" style="margin-top:10px" aria-hidden="true"></i>
                         <div style="float:left;margin-left:20px;margin-top:-8px">
-                            <h4><b style="font-family: serif;">NEWS FEED</b></h4>
+                            <h4><b style="font-family: serif;color:white">NEWS FEED</b></h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 news-container" id="news_containers">  
+                <div class="col-md-8 col-sm-12 news-container" id="news_containers">  
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel" *ngIf="news_feed_data_array.length>0">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -155,23 +161,37 @@
 </div>
 
 <div class="row row-center">
-    <div class="col-md-4">
-        <div class="card" style="background-color:blue;height:540px;">
-            <img class="card-img-top" src="https://www.ceylontours.com/images/faq.jpg" height="300px" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title"><b>FAQ</b></h4>
-                <p class="card-text" style="font-size: 20px;color:white"><b>“Have some question? We'll help you...”</b></p>
-                <a href="/faq" class="btn btn-primary"><b>READ MORE</b></a>
+    <div class="col-md-4 col-sm-12">
+        <div class="card" style="background-color:#23a516">
+            <img class="card-img-top" src="https://www.ceylontours.com/images/faq.jpg" height="320px" alt="Card image cap">
+            <div class="card-body" id="faq_body" style="height:134px">
+                <h4 class="card-title" style="margin-top:-13px;color:white"><b>FAQ</b></h4>
+                <p class="card-text" style="font-size: 16px;color:white;margin-top:-5px">“Have some question? We'll help you to solve them”</p>
+                <div class="row" id="faq_row" style="margin-top:-27px;padding-right:6px">
+                    <!-- <a href="/faq" class="btn btn-primary" align="right" style="margin-top:-18px"><b>READ MORE</b></a> -->
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4">
+                        <a href="/faq" class="btn btn-primary"><b>READ MORE</b></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card" style="background-color:blue;height:540px;">
-            <img class="card-img-top" src="assets/img/transfers/transfer12.jpg" height="300px" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title"><b>TRANSFERS</b></h4>
-                <p class="card-text" style="font-size: 20px;color:white"><b>“Let us take you there, where you can leave your footprints”</b></p>
-                <a href="/transfers" class="btn btn-primary"><b>READ MORE</b></a>
+        <div class="card" style="background-color:#ffb000">
+            <img class="card-img-top" src="assets/img/transfers/transfer12.jpg" height="320px" alt="Card image cap">
+            <div class="card-body" id="transfer_body" style="height:134px">
+                <h4 class="card-title" style="margin-top:-13px;color:white"><b>TRANSFERS</b></h4>
+                <p class="card-text" style="font-size:16px;color:white;margin-top:-5px">“Let us take you there, where you can leave your footprints”</p>
+                <div class="row" id="transfer_row" style="margin-top:-27px;padding-right:6px">
+                    <!-- <a href="/transfers" class="btn btn-primary" style="margin-top:-18px;"><b>READ MORE</b></a> -->
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4">
+                        <a href="/transfers" class="btn btn-primary"><b>READ MORE</b></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -187,31 +207,37 @@
             </div>
         </div> -->
         <!-- <div style="height:260px"> -->
-        <div class="card" style="height:540px;">
-            <div class="card-body" style="background-image: url('assets/img/bg.jpg');height:540px;">
+        <div class="card">
+            <div class="card-body" style="background-color:#04558b;height:454px;">
                 <div class="row" style="margin-top:-15px">
-                        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/img/background_sky.jpg" class="d-block w-100" alt="testimonials" style="height:450px;padding-left:0;padding-right:0">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p style="text-align:justify;color:black;margin-top:-300px"><i class="fa fa-comments fa-2x" aria-hidden="true"></i><b style="padding-left:10px;font-size:20px;">TESTIMONIALS</b></p>
-                                            <p style="text-align:justify;margin-top:10px;margin-left:50px">Hello Mrs.Perera</p>
-                                        </div>
+                    <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/background_sky.jpg" class="d-block w-100" alt="testimonials" style="height:415px;padding-left:0;padding-right:0">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p style="text-align:justify;color:black;margin-top:-300px"><i class="fa fa-comments fa-2x" aria-hidden="true"></i><b style="padding-left:10px;font-size:20px;">TESTIMONIALS</b></p>
+                                        <p style="text-align:justify;margin-top:10px;margin-left:50px">Hello Mrs.Perera</p>
                                     </div>
-                                    <div class="carousel-item" *ngFor="let news of news_feed_data_array;let index=index">
-                                        <img src="assets/img/background_sky.jpg" class="d-block w-100" style="height:450px;padding-left:0;padding-right:0" alt="testimonials">
-                                    </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
-                                    <i class="fa fa-chevron-left fa-2x" style="color:black" aria-hidden="true"></i>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
-                                    <i class="fa fa-chevron-right fa-2x" style="color:black" aria-hidden="true"></i>
-                                </a>
                             </div>
+                            <div class="carousel-item" *ngFor="let news of news_feed_data_array;let index=index">
+                                <img src="assets/img/background_sky.jpg" class="d-block w-100" style="height:415px;padding-left:0;padding-right:0" alt="testimonials">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left fa-2x" style="color:black" aria-hidden="true"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right fa-2x" style="color:black" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href="#" class="btn btn-primary"><b>READ MORE</b></a>
+                <div class="row row-center" id="testimonials_row" style="margin-top:-9px;padding-left:2px">
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4"></div>
+                    <div class="col-4 col-md-4">
+                        <a href="#" class="btn btn-primary"><b>READ MORE</b></a>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- </div> -->

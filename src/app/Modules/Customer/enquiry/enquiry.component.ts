@@ -163,40 +163,39 @@ export class EnquiryComponent implements OnInit {
       }
     }
 
-    const message="<div>"+
-    "<p><b>Name :</b>"+first_name+""+second_name+"</p>"+
-    "<p><b>City :</b>"+city+"</p>"+
-    "<p><b>Country :</b>"+country+"</p>"+
-    "<p><b>Address :</b>"+address+"</p>"+
-    "<p><b>Email :</b>"+email+"</p>"+
-    "<p><b>Date Of Birth :</b>"+dob+"</p>"+
-    "<p><b>State :</b>"+state+"</p>"+
-    "<p><b>Nationality :</b>"+nationality+"</p>"+
-    "<p><b>Tel :</b>"+phone+"</p>"+
-    "<p><b>Tour Name :</b>"+tour_name+"</p>"+
-    "<p><b>Accomodations :</b>"+accomodations+"</p>"+
-    "<p><b>Meal Plan :</b>"+meals+"</p>"+
-    "<p><b>Quote For Airfare :</b>"+this.airfare_check+"</p>"+
-    "<p><b>Arrival :</b>"+arrival+"</p>"+
-    "<p><b>Departure :</b>"+departure+"</p>"+
-    "<p><b>No of Adults :</b>"+no_of_adults+"</p>"+
-    "<p><b>No of Children :</b>"+no_of_children+"</p>"+
-    "<p><b>Approximate Budget Per Person :</b>"+budget+"</p>"+
-    "<p><b>Interest in Active Travelling :</b>"+interest_in_travel+"</p>"+
-    "<p><b>Destination Experience :</b> </p>"+
-    "<p><b>Special Occasions :</b>"+special_occasion+"</p>"+
-    "<p><b>Special Requirements :</b>"+special_requirements+"</p>"+
-    "<p><b>Search Engines :</b>"+this.search_engines_string+"</p>"+
-    "<p><b>Website Link :</b></p>"+
-    "<p><b>KeyWords :</b>"+keywords+"</p>"+
-    "<p><b>Referral :</b>"+refferal+"</p>"+
-    "<p><b>Description :</b>"+description+"</p>"+
-    "<p><b>Desired Physical Activities :</b>"+this.physical_activities_string+"</p>"+
-    "<p><b>Adventure Activities :</b>"+this.adventure_activities_string+"</p>"+
-    "<p><b>Sun Activities :</b>"+this.sun_activities_string+"</p>"+
-    "<p><b>Specific Interests :</b>"+this.specific_interests_string+"</p>"+
-  "</div>";
-
+    const message="<html><head><meta charset='utf-8' /> <style> .container{width: 400px;border: 2px solid gray;padding:50px;margin-left:250px} td{width:1000px;} .row{display: grid;grid-template-columns: auto auto auto auto;grid-gap: 10px;padding: 10px;padding-top:0;}  .col-4{grid-row: 1 ;} </style></head> <body><div class='container'><div class='row'><div class='col-4'><img src='https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/ABR.png?alt=media&token=647fc424-f023-4ed5-810f-93449e53ebbe' height='300px' width='200px' style='margin-top:-300px;margin-left:70px'></div><div class='col-4'><h1 style='color:green;margin-top:-50px;font-size:80px' align='center'><b>ABR TOURS</b></h1></div></div><table>"+
+    "<tr><td><b>Name :</b></td><td>"+first_name+""+second_name+"</td></tr>"+
+    "<tr><td><b>City :</b></td><td>"+city+"</td></tr>"+
+    "<tr><td><b>Country :</b></td><td>"+country+"</td></tr>"+
+    "<tr><td><b>Address :</b></td><td>"+address+"</td></tr>"+
+    "<tr><td><b>Email :</b></td><td>"+email+"</td></tr>"+
+    "<tr><td><b>Date Of Birth :</b></td><td><"+dob+"</td></tr>"+
+    "<tr><td><b>State :</b></td><td>"+state+"</td></tr>"+
+    "<tr><td><b>Nationality :</b></td><td>"+nationality+"</td></tr>"+
+    "<tr><td><b>Tel :</b></td><td>"+phone+"</td></tr>"+
+    "<tr><td><b>Tour Name :</b></td><td>"+tour_name+"</td></tr>"+
+    "<tr><td><b>Accomodations :</b></td><td>"+accomodations+"</td></tr>"+
+    "<tr><td><b>Meal Plan :</b></td><td>"+meals+"</td></tr>"+
+    "<tr><td><b>Quote For Airfare :</b></td><td>"+this.airfare_check+"</td></tr>"+
+    "<tr><td><b>Arrival :</b></td><td>"+arrival+"</td></tr>"+
+    "<tr><td><b>Departure :</b></td><td>"+departure+"</td></tr>"+
+    "<tr><td><b>No of Adults :</b></td><td>"+no_of_adults+"</td></tr>"+
+    "<tr><td><b>No of Children :</b></td><td>"+no_of_children+"</td></tr>"+
+    "<tr><td><b>Approximate Budget Per Person :</b></td><td>"+budget+"</td></tr>"+
+    "<tr><td><b>Interest in Active Travelling :</b></td><td>"+interest_in_travel+"</td></tr>"+
+    "<tr><td><b>Destination Experience :</b></td><td>"+destinations_experience+"</td></tr>"
+    "<tr><td><b>Special Occasions :</b></td><td>"+special_occasion+"</td></tr>"+
+    "<tr><td><b>Special Requirements :</b></td><td>"+special_requirements+"</td></tr>"+
+    "<tr><td><b>Search Engines :</b></td><td>"+this.search_engines_string+"</td></tr>"+
+    "<tr><td><b>Website Link :</b></td><td>"+website_link+"</td></tr>"+
+    "<tr><td><b>KeyWords :</b></td><td>"+keywords+"</td></tr>"+
+    "<tr><td><b>Referral :</b></td><td>"+refferal+"</td></tr>"+
+    "<tr><td><b>Description :</b></td><td>"+description+"</td></tr>"+
+    "<tr><td><b>Desired Physical Activities :</b></td><td>"+this.physical_activities_string+"</td></tr>"+
+    "<tr><td><b>Adventure Activities :</b></td><td>"+this.adventure_activities_string+"</td></tr>"+
+    "<tr><td><b>Sun Activities :</b></td><td>"+this.sun_activities_string+"</td></tr>"+
+    "<tr><td><b>Specific Interests :</b></td><td>"+this.specific_interests_string+"</td></tr>"+
+    "</table></div></body></html>";
 
     console.log(search_count+"->S")
     if(search_count==4 || interest_count==14 || activity_count==9) this.isSelected=false;
@@ -330,6 +329,10 @@ export class EnquiryComponent implements OnInit {
         duration:300
       });
     });
+  }
+
+  createMessageHTML(){
+    const message="<html><head><meta charset='utf-8'/>"
   }
 
 }

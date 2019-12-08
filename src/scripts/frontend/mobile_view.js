@@ -69,7 +69,6 @@ export function adjust_mobile_view_destination(){
     //    $('#row3').removeAttr('style'); 
     }
     $(window).resize(function(){
-        // this.alert(this.innerWidth)
         if(this.innerWidth<720){
         $('#row1').removeClass('row-center');
         $('#row2').removeClass('row-center');
@@ -141,14 +140,18 @@ export function adjust_mobile_view_faq(){
        for(var i=1;i<=15;i++){
            var row_id="#row"+i;
            $(row_id).removeClass('row-center');
-           $(row_id).attr('style','margin-left:0;margin-right:0;margin-top:10px');
+           $("#card-title").attr('style','height:80px;background-color:green');
+           $(row_id).attr('style','margin-left:0;margin-right:0;margin-top:5px');
            $("h5").removeClass('faq-height');
        }
     }
     else{
-        for(var i=1;i<=15;i++){
+        for(var i=3;i<=15;i++){
             var row_id="#row"+i;
             $(row_id).addClass('row-center');
+            $("#row1").addClass('row-center');
+            $("#row2").addClass('row-center');
+            $("#card-title").attr('style','height:65px;background-color:green');
             $(row_id).removeAttr('style');
             $("h5").addClass('faq-height');
         }
@@ -159,14 +162,18 @@ export function adjust_mobile_view_faq(){
             for(var i=1;i<=15;i++){
                 var row_id="#row"+i;
                 $(row_id).removeClass('row-center');
+                $("#card-title").attr('style','height:80px;background-color:green');
                 $(row_id).attr('style','margin-left:0;margin-right:0;margin-top:10px');
                 $("h5").removeClass('faq-height');
             }
         }
         else{
-            for(var i=1;i<=15;i++){
+            for(var i=3;i<=15;i++){
                 var row_id="#row"+i;
+                $("#row1").addClass('row-center');
+                $("#row2").addClass('row-center');
                 $(row_id).addClass('row-center');
+                $("#card-title").attr('style','height:65px;background-color:green')
                 $(row_id).removeAttr('style');
                 $("h5").addClass('faq-height');
             }
@@ -179,20 +186,46 @@ export function adjust_mobile_view_faq(){
 export function adjust_mobile_view_home(){
     var scree_size=$(window).width();
     if(scree_size<720){
-      $('#news_containers').removeClass('news-container');
+      $('#news_containers').removeClass('news_container');
       $('#news_containers').attr('style','margin-top:20px');
+
+    //   $("#faq_row").removeAttr('style');
+    //   $("#faq_row").attr('style','padding-left:296px;padding-right:0');
+      $("#faq_body").removeAttr('style');
+      $("#faq_body").attr('style','height:107px');
+
+    //   $("#transfer_row").removeAttr('style');
+    //   $("#transfer_row").attr('style','padding-left:296px;padding-right:0');
     }
     else{
         $('#news_containers').addClass('news-container');
         $('#news_containers').removeAttr('style');
+
+        // $("#faq_row").removeAttr('style');
+        // $("#faq_row").attr('style','padding-left:275px;padding-right:0');
+        $("#faq_body").removeAttr('style');
+        $("#faq_body").attr('style','height:134px');
+  
+        // $("#transfer_row").removeAttr('style');
+        // $("#transfer_row").attr('style','padding-left:275px;padding-right:0');
     }
     $(window).resize(function(){
         // this.alert(this.innerWidth)
         if(this.innerWidth<720){
-           
+            // $("#faq_row").removeAttr('style');
+            // $("#faq_row").attr('style','padding-left:296px;padding-right:0');
+            $("#faq_body").removeAttr('style');
+            $("#faq_body").attr('style','height:107px');
+            // $("#transfer_row").removeAttr('style');
+            // $("#transfer_row").attr('style','padding-left:296px;padding-right:0');
         }
         else{
-           
+            // $("#faq_row").removeAttr('style');
+            // $("#faq_row").attr('style','padding-left:275px;padding-right:0');
+            $("#faq_body").removeAttr('style');
+            $("#faq_body").attr('style','height:134px');
+            // $("#transfer_row").removeAttr('style');
+            // $("#transfer_row").attr('style','padding-left:275px;padding-right:0');
         }
     })
 }

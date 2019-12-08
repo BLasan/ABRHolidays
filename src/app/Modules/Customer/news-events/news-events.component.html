@@ -1,5 +1,5 @@
 <div class="row row-center" id="row1">
-    <div class="col-md-12" style="height:65px;background-color:lightblue;">
+    <div class="col-md-12" style="height:65px;background-color:green;">
       <h3 class="card-title" style="padding:10px;color:white" *ngIf="!is_target"><b>NEWS & EVENTS</b></h3>
       <h3 class="card-title" style="padding:10px;color:white" *ngIf="is_target"><b style="text-transform:uppercase">{{news_title}}</b></h3>
     </div>
@@ -11,9 +11,9 @@
     <div class="card">
       <h4 class="card-title" style="padding-left:20px;margin-top:10px;"><b>{{news_feed.title}}</b></h4>
       <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body" style="height:150px">
           <p class="card-text">{{news_feed.news}}</p>
-          <div class="row">
+          <div class="row" style="margin-top:60px">
             <div class="col-md-6 rect">
               <h6 style="padding-top: 10px;">
                 <i class="fa fa-calendar" aria-hidden="true"></i> 
