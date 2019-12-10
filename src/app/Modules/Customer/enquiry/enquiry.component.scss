@@ -5,7 +5,7 @@ h3{
 .row-center{
     margin-left: 0;
     margin-right: 0;
-    padding: 10px 100px 20px 100px;
+    // padding: 10px 100px 20px 100px;
 }
 
 .height-class{
@@ -53,19 +53,6 @@ span{
     padding-left:10px;
 }
 
-.mapouter{
-    position:relative;
-    text-align:right;
-    height:500px;
-    margin-left:-130px;
-    width:700px;
-}
-.gmap_canvas {
-    overflow:hidden;
-    background:none!important;
-    height:500px;
-    width:600px;
-}
 
 label{
     color:white;    

@@ -40,6 +40,7 @@ export class NewsEventsComponent implements OnInit {
       snapshot.forEach(doc=>{
         if(doc.data().status===""){
           this.news_feed_array.push(doc.data());
+          adjust_mobile_view_about_us();
         }
       })
   
@@ -55,6 +56,7 @@ export class NewsEventsComponent implements OnInit {
     this._db.firestore.collection('news_feed').doc(id).get().then(function(doc){
       _this.news_feed_array.push(doc.data());
       _this.news_title=doc.data().title;
+      adjust_mobile_view_about_us();
   
     }).catch(function(ex){
       alert("Error");

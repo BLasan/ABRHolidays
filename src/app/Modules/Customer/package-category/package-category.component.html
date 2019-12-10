@@ -3,25 +3,24 @@
 </div>
 
 
-
 <div *ngIf="package_data.length>0">
-  <div class="row">
-    <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:green;">
+  <div class="row row-center" id="row1">
+    <div class="col-md-12" style="height:60px;background-color:green;">
       <h3 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_category}}</h3>
     </div>
   </div>  
       
-  <div class="row">
-    <div class="col-md-8">
-      <div class="row" *ngFor="let package_data of package_data">
+  <div class="row row-center" style="margin-top:20px" id="row2">
+    <div class="col-12 col-md-8">
+      <div class="row row-center"  *ngFor="let package_data of package_data">
           <div class="col-md-5">
               <img src="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_package%2FDISCOVERY%40abc?alt=media&token=04440897-e87d-409a-a037-3487b74fb019" alt="Card image cap">
-            </div>
+          </div>
             <div class="col-md-7 padding-right">
               <div class="rectangle">
                 <h3 style="background-color: blue;margin-top:0px"><b>{{package_data.package_name}}</b></h3>
                 <div class="row">
-                  <img id="custom_img" src="https://www.ceylontours.com/images/day.png"><h3><b>{{package_data.no_of_days}}</b></h3> 
+                  <img id="custom_img" style="margin-left:10px" src="https://www.ceylontours.com/images/day.png"><h3><b>{{package_data.no_of_days}}</b></h3> 
                   <img id="custom_img" style="margin-left:40px" src="https://www.ceylontours.com/images/night.png"><h3><b>{{package_data.no_of_days-1}}</b></h3>
                 </div>
                 <div class="row" id="details" style="margin-top:20px">
@@ -34,10 +33,10 @@
                 </div>
                 <div class="row" style="margin-top:20px">
                   <div class="col-md-4"></div>
-                  <div class="col-md-4">
+                  <div class="col-4 col-md-4">
                     <button type="button" class="btn btn-danger"><b>ENQUIRY</b></button>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-4 col-md-4">
                     <button type="button" class="btn btn-info" style="margin-left:-20px"><b>MORE INFO</b></button>
                   </div>
                 </div>
@@ -45,7 +44,7 @@
             </div>
       </div>
     </div>
-    <div class="col-md-4" style="width:20rem;">
+    <div class="col-12 col-md-4" style="width:20rem;" id="category">
         <div class="card">
           <h4 class="card-title" style="font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px"><b>TOUR CATEGORIES</b></h4>
           <div class="card-body">

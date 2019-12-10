@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { categories} from '../../../../scripts/frontend/package_categories';
-
+import { adjust_mobile_view_inbound_package_category} from '../../../../scripts/frontend/mobile_view';
 @Component({
   selector: 'app-package-category',
   templateUrl: './package-category.component.html',
@@ -17,10 +17,12 @@ export class PackageCategoryComponent implements OnInit {
   constructor(private route:ActivatedRoute,private _db:AngularFirestore) { }
 
   ngOnInit() {
+    adjust_mobile_view_inbound_package_category();
     this.route.params.subscribe(params => {
       this.package_category=params.category;
       // console.log(this.package_category)
       this.load_packages(this.package_category);
+      adjust_mobile_view_inbound_package_category();
     });
 
     this.package_category_array=categories;
@@ -29,6 +31,7 @@ export class PackageCategoryComponent implements OnInit {
   load_packages(category){
     var collection=this._db.firestore.collection('packages');
     collection.get().then(snapshot=>{
+      adjust_mobile_view_inbound_package_category();
       if (snapshot.empty) {
         alert("Empty Data");
         // console.log('No matching documents.');

@@ -1,5 +1,5 @@
-<div class="row row-center">
-  <div class="col-md-10 card" style="margin-left:15px;height:60px;background-color:green;">
+<div class="row row-center" id="row1">
+  <div class="col-md-12" style="height:65px;background-color:green;">
     <h2 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_name}}</h2>
   </div>
     <!-- <div class="heading" align="center">
@@ -8,7 +8,7 @@
 </div>  
 
 
-<div class="row row-center" style="margin-top:10px">
+<div class="row row-center" style="margin-top:10px" id="row2">
   <div class="col-md-8">
     <div class="row row-center">
       <table class="table table-striped table-dark">
@@ -52,7 +52,7 @@
       </div>         
     </div>
   </div>
-  <div class="col-md-4" style="width:20rem;">
+  <div class="col-12 col-md-4" style="width:20rem;">
     <div class="card">
       <h4 class="card-title" style="font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px"><b>TOUR CATEGORIES</b></h4>
       <div class="card-body">

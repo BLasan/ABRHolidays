@@ -5,6 +5,7 @@ import { country_array} from '../../../../scripts/frontend/load_country'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { SendMailService } from '../../../services/send_mail.service';
 import { MatSnackBar } from '@angular/material';
+import { adjust_mobile_view_contact_us} from '../../../../scripts/frontend/mobile_view';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -18,6 +19,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private _db:AngularFirestore,private service:SendMailService,private _snackbar:MatSnackBar) { }
 
   ngOnInit() {
+    adjust_mobile_view_contact_us();
     this.form=new FormGroup({
       subject:new FormControl(this.subject,Validators.required),
       f_name:new FormControl('',Validators.required),

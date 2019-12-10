@@ -1,25 +1,25 @@
 <div class="row row-center" id="row1">
-  <div class="col-md-12 card" style="height:65px;background-color:green;">
-    <h3 class="card-title" style="margin:auto;padding:5px;color:white"><b>ENQUIRY</b></h3>
+  <div class="col-md-12" style="height:65px;background-color:green;">
+    <h3 class="card-title" style="padding:10px;color:white"><b>ENQUIRY</b></h3>
   </div>
 </div>  
 
-<div class="row row-center" style="margin-top:10px">
+<div class="row row-center" style="margin-top:10px" id="row2">
   <div class="col-md-8">
     <div class="card">
       <h4 class="card-title"><b style="padding-left:20px">TOUR INFORMATION</b></h4>
       <div class="card-body">
         <form [formGroup]="form">
           <div class="row">
-            <div class="col-md-3">Tour Name :</div>
-            <div class="col-md-9">
+            <div class="col-12 col-md-3">Tour Name :</div>
+            <div class="col-12 col-md-9">
               <div class="form-group" [ngClass]="{'has-success':form.controls.tour_name.valid && (form.controls.tour_name.dirty || form.controls.tour_name.touched),'has-danger':form.controls.tour_name.invalid && (form.controls.tour_name.dirty || form.controls.tour_name.touched)}">
                 <input type="text" class="form-control" id="tour_name" placeholder="Tour Name" formControlName="tour_name">
               </div>
             </div>
           </div>
           <div class="row" style="padding-top:10px;">
-            <div class="col-md-6">
+            <div class="col-12 col-md-6">
               <div class="row">
                 <div class="col-md-4">Arrival :</div>
                 <div class="col-md-8">
@@ -29,7 +29,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6">
               <div class="row">
                 <div class="col-md-4" style="padding-top:5px;">Departure :</div>
                 <div class="col-md-8">
@@ -41,10 +41,10 @@
             </div>
           </div>
           <div class="row" style="padding-top:10px;">
-            <div class="col-md-7" style="padding-top:6px">Would you like a quote for airfare ?</div>
-            <div class="col-md-5">
+            <div class="col-12 col-md-7" style="padding-top:6px">Would you like a quote for airfare ?</div>
+            <div class="col-12 col-md-5">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                   <div class="form-check form-check-radio">
                     <label class="form-check-label" style="color:black">
                       <input class="form-check-input" type="radio" name="airfare_Radios" id="airfare_Radios_yes" value="yes" checked (change)="radioCheck1($event)">
@@ -53,7 +53,7 @@
                     </label>
                   </div> 
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                   <div class="form-check form-check-radio">
                     <label class="form-check-label"  style="color: black;">
                       <input class="form-check-input" type="radio" name="airfare_Radios" id="airfare_Radios_yes" value="no" (change)="radioCheck1($event)">
@@ -66,15 +66,15 @@
             </div>
           </div>
           <div class="row" style="padding-top:10px;">
-            <div class="col-md-3">No. of Persons :</div> 
-            <div class="col-md-9" style="padding-left:-20px">
+            <div class="col-12 col-md-3">No. of Persons :</div> 
+            <div class="col-12 col-md-9" style="padding-left:-20px">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                   <div class="form-group" [ngClass]="{'has-success':form.controls.no_of_adults.valid && (form.controls.no_of_adults.dirty || form.controls.no_of_adults.touched),'has-danger':form.controls.no_of_adults.invalid && (form.controls.no_of_adults.dirty || form.controls.no_of_adults.touched)}">
                     <input type="number" class="form-control" id="no_of_adults" placeholder="Number Of Adults" formControlName="no_of_adults">
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                   <div class="form-group" [ngClass]="{'has-success':form.controls.no_of_children.valid && (form.controls.no_of_children.dirty || form.controls.no_of_children.touched),'has-danger':form.controls.no_of_children.invalid && (form.controls.no_of_children.dirty || form.controls.no_of_children.touched)}">
                     <input type="number" class="form-control" id="no_of_children" placeholder="Number Of Children" formControlName="no_of_children">
                   </div>
@@ -83,8 +83,8 @@
             </div>
           </div>
           <div class="row" style="padding-top:10px;">
-            <div class="col-md-3">Accomodation :</div>
-            <div class="col-md-9">
+            <div class="col-12 col-md-3">Accomodation :</div>
+            <div class="col-12 col-md-9">
               <div class="form-group" [ngClass]="{'has-success':form.controls.accomodations.valid && (form.controls.accomodations.dirty || form.controls.accomodations.touched),'has-danger':form.controls.accomodations.invalid && (form.controls.accomodations.dirty || form.controls.accomodations.touched)}">
                 <select name="country" id="accomodations" class="form-control" style="height:38px;" formControlName="accomodations">
                   <option *ngFor="let accomodations of accomodation_options" value="{{accomodations}}">{{accomodations}}</option>
@@ -103,8 +103,8 @@
             </div>
           </div>
           <div class="row" style="padding-top:10px;">
-            <div class="col-md-5" style="padding-top:5px;">Approximate Budget Per Person :</div>
-            <div class="col-md-7">
+            <div class="col-12 col-md-5" style="padding-top:5px;">Approximate Budget Per Person :</div>
+            <div class="col-12col-md-7">
               <div class="form-group" [ngClass]="{'has-success':form.controls.budget.valid && (form.controls.budget.dirty || form.controls.budget.touched),'has-danger':form.controls.budget.invalid && (form.controls.budget.dirty || form.controls.budget.touched)}">
                 <input type="number" class="form-control" id="budget" placeholder="Enter Budget" formControlName="budget">
               </div>   
@@ -595,39 +595,3 @@
   </div>
 </div>
 
-
-<!-- <div style="display:none;" *ngFor="let data of data_obj_array" id="contentToConvert">
-  <p><b>Name :</b> {{data.first_name}} {{data.second_name}}</p>
-  <p><b>City :</b> {{data.city}}</p>
-  <p><b>Country :</b> {{data.country}}</p>
-  <p><b>Address :</b> {{data.address}}</p>
-  <p><b>Email :</b> {{data.email}}</p>
-  <p><b>Date Of Birth :</b> {{data.dob}}</p>
-  <p><b>State :</b> {{data.state}}</p>
-  <p><b>Nationality :</b> {{data.nationality}}</p>
-  <p><b>Tel :</b> {{data.phone}}</p>
-  <hr>
-  <p><b>Tour Name :</b> {{data.tour_name}}</p>
-  <p><b>Accomodations :</b> {{data.accomodations}}</p>
-  <p><b>Meal Plan :</b> {{data.meals}}</p>
-  <p><b>Quote For Airfare :</b> {{data.airfare_check}}</p>
-  <p><b>Arrival :</b> {{data.arrival}}</p>
-  <p><b>Departure :</b> {{data.departure}}</p>
-  <p><b>No of Adults :</b> {{data.no_of_adults}}</p>
-  <p><b>No of Children :</b> {{data.no_of_children}}</p>
-  <p><b>Approximate Budget Per Person :</b> {{data.budget}}</p>
-  <p><b>Interest in Active Travelling :</b> {{data.interest_in_travel}}</p>
-  <p><b>Destination Experience :</b> {{data.destinations_experience}}</p>
-  <p><b>Special Occasions :</b> {{data.special_occasion}}</p>
-  <p><b>Special Requirements :</b> {{data.special_requirements}}</p>
-  <p><b>Search Engines :</b> {{search_engines}}</p>
-  <p><b>Website Link :</b> {{data.website_link}}</p>
-  <p><b>KeyWords :</b> {{data.keywords}}</p>
-  <p><b>Referral :</b> {{data.referral}}</p>
-  <p><b>Description :</b> {{data.description}}</p>
-  <hr>
-  <p><b>Desired Physical Activities :</b> {{physical_activities}}</p>
-  <p><b>Adventure Activities :</b> {{ad_activities}}</p>
-  <p><b>Sun Activities :</b> {{sun_activities}}</p>
-  <p><b>Specific Interests :</b> {{specific_interests}}</p>
-</div> -->

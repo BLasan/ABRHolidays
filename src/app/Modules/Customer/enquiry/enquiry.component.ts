@@ -8,6 +8,7 @@ import { country_array} from '../../../../scripts/frontend/load_country';
 import CryptoJS from 'crypto-js';
 import * as jspdf from 'jspdf';  
 import html2canvas from 'html2canvas'; 
+import { adjust_mobile_view_enquiry} from '../../../../scripts/frontend/mobile_view';
 @Component({
   selector: 'app-enquiry',
   templateUrl: './enquiry.component.html',
@@ -38,6 +39,7 @@ export class EnquiryComponent implements OnInit {
   constructor(private _db:AngularFirestore,private service:SendMailService,private _snackbar:MatSnackBar,private route:ActivatedRoute) { }
 
   ngOnInit() {
+    adjust_mobile_view_enquiry();
     this.country_array=country_array;
     this.route.params.subscribe(params => {
       this.package_name=params.package;
@@ -70,6 +72,7 @@ export class EnquiryComponent implements OnInit {
         refferal:new FormControl('',[Validators.required]),
         description:new FormControl('',[Validators.required])
       });
+      adjust_mobile_view_enquiry();
     });
   }
 

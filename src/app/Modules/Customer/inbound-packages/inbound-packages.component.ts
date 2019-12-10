@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { categories} from '../../../../scripts/frontend/package_categories';
-
+import { adjust_mobile_view_inbound_packages} from '../../../../scripts/frontend/mobile_view';
 @Component({
   selector: 'app-inbound-packages',
   templateUrl: './inbound-packages.component.html',
@@ -21,6 +21,7 @@ export class InboundPackagesComponent implements OnInit {
   constructor(private _db:AngularFirestore,private route: ActivatedRoute) { }
 
   ngOnInit() {
+    adjust_mobile_view_inbound_packages();
     this.route.params.subscribe(params => {
       this.package_id=params.code;
       this.load_package_data(this.package_id);
@@ -37,6 +38,7 @@ export class InboundPackagesComponent implements OnInit {
       _this.duration=doc.data().no_of_days;
       _this.package_name=doc.data().package_name;
       _this.filter_destination_details(_this.package_data);
+      adjust_mobile_view_inbound_packages();
     }).catch(function(ex){
       alert("Error");
       //  console.log(ex);
