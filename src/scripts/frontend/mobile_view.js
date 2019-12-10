@@ -5,9 +5,9 @@ export function adjust_mobile_view_about_us(){
         $('#row1').removeClass('row-center');
         $('#row2').removeClass('row-center');
         $('#row3').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:20px');
+        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:20px');
+        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:20px');
     //    $('#title-container').removeClass('title-container');
     //    $('#title-container').attr('style','height:auto');
     //    $('#title-container').attr('style','background-color:lightblue');
@@ -26,9 +26,9 @@ export function adjust_mobile_view_about_us(){
             $('#row1').removeClass('row-center');
             $('#row2').removeClass('row-center');
             $('#row3').removeClass('row-center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:20px');
+            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:20px');
+            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:20px');
         }
         else{
             $('#row1').addClass('row-center');
