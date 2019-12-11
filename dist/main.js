@@ -265,7 +265,7 @@ var CustomerLayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"limiter\">\n\t\t<div class=\"container-login100\" style=\"background-image: url('assets/img/img-01.jpg');\">\n\t\t\t<div class=\"wrap-login100 p-t-190 p-b-30\">\n\n\t\t\t\t<form class=\"login100-form validate-form\">\n\t\t\t\t\t<div class=\"login100-form-avatar\">\n\t\t\t\t\t\t<img src=\"assets/img/avatar-01.jpg\" alt=\"AVATAR\">\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<span class=\"login100-form-title p-t-20 p-b-45\">\n\t\t\t\t\t\tJohn Doe\n          </span>\n          \n          <div class=\"alert alert-danger\" style=\"display:none\" id=\"warning_message\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i> Login Unsuccessfull</span>\n          </div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Username is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"text\" name=\"username\" placeholder=\"Username\" id=\"user_name\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-user\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Password is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"password\" name=\"pass\" placeholder=\"Password\" id=\"user_password\" (keyup.enter)=\"submit_form()\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-lock\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"container-login100-form-btn p-t-10\">\n\t\t\t\t\t\t<button class=\"login100-form-btn\" type=\"button\" (click)=\"submit_form()\">\n\t\t\t\t\t\t\tLogin\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"text-center w-full p-t-25 p-b-230\">\n\t\t\t\t\t\t<a href=\"#\" class=\"txt1\">\n\t\t\t\t\t\t\tForgot Username / Password?\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- <div class=\"text-center w-full\">\n\t\t\t\t\t\t<a class=\"txt1\" href=\"#\">\n\t\t\t\t\t\t\tCreate new account\n\t\t\t\t\t\t\t<i class=\"fa fa-long-arrow-right\"></i>\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n<a href=\"/dashboard\" id=\"redirect_to_admin\" style=\"display: none;\"></a>"
+module.exports = "<div class=\"limiter\">\n\t<div class=\"container-login100\" style=\"background-image: url('assets/img/img-01.jpg');\">\n\t\t<div class=\"wrap-login100 p-t-190 p-b-30\">\n\t\t\t<form class=\"login100-form validate-form\" style=\"padding-top:0\">\n\t\t\t\t<div class=\"login100-form-avatar\">\n\t\t\t\t\t<img src=\"assets/img/ABR.png\" alt=\"ABR-LOGO\">\n\t\t\t\t</div>\n\t\t\t\t<span class=\"login100-form-title p-t-20 p-b-45\">\n\t\t\t\t\t\tABR TOURS\n                </span>\n          <div class=\"alert alert-danger\" style=\"display:none\" id=\"warning_message\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i> Login Unsuccessfull</span>\n          </div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Username is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"text\" name=\"username\" placeholder=\"Username\" id=\"user_name\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-user\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Password is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"password\" name=\"pass\" placeholder=\"Password\" id=\"user_password\" (keyup.enter)=\"submit_form()\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-lock\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"container-login100-form-btn p-t-10\">\n\t\t\t\t\t\t<button class=\"login100-form-btn\" type=\"button\" (click)=\"submit_form()\">\n\t\t\t\t\t\t\tLogin\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<!-- <div class=\"text-center w-full p-t-25 p-b-230\">\n\t\t\t\t\t\t<a href=\"#\" class=\"txt1\">\n\t\t\t\t\t\t\tForgot Username / Password?\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t\t<!-- <div class=\"text-center w-full\">\n\t\t\t\t\t\t<a class=\"txt1\" href=\"#\">\n\t\t\t\t\t\t\tCreate new account\n\t\t\t\t\t\t\t<i class=\"fa fa-long-arrow-right\"></i>\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n<a href=\"/dashboard\" id=\"redirect_to_admin\" style=\"display: none;\"></a>"
 
 /***/ }),
 
@@ -296,14 +296,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var crypto_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(crypto_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
 /* harmony import */ var _scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../scripts/frontend/redirect_to_dashboard */ "./src/scripts/frontend/redirect_to_dashboard.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _services_send_mail_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/send_mail.service */ "./src/app/services/send_mail.service.ts");
+
+
 
 
 
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(_db) {
+    function LoginComponent(_db, _auth, service) {
         this._db = _db;
+        this._auth = _auth;
+        this.service = service;
     }
     LoginComponent.prototype.ngOnInit = function () {
         // this.form=new FormGroup({
@@ -315,14 +321,38 @@ var LoginComponent = /** @class */ (function () {
         var email = document.getElementById('user_name').value;
         var password = document.getElementById('user_password').value;
         var hash = crypto_js__WEBPACK_IMPORTED_MODULE_2___default.a.SHA256(password).toString();
-        console.log(hash);
+        // console.log(hash);
+        var _this = this;
         var docRef = this._db.firestore.collection('admin').doc(email);
         docRef.get().then(function (doc) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
                 return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                    // console.log(doc.data().password===hash && doc.data().active)
                     if (doc.data().password == hash) {
+                        // console.log("Hello")
                         localStorage.setItem('login', 'true');
-                        Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["redirect_to_admin"])();
+                        _this._auth.auth.signInWithEmailAndPassword(email, hash).then(function (value) {
+                            // alert(value.user.metadata.lastSignInTime);
+                            var message = "Last Login : " + value.user.metadata.lastSignInTime;
+                            var email_message = {
+                                to: 'benuraab@gmail.com',
+                                from: 'developerbenura@gmail.com',
+                                subject: 'User Login monitored',
+                                text: message,
+                                html: '<strong>' + message + '</strong>' + '<p>' + "Take necessary actions if this is not you." + '</p>',
+                            };
+                            _this.service.sendEmail(email_message).subscribe(function (data) {
+                                _this.data = data;
+                                // console.log(_this.data.success)
+                                if (_this.data.success)
+                                    Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["redirect_to_admin"])();
+                                else
+                                    alert('Notification Sending Failed!');
+                            });
+                        }).catch(function (err) {
+                            alert("Error");
+                            // console.log(err);
+                        });
                     }
                     else {
                         Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["warning_message"])();
@@ -332,7 +362,8 @@ var LoginComponent = /** @class */ (function () {
             });
         }).catch(function (error) {
             Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["warning_message"])();
-            console.log(error);
+            alert("Error");
+            // console.log(error);
         });
     };
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -341,7 +372,7 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/Modules/Admin/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.scss */ "./src/app/Modules/Admin/login/login.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"], _services_send_mail_service__WEBPACK_IMPORTED_MODULE_6__["SendMailService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -553,7 +584,10 @@ var AppModule = /** @class */ (function () {
                 _Modules_Admin_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
                 _Modules_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_19__["PageNotFoundComponent"],
                 _components_customer_navbar_customer_navbar_component__WEBPACK_IMPORTED_MODULE_20__["CustomerNavbarComponent"],
-                _components_customer_footer_customer_footer_component__WEBPACK_IMPORTED_MODULE_22__["CustomerFooterComponent"],
+                _components_customer_footer_customer_footer_component__WEBPACK_IMPORTED_MODULE_22__["CustomerFooterComponent"]
+                // FilterDataComponent
+                // DestinationsComponent,
+                // CustomerHomeComponent
             ],
             providers: [_services_AuthGuardAdmin_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardAdminService"], _services_AuthGuardCustomer_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardCustomerService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
@@ -724,7 +758,7 @@ var ComponentsModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/contact-us\">\n            ABR TOURS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            ABOUT US\n          </a>\n        </li>\n        <li>\n          <a href=\"/home\">\n            BLOG\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"#\" target=\"_blank\">Super Softwares</a>. Coded by\n      <a href=\"#\" target=\"_blank\">Super Softwares</a>.\n    </div>\n  </div>\n</footer>\n"
+module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/contact-us\">\n            ABR HOLIDAYS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            ABOUT US\n          </a>\n        </li>\n        <li>\n          <a href=\"/home\">\n            BLOG\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174; Coded by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174;\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -780,7 +814,7 @@ var CustomerFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" style=\"height:38px;margin-right:5px\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\" style=\"margin-top:0px;margin-left:-8px;\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/home\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/about-us\">About Us</a>\n        </li>\n        <!-- <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/services\">Services</a>\n        </li> -->\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/news-events/my_news\">News & Events</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/destinations\">Destinations</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/testimonials\">Testimonials</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/faq\">FAQ</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"contact-us\">Contact Us</a>\n        </li>\n      </ul>\n    </div>\n  </nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <img src=\"assets/img/ABR.png\" height=\"70px\">\n    <button class=\"navbar-toggler\" type=\"button\" style=\"height:38px;margin-right:5px\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\" style=\"margin-top:0px;margin-left:-8px;\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/home\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/about-us\">About Us</a>\n        </li>\n        <!-- <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/services\">Services</a>\n        </li> -->\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/news-events/my_news\">News & Events</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/destinations\">Destinations</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/testimonials\">Testimonials</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/faq\">FAQ</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"contact-us\">Contact Us</a>\n        </li>\n      </ul>\n    </div>\n  </nav>"
 
 /***/ }),
 
@@ -847,7 +881,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Tour</a>.\n    </div>\n  </div>\n</footer>\n"
+module.exports = "\n<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/home\">\n            ABR HOLIDAYS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"#\">\n            Blog\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Tour</a>.\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -924,6 +958,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _scripts_frontend_disable_href_links__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../scripts/frontend/disable_href_links */ "./src/scripts/frontend/disable_href_links.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+
 
 
 
@@ -931,9 +967,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent(location, element, router) {
+    function NavbarComponent(location, element, router, auth) {
         this.element = element;
         this.router = router;
+        this.auth = auth;
         this.mobile_menu_visible = 0;
         this.isCollapsed = true;
         this.location = location;
@@ -958,7 +995,7 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.collapse = function () {
         this.isCollapsed = !this.isCollapsed;
         var navbar = document.getElementsByTagName('nav')[0];
-        console.log(navbar);
+        // console.log(navbar);
         if (!this.isCollapsed) {
             navbar.classList.remove('navbar-transparent');
             navbar.classList.add('bg-white');
@@ -1061,6 +1098,9 @@ var NavbarComponent = /** @class */ (function () {
             return 'Searched Data';
     };
     NavbarComponent.prototype.signout = function () {
+        // alert(this.auth.auth.currentUser)
+        // alert(this.auth.auth.currentUser.displayName)
+        this.auth.auth.signOut();
         localStorage.removeItem('login');
     };
     NavbarComponent.prototype.search = function () {
@@ -1085,7 +1125,7 @@ var NavbarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./navbar.component.html */ "./src/app/components/navbar/navbar.component.html"),
             styles: [__webpack_require__(/*! ./navbar.component.css */ "./src/app/components/navbar/navbar.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_6__["AngularFireAuth"]])
     ], NavbarComponent);
     return NavbarComponent;
 }());
@@ -1101,7 +1141,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"logo\" style=\"background-color:grey;\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"./assets/img/angular2-logo-white.png\"/>\n      </div>\n    </a>\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-normal\">\n        <b>Hotel</b>\n    </a>\n</div>\n<div class=\"sidebar-wrapper\" style=\"background-color:grey;\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a [routerLink]=\"[menuItem.path]\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p><b style=\"color:black\">{{menuItem.title}}</b></p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
+module.exports = "\n<div class=\"logo\" style=\"background-color:grey;\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/ABR.png?alt=media&token=647fc424-f023-4ed5-810f-93449e53ebbe\"/>\n      </div>\n    </a>\n    <a href=\"#\" class=\"simple-text logo-normal\">\n        <b>Hotel</b>\n    </a>\n</div>\n<div class=\"sidebar-wrapper\" style=\"background-color:grey;\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a [routerLink]=\"[menuItem.path]\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p><b style=\"color:black\">{{menuItem.title}}</b></p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
 
 /***/ }),
 
@@ -1141,6 +1181,7 @@ var ROUTES = [
     // { path: '/accomodation-transfer', title: 'Accomodation',  icon:'business_bank', class: '' }, 
     // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
     { path: '/view-details', title: 'View Details', icon: 'design_bullet-list-67', class: '' },
+    { path: '/enquiry', title: 'View Enquiries', icon: 'business_bank', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent() {
@@ -1236,7 +1277,7 @@ var AuthGuardCustomerService = /** @class */ (function () {
     }
     AuthGuardCustomerService.prototype.canActivate = function (route, state) {
         var path = this.location.prepareExternalUrl(this.location.path());
-        console.log(path);
+        // console.log(path)
         if (path === "/about-us")
             return true;
         else if (path === "/accomodation")
@@ -1253,7 +1294,11 @@ var AuthGuardCustomerService = /** @class */ (function () {
             return true;
         else if (path.indexOf('/package-category') > -1)
             return true;
+        else if (path.indexOf('/enquiry') > -1)
+            return true;
         else if (path === "/transfers")
+            return true;
+        else if (path.indexOf("/transfer-contactUs") > -1)
             return true;
         else if (path === "/destinations")
             return true;
@@ -1270,6 +1315,45 @@ var AuthGuardCustomerService = /** @class */ (function () {
             _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]])
     ], AuthGuardCustomerService);
     return AuthGuardCustomerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/send_mail.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/services/send_mail.service.ts ***!
+  \***********************************************/
+/*! exports provided: SendMailService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendMailService", function() { return SendMailService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var SendMailService = /** @class */ (function () {
+    function SendMailService(http) {
+        this.http = http;
+        this._url = "http://localhost:4600";
+    }
+    SendMailService.prototype.sendEmail = function (email_message) {
+        //console.log(email_message.to)
+        //let headers=new HttpHeaders({'Content-Type':'application/json','Access-Control-Allow-Origin':'*',"Access-Control-Allow-Headers":["Origin,X-Requested-With, Content-Type, Accept"]});
+        return this.http.post(this._url + "/send_mail", [email_message.to, email_message.from, email_message.subject, email_message.text, email_message.html]);
+    };
+    SendMailService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], SendMailService);
+    return SendMailService;
 }());
 
 

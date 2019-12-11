@@ -319,7 +319,7 @@ export class EnquiryComponent implements OnInit {
     }
 
     //console.log(email_message.html)
-
+   
     this.service.sendEmail(email_message).subscribe((data)=>{
       this.data=data;
       if(this.data.success){

@@ -62,6 +62,7 @@ export class ContactUsComponent implements OnInit {
     let object={subject:subject,first_name:f_name,last_name:l_name,email:email,tel:tel,message:message,country:country,date:date,id:notification_id,view:false};
     this._db.firestore.collection('customer_message').doc(notification_id).set(object).then(doc=>{
       // console.log("Success");
+    
       _this.service.sendEmail(email_message).subscribe((data)=>{
         _this.data=data;
         if(_this.data.success){

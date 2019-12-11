@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && nodemon server.js",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -45,6 +45,7 @@
     "firebase": "^7.3.0",
     "firebase-functions": "^3.3.0",
     "font-awesome": "4.7.0",
+    "forever": "^1.0.0",
     "hammerjs": "2.0.8",
     "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.4.1",

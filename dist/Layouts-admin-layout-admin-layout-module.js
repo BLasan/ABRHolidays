@@ -33037,6 +33037,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Modules_Admin_accomodation_transfer_accomodation_transfer_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../Modules/Admin/accomodation-transfer/accomodation-transfer.component */ "./src/app/Modules/Admin/accomodation-transfer/accomodation-transfer.component.ts");
 /* harmony import */ var _Modules_Admin_edit_packages_edit_packages_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../Modules/Admin/edit-packages/edit-packages.component */ "./src/app/Modules/Admin/edit-packages/edit-packages.component.ts");
 /* harmony import */ var _Modules_Admin_filter_data_filter_data_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../Modules/Admin/filter-data/filter-data.component */ "./src/app/Modules/Admin/filter-data/filter-data.component.ts");
+/* harmony import */ var _Modules_Admin_enquiries_enquiries_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../Modules/Admin/enquiries/enquiries.component */ "./src/app/Modules/Admin/enquiries/enquiries.component.ts");
+
 
 
 
@@ -33090,7 +33092,8 @@ var AdminLayoutModule = /** @class */ (function () {
                 _Modules_Admin_manage_news_feed_manage_news_feed_component__WEBPACK_IMPORTED_MODULE_20__["ManageNewsFeedComponent"],
                 _Modules_Admin_accomodation_transfer_accomodation_transfer_component__WEBPACK_IMPORTED_MODULE_21__["AccomodationTransferComponent"],
                 _Modules_Admin_edit_packages_edit_packages_component__WEBPACK_IMPORTED_MODULE_22__["EditPackagesComponent"],
-                _Modules_Admin_filter_data_filter_data_component__WEBPACK_IMPORTED_MODULE_23__["FilterDataComponent"]
+                _Modules_Admin_filter_data_filter_data_component__WEBPACK_IMPORTED_MODULE_23__["FilterDataComponent"],
+                _Modules_Admin_enquiries_enquiries_component__WEBPACK_IMPORTED_MODULE_24__["EnquiriesComponent"]
             ]
         })
     ], AdminLayoutModule);
@@ -33121,6 +33124,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Modules_Admin_manage_news_feed_manage_news_feed_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Modules/Admin/manage-news-feed/manage-news-feed.component */ "./src/app/Modules/Admin/manage-news-feed/manage-news-feed.component.ts");
 /* harmony import */ var _Modules_Admin_edit_packages_edit_packages_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Modules/Admin/edit-packages/edit-packages.component */ "./src/app/Modules/Admin/edit-packages/edit-packages.component.ts");
 /* harmony import */ var _Modules_Admin_filter_data_filter_data_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../Modules/Admin/filter-data/filter-data.component */ "./src/app/Modules/Admin/filter-data/filter-data.component.ts");
+/* harmony import */ var _Modules_Admin_enquiries_enquiries_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../Modules/Admin/enquiries/enquiries.component */ "./src/app/Modules/Admin/enquiries/enquiries.component.ts");
+
 
 
 
@@ -33145,6 +33150,7 @@ var AdminLayoutRoutes = [
     { path: 'upgrade', component: _Modules_Admin_upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_4__["UpgradeComponent"] },
     { path: 'edit-package/:package_id', component: _Modules_Admin_edit_packages_edit_packages_component__WEBPACK_IMPORTED_MODULE_8__["EditPackagesComponent"] },
     { path: 'manage-news-feed', component: _Modules_Admin_manage_news_feed_manage_news_feed_component__WEBPACK_IMPORTED_MODULE_7__["ManageNewsFeedComponent"] },
+    { path: 'enquiry', component: _Modules_Admin_enquiries_enquiries_component__WEBPACK_IMPORTED_MODULE_10__["EnquiriesComponent"] },
     { path: 'filter-data/:category/:search_text', component: _Modules_Admin_filter_data_filter_data_component__WEBPACK_IMPORTED_MODULE_9__["FilterDataComponent"] }
 ];
 
@@ -33301,7 +33307,7 @@ var AddDetailsComponent = /** @class */ (function () {
     };
     AddDetailsComponent.prototype.get_uploaded_image = function (event) {
         this.image_file = event.target.files;
-        console.log(this.image_file);
+        // console.log(this.image_file);
     };
     AddDetailsComponent.prototype.upload_image = function (id) {
         var imageId = "image_package/" + id;
@@ -33328,12 +33334,12 @@ var AddDetailsComponent = /** @class */ (function () {
     AddDetailsComponent.prototype.create_package = function () {
         var package_name = document.getElementById("package_name").value;
         var category = document.getElementById("category").value;
-        console.log(category);
+        //  console.log(category)
         var no_of_days = this.day_count;
         for (var i = 0; i < this.day_count; i++) {
             var day_id = "day" + i;
             var overnight_id = "overnight" + i;
-            console.log(day_id);
+            //  console.log(day_id);
             var day_no = parseInt(document.getElementById(day_id).value);
             var overnight = document.getElementById(overnight_id).value;
             var destination = void 0;
@@ -33356,7 +33362,7 @@ var AddDetailsComponent = /** @class */ (function () {
                 drive_destination_array.push(package_destination_obj);
             }
             //  let description=(<HTMLInputElement>document.getElementById(desc_id)).value;
-            console.log(description);
+            //  console.log(description);
             if (day_no == 0 || destination == null || overnight == null || drive == null || description == null) {
                 // if(day_no==0){
                 //   this.isEmptyDay=true;
@@ -33402,7 +33408,7 @@ var AddDetailsComponent = /** @class */ (function () {
                     duration: 2000,
                 });
             }).catch(function (err) {
-                console.log(err);
+                // console.log(err);
                 snackBar.open(err, "Re-Submit", {
                     duration: 2000,
                 });
@@ -33494,10 +33500,10 @@ var DashboardComponent = /** @class */ (function () {
     }
     // events
     DashboardComponent.prototype.chartClicked = function (e) {
-        console.log(e);
+        // console.log(e);
     };
     DashboardComponent.prototype.chartHovered = function (e) {
-        console.log(e);
+        // console.log(e);
     };
     DashboardComponent.prototype.hexToRGB = function (hex, alpha) {
         var r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
@@ -33831,7 +33837,7 @@ var DashboardComponent = /** @class */ (function () {
         Object(_scripts_frontend_image_uploader__WEBPACK_IMPORTED_MODULE_3__["image_slider_uploader"])();
     };
     DashboardComponent.prototype.get_files = function (event) {
-        console.log(event.target.files);
+        //  console.log(event.target.files);
         this.file_list = event.target.files;
     };
     DashboardComponent.prototype.upload_images = function () {
@@ -33851,14 +33857,16 @@ var DashboardComponent = /** @class */ (function () {
                     var fileTimeCreated = snapshot.metadata.timeCreated;
                     var obj = { fileName: fileName, contentType: fileContentType, fileSize: fileSize, fileUrl: fileUrl, fileTimeCreated: fileTimeCreated };
                     collection.doc(snapshot.metadata.name).set(obj).then(function (docs) {
-                        console.log("Success");
+                        // console.log("Success");
                         this_function.remove_images();
                     }).catch(function (error) {
-                        console.log(error);
+                        alert("Error");
+                        // console.log(error)
                     });
                 });
             }).catch(function (error) {
-                console.log(error);
+                alert("Error");
+                // console.log(error)
             });
         };
         var this_1 = this, imageId;
@@ -33954,7 +33962,7 @@ var EditPackagesComponent = /** @class */ (function () {
         this.package_category_array = _scripts_frontend_package_categories__WEBPACK_IMPORTED_MODULE_5__["categories"];
     };
     EditPackagesComponent.prototype._init_ = function () {
-        console.log(this.package_details[0]);
+        // console.log(this.package_details[0])
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
             package_name: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](this.package_details[0].package_name, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required),
             package_category: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](this.package_details[0].package_category, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required),
@@ -33968,6 +33976,7 @@ var EditPackagesComponent = /** @class */ (function () {
                 _this._init_();
             }
         }).catch(function (err) {
+            alert("Error");
         });
     };
     EditPackagesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -33979,6 +33988,126 @@ var EditPackagesComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
     ], EditPackagesComponent);
     return EditPackagesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modules/Admin/enquiries/enquiries.component.html":
+/*!******************************************************************!*\
+  !*** ./src/app/Modules/Admin/enquiries/enquiries.component.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel-header\">\n  <div class=\"header text-center\">\n    <h2 class=\"title\">Notifications</h2>\n    <p class=\"category\">User Enquiries\n    </p>\n  </div>\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\" *ngIf=\"notification_array.length>0\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"><b>ENQUIRIES</b></h4>\n        </div>\n        <div class=\"card-body\" id=\"notification_card\">\n        <div class=\"alert alert-info alert-with-icon\" data-notify=\"container\" *ngFor=\"let notifications of notification_array\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" (click)=\"mark_view(notifications.id)\" >\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span data-notify=\"icon\" class=\"now-ui-icons ui-1_bell-53\"></span>\n            <span data-notify=\"message\" style=\"text-transform: uppercase;font-weight: bolder;\">YOU HAVE 1 ENQUIRY FROM {{notifications.first_name+' '+notifications.second_name}} from {{notifications.country}}. Click <a href=\"#\" (click)=\"open_modal(notifications.id)\" id=\"view_message\" data-toggle=\"modal\" data-target=\"#exampleModal\">here</a> to view enquiry</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"card\" *ngIf=\"notification_array.length==0\">\n        <h2 class=\"card-title\" align=\"center\"><b style=\"color:red\">EMPTY ENQUIRIES</b></h2>\n      </div>\n    </div>\n  </div>\n</div>\n\n  \n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\" style=\"color:red\"><b style=\"text-transform: uppercase;\"> VIEW ENQUIRY</b></h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <div *ngFor=\"let data of filtered_data\">\n            <p><b>Name :</b> {{data.first_name}} {{data.second_name}}</p>\n            <p><b>City :</b> {{data.city}}</p>\n            <p><b>Country :</b> {{data.country}}</p>\n            <p><b>Address :</b> {{data.address}}</p>\n            <p><b>Email :</b> {{data.email}}</p>\n            <p><b>Date Of Birth :</b> {{data.dob}}</p>\n            <p><b>State :</b> {{data.state}}</p>\n            <p><b>Nationality :</b> {{data.nationality}}</p>\n            <p><b>Tel :</b> {{data.phone}}</p>\n            <hr>\n            <p><b>Tour Name :</b> {{data.tour_name}}</p>\n            <p><b>Accomodations :</b> {{data.accomodations}}</p>\n            <p><b>Meal Plan :</b> {{data.meals}}</p>\n            <p><b>Quote For Airfare :</b> {{data.airfare_check}}</p>\n            <p><b>Arrival :</b> {{data.arrival}}</p>\n            <p><b>Departure :</b> {{data.departure}}</p>\n            <p><b>No of Adults :</b> {{data.no_of_adults}}</p>\n            <p><b>No of Children :</b> {{data.no_of_children}}</p>\n            <p><b>Approximate Budget Per Person :</b> {{data.budget}}</p>\n            <p><b>Interest in Active Travelling :</b> {{data.interest_in_travel}}</p>\n            <p><b>Destination Experience :</b> {{data.destinations_experience}}</p>\n            <p><b>Special Occasions :</b> {{data.special_occasion}}</p>\n            <p><b>Special Requirements :</b> {{data.special_requirements}}</p>\n            <p><b>Search Engines :</b> {{search_engines}}</p>\n            <p><b>Website Link :</b> {{data.website_link}}</p>\n            <p><b>KeyWords :</b> {{data.keywords}}</p>\n            <p><b>Referral :</b> {{data.referral}}</p>\n            <p><b>Description :</b> {{data.description}}</p>\n            <hr>\n            <p><b>Desired Physical Activities :</b> {{physical_activities}}</p>\n            <p><b>Adventure Activities :</b> {{ad_activities}}</p>\n            <p><b>Sun Activities :</b> {{sun_activities}}</p>\n            <p><b>Specific Interests :</b> {{specific_interests}}</p>\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Admin/enquiries/enquiries.component.scss":
+/*!******************************************************************!*\
+  !*** ./src/app/Modules/Admin/enquiries/enquiries.component.scss ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL01vZHVsZXMvQWRtaW4vZW5xdWlyaWVzL2VucXVpcmllcy5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Admin/enquiries/enquiries.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/Modules/Admin/enquiries/enquiries.component.ts ***!
+  \****************************************************************/
+/*! exports provided: EnquiriesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnquiriesComponent", function() { return EnquiriesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _scripts_frontend_disable_href_links__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../scripts/frontend/disable_href_links */ "./src/scripts/frontend/disable_href_links.js");
+/* harmony import */ var _scripts_frontend_disable_enable_search_bar_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../scripts/frontend/disable_enable_search_bar.js */ "./src/scripts/frontend/disable_enable_search_bar.js");
+
+
+
+
+
+var EnquiriesComponent = /** @class */ (function () {
+    function EnquiriesComponent(_db) {
+        this._db = _db;
+        this.notification_array = [];
+        this.islLoaded = false;
+        this.filtered_data = [];
+        this.search_engines = "";
+        this.physical_activities = "";
+        this.sun_activities = "";
+        this.ad_activities = "";
+        this.specific_interests = "";
+        this.isEmpty = false;
+    }
+    EnquiriesComponent.prototype.ngOnInit = function () {
+        var _this_1 = this;
+        Object(_scripts_frontend_disable_enable_search_bar_js__WEBPACK_IMPORTED_MODULE_4__["disable_search_bar"])();
+        var _this = this;
+        this._db.firestore.collection('enquiry').get().then(function (snapshot) {
+            if (snapshot.empty)
+                _this.isEmpty = true;
+            else {
+                snapshot.forEach(function (docs) {
+                    console.log(docs.data());
+                    if (docs.data().view === false)
+                        _this_1.notification_array.push(docs.data());
+                });
+            }
+        });
+    };
+    EnquiriesComponent.prototype.open_modal = function (id) {
+        this.filtered_data = [];
+        Object(_scripts_frontend_disable_href_links__WEBPACK_IMPORTED_MODULE_3__["disable_view_notification"])();
+        this.filtered_data = this.notification_array.filter(function (x) { return x.id == id; });
+        for (var i = 0; i < this.filtered_data.length; i++) {
+            for (var j = 0; j < this.filtered_data[i].search_engines.length; j++)
+                this.search_engines += this.filtered_data[i].search_engines[j] + " / ";
+            for (var j = 0; j < this.filtered_data[i].physical_activities.length; j++)
+                this.physical_activities += this.filtered_data[i].physical_activities[j] + " / ";
+            for (var j = 0; j < this.filtered_data[i].specific_interests.length; j++)
+                this.specific_interests += this.filtered_data[i].specific_interests[j] + " / ";
+            for (var j = 0; j < this.filtered_data[i].sun_activities.length; j++)
+                this.sun_activities += this.filtered_data[i].sun_activities[j] + " / ";
+            for (var j = 0; j < this.filtered_data[i].adventure_activities.length; j++)
+                this.ad_activities += this.filtered_data[i].adventure_activities[j] + " / ";
+        }
+        // this.message=this.filtered_data[0].message;
+        // this.subject=this.filtered_data[0].subject;
+    };
+    EnquiriesComponent.prototype.mark_view = function (id) {
+        this._db.firestore.collection('enquiry').doc(id).update({ view: true });
+        this.get_realtime_updates();
+    };
+    EnquiriesComponent.prototype.get_realtime_updates = function () {
+        var _this = this;
+        this.notification_array = [];
+        this._db.firestore.collection("enquiry").get().then(function (snapshot) {
+            snapshot.forEach(function (element) {
+                // console.log(element.data());
+                if (element.data().view === false)
+                    _this.notification_array.push(element.data());
+            });
+        });
+    };
+    EnquiriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-enquiries',
+            template: __webpack_require__(/*! ./enquiries.component.html */ "./src/app/Modules/Admin/enquiries/enquiries.component.html"),
+            styles: [__webpack_require__(/*! ./enquiries.component.scss */ "./src/app/Modules/Admin/enquiries/enquiries.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], EnquiriesComponent);
+    return EnquiriesComponent;
 }());
 
 
@@ -34051,16 +34180,18 @@ var FilterDataComponent = /** @class */ (function () {
         var docRef = this._db.firestore.collection('news_feed');
         docRef.get().then(function (snapshot) {
             if (snapshot.empty) {
-                console.log('No matching documents.');
+                alert("Empty Data");
+                // console.log('Empty Data');
                 return;
             }
             snapshot.forEach(function (doc) {
-                console.log(doc.id, '=>', doc.data());
+                // console.log(doc.id, '=>', doc.data());
                 if (doc.data().status != 'deleted' && doc.data().title == search_text)
                     _this.data.push(doc.data());
             });
         }).catch(function (err) {
-            console.log('Error getting documents', err);
+            alert("Error");
+            // console.log('Error getting documents', err);
         });
     };
     FilterDataComponent.prototype.filter_packages = function (search_text) {
@@ -34069,16 +34200,18 @@ var FilterDataComponent = /** @class */ (function () {
         var docRef = this._db.firestore.collection('packages');
         docRef.get().then(function (snapshot) {
             if (snapshot.empty) {
-                console.log('No matching documents.');
+                alert("Empty Data");
+                // console.log('No matching documents.');
                 return;
             }
             snapshot.forEach(function (doc) {
-                console.log(doc.id, '=>', doc.data());
+                // console.log(doc.id, '=>', doc.data());
                 if (doc.data().status != 'deleted' && doc.data().package_name == search_text)
                     _this.data.push(doc.data());
             });
         }).catch(function (err) {
-            console.log('Error getting documents', err);
+            alert("Error");
+            // console.log('Error getting documents', err);
         });
     };
     FilterDataComponent.prototype.delete = function (id) {
@@ -34087,7 +34220,8 @@ var FilterDataComponent = /** @class */ (function () {
         this._db.collection('packages').doc(id).update({ status: 'deleted' }).then(function (docs) {
             variable_this.filter_packages(variable_this.searchedText);
         }).catch(function (error) {
-            console.log(error);
+            alert("Error");
+            // console.log(error);
         });
     };
     FilterDataComponent.prototype.load_modal = function (id) {
@@ -34238,7 +34372,7 @@ var ManageNewsFeedComponent = /** @class */ (function () {
         var title = document.getElementById('title').value;
         var today = new Date();
         var date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate());
-        console.log(date);
+        // console.log(date);
         var id = this.generate_news_feed_id(date, title);
         var imageId = "news_feed/image" + today.getTime();
         var storageRef = this.storage.ref(imageId);
@@ -34253,7 +34387,8 @@ var ManageNewsFeedComponent = /** @class */ (function () {
                     document.getElementById('file_name').innerHTML = "";
                     document.getElementById('news_feed_img_uploader').value = "";
                 }).catch(function (error) {
-                    console.log(error);
+                    alert("Error");
+                    // console.log(error)
                 });
             });
         });
@@ -34268,16 +34403,18 @@ var ManageNewsFeedComponent = /** @class */ (function () {
         var docRef = this._db.firestore.collection('news_feed');
         docRef.get().then(function (snapshot) {
             if (snapshot.empty) {
-                console.log('No matching documents.');
+                alert("Empty Data");
+                // console.log('No matching documents.');
                 return;
             }
             snapshot.forEach(function (doc) {
-                console.log(doc.id, '=>', doc.data());
+                // console.log(doc.id, '=>', doc.data());
                 if (doc.data().status != 'deleted')
                     _this_1.newsFeed_data.push(doc.data());
             });
         }).catch(function (err) {
-            console.log('Error getting documents', err);
+            alert("Error");
+            // console.log('Error getting documents', err);
         });
     };
     // filter_news_feed(){
@@ -34325,7 +34462,7 @@ var ManageNewsFeedComponent = /** @class */ (function () {
         Object(_scripts_frontend_image_uploader__WEBPACK_IMPORTED_MODULE_5__["news_feed_image_uploader"])();
     };
     ManageNewsFeedComponent.prototype.get_files = function (event) {
-        console.log(event.target.files);
+        // console.log(event.target.files);
         this.file_list = event.target.files;
     };
     ManageNewsFeedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -34515,7 +34652,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header\">\n  <div class=\"header text-center\">\n    <h2 class=\"title\">Notifications</h2>\n    <p class=\"category\">User {{subject}}\n      <a href=\"https://scttcper.github.io/ngx-toastr/\" target=\"_blank\">Notifications</a>\n    </p>\n  </div>\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\" *ngIf=\"notification_array.length>0\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">My Notifications</h4>\n        </div>\n        <div class=\"card-body\" id=\"notification_card\">\n          <!-- <div class=\"alert alert-info\">\n            <span>This is a plain notification</span>\n          </div> -->\n          <!-- <div class=\"alert alert-info\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>This is a notification with close button.</span>\n          </div> -->\n\n          <div class=\"alert alert-info alert-with-icon\" data-notify=\"container\" *ngFor=\"let notifications of notification_array\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" (click)=\"mark_view(notifications.id)\" >\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span data-notify=\"icon\" class=\"now-ui-icons ui-1_bell-53\"></span>\n            <span data-notify=\"message\" style=\"text-transform: uppercase;font-weight: bolder;\">YOU HAVE 1 MESSAGE FROM {{notifications.first_name+' '+notifications.last_name}} from {{notifications.country}}. Click <a href=\"#\" (click)=\"open_modal(notifications.id)\" id=\"view_message\" data-toggle=\"modal\" data-target=\"#exampleModal\">here</a> to view message</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- <div class=\"col-md-6\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Notification states</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"alert alert-primary\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Primary - </b> This is a regular notification made with \".alert-primary\"</span>\n          </div>\n          <div class=\"alert alert-info\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Info - </b> This is a regular notification made with \".alert-info\"</span>\n          </div>\n          <div class=\"alert alert-success\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Success - </b> This is a regular notification made with \".alert-success\"</span>\n          </div>\n          <div class=\"alert alert-warning\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Warning - </b> This is a regular notification made with \".alert-warning\"</span>\n          </div>\n          <div class=\"alert alert-danger\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Danger - </b> This is a regular notification made with \".alert-danger\"</span>\n          </div>\n        </div>\n      </div>\n    </div> -->\n    <!-- <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-body\">\n          <div class=\"places-buttons\">\n            <div class=\"row\">\n              <div class=\"col-md-6 ml-auto mr-auto text-center\">\n                <h4 class=\"card-title\">\n                  Notifications Places\n                  <p class=\"category\">Click to view notifications</p>\n                </h4>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-8 ml-auto mr-auto\">\n                <div class=\"row\">\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','left')\">Top Left</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','center')\">Top Center</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','right')\">Top Right</button>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-8 ml-auto mr-auto\">\n                <div class=\"row\">\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','left')\">Bottom Left</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','center')\">Bottom Center</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','right')\">Bottom Right</button>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div> -->\n  </div>\n</div>\n\n  \n  <!-- Modal -->\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\" style=\"color:red\"><b style=\"text-transform: uppercase;\">{{subject}}</b></h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p style=\"text-align: justify;\"><b>{{message}}</b></p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "<div class=\"panel-header\">\n  <div class=\"header text-center\">\n    <h2 class=\"title\">Notifications</h2>\n    <p class=\"category\">User {{subject}}\n      <a href=\"https://scttcper.github.io/ngx-toastr/\" target=\"_blank\">Notifications</a>\n    </p>\n  </div>\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\" *ngIf=\"notification_array.length>0\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\"><b>CONTACT SUPPORTS</b></h4>\n        </div>\n        <div class=\"card-body\" id=\"notification_card\">\n          <!-- <div class=\"alert alert-info\">\n            <span>This is a plain notification</span>\n          </div> -->\n          <!-- <div class=\"alert alert-info\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>This is a notification with close button.</span>\n          </div> -->\n\n          <div class=\"alert alert-info alert-with-icon\" data-notify=\"container\" *ngFor=\"let notifications of notification_array\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" (click)=\"mark_view(notifications.id)\" >\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span data-notify=\"icon\" class=\"now-ui-icons ui-1_bell-53\"></span>\n            <span data-notify=\"message\" style=\"text-transform: uppercase;font-weight: bolder;\">YOU HAVE 1 MESSAGE FROM {{notifications.first_name+' '+notifications.last_name}} from {{notifications.country}}. Click <a href=\"#\" (click)=\"open_modal(notifications.id)\" id=\"view_message\" data-toggle=\"modal\" data-target=\"#exampleModal\">here</a> to view message</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- <div class=\"col-md-6\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h4 class=\"card-title\">Notification states</h4>\n        </div>\n        <div class=\"card-body\">\n          <div class=\"alert alert-primary\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Primary - </b> This is a regular notification made with \".alert-primary\"</span>\n          </div>\n          <div class=\"alert alert-info\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Info - </b> This is a regular notification made with \".alert-info\"</span>\n          </div>\n          <div class=\"alert alert-success\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Success - </b> This is a regular notification made with \".alert-success\"</span>\n          </div>\n          <div class=\"alert alert-warning\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Warning - </b> This is a regular notification made with \".alert-warning\"</span>\n          </div>\n          <div class=\"alert alert-danger\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span>\n              <b> Danger - </b> This is a regular notification made with \".alert-danger\"</span>\n          </div>\n        </div>\n      </div>\n    </div> -->\n    <!-- <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div class=\"card-body\">\n          <div class=\"places-buttons\">\n            <div class=\"row\">\n              <div class=\"col-md-6 ml-auto mr-auto text-center\">\n                <h4 class=\"card-title\">\n                  Notifications Places\n                  <p class=\"category\">Click to view notifications</p>\n                </h4>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-8 ml-auto mr-auto\">\n                <div class=\"row\">\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','left')\">Top Left</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','center')\">Top Center</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('top','right')\">Top Right</button>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-8 ml-auto mr-auto\">\n                <div class=\"row\">\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','left')\">Bottom Left</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','center')\">Bottom Center</button>\n                  </div>\n                  <div class=\"col-md-4\">\n                    <button class=\"btn btn-primary btn-block\" (click)=\"showNotification('bottom','right')\">Bottom Right</button>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div> -->\n  </div>\n</div>\n\n  \n  <!-- Modal -->\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\" style=\"color:red\"><b style=\"text-transform: uppercase;\">{{subject}}</b></h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p style=\"text-align: justify;\"><b>{{message}}</b></p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -34606,10 +34743,11 @@ var NotificationsComponent = /** @class */ (function () {
         this.get_realtime_updates();
     };
     NotificationsComponent.prototype.get_realtime_updates = function () {
+        this.notification_array = [];
         var _this = this;
         this._db.firestore.collection("customer_message").get().then(function (snapshot) {
             snapshot.forEach(function (element) {
-                console.log(element.data());
+                // console.log(element.data());
                 if (element.data().view == false)
                     _this.notification_array.push(element.data());
             });
@@ -34650,7 +34788,7 @@ var NotificationsComponent = /** @class */ (function () {
         this.subject = this.filtered_data[0].subject;
     };
     NotificationsComponent.prototype.mark_view = function (id) {
-        console.log(id);
+        // console.log(id);
         this._db.firestore.collection('customer_message').doc(id).update({ view: true });
         this.get_realtime_updates();
     };
@@ -34676,7 +34814,7 @@ var NotificationsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel-header panel-header-sm\">\n  </div>\n  <div class=\"main-content\">\n    <div class=\"row\" *ngIf=\"isLoaded\">\n      <div class=\"col-md-6\">\n        <div class=\"card\">\n          <div class=\"card-header\">\n            <h5 class=\"title\">Reset Password</h5>\n          </div>\n          <div class=\"card-body\">\n            <form [formGroup]=\"form\">\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'has-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}\">\n                    <label>Old Password</label>\n                    <input type=\"password\" class=\"form-control\" placeholder=\"Old Password\" formControlName=\"old_password\" [ngClass]=\"{'form-control-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'form-control-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'has-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}\">\n                    <label>New Password</label>\n                    <input type=\"password\" class=\"form-control\" id=\"new_password\" placeholder=\"New Password\" name=\"new_password\" formControlName=\"new_password\" [ngClass]=\"{'form-control-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'form-control-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'has-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}\">\n                    <label>Re-Enter Password</label>\n                    <input type=\"password\" class=\"form-control\" placeholder=\"Re-Enter Password\" formControlName=\"re_enter_password\" [ngClass]=\"{'form-control-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'form-control-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <button type=\"button\" style=\"margin-left:150px\" [disabled]=\"!form.valid\" class=\"btn btn-success\" (click)=\"reset_password()\">Reset</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-6\">\n        <div class=\"card\">\n          <div class=\"card-header\">\n            <h5 class=\"title\">Reset User Name</h5>\n          </div>\n          <div class=\"card-body\">\n            <form [formGroup]=\"form1\">\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'has-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}\">\n                    <label>Old Password</label>\n                    <input type=\"password\" id=\"old_password1\" class=\"form-control\" placeholder=\"Old Password\" formControlName=\"old_password1\" [ngClass]=\"{'form-control-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'form-control-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'has-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}\">\n                    <label>New User Name</label>\n                    <input type=\"text\" class=\"form-control\" id=\"new_user_name\" placeholder=\"New User Name\" name=\"new_user_name\" formControlName=\"new_user_name\" [ngClass]=\"{'form-control-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'form-control-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <button type=\"button\" style=\"margin-left:150px\" [disabled]=\"!form1.valid\" class=\"btn btn-success\" (click)=\"reset_email()\">Reset</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  "
+module.exports = "<div class=\"panel-header panel-header-sm\">\n  </div>\n  <div class=\"main-content\">\n    <div class=\"row\" *ngIf=\"isLoaded\">\n      <div class=\"col-md-6\">\n        <div class=\"card\">\n          <div class=\"card-header\">\n            <h5 class=\"title\">Reset Password</h5>\n          </div>\n          <div class=\"card-body\">\n            <form [formGroup]=\"form\">\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'has-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}\">\n                    <label>Old Password</label>\n                    <input type=\"password\" id=\"old_password\" class=\"form-control\" placeholder=\"Old Password\" formControlName=\"old_password\" [ngClass]=\"{'form-control-success':form.controls.old_password.valid && (form.controls.old_password.dirty || form.controls.old_password.touched),'form-control-danger':form.controls.old_password.invalid && (form.controls.old_password.dirty || form.controls.old_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.new_user_name.valid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched),'has-danger':form.controls.new_user_name.invalid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched)}\">\n                    <label>New User Name</label>\n                    <input type=\"text\" class=\"form-control\" id=\"new_user_name\" placeholder=\"New User Name\" name=\"new_user_name\" formControlName=\"new_user_name\" [ngClass]=\"{'form-control-success':form.controls.new_user_name.valid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched),'form-control-danger':form.controls.new_user_name.invalid && (form.controls.new_user_name.dirty || form.controls.new_user_name.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'has-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}\">\n                    <label>New Password</label>\n                    <input type=\"password\" class=\"form-control\" id=\"new_password\" placeholder=\"New Password\" name=\"new_password\" formControlName=\"new_password\" [ngClass]=\"{'form-control-success':form.controls.new_password.valid && (form.controls.new_password.dirty || form.controls.new_password.touched),'form-control-danger':form.controls.new_password.invalid && (form.controls.new_password.dirty || form.controls.new_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'has-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}\">\n                    <label>Re-Enter Password</label>\n                    <input type=\"password\" id=\"re_enter_password\" class=\"form-control\" placeholder=\"Re-Enter Password\" formControlName=\"re_enter_password\" [ngClass]=\"{'form-control-success':form.controls.re_enter_password.valid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched),'form-control-danger':form.controls.re_enter_password.invalid && (form.controls.re_enter_password.dirty || form.controls.re_enter_password.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <button type=\"button\" style=\"margin-left:150px\" [disabled]=\"!form.valid\" class=\"btn btn-success\" (click)=\"reset_password()\">Reset</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n      <!-- <div class=\"col-md-6\">\n        <div class=\"card\">\n          <div class=\"card-header\">\n            <h5 class=\"title\">Reset User Name</h5>\n          </div>\n          <div class=\"card-body\">\n            <form [formGroup]=\"form1\">\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'has-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}\">\n                    <label>Old Password</label>\n                    <input type=\"password\" id=\"old_password1\" class=\"form-control\" placeholder=\"Old Password\" formControlName=\"old_password1\" [ngClass]=\"{'form-control-success':form1.controls.old_password1.valid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched),'form-control-danger':form1.controls.old_password1.invalid && (form1.controls.old_password1.dirty || form1.controls.old_password1.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-md-12 pr-1\">\n                  <div class=\"form-group\" [ngClass]=\"{'has-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'has-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}\">\n                    <label>New User Name</label>\n                    <input type=\"text\" class=\"form-control\" id=\"new_user_name\" placeholder=\"New User Name\" name=\"new_user_name\" formControlName=\"new_user_name\" [ngClass]=\"{'form-control-success':form1.controls.new_user_name.valid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched),'form-control-danger':form1.controls.new_user_name.invalid && (form1.controls.new_user_name.dirty || form1.controls.new_user_name.touched)}\">\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <button type=\"button\" style=\"margin-left:150px\" [disabled]=\"!form1.valid\" class=\"btn btn-success\" (click)=\"reset_email()\">Reset</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div> -->\n    </div>\n  </div>\n  "
 
 /***/ }),
 
@@ -34711,6 +34849,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_frontend_disable_enable_search_bar_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../scripts/frontend/disable_enable_search_bar.js */ "./src/scripts/frontend/disable_enable_search_bar.js");
 /* harmony import */ var _services_check_old_password_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/check_old_password.service */ "./src/app/services/check_old_password.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
 
 
 
@@ -34721,9 +34863,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SettingsComponent = /** @class */ (function () {
-    function SettingsComponent(_db, _snackbar) {
+    function SettingsComponent(_db, _snackbar, auth, router) {
         this._db = _db;
         this._snackbar = _snackbar;
+        this.auth = auth;
+        this.router = router;
         this.isLoaded = false;
     }
     SettingsComponent.prototype.ngOnInit = function () {
@@ -34733,24 +34877,31 @@ var SettingsComponent = /** @class */ (function () {
     SettingsComponent.prototype.reset_password = function () {
         var _this = this;
         // var password_hash=require('password-hash');
+        var email = document.getElementById('new_user_name').value;
         var password = document.getElementById('new_password').value;
         var hash = crypto_js__WEBPACK_IMPORTED_MODULE_5___default.a.SHA256(password).toString();
-        console.log(hash);
-        var docs = { user_email: this.admin_user_name, password: hash };
-        this._db.collection('admin').doc(this.admin_user_name).set(docs).then(function (docs) {
-            console.log("Done");
+        // console.log(hash);
+        var docs = { user_email: this.admin_user_name, password: hash, active: true };
+        this._db.collection('admin').doc(email).set(docs).then(function (docs) {
+            // console.log("Done");
+            _this._db.collection('admin').doc(_this.admin_user_name).update({ active: false });
+            _this.admin_user_name = email;
             document.getElementById('old_password').value = "";
             document.getElementById('new_password').value = "";
             document.getElementById('re_enter_password').value = "";
+            _this.changeCredentials(email, hash);
             _this._snackbar.open('Successfully Updated!', 'OK', {
                 duration: 300
             });
         }).catch(function (error) {
-            console.log(error);
+            // console.log(error);
+            alert("Error");
             _this._snackbar.open('Not Updated!', 'OK', {
                 duration: 300
             });
         });
+        // this.auth.auth.currentUser.updatePassword(hash);
+        // this.auth.auth.currentUser.updateEmail(email);
     };
     SettingsComponent.prototype.load_old_password = function () {
         var _this = this;
@@ -34762,50 +34913,74 @@ var SettingsComponent = /** @class */ (function () {
                     if (doc.data().active === true) {
                         _this.admin_user_name = doc.data().user_email;
                         _this.admin_password = doc.data().password;
-                        console.log(_this.admin_password);
+                        // console.log(_this.admin_password);
                         _this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+                            new_user_name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]),
                             old_password: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, Object(_services_check_old_password_service__WEBPACK_IMPORTED_MODULE_7__["check_old_password"])(_this.admin_password)]),
                             new_password: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(6)]),
                             re_enter_password: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, Object(_services_confirm_password_service__WEBPACK_IMPORTED_MODULE_3__["confirmPassword"])('new_password')])
                         });
-                        _this.form1 = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-                            old_password1: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, Object(_services_check_old_password_service__WEBPACK_IMPORTED_MODULE_7__["check_old_password"])(_this.admin_password)]),
-                            new_user_name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email])
-                        });
+                        // _this.form1=new FormGroup({
+                        //   old_password1:new FormControl('',[Validators.required,check_old_password(_this.admin_password)]),
+                        //   new_user_name:new FormControl('',[Validators.required,Validators.email])
+                        // });
                         _this.isLoaded = true;
                     }
                 });
             }
         });
     };
-    SettingsComponent.prototype.reset_email = function () {
+    // reset_email(){
+    //   var _this=this;
+    //   let old_password1=(<HTMLInputElement>document.getElementById('old_password1')).value;
+    //   let email=(<HTMLInputElement>document.getElementById('new_user_name')).value;
+    //   let docs={user_email:email,password:old_password1,active:true};
+    //   if(email===this.admin_user_name){
+    //     alert('Same User Email');
+    //     (<HTMLInputElement>document.getElementById('old_password1')).value="";
+    //     (<HTMLInputElement>document.getElementById('new_user_name')).value="";
+    //   }
+    //   else{
+    //     this._db.collection('admin').doc(email).set(docs).then(function(docs){
+    //       console.log("Done");
+    //       (<HTMLInputElement>document.getElementById('old_password1')).value="";
+    //       (<HTMLInputElement>document.getElementById('new_user_name')).value="";
+    //       // alert('Successfully changed');
+    //       _this._db.collection('admin').doc(_this.admin_user_name).update({active:false});
+    //       _this.admin_user_name=email;
+    //       _this._snackbar.open('Successfully Updated!','OK',{
+    //         duration:300
+    //       })
+    //     }).catch(function(error){
+    //       console.log(error);
+    //       _this._snackbar.open('Not Updated!','OK',{
+    //         duration:300
+    //       });
+    //     });
+    //     this.auth.auth.currentUser.updateEmail(email);
+    //   }
+    // }
+    SettingsComponent.prototype.changeCredentials = function (email, hash) {
         var _this = this;
-        var old_password1 = document.getElementById('old_password1').value;
-        var email = document.getElementById('new_user_name').value;
-        var docs = { user_email: email, password: old_password1, active: true };
-        if (email === this.admin_user_name) {
-            alert('Same User Email');
-            document.getElementById('old_password1').value = "";
-            document.getElementById('new_user_name').value = "";
-        }
-        else {
-            this._db.collection('admin').doc(email).set(docs).then(function (docs) {
-                console.log("Done");
-                document.getElementById('old_password1').value = "";
-                document.getElementById('new_user_name').value = "";
-                // alert('Successfully changed');
-                _this._db.collection('admin').doc(_this.admin_user_name).update({ active: false });
-                _this.admin_user_name = email;
-                _this._snackbar.open('Successfully Updated!', 'OK', {
-                    duration: 300
-                });
-            }).catch(function (error) {
-                console.log(error);
-                _this._snackbar.open('Not Updated!', 'OK', {
-                    duration: 300
-                });
+        this.auth.auth.currentUser.updateEmail(email).then(function () {
+            _this.auth.auth.currentUser.updatePassword(hash).then(function () {
+                _this.auth.auth.signOut();
+                _this.router.navigate(['/login']);
+            }).catch(function (err) {
+                alert("Error");
+                // console.log(err);
             });
-        }
+        }).catch(function (err) {
+            alert("Error");
+            // console.log(err);
+        });
+        this.auth.auth.currentUser.updateProfile({ displayName: 'Ravindu' });
+        // console.log(this.auth.auth.currentUser);
+        // this.auth.auth.signInWithEmailAndPassword(email,hash).then(value=>{
+        //   console.log(value.user.displayName)
+        // }).catch(err=>{
+        //   console.log(err);
+        // });
     };
     SettingsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -34813,7 +34988,7 @@ var SettingsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./settings.component.html */ "./src/app/Modules/Admin/settings/settings.component.html"),
             styles: [__webpack_require__(/*! ./settings.component.scss */ "./src/app/Modules/Admin/settings/settings.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"], _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"], _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_9__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"]])
     ], SettingsComponent);
     return SettingsComponent;
 }());
@@ -34880,16 +35055,18 @@ var TableListComponent = /** @class */ (function () {
         var docRef = this._db.firestore.collection('packages');
         docRef.get().then(function (snapshot) {
             if (snapshot.empty) {
-                console.log('No matching documents.');
+                alert("Empty Data");
+                // console.log('No matching documents.');
                 return;
             }
             snapshot.forEach(function (doc) {
-                console.log(doc.id, '=>', doc.data());
+                // console.log(doc.id, '=>', doc.data());
                 if (doc.data().status != 'deleted')
                     _this.package_data.push(doc.data());
             });
         }).catch(function (err) {
-            console.log('Error getting documents', err);
+            alert("Error");
+            // console.log('Error getting documents', err);
         });
     };
     TableListComponent.prototype.delete = function (id) {

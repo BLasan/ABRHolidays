@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
             text: message,
             html: '<strong>'+message+'</strong>'+'<p>'+"Take necessary actions if this is not you."+'</p>',
           }
+         
           _this.service.sendEmail(email_message).subscribe(data=>{
             _this.data=data;
             // console.log(_this.data.success)
