@@ -1340,7 +1340,7 @@ __webpack_require__.r(__webpack_exports__);
 var SendMailService = /** @class */ (function () {
     function SendMailService(http) {
         this.http = http;
-        this._url = "http://www.abrholidays:4600";
+        this._url = "http://ec2-34-227-161-44.compute-1.amazonaws.com:80";
     }
     SendMailService.prototype.sendEmail = function (email_message) {
         // SendGrid.MailService.setApiKey("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");
