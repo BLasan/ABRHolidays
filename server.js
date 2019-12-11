@@ -35,7 +35,7 @@ const msg={
 
 });
 
-server.listen(4600);
+server.listen(80);
 
 // var functions=require('firebase-functions');
 // const sendGrid=require('@sendgrid/mail');
