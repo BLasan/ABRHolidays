@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
           });
     
         }).catch(err=>{
-          alert("Error");
+          alert(err);
           // console.log(err);
         });
       }

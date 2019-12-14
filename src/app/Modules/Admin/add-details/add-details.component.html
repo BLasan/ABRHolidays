@@ -8,7 +8,10 @@
           <h5 class="title">Add New Package</h5>
         </div>
         <div class="card-body">
-            <form [formGroup]="form">
+            <form [formGroup]="form" id="form">
+                <div class="form-group">
+                  <input type="file" id="package_image_file_uploader" style="display:none" (change)="get_uploaded_image($event)" formControlName="file_uploader" accept="image/*"> 
+                </div>
                 <div class="row">
                   <div class="col-md-5 pr-1">
                     <div class="form-group">
@@ -196,12 +199,11 @@
                         </div>
                       </div> -->
                     </div>
-                    <input type="file" id="package_image_file_uploader" style="display:none" (change)="get_uploaded_image($event)" accept="image/*"> 
                     <div>
                       <hr class="new4">
                       <button type="button" class="btn btn-primary btn-just-round add-more" (click)="add_new_package_detail()"><i class="fa fa-plus" ></i></button>
                     </div>
-                <button type="button" class="btn btn-success" [disabled]="!form.valid" (click)="create_package()">Create</button>
+                <button type="button" class="btn btn-success" [disabled]="!form.valid" (click)="create_package()" title="Please Upload Image to proceed">Create</button>
                 <!-- <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
@@ -218,9 +220,9 @@
       <div class="card card-user">
         <div class="card-body">
           <div class="card-header">
-            <h5 class="title">UPLOAD IMAGE</h5>
+            <h5 class="title blink" *ngIf="!isUploadedImage" style="color:red">UPLOAD IMAGE</h5>
           </div>
-          <div class="card-body">
+          <div class="card-body"> 
             <a href="" id="package_image_uploader" (click)="image_uploader()">
               <img src="assets/img/image_uploader.png" id="package_image" class="zoom" style="height:250px;width:250px">
             </a>

@@ -16,6 +16,7 @@ import { enable_search_bar,disable_search_bar} from '../../../../scripts/fronten
 })
 export class DashboardComponent implements OnInit {
   public file_list:FileList;
+  public remove_count:number=0;
   public lineBigDashboardChartType;
   public gradientStroke;
   public chartColor;
@@ -69,7 +70,9 @@ export class DashboardComponent implements OnInit {
   constructor(private storage:AngularFireStorage,private _db:AngularFirestore) { }
 
   ngOnInit() {
+    disable_image_slider();
     disable_search_bar();
+    // localStorage.setItem('remove_count',this.remove_count.toString())
     this.chartColor = "#FFFFFF";
     this.canvas = document.getElementById("bigDashboardChart");
     this.ctx = this.canvas.getContext("2d");
@@ -418,14 +421,16 @@ export class DashboardComponent implements OnInit {
   }
 
   image_uploader(){
-    disable_image_slider();
+    // disable_image_slider();
     image_slider_uploader();
    
   }
 
   get_files(event){
-  //  console.log(event.target.files);
+   console.log(event.target.files);
    this.file_list=event.target.files;
+   console.log(this.file_list.length);
+   localStorage.setItem('file_size',this.file_list.length.toString());
   }
 
   upload_images(){
@@ -446,21 +451,27 @@ export class DashboardComponent implements OnInit {
           let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
           collection.doc(snapshot.metadata.name).set(obj).then(function(docs){
             // console.log("Success");
-            this_function.remove_images();
           }).catch(function(error){
             alert("Error");
             // console.log(error)
           })
         })
-      }).catch(function(error){
+      }  
+      ).catch(function(error){
         alert("Error");
         // console.log(error)
       })
     }
+    this.remove_images();
   }
 
   remove_images(){
+    this.remove_count+=1;
+    // localStorage.setItem('remove_count',this.remove_count.toString());
+    console.log(this.file_list.length);
     remove_image_slider(this.file_list.length);
+    this.file_list=null;
+    localStorage.removeItem('file_size')
   }
 
 }

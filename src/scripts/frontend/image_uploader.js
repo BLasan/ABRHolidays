@@ -28,6 +28,7 @@ export function remove_package_image(){
 
 export function image_slider_uploader(){
   var size=0;
+  // if(parseInt(localStorage.getItem('remove_count'))==0)
   $('#image_slider_file_uploader').click();
   var row=document.getElementById('image_slider_content');
 
@@ -73,15 +74,17 @@ export function image_slider_uploader(){
     } else alert("Upload an image");
   }
 
-  $("#image_slider_file_uploader").change(function () {
-    localStorage.setItem('file_size',this.files.length);
-    file_array=this.files;
-    for(var i=0;i<this.files.length;i++){
+  $("#image_slider_file_uploader").change(function (e) {
+    e.stopImmediatePropagation();
+    console.log(localStorage.getItem('file_size'));
+    var file_size=parseInt(localStorage.getItem('file_size'));
+    for(var i=0;i<file_size;i++){
       readURL(this,i);
     }
     document.getElementById('file_size').innerHTML=size/1024+"KB";
     //console.log(file_array);
   });
+  
 }
 
 export function remove_image_slider(length){
