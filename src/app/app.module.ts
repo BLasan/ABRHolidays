@@ -44,6 +44,9 @@ import { FilterDataComponent } from './Modules/Admin/filter-data/filter-data.com
 import { EnquiryComponent } from './Modules/Customer/enquiry/enquiry.component';
 import { EnquiriesComponent } from './Modules/Admin/enquiries/enquiries.component';
 import { TransferContactUsComponent } from './Modules/Customer/transfer-contact-us/transfer-contact-us.component';
+import { TicketingComponent } from './Modules/Customer/ticketing/ticketing.component';
+import { VisaHandlingComponent } from './Modules/Customer/visa-handling/visa-handling.component';
+import { InsuranceComponent } from './Modules/Customer/insurance/insurance.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
@@ -80,7 +83,7 @@ const firebaseConfig = {
     LoginComponent,
     PageNotFoundComponent,
     CustomerNavbarComponent,
-    CustomerFooterComponent
+    CustomerFooterComponent,
     // FilterDataComponent
     // DestinationsComponent,
     // CustomerHomeComponent

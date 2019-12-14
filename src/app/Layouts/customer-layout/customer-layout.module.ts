@@ -20,6 +20,9 @@ import { DestinationsComponent } from '../../Modules/Customer/destinations/desti
 import { MatSnackBarModule } from '@angular/material';
 import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
 import { TransferContactUsComponent } from '../../Modules/Customer/transfer-contact-us/transfer-contact-us.component';
+import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.component';
+import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
+import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -44,7 +47,10 @@ import { TransferContactUsComponent } from '../../Modules/Customer/transfer-cont
     TestimonialsComponent,
     DestinationsComponent,
     EnquiryComponent,
-    TransferContactUsComponent
+    TransferContactUsComponent,
+    TicketingComponent,
+    VisaHandlingComponent,
+    InsuranceComponent
   ],
 })
 export class CustomerLayoutModule { }

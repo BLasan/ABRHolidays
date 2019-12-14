@@ -456,3 +456,145 @@ export function adjust_mobile_view_inbound_package_category(){
     })
 }
 
+
+export function adjust_mobile_view_visaHandling(){
+    var screen_size=$(window).width();
+    if(screen_size<900){
+        $('#row1').removeClass('row-center'); 
+        $('#row2').removeClass('row-center');
+        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+    }
+    else{
+        $('#row1').addClass('row-center'); 
+        $('#row2').addClass('row-center');
+        $('#row1').attr('style','margin-top:20px'); 
+        $('#row2').attr('style','margin-top:20px'); 
+    }
+
+    $(window).resize(function(){
+        // this.alert(this.innerWidth)
+        if(this.innerWidth<900){
+            $('#row1').removeClass('row-center');
+            $('#row2').removeClass('row-center');
+            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        }
+        else{
+            $('#row1').addClass('row-center');
+            $('#row2').addClass('row-center');
+            $('#row1').attr('style','margin-top:20px'); 
+            $('#row2').attr('style','margin-top:20px'); 
+        }
+    })
+}
+
+
+
+export function adjust_mobile_view_ticketing(){
+    var screen_size=$(window).width();
+    if(screen_size<900){
+        $('#row1').removeClass('row-center'); 
+        $('#row2').removeClass('row-center');
+        $('#row3').removeClass('row-center');
+        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+    }
+    else{
+        $('#row1').addClass('row-center'); 
+        $('#row2').addClass('row-center');
+        $('#row3').addClass('row-center');
+        $('#row1').attr('style','margin-top:20px'); 
+        $('#row2').attr('style','margin-top:20px'); 
+        $('#row3').attr('style','margin-top:20px'); 
+    }
+
+    $(window).resize(function(){
+        // this.alert(this.innerWidth)
+        if(this.innerWidth<900){
+            $('#row1').removeClass('row-center');
+            $('#row2').removeClass('row-center');
+            $('#row3').removeClass('row-center');
+            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        }
+        else{
+            $('#row1').addClass('row-center');
+            $('#row2').addClass('row-center');
+            $('#row3').addClass('row-center');
+            $('#row1').attr('style','margin-top:20px'); 
+            $('#row2').attr('style','margin-top:20px'); 
+            $('#row3').attr('style','margin-top:20px'); 
+        }
+    })
+}
+
+
+export function adjust_mobile_view_insurance(){
+    var screen_size=$(window).width();
+    if(screen_size<900){
+        $('#row1').removeClass('row-center'); 
+        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+    }
+    else{
+        $('#row1').addClass('row-center'); 
+        $('#row1').attr('style','margin-top:20px'); 
+    }
+
+    $(window).resize(function(){
+        // this.alert(this.innerWidth)
+        if(this.innerWidth<900){
+            $('#row1').removeClass('row-center');
+            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        }
+        else{
+            $('#row1').addClass('row-center');
+            $('#row1').attr('style','margin-top:20px'); 
+        }
+    })
+}
+
+
+export function adjust_mobile_view_discoverWorld(){
+    var screen_size=$(window).width();
+    if(screen_size<900){
+        $('#row1').removeClass('row-center'); 
+        $('#row2').removeClass('row-center');
+        $('#row3').removeClass('row-center');
+        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+    }
+    else{
+        $('#row1').addClass('row-center'); 
+        $('#row2').addClass('row-center');
+        $('#row3').addClass('row-center');
+        $('#row1').attr('style','margin-top:20px'); 
+        $('#row2').attr('style','margin-top:20px'); 
+        $('#row3').attr('style','margin-top:20px'); 
+    }
+
+    $(window).resize(function(){
+        // this.alert(this.innerWidth)
+        if(this.innerWidth<900){
+            $('#row1').removeClass('row-center');
+            $('#row2').removeClass('row-center');
+            $('#row3').removeClass('row-center');
+            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        }
+        else{
+            $('#row1').addClass('row-center');
+            $('#row2').addClass('row-center');
+            $('#row3').addClass('row-center');
+            $('#row1').attr('style','margin-top:20px'); 
+            $('#row2').attr('style','margin-top:20px'); 
+            $('#row3').attr('style','margin-top:20px'); 
+        }
+    })
+}
+
+

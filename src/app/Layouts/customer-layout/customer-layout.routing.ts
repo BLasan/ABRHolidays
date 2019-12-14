@@ -13,6 +13,9 @@ import { TestimonialsComponent } from '../../Modules/Customer/testimonials/testi
 import { DestinationsComponent } from '../../Modules/Customer/destinations/destinations.component';
 import { EnquiryComponent } from '../../Modules/Customer/enquiry/enquiry.component';
 import { TransferContactUsComponent } from '../../Modules/Customer/transfer-contact-us/transfer-contact-us.component';
+import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.component';
+import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
+import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -21,6 +24,9 @@ export const CustomerLayoutRoutes: Routes = [
     { path: 'contact-us',component:ContactUsComponent},
     { path: 'discover-world',component:DiscoverWorldComponent},
     { path:'faq',component:FaqComponent},
+    { path:'ticketing',component:TicketingComponent},
+    { path:'visa-handling',component:VisaHandlingComponent},
+    { path:'travel-insurance',component:InsuranceComponent},
     { path:'news-events/:news_id',component:NewsEventsComponent},
     { path:'inbound-packages/:code',component:InboundPackagesComponent},
     { path:'package-category/:category',component:PackageCategoryComponent},
