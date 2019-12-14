@@ -59,14 +59,14 @@
                             <!-- <div > -->
                             <div class="carousel-item active">
                                 <img src="assets/img/bg.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;" class="d-block w-100 card-img-top" alt="package">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption">
                                     <h3 style="color:red;margin-top:-200px;"><b>WELCOME TO OUR PACKAGES</b></h3>
                                         <!-- <button type="button" class="btn btn-danger">Read More</button> -->
                                 </div>
                             </div>
                             <div class="carousel-item" *ngFor="let package_data of package_data;let index=index">
                                 <img src="{{package_data.image_url}}" class="d-block" alt="{{package_data.package_name}}" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption">
                                     <img src="https://www.ceylontours.com/images/day.png">
                                     <h3 style="color:red"><b>{{package_data.no_of_days}} Days</b></h3>
                                     <a href="inbound-packages/{{package_data.package_id}}" class="btn btn-danger">Read More</a>
