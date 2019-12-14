@@ -185,7 +185,7 @@
                       <div class="row">
                         <div class="col-md-6 pr-1"></div>
                         <div class="col-md-6 pr-1">
-                          <div class="row" style="margin-left:180px">
+                          <div class="row" id="add_destBtn" style="margin-left:180px">
                             <a href="" id="drive_link" style="align-content:center;" (click)="create_new_destination(index)"><i class="material-icons">add</i>Add New</a>
                           </div>
                         </div>
@@ -201,7 +201,7 @@
                     </div>
                     <div>
                       <hr class="new4">
-                      <button type="button" class="btn btn-primary btn-just-round add-more" (click)="add_new_package_detail()"><i class="fa fa-plus" ></i></button>
+                      <button type="button" id="add_pkgBtn" class="btn btn-primary btn-just-round add-more" (click)="add_new_package_detail()"><i class="fa fa-plus" ></i></button>
                     </div>
                 <button type="button" class="btn btn-success" [disabled]="!form.valid" (click)="create_package()" title="Please Upload Image to proceed">Create</button>
                 <!-- <div class="row">

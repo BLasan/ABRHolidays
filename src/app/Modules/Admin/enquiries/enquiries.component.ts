@@ -28,7 +28,7 @@ export class EnquiriesComponent implements OnInit {
       if(snapshot.empty) _this.isEmpty=true;
       else{
         snapshot.forEach(docs=>{
-          console.log(docs.data())
+          // console.log(docs.data())
           if(docs.data().view===false)
           this.notification_array.push(docs.data());
         })

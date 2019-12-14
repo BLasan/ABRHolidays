@@ -6,7 +6,8 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription ,  Observable } from 'rxjs';
 import PerfectScrollbar from 'perfect-scrollbar';
-
+import { UserIdleService } from 'angular-user-idle';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-admin-layout',
   templateUrl: './admin-layout.component.html',
@@ -17,7 +18,7 @@ export class AdminLayoutComponent implements OnInit {
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
 
-  constructor( public location: Location, private router: Router) {}
+  constructor( public location: Location, private router: Router,private userIdle:UserIdleService,private auth:AngularFireAuth) {}
 
   ngOnInit() {
      // this.disable_enable_navbar_search_bar();
@@ -56,10 +57,67 @@ export class AdminLayoutComponent implements OnInit {
           let ps = new PerfectScrollbar(elemMainPanel);
           ps = new PerfectScrollbar(elemSidebar);
       }
+
+      this.userIdle.startWatching();
+
+      this.userIdle.onTimerStart().subscribe(count =>{
+        // console.log(count);
+        var eventList= ['click', 'mouseover','keydown','DOMMouseScroll','mousewheel','mousedown','touchstart','touchmove','scroll','keyup'];
+          for(let event of eventList) {
+          document.getElementById('wrapper_admin').addEventListener(event, () =>this.userIdle.resetTimer());
+          }
+      })
+      
+  
+      this.userIdle.onTimeout().subscribe(() =>{
+        this.auth.auth.signOut();
+        localStorage.removeItem('login');
+        alert('Your Session has been Expired');
+        this.router.navigate(['login']);
+        localStorage.setItem('session','timeout');
+  
+      });
+
+      // this.userIdle.onTimerStart().subscribe(count =>{
+      //   console.log(count);
+      //   var eventList= ['click', 'mouseover','keydown','DOMMouseScroll','mousewheel','mousedown','touchstart','touchmove','scroll','keyup'];
+      //     for(let event of eventList) {
+      //     document.getElementById('wrapper_admin').addEventListener(event, () =>this.userIdle.resetTimer());
+      //     }
+      // })
+      
+  
+      // this.userIdle.onTimeout().subscribe(() =>{
+      //   this.auth.auth.signOut();
+      //   localStorage.removeItem('login');
+      //   alert('Your Session has been Expired');
+      //   this.router.navigate(['login']);
+      //   localStorage.setItem('session','timeout');
+  
+      // });
   }
+
   ngAfterViewInit() {
       this.runOnRouteChange();
   }
+
+  stop() {
+    this.userIdle.stopTimer();
+  }
+ 
+  stopWatching() {
+    this.userIdle.stopWatching();
+  }
+ 
+  startWatching() {
+    this.userIdle.startWatching();
+  }
+ 
+  restart() {
+    this.userIdle.resetTimer();
+  }
+
+
   isMaps(path){
       var titlee = this.location.prepareExternalUrl(this.location.path());
       titlee = titlee.slice( 1 );

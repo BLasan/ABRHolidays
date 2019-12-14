@@ -47,7 +47,7 @@ import { TransferContactUsComponent } from './Modules/Customer/transfer-contact-
 import { TicketingComponent } from './Modules/Customer/ticketing/ticketing.component';
 import { VisaHandlingComponent } from './Modules/Customer/visa-handling/visa-handling.component';
 import { InsuranceComponent } from './Modules/Customer/insurance/insurance.component';
-
+import { UserIdleModule } from 'angular-user-idle';
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
   authDomain: "hotel-management-5b661.firebaseapp.com",
@@ -70,6 +70,7 @@ const firebaseConfig = {
     ReactiveFormsModule,
     NgbModule,
     ToastrModule.forRoot(),
+    UserIdleModule.forRoot({idle: 1800, timeout: 120, ping: 120}),
     // admin.initializeApp(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule.enablePersistence(), // firestore

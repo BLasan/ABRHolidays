@@ -11,6 +11,7 @@ import { categories} from '../../../../scripts/frontend/package_categories'
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 import { packageImage } from '../../../services/package_service.service';
 import CryptoJS from 'crypto-js';
+import { adjust_mobile_view_add_pkgBtn} from '../../../../scripts/frontend/mobile_view.js';
 @Component({
   selector: 'app-add-details',
   templateUrl: './add-details.component.html',
@@ -39,6 +40,7 @@ export class AddDetailsComponent implements OnInit {
 
   ngOnInit() {
     disable_search_bar();
+    adjust_mobile_view_add_pkgBtn();
     this.form=new FormGroup({
       package_name:new FormControl('',Validators.required),
       file_uploader:new FormControl('',[Validators.required])
@@ -182,7 +184,7 @@ export class AddDetailsComponent implements OnInit {
     if(this.isValid){
      var today=new Date();
      var remove_image=this;
-     console.log(this.image_file[0]+"->Images")
+    //  console.log(this.image_file[0]+"->Images")
      var date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
      var package_id=this.generate_package_id(package_name,category,today);
      this.upload_image(package_id);

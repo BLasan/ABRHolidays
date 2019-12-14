@@ -427,9 +427,9 @@ export class DashboardComponent implements OnInit {
   }
 
   get_files(event){
-   console.log(event.target.files);
+  //  console.log(event.target.files);
    this.file_list=event.target.files;
-   console.log(this.file_list.length);
+  //  console.log(this.file_list.length);
    localStorage.setItem('file_size',this.file_list.length.toString());
   }
 
@@ -468,7 +468,7 @@ export class DashboardComponent implements OnInit {
   remove_images(){
     this.remove_count+=1;
     // localStorage.setItem('remove_count',this.remove_count.toString());
-    console.log(this.file_list.length);
+    // console.log(this.file_list.length);
     remove_image_slider(this.file_list.length);
     this.file_list=null;
     localStorage.removeItem('file_size')

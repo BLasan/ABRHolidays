@@ -103,10 +103,10 @@ export class EnquiryComponent implements OnInit {
     let keywords=this.form.controls['keywords'].value;
     let refferal=this.form.controls['refferal'].value;
     let description=this.form.controls['description'].value;
-    console.log(country);
+    // console.log(country);
     let aifareRadio=this.airfare_check;
-    console.log(accomodations)
-    console.log(aifareRadio)
+    // console.log(accomodations)
+    // console.log(aifareRadio)
     let interest_in_travel=this.travel_interest_check;
     if(other_link!=null) this.search_engines.push(other_link);
     let activity_count=0;
@@ -159,7 +159,7 @@ export class EnquiryComponent implements OnInit {
       var id="search_engine_"+i;
       let search_engine=((<HTMLInputElement>document.getElementById(id)).checked);
       if(!search_engine) search_count++;
-      console.log(((<HTMLInputElement>document.getElementById(id)).value))
+      // console.log(((<HTMLInputElement>document.getElementById(id)).value))
       if(search_engine){
         this.search_engines.push(((<HTMLInputElement>document.getElementById(id)).value));
         this.search_engines_string+=(<HTMLInputElement>document.getElementById(id)).value+" / "
@@ -200,7 +200,7 @@ export class EnquiryComponent implements OnInit {
     "<tr><td><b>Specific Interests :</b></td><td>"+this.specific_interests_string+"</td></tr>"+
     "</table></div></body></html>";
 
-    console.log(search_count+"->S")
+    // console.log(search_count+"->S")
     if(search_count==4 || interest_count==14 || activity_count==9) this.isSelected=false;
 
     let date=new Date();
@@ -215,14 +215,14 @@ export class EnquiryComponent implements OnInit {
                       airfare_check:aifareRadio,interest_in_travel:interest_in_travel,physical_activities:this.physical_activities,specific_interests:this.specific_interests,
                       search_engines:this.search_engines,date:today,id:hash,view:false,adventure_activities:this.adventure_activities,sun_activities:this.sun_activities,referral:refferal};
     this.data_obj_array.push(user_enquiry);
-    console.log(this.data_obj_array[0].tour_name)
+    // console.log(this.data_obj_array[0].tour_name)
     var _this=this;
     this._db.collection('enquiry').doc(hash).set(user_enquiry).then(()=>{
       _this.sendEmail(message);
       _this._snackbar.open("Successfully Submitted!","OK",{
         duration:300
       });
-      console.log(user_enquiry)
+      // console.log(user_enquiry)
     }).catch(err=>{
       alert("Error Submitting");
     });
@@ -231,7 +231,7 @@ export class EnquiryComponent implements OnInit {
 
   radioCheck1(event:any){
     this.airfare_check=event.target.value;
-    console.log(this.airfare_check)
+    // console.log(this.airfare_check)
   }
 
   radioCheck2(event:any){
@@ -309,7 +309,7 @@ export class EnquiryComponent implements OnInit {
   }
 
   sendEmail(message){
-    console.log(message)
+    // console.log(message)
     const email_message={
       to: 'benuraab@gmail.com',
       from: 'developerbenura@gmail.com',

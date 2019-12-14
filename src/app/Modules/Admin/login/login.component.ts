@@ -17,9 +17,11 @@ export class LoginComponent implements OnInit {
   form:any;
   login_success:any;
   data:any;
+  session:boolean=false;
   constructor(private _db:AngularFirestore,private _auth:AngularFireAuth,private service:SendMailService) { }
 
   ngOnInit() {
+    if(localStorage.getItem('session')==='timeout') this.session=true;
     // this.form=new FormGroup({
     //   user_name:new FormControl('',[Validators.required,Validators.email]),
     //   user_password:new FormControl('',[Validators.required])
@@ -38,6 +40,8 @@ export class LoginComponent implements OnInit {
       if(doc.data().password==hash){
         // console.log("Hello")
         localStorage.setItem('login','true');
+        if(_this.session===true)
+        localStorage.removeItem('session')
         _this._auth.auth.signInWithEmailAndPassword(email,hash).then(value=>{
           // alert(value.user.metadata.lastSignInTime);
           const message="Last Login : "+value.user.metadata.lastSignInTime;

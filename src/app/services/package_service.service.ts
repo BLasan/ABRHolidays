@@ -6,7 +6,7 @@ import CryptoJS from 'crypto-js';
 
 export function packageImage():ValidatorFn{
     return (c:AbstractControl):ValidationErrors|null=>{
-        console.log(c.value)
+        // console.log(c.value)
         if(c.value==null||c.value.length==0){
             return {'notequal':true};
         }

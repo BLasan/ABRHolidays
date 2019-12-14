@@ -126,10 +126,10 @@
         <form>
           <input type="file" id="image_slider_file_uploader" style="display: none;" (change)=get_files($event)  accept="image/*" multiple>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-6 col-md-6">
               <button type="button" class="btn btn-success" style="margin-left:40px" (click)="upload_images()">Upload</button>
             </div>
-            <div class="col-md-6">
+            <div class="col-6 col-md-6">
               <button type="button" class="btn btn-danger" (click)="remove_images()">Remove</button>
             </div>
           </div>

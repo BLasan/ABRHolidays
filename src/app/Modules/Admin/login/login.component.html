@@ -9,11 +9,22 @@
 						ABR TOURS
                 </span>
           <div class="alert alert-danger" style="display:none" id="warning_message">
-            <button type="button" aria-hidden="true" class="close">
-              <i class="now-ui-icons ui-1_simple-remove"></i>
-            </button>
             <span style="width:350px"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Login Unsuccessfull</span>
-          </div>
+		  </div>
+		  
+		    <div class="alert alert-danger" style="display:none" id="warning_message">
+				<button type="button" aria-hidden="true" class="close">
+				  <i class="now-ui-icons ui-1_simple-remove"></i>
+				</button>
+				<span style="width:350px"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Login Unsuccessfull</span>
+			</div>
+			
+			<div class="alert alert-danger" *ngIf="session">
+				<button type="button" aria-hidden="true" class="close">
+					<i class="now-ui-icons ui-1_simple-remove"></i>
+				</button>
+				<span style="width:350px"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Session Expired !</span>
+			</div>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
 						<input class="input100" type="text" name="username" placeholder="Username" id="user_name">
