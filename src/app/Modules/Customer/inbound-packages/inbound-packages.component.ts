@@ -14,6 +14,7 @@ export class InboundPackagesComponent implements OnInit {
   package_id:any;
   package_name:string;
   package_data:any=[];
+  isLoaded:boolean=false;
   destination_string:String="";
   destination_details:any=[];
   duration:number;
@@ -37,7 +38,7 @@ export class InboundPackagesComponent implements OnInit {
       _this.package_data.push(doc.data());
       _this.duration=doc.data().no_of_days;
       _this.package_name=doc.data().package_name;
-      _this.filter_destination_details(_this.package_data);
+      _this.filter_destination_details(_this.package_data,_this);
       adjust_mobile_view_inbound_packages();
     }).catch(function(ex){
       alert("Error");
@@ -45,7 +46,7 @@ export class InboundPackagesComponent implements OnInit {
     })
   }
 
-  filter_destination_details(package_data){
+  filter_destination_details(package_data,_this){
     var length=package_data.length;
     // console.log(length)
     for(var i=0;i<length;i++){
@@ -60,6 +61,6 @@ export class InboundPackagesComponent implements OnInit {
         }
       }
     }
+  _this.isLoaded=true;
   }
-
 }

@@ -7,8 +7,15 @@
     </div> -->
 </div>  
 
+<div class="row row-center" style="margin-top:20px" *ngIf="!isLoaded">
+  <div class="col-md-4 col-sm-4"></div>
+  <div class="col-md-4 col-sm-4" style="padding-left:120px">
+      <div class="loader"></div>
+      <span style="color:red"><b>LOADING PACKAGE</b></span>
+  </div>
+</div>
 
-<div class="row row-center" style="margin-top:10px" id="row2">
+<div class="row row-center" style="margin-top:10px" id="row2" *ngIf="isLoaded">
   <div class="col-md-8">
     <div class="row row-center">
       <table class="table table-striped table-dark">
@@ -48,6 +55,7 @@
                   <b>Overnight Stay : {{details.overnight_stay}}</b>
                 </div>
               </div>
+              <hr *ngIf="details.destination_drive.length>1">
           </div>
       </div>         
     </div>
