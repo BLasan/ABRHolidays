@@ -10,9 +10,6 @@ We wanted to fully display the power of this dashboard, so the kit comes packed 
 
 + [Live Preview](https://creativetimofficial.github.io/now-ui-dashboard-angular)
 
-**Tutorial**
-In order for you to easily be able to use the Now UI Dashboard Angular, we have created a tutorial page in our documentation. It shows the structure for the files inside the archive and how to import them. It then features every components with a description and example how to use it. You can see the details [here](https://creativetimofficial.github.io/now-ui-dashboard-angular/documentation/tutorial).
-
 
 
 ### What's included
