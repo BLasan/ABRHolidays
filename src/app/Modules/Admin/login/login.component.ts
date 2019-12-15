@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
           // alert(value.user.metadata.lastSignInTime);
           const message="Last Login : "+value.user.metadata.lastSignInTime;
           const email_message={
-            to: 'benuraab@gmail.com',
+            to: 'abrceylon@gmail.com',
             from: 'developerbenura@gmail.com',
             subject: 'User Login monitored',
             text: message,

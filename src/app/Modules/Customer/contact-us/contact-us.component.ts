@@ -53,7 +53,7 @@ export class ContactUsComponent implements OnInit {
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     var _this=this;
     const email_message={
-      to: 'kavindu@gmail.com',
+      to: 'abrceylon@gmail.com',
       from: email,
       subject: subject,
       text: message,

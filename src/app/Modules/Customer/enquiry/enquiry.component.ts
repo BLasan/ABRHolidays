@@ -218,7 +218,7 @@ export class EnquiryComponent implements OnInit {
     // console.log(this.data_obj_array[0].tour_name)
     var _this=this;
     this._db.collection('enquiry').doc(hash).set(user_enquiry).then(()=>{
-      _this.sendEmail(message);
+      _this.sendEmail(message,email);
       _this._snackbar.open("Successfully Submitted!","OK",{
         duration:300
       });
@@ -308,11 +308,11 @@ export class EnquiryComponent implements OnInit {
     }); 
   }
 
-  sendEmail(message){
+  sendEmail(message,email){
     // console.log(message)
     const email_message={
-      to: 'benuraab@gmail.com',
-      from: 'developerbenura@gmail.com',
+      to: 'abrceylon@gmail.com',
+      from: email,
       subject: 'User Enquiry',
       text: message,
       html: message,
