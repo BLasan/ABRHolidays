@@ -17,15 +17,7 @@ We wanted to fully display the power of this dashboard, so the kit comes packed 
 **Tutorial**
 In order for you to easily be able to use the Now UI Dashboard Angular, we have created a tutorial page in our documentation. It shows the structure for the files inside the archive and how to import them. It then features every components with a description and example how to use it. You can see the details [here](https://creativetimofficial.github.io/now-ui-dashboard-angular/documentation/tutorial).
 
-## Terminal Commands
 
-1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
-2. Open Terminal
-3. Go to your file project
-4. Run in terminal: ```npm install -g @angular/cli```
-5. Then: ```npm install```
-6. And: ```npm start```
-7. Navigate to [localhost:4200](localhost:4200)
 
 ### What's included
 

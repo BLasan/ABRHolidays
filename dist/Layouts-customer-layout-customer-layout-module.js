@@ -7378,6 +7378,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _Modules_Customer_enquiry_enquiry_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../Modules/Customer/enquiry/enquiry.component */ "./src/app/Modules/Customer/enquiry/enquiry.component.ts");
 /* harmony import */ var _Modules_Customer_transfer_contact_us_transfer_contact_us_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../Modules/Customer/transfer-contact-us/transfer-contact-us.component */ "./src/app/Modules/Customer/transfer-contact-us/transfer-contact-us.component.ts");
+/* harmony import */ var _Modules_Customer_ticketing_ticketing_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../Modules/Customer/ticketing/ticketing.component */ "./src/app/Modules/Customer/ticketing/ticketing.component.ts");
+/* harmony import */ var _Modules_Customer_visa_handling_visa_handling_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../Modules/Customer/visa-handling/visa-handling.component */ "./src/app/Modules/Customer/visa-handling/visa-handling.component.ts");
+/* harmony import */ var _Modules_Customer_insurance_insurance_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../Modules/Customer/insurance/insurance.component */ "./src/app/Modules/Customer/insurance/insurance.component.ts");
+
+
+
 
 
 
@@ -7429,7 +7435,10 @@ var CustomerLayoutModule = /** @class */ (function () {
                 _Modules_Customer_testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_18__["TestimonialsComponent"],
                 _Modules_Customer_destinations_destinations_component__WEBPACK_IMPORTED_MODULE_19__["DestinationsComponent"],
                 _Modules_Customer_enquiry_enquiry_component__WEBPACK_IMPORTED_MODULE_21__["EnquiryComponent"],
-                _Modules_Customer_transfer_contact_us_transfer_contact_us_component__WEBPACK_IMPORTED_MODULE_22__["TransferContactUsComponent"]
+                _Modules_Customer_transfer_contact_us_transfer_contact_us_component__WEBPACK_IMPORTED_MODULE_22__["TransferContactUsComponent"],
+                _Modules_Customer_ticketing_ticketing_component__WEBPACK_IMPORTED_MODULE_23__["TicketingComponent"],
+                _Modules_Customer_visa_handling_visa_handling_component__WEBPACK_IMPORTED_MODULE_24__["VisaHandlingComponent"],
+                _Modules_Customer_insurance_insurance_component__WEBPACK_IMPORTED_MODULE_25__["InsuranceComponent"]
             ],
         })
     ], CustomerLayoutModule);
@@ -7464,6 +7473,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Modules_Customer_destinations_destinations_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Modules/Customer/destinations/destinations.component */ "./src/app/Modules/Customer/destinations/destinations.component.ts");
 /* harmony import */ var _Modules_Customer_enquiry_enquiry_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../Modules/Customer/enquiry/enquiry.component */ "./src/app/Modules/Customer/enquiry/enquiry.component.ts");
 /* harmony import */ var _Modules_Customer_transfer_contact_us_transfer_contact_us_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../Modules/Customer/transfer-contact-us/transfer-contact-us.component */ "./src/app/Modules/Customer/transfer-contact-us/transfer-contact-us.component.ts");
+/* harmony import */ var _Modules_Customer_ticketing_ticketing_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../Modules/Customer/ticketing/ticketing.component */ "./src/app/Modules/Customer/ticketing/ticketing.component.ts");
+/* harmony import */ var _Modules_Customer_insurance_insurance_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../Modules/Customer/insurance/insurance.component */ "./src/app/Modules/Customer/insurance/insurance.component.ts");
+/* harmony import */ var _Modules_Customer_visa_handling_visa_handling_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../Modules/Customer/visa-handling/visa-handling.component */ "./src/app/Modules/Customer/visa-handling/visa-handling.component.ts");
+
+
+
 
 
 
@@ -7485,6 +7500,9 @@ var CustomerLayoutRoutes = [
     { path: 'contact-us', component: _Modules_Customer_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_3__["ContactUsComponent"] },
     { path: 'discover-world', component: _Modules_Customer_discover_world_discover_world_component__WEBPACK_IMPORTED_MODULE_4__["DiscoverWorldComponent"] },
     { path: 'faq', component: _Modules_Customer_faq_faq_component__WEBPACK_IMPORTED_MODULE_5__["FaqComponent"] },
+    { path: 'ticketing', component: _Modules_Customer_ticketing_ticketing_component__WEBPACK_IMPORTED_MODULE_14__["TicketingComponent"] },
+    { path: 'visa-handling', component: _Modules_Customer_visa_handling_visa_handling_component__WEBPACK_IMPORTED_MODULE_16__["VisaHandlingComponent"] },
+    { path: 'travel-insurance', component: _Modules_Customer_insurance_insurance_component__WEBPACK_IMPORTED_MODULE_15__["InsuranceComponent"] },
     { path: 'news-events/:news_id', component: _Modules_Customer_news_events_news_events_component__WEBPACK_IMPORTED_MODULE_9__["NewsEventsComponent"] },
     { path: 'inbound-packages/:code', component: _Modules_Customer_inbound_packages_inbound_packages_component__WEBPACK_IMPORTED_MODULE_6__["InboundPackagesComponent"] },
     { path: 'package-category/:category', component: _Modules_Customer_package_category_package_category_component__WEBPACK_IMPORTED_MODULE_8__["PackageCategoryComponent"] },
@@ -7620,7 +7638,7 @@ var AccomodationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-12 col-md-12\" style=\"height:65px;background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>CONTACT US</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-md-6\">\n    <div class=\"card color-card\">\n      <div class=\"card-body\">\n        <p><b>CEYLON TOURS LIMITED</b></p>\n        <p>\n          <i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i>\n          <span>\n            8A,Gamoaha Road,Angoda\n          </span>\n        </p>\n        <p><b>SRI LANKA</b></p>\n        <p>\n          <i class=\"fa fa-phone\" aria-hidden=\"true\"></i>\n          <span>\n            (+94) 112 774 323\n          </span>\n        </p>\n        <p><b>FAX</b></p>\n        <p>\n          <i class=\"fa fa-fax\" aria-hidden=\"true\"></i>\n          <span>\n            (+94) 112 34 2 234\n          </span>\n        </p>\n        <p><b>EMAIL</b></p>\n        <i class=\"fa fa-envelope\" aria-hidden=\"true\"></i>\n        <span>\n           info@ceylontours.com\n        </span>\n      </div>\n    </div>  \n  </div>\n  <!-- <div class=\"col-md-6\">\n    <div class=\"mapouter\">\n      <div class=\"gmap_canvas\" id=\"gmap_canvas1\">\n      <iframe height=\"500\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=gampaha&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"2\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\">\n      </iframe>\n      <a href=\"https://www.embedgooglemap.net/blog/booking.com-coupon/\">\n      </a>\n      </div>\n    </div>\n  </div> -->\n</div>\n\n<div class=\"row row-center\" id=\"row3\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\" style=\"background-color:black;\">\n      <div class=\"card-body\">\n        <form [formGroup]=\"form\">\n          <div class=\"row\">\n            <div class=\"col-12 col-md-6\" style=\"padding-left:0\">\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}\">\n                <label>Subject</label>\n                <input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Subject\" required formControlName=\"subject\" [ngClass]=\"{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'has-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}\">\n                <label>First Name</label>\n                <input type=\"text\" id=\"f_name\" class=\"form-control\" placeholder=\"First Name\" required formControlName=\"f_name\" [ngClass]=\"{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'has-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}\">\n                <label>Last Name</label>\n                <input type=\"text\" id=\"l_name\" class=\"form-control\" placeholder=\"Last Name\" required formControlName=\"l_name\" [ngClass]=\"{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}\">\n              </div>\n              <div class=\"form-group\">\n                <label for=\"email\">Country</label>\n                <select name=\"country\" id=\"country\" class=\"form-control\" style=\"height:38px;\">\n                  <option *ngFor=\"let category of country_array_list\" value=\"{{category}}\">{{category}}</option>\n                </select>\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}\">\n                <label>Email</label>\n                <input type=\"email\" id=\"email\" class=\"form-control\" placeholder=\"Enter email\" required formControlName=\"email\" [ngClass]=\"{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}\">\n              </div>\n            </div>\n            <div class=\"col-12 col-md-6\">\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'has-danger':form.controls.email.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}\">\n                <label>Telephone No</label>\n                <input type=\"number\" id=\"tel_no\"  class=\"form-control\" formControlName=\"tel\" [ngClass]=\"{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'has-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}\">\n                <label>Message</label>\n                <textarea class=\"form-control\" id=\"message\" rows=\"3\" formControlName=\"message\" [ngClass]=\"{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}\"></textarea>\n              </div>\n              <button type=\"button\" [disabled]=\"!form.valid\" class=\"btn btn-primary\" (click)=\"submit_form()\">Submit</button>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- <button (click)=\"send_email()\">yy</button> -->\n\n"
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-12 col-md-12\" style=\"height:65px;background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>CONTACT US</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-md-6\">\n    <div class=\"card color-card\">\n      <div class=\"card-body\">\n        <p><b>CEYLON TOURS LIMITED</b></p>\n        <p>\n          <i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i>\n          <span>\n            No 1/1, Embaraluwa North , Weliveriya -\n              Sri Lanka\n          </span>\n        </p>\n        <p><b>SRI LANKA</b></p>\n        <p>\n          <i class=\"fa fa-phone\" aria-hidden=\"true\"></i>\n          <span>\n            (+94) 777881168\n          </span>\n        </p>\n        <p><b>WHATSAPP</b></p>\n        <p>\n          <i class=\"fa fa-fax\" aria-hidden=\"true\"></i>\n          <span>\n            (+49)  15739497155 \n          </span>\n        </p>\n        <p><b>EMAIL</b></p>\n        <i class=\"fa fa-envelope\" aria-hidden=\"true\"></i>\n        <span>\n           abrceylon@gmail.com\n        </span>\n      </div>\n    </div>  \n  </div>\n  <!-- <div class=\"col-md-6\">\n    <div class=\"mapouter\">\n      <div class=\"gmap_canvas\" id=\"gmap_canvas1\">\n      <iframe height=\"500\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=gampaha&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"2\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\">\n      </iframe>\n      <a href=\"https://www.embedgooglemap.net/blog/booking.com-coupon/\">\n      </a>\n      </div>\n    </div>\n  </div> -->\n  <div class=\"col-md-6\">\n    <div class=\"mapouter\">\n      <div class=\"gmap_canvas\" id=\"gmap_canvas1\">\n        <iframe height=\"500\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=No%201%2F1%2C%20Embaraluwa%20North%20%2C%20Weliveriya%20-%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"2\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>\n        <a href=\"https://www.embedgooglemap.net/blog/nordvpn-coupon-code/\"></a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row3\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\" style=\"background-color:black;\">\n      <div class=\"card-body\">\n        <form [formGroup]=\"form\">\n          <div class=\"row\">\n            <div class=\"col-12 col-md-6\" style=\"padding-left:0\">\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}\">\n                <label>Subject</label>\n                <input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Subject\" required formControlName=\"subject\" [ngClass]=\"{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'has-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}\">\n                <label>First Name</label>\n                <input type=\"text\" id=\"f_name\" class=\"form-control\" placeholder=\"First Name\" required formControlName=\"f_name\" [ngClass]=\"{'form-control-success':form.controls.f_name.valid && (form.controls.f_name.dirty || form.controls.f_name.touched),'form-control-danger':form.controls.f_name.invalid && (form.controls.f_name.dirty || form.controls.f_name.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'has-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}\">\n                <label>Last Name</label>\n                <input type=\"text\" id=\"l_name\" class=\"form-control\" placeholder=\"Last Name\" required formControlName=\"l_name\" [ngClass]=\"{'form-control-success':form.controls.l_name.valid && (form.controls.l_name.dirty || form.controls.l_name.touched),'form-control-danger':form.controls.l_name.invalid && (form.controls.l_name.dirty || form.controls.l_name.touched)}\">\n              </div>\n              <div class=\"form-group\">\n                <label for=\"email\">Country</label>\n                <select name=\"country\" id=\"country\" class=\"form-control\" style=\"height:38px;\">\n                  <option *ngFor=\"let category of country_array_list\" value=\"{{category}}\">{{category}}</option>\n                </select>\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}\">\n                <label>Email</label>\n                <input type=\"email\" id=\"email\" class=\"form-control\" placeholder=\"Enter email\" required formControlName=\"email\" [ngClass]=\"{'form-control-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'form-control-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}\">\n              </div>\n            </div>\n            <div class=\"col-12 col-md-6\">\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'has-danger':form.controls.email.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}\">\n                <label>Telephone No</label>\n                <input type=\"number\" id=\"tel_no\"  class=\"form-control\" formControlName=\"tel\" [ngClass]=\"{'form-control-success':form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched),'form-control-danger':form.controls.tel.invalid && (form.controls.tel.dirty || form.controls.tel.touched)}\">\n              </div>\n              <div class=\"form-group\" [ngClass]=\"{'has-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'has-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}\">\n                <label>Message</label>\n                <textarea class=\"form-control\" id=\"message\" rows=\"3\" formControlName=\"message\" [ngClass]=\"{'form-control-success':form.controls.message.valid && (form.controls.message.dirty || form.controls.message.touched),'form-control-danger':form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)}\"></textarea>\n              </div>\n              <button type=\"button\" [disabled]=\"!form.valid\" class=\"btn btn-primary\" (click)=\"submit_form()\">Submit</button>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- <button (click)=\"send_email()\">yy</button> -->\n\n"
 
 /***/ }),
 
@@ -7631,7 +7649,7 @@ module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\n.height-class {\n  height: 500px !important; }\n\n.description {\n  font-family: sans-serif;\n  font-size: 20px;\n  color: blue; }\n\np {\n  font-family: sans-serif;\n  color: white; }\n\nh3 .card-title {\n  vertical-align: center; }\n\n.square {\n  width: auto;\n  background-color: green; }\n\n.p-title {\n  font-family: sans-serif;\n  color: white; }\n\ni {\n  color: red; }\n\n.color-card {\n  background-color: lightblue; }\n\nspan {\n  font-family: 'Open Sans',sans-serif;\n  text-align: justify;\n  color: white;\n  padding-left: 10px; }\n\nlabel {\n  color: white;\n  font-weight: bold; }\n\ninput {\n  color: white; }\n\ntextarea {\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY29udGFjdC11cy9jb250YWN0LXVzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksY0FBYztFQUNkLGVBQWU7RUFDZiw4QkFBOEIsRUFBQTs7QUFHbEM7RUFDSSx3QkFBdUIsRUFBQTs7QUFHM0I7RUFDSSx1QkFBc0I7RUFDdEIsZUFBZTtFQUNmLFdBQVUsRUFBQTs7QUFHZDtFQUNJLHVCQUF1QjtFQUN2QixZQUFXLEVBQUE7O0FBR2Y7RUFDSSxzQkFBc0IsRUFBQTs7QUFHMUI7RUFDSSxXQUFVO0VBQ1YsdUJBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFJaEI7RUFDSSxVQUFTLEVBQUE7O0FBR2I7RUFDSSwyQkFBMEIsRUFBQTs7QUFHOUI7RUFDSSxtQ0FBbUM7RUFDbkMsbUJBQW1CO0VBQ25CLFlBQVc7RUFDWCxrQkFBaUIsRUFBQTs7QUFpQnJCO0VBQ0ksWUFBVztFQUNYLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLFlBQVcsRUFBQTs7QUFHZjtFQUNJLFlBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY29udGFjdC11cy9jb250YWN0LXVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDN7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbi5yb3ctY2VudGVye1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIG1hcmdpbi1yaWdodDogMDtcbiAgICBwYWRkaW5nOiAxMHB4IDEwMHB4IDIwcHggMTAwcHg7XG59XG5cbi5oZWlnaHQtY2xhc3N7XG4gICAgaGVpZ2h0OiA1MDBweCFpbXBvcnRhbnQ7XG59XG5cbi5kZXNjcmlwdGlvbntcbiAgICBmb250LWZhbWlseTpzYW5zLXNlcmlmO1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbiAgICBjb2xvcjpibHVlO1xufVxuXG5we1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgIGNvbG9yOndoaXRlO1xufVxuXG5oMyAuY2FyZC10aXRsZXtcbiAgICB2ZXJ0aWNhbC1hbGlnbjogY2VudGVyO1xufVxuXG4uc3F1YXJlIHtcbiAgICB3aWR0aDphdXRvO1xuICAgIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4ucC10aXRsZXtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgLy8gcGFkZGluZzogMzBweCAyMHB4O1xufVxuXG5pe1xuICAgIGNvbG9yOnJlZDsgIFxufVxuXG4uY29sb3ItY2FyZHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOmxpZ2h0Ymx1ZTsgIFxufVxuXG5zcGFue1xuICAgIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJyxzYW5zLXNlcmlmO1xuICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gICAgY29sb3I6d2hpdGU7XG4gICAgcGFkZGluZy1sZWZ0OjEwcHg7XG59XG5cbi8vIC5tYXBvdXRlcntcbi8vICAgICBwb3NpdGlvbjpyZWxhdGl2ZTtcbi8vICAgICB0ZXh0LWFsaWduOnJpZ2h0O1xuLy8gICAgIGhlaWdodDo1MDBweDtcbi8vICAgICBtYXJnaW4tbGVmdDotMTMwcHg7XG4vLyAgICAgd2lkdGg6NzAwcHg7XG4vLyB9XG4vLyAuZ21hcF9jYW52YXMge1xuLy8gICAgIG92ZXJmbG93OmhpZGRlbjtcbi8vICAgICBiYWNrZ3JvdW5kOm5vbmUhaW1wb3J0YW50O1xuLy8gICAgIGhlaWdodDo1MDBweDtcbi8vICAgICB3aWR0aDo2MDBweDtcbi8vIH1cblxubGFiZWx7XG4gICAgY29sb3I6d2hpdGU7ICAgIFxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG5pbnB1dHtcbiAgICBjb2xvcjp3aGl0ZTtcbn1cblxudGV4dGFyZWF7XG4gICAgY29sb3I6d2hpdGU7XG59Il19 */"
+module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\n.height-class {\n  height: 500px !important; }\n\n.description {\n  font-family: sans-serif;\n  font-size: 20px;\n  color: blue; }\n\np {\n  font-family: sans-serif;\n  color: white; }\n\nh3 .card-title {\n  vertical-align: center; }\n\n.square {\n  width: auto;\n  background-color: green; }\n\n.p-title {\n  font-family: sans-serif;\n  color: white; }\n\ni {\n  color: red; }\n\n.color-card {\n  background-color: lightblue; }\n\nspan {\n  font-family: 'Open Sans',sans-serif;\n  text-align: justify;\n  color: white;\n  padding-left: 10px; }\n\n.mapouter {\n  position: relative;\n  text-align: right;\n  height: 500px;\n  margin-left: -130px;\n  width: 700px; }\n\n.gmap_canvas {\n  overflow: hidden;\n  background: none !important;\n  height: 500px;\n  width: 600px; }\n\nlabel {\n  color: white;\n  font-weight: bold; }\n\ninput {\n  color: white; }\n\ntextarea {\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY29udGFjdC11cy9jb250YWN0LXVzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksY0FBYztFQUNkLGVBQWU7RUFDZiw4QkFBOEIsRUFBQTs7QUFHbEM7RUFDSSx3QkFBdUIsRUFBQTs7QUFHM0I7RUFDSSx1QkFBc0I7RUFDdEIsZUFBZTtFQUNmLFdBQVUsRUFBQTs7QUFHZDtFQUNJLHVCQUF1QjtFQUN2QixZQUFXLEVBQUE7O0FBR2Y7RUFDSSxzQkFBc0IsRUFBQTs7QUFHMUI7RUFDSSxXQUFVO0VBQ1YsdUJBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFJaEI7RUFDSSxVQUFTLEVBQUE7O0FBR2I7RUFDSSwyQkFBMEIsRUFBQTs7QUFHOUI7RUFDSSxtQ0FBbUM7RUFDbkMsbUJBQW1CO0VBQ25CLFlBQVc7RUFDWCxrQkFBaUIsRUFBQTs7QUFHckI7RUFDSSxrQkFBaUI7RUFDakIsaUJBQWdCO0VBQ2hCLGFBQVk7RUFDWixtQkFBa0I7RUFDbEIsWUFBVyxFQUFBOztBQUVmO0VBQ0ksZ0JBQWU7RUFDZiwyQkFBeUI7RUFDekIsYUFBWTtFQUNaLFlBQVcsRUFBQTs7QUFHZjtFQUNJLFlBQVc7RUFDWCxpQkFBaUIsRUFBQTs7QUFHckI7RUFDSSxZQUFXLEVBQUE7O0FBR2Y7RUFDSSxZQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bGVzL0N1c3RvbWVyL2NvbnRhY3QtdXMvY29udGFjdC11cy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImgze1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xufVxuXG4ucm93LWNlbnRlcntcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgcGFkZGluZzogMTBweCAxMDBweCAyMHB4IDEwMHB4O1xufVxuXG4uaGVpZ2h0LWNsYXNze1xuICAgIGhlaWdodDogNTAwcHghaW1wb3J0YW50O1xufVxuXG4uZGVzY3JpcHRpb257XG4gICAgZm9udC1mYW1pbHk6c2Fucy1zZXJpZjtcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgY29sb3I6Ymx1ZTtcbn1cblxucHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgICBjb2xvcjp3aGl0ZTtcbn1cblxuaDMgLmNhcmQtdGl0bGV7XG4gICAgdmVydGljYWwtYWxpZ246IGNlbnRlcjtcbn1cblxuLnNxdWFyZSB7XG4gICAgd2lkdGg6YXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcbn1cblxuLnAtdGl0bGV7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIC8vIHBhZGRpbmc6IDMwcHggMjBweDtcbn1cblxuaXtcbiAgICBjb2xvcjpyZWQ7ICBcbn1cblxuLmNvbG9yLWNhcmR7XG4gICAgYmFja2dyb3VuZC1jb2xvcjpsaWdodGJsdWU7ICBcbn1cblxuc3BhbntcbiAgICBmb250LWZhbWlseTogJ09wZW4gU2Fucycsc2Fucy1zZXJpZjtcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICAgIGNvbG9yOndoaXRlO1xuICAgIHBhZGRpbmctbGVmdDoxMHB4O1xufVxuXG4ubWFwb3V0ZXJ7XG4gICAgcG9zaXRpb246cmVsYXRpdmU7XG4gICAgdGV4dC1hbGlnbjpyaWdodDtcbiAgICBoZWlnaHQ6NTAwcHg7XG4gICAgbWFyZ2luLWxlZnQ6LTEzMHB4O1xuICAgIHdpZHRoOjcwMHB4O1xufVxuLmdtYXBfY2FudmFzIHtcbiAgICBvdmVyZmxvdzpoaWRkZW47XG4gICAgYmFja2dyb3VuZDpub25lIWltcG9ydGFudDtcbiAgICBoZWlnaHQ6NTAwcHg7XG4gICAgd2lkdGg6NjAwcHg7XG59XG5cbmxhYmVse1xuICAgIGNvbG9yOndoaXRlOyAgICBcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuaW5wdXR7XG4gICAgY29sb3I6d2hpdGU7XG59XG5cbnRleHRhcmVhe1xuICAgIGNvbG9yOndoaXRlO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -7694,7 +7712,7 @@ var ContactUsComponent = /** @class */ (function () {
         var date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate());
         var _this = this;
         var email_message = {
-            to: 'kavindu@gmail.com',
+            to: 'abrceylon@gmail.com',
             from: email,
             subject: subject,
             text: message,
@@ -7747,7 +7765,7 @@ var ContactUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div id=\"carouselExampleControls_home\" class=\"carousel slide\" data-ride=\"carousel\" style=\"margin-top:-20px;\">\n        <div class=\"carousel-inner\">\n            <div class=\"carousel-item active\">\n                <img src=\"https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_carousal%2Fimage0?alt=media&token=43f566ce-0750-499a-a87c-de91bccba93e\" style=\"height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;\" class=\"d-block w-100\" alt=\"image\">\n            </div>\n            <div class=\"carousel-item\" *ngFor=\"let images of image_carousal_array\">\n                <img [src]=\"images.fileUrl\" class=\"d-block w-100\" style=\"height:500px;padding-left:0;padding-right:0;\" alt=\"...\">\n            </div>           \n        </div>\n        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls_home\" role=\"button\" data-slide=\"prev\">\n            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#carouselExampleControls_home\" role=\"button\" data-slide=\"next\" id=\"carousal_home\">\n            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Next</span>\n        </a>\n    </div>\n\n\n\n\n<div class=\"row row-center\" *ngIf=\"image_carousal_array.length==0\">\n    <div class=\"col-md-4 col-sm-4\"></div>\n    <div class=\"col-md-4 col-sm-4\" style=\"padding-left:120px\">\n        <div class=\"loader\"></div>\n        <span style=\"color:red\"><b>LOADING IMAGES</b></span>\n    </div>\n</div>\n\n<br>\n\n<div class=\"row row-center\">\n    <div class=\"heading\">\n        <h2 id=\"txt\" style=\"padding-top:20px\">Welcome to ABR Holidays</h2>\n    </div>\n</div>  \n\n<!-- <div class=\"row row-center\" style=\"padding-top:10px;padding-left:120px\">\n    <div class=\"col-md-4\"></div>\n    <div class=\"col-md-4\">\n        <div class=\"brand_logo_container\">\n            <img src=\"assets/img/ABR.png\" class=\"brand_logo\" alt=\"Logo\">\n        </div>\n    </div>\n    <div class=\"col-md-4\"></div>\n</div> -->\n\n\n<div class=\"row row-center\" style=\"margin-top:20px\">\n    <div class=\"col-md-8 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#3498db!important\">\n            <h4 class=\"card-title\" style=\"padding-left:50px;color:white\"><b>INBOUND PACKAGES</b></h4>\n            <div class=\"card-body card-img-top\">\n                <div class=\"row\" style=\"margin-top:-13px\">\n                    <div id=\"carouselExampleControls1\" class=\"carousel slide\" data-ride=\"carousel\" style=\"margin-bottom:-15px;\">\n                        <div class=\"carousel-inner\">\n                            <!-- <div > -->\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/bg.jpg\" style=\"padding-left:0;padding-right:0;padding-bottom:0;\" class=\"d-block w-100 card-img-top\" alt=\"package\">\n                                <div class=\"carousel-caption d-none d-md-block\">\n                                    <h3 style=\"color:red;margin-top:-200px;\"><b>WELCOME TO OUR PACKAGES</b></h3>\n                                        <!-- <button type=\"button\" class=\"btn btn-danger\">Read More</button> -->\n                                </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let package_data of package_data;let index=index\">\n                                <img src=\"{{package_data.image_url}}\" class=\"d-block w-100\" alt=\"...\" style=\"padding-left:0;padding-right:0;padding-bottom:0;\">\n                                <div class=\"carousel-caption d-none d-md-block\">\n                                    <img src=\"https://www.ceylontours.com/images/day.png\">\n                                    <h3 style=\"color:red\"><b>{{package_data.no_of_days}} Days</b></h3>\n                                    <a href=\"inbound-packages/{{package_data.package_id}}\" class=\"btn btn-danger\">Read More</a>\n                                </div>\n                            </div>           \n                        </div>\n                        <div *ngFor=\"let package_data of package_data;let index=index\">\n                            <a class=\"carousel-control-prev\" href=\"#carouselExampleControls1\" role=\"button\" data-slide=\"prev\">\n                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n                                <span class=\"sr-only\">Previous</span>\n                            </a>\n                            <a class=\"carousel-control-next\" href=\"#carouselExampleControls1\" role=\"button\" data-slide=\"next\">\n                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n                                <span class=\"sr-only\">Next</span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>               \n    </div>\n    <div class=\"col-md-4 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#E74C3C\">\n            <h4 class=\"card-title\" align=\"center\" style=\"color:white\"><b>DISCOVER THE WORLD</b></h4>\n            <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/discover-the-world.jpg\" alt=\"Card image cap\">\n            <div class=\"card-body\" style=\"height:152px\">\n                <p class=\"card-text\" style=\"font-size: 16px;color:white;margin-top:20px\">If you were looking for a holiday, we have the perfect agenda for you</p>\n                <div class=\"row\" id=\"discover_row\" style=\"margin-top:-2px\">\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <button type=\"button\" id=\"dis_btn\" class=\"btn btn-primary\" style=\"margin-left:-15px;margin-top:-10px\"><b>READ MORE</b></button>    \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>     \n\n<div class=\"row row-center\">\n    <div class=\"col-md-12 col-sm-12\">\n        <div class=\"card\" style=\"height:90px;\">\n            <div class=\"row row-center\">\n                <div class=\"col-md-4 col-sm-12 rect\">\n                    <div class=\"row\" style=\"padding-left:10px\">\n                        <i class=\"fa fa-newspaper-o fa-5x\" style=\"margin-top:10px\" aria-hidden=\"true\"></i>\n                        <div style=\"float:left;margin-left:20px;margin-top:-8px\">\n                            <h4><b style=\"font-family: serif;color:white\">NEWS FEED</b></h4>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-md-8 col-sm-12 news-container\" id=\"news_containers\">  \n                    <div id=\"carouselExampleControls2\" class=\"carousel slide\" data-ride=\"carousel\" *ngIf=\"news_feed_data_array.length>0\">\n                        <div class=\"carousel-inner\">\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/blank.png\" style=\"height:80px;\" class=\"d-block w-100\" alt=\"...\">\n                                <div class=\"carousel-caption d-none d-md-block\" style=\"height:80px;\">\n                                    <!-- <h4 style=\"color:red;margin-top:0px;padding-left:0;\"><b>News</b></h4> -->\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0\"><a href=\"/news-events/{{news_feed_data_array[0].id}}\">{{news_feed_data_array[0].title}}</a></p>\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0;margin-top:-15px\">{{news_feed_data_array[0].news}}</p>\n                                </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let news of news_feed_data_array;let index=index\">\n                                <img src=\"assets/img/blank.png\" class=\"d-block w-100\" style=\"height:80px;\" alt=\"...\">\n                                <div class=\"carousel-caption d-none d-md-block\" style=\"height:80px;\">\n                                    <!-- <h4 style=\"color:red;margin-top:0px;padding-left:0;\"><b>News</b></h4> -->\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0\"><a href=\"/news-events/{{news.id}}\">{{news.title}}</a></p>\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0;margin-top:-15px\">{{news.news}}</p>\n                                </div>\n                            </div>\n                            <!-- <div class=\"carousel-item\">\n                                <img src=\"assets/img/blank.png\" style=\"height:80px;\" class=\"d-block w-100\" alt=\"...\">\n                                <div class=\"carousel-caption d-none d-md-block\" style=\"height:80px;\">\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0\"><a href=\"\">Hello Tilt</a></p>\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0;margin-top:-15px\">A religious festival celebrated by Hindus across Sri Lanka, Maha Sivaratri Festival is observed in the month of February on the 14th night of the new moon. With its name translating to &ldquo;Great</p>\n                                </div>\n                            </div> -->\n                        </div>\n                        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"prev\">\n                            <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                        <a class=\"carousel-control-next\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"next\">\n                            <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                            <!-- <span class=\"carousel-control-next-icon news\" aria-hidden=\"true\" style=\"background-color:black\"></span>\n                            <span class=\"sr-only\">Next</span> -->\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row row-center\">\n    <div class=\"col-md-4 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#23a516\">\n            <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/faq.jpg\" height=\"320px\" alt=\"Card image cap\">\n            <div class=\"card-body\" id=\"faq_body\" style=\"height:134px\">\n                <h4 class=\"card-title\" style=\"margin-top:-13px;color:white\"><b>FAQ</b></h4>\n                <p class=\"card-text\" style=\"font-size: 16px;color:white;margin-top:-5px\">“Have some question? We'll help you to solve them”</p>\n                <div class=\"row\" id=\"faq_row\" style=\"margin-top:-27px;padding-right:6px\">\n                    <!-- <a href=\"/faq\" class=\"btn btn-primary\" align=\"right\" style=\"margin-top:-18px\"><b>READ MORE</b></a> -->\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/faq\" id=\"faq_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-4\">\n        <div class=\"card\" style=\"background-color:#ffb000\">\n            <img class=\"card-img-top\" src=\"assets/img/transfers/transfer12.jpg\" height=\"320px\" alt=\"Card image cap\">\n            <div class=\"card-body\" id=\"transfer_body\" style=\"height:134px\">\n                <h4 class=\"card-title\" style=\"margin-top:-13px;color:white\"><b>TRANSFERS</b></h4>\n                <p class=\"card-text\" style=\"font-size:16px;color:white;margin-top:-5px\">“Let us take you there, where you can leave your footprints”</p>\n                <div class=\"row\" id=\"transfer_row\" style=\"margin-top:-27px;padding-right:6px\">\n                    <!-- <a href=\"/transfers\" class=\"btn btn-primary\" style=\"margin-top:-18px;\"><b>READ MORE</b></a> -->\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/transfers\" id=\"transfer_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-4\">\n        <!-- <div style=\"height:260px\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"background-image: url('assets/img/bg.jpg');\">\n                    <img class=\"card-img-top\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n                    <h4 class=\"card-title\">ACCOMODATION</h4>\n                    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n                    <a href=\"#\" class=\"btn btn-primary\">Read More</a>\n                </div>\n            </div>\n        </div> -->\n        <!-- <div style=\"height:260px\"> -->\n        <div class=\"card\">\n            <div class=\"card-body\" style=\"background-color:#04558b;height:454px;\">\n                <div class=\"row\" style=\"margin-top:-15px\">\n                    <div id=\"carouselExampleControls3\" class=\"carousel slide\" data-ride=\"carousel\">\n                        <div class=\"carousel-inner\">\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/background_sky.jpg\" class=\"d-block w-100\" alt=\"testimonials\" style=\"height:415px;padding-left:0;padding-right:0\">\n                                    <div class=\"carousel-caption d-none d-md-block\">\n                                        <p style=\"text-align:justify;color:black;margin-top:-300px\"><i class=\"fa fa-comments fa-2x\" aria-hidden=\"true\"></i><b style=\"padding-left:10px;font-size:20px;\">TESTIMONIALS</b></p>\n                                        <p style=\"text-align:justify;margin-top:10px;margin-left:50px\">Hello Mrs.Perera</p>\n                                    </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let news of news_feed_data_array;let index=index\">\n                                <img src=\"assets/img/background_sky.jpg\" class=\"d-block w-100\" style=\"height:415px;padding-left:0;padding-right:0\" alt=\"testimonials\">\n                            </div>\n                        </div>\n                        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls3\" role=\"button\" data-slide=\"prev\">\n                            <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                        <a class=\"carousel-control-next\" href=\"#carouselExampleControls3\" role=\"button\" data-slide=\"next\">\n                            <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                    </div>\n                </div>\n                <div class=\"row row-center\" id=\"testimonials_row\" style=\"margin-top:-9px;padding-left:2px\">\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/testimonials\" id=\"testi_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- </div> -->\n    </div>\n</div>\n\n\n"
+module.exports = "\n    <div id=\"carouselExampleControls_home\" class=\"carousel slide\" data-ride=\"carousel\" style=\"margin-top:-20px;\">\n        <div class=\"carousel-inner\">\n            <div class=\"carousel-item active\">\n                <img src=\"https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_carousal%2Fimage0?alt=media&token=43f566ce-0750-499a-a87c-de91bccba93e\" style=\"height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;\" class=\"d-block w-100\" alt=\"image\">\n            </div>\n            <div class=\"carousel-item\" *ngFor=\"let images of image_carousal_array\">\n                <img [src]=\"images.fileUrl\" class=\"d-block w-100\" style=\"height:500px;padding-left:0;padding-right:0;\" alt=\"...\">\n            </div>           \n        </div>\n        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls_home\" role=\"button\" data-slide=\"prev\">\n            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#carouselExampleControls_home\" role=\"button\" data-slide=\"next\" id=\"carousal_home\">\n            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Next</span>\n        </a>\n    </div>\n\n\n\n\n<div class=\"row row-center\" *ngIf=\"image_carousal_array.length==0\">\n    <div class=\"col-md-4 col-sm-4\"></div>\n    <div class=\"col-md-4 col-sm-4\" style=\"padding-left:120px\">\n        <div class=\"loader\"></div>\n        <span style=\"color:red\"><b>LOADING IMAGES</b></span>\n    </div>\n</div>\n\n<br>\n\n<div class=\"row row-center\">\n    <div class=\"heading\" id=\"heading\">\n        <h2 id=\"txt\" class=\"trans\" style=\"padding-top:20px\">Welcome to ABR Holidays</h2>\n    </div>\n</div>  \n\n<!-- <div class=\"row row-center\" style=\"padding-top:10px;padding-left:120px\">\n    <div class=\"col-md-4\"></div>\n    <div class=\"col-md-4\">\n        <div class=\"brand_logo_container\">\n            <img src=\"assets/img/ABR.png\" class=\"brand_logo\" alt=\"Logo\">\n        </div>\n    </div>\n    <div class=\"col-md-4\"></div>\n</div> -->\n\n\n<div class=\"row row-center\" style=\"margin-top:20px\">\n    <div class=\"col-md-8 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#3498db!important\">\n            <h4 class=\"card-title\" style=\"padding-left:50px;color:white\"><b>INBOUND PACKAGES</b></h4>\n            <div class=\"card-body card-img-top\">\n                <div class=\"row\" style=\"margin-top:-13px\">\n                    <div id=\"carouselExampleControls1\" class=\"carousel slide\" data-ride=\"carousel\" style=\"margin-bottom:-15px;\">\n                        <div class=\"carousel-inner\">\n                            <!-- <div > -->\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/bg.jpg\" style=\"padding-left:0;padding-right:0;padding-bottom:0;\" class=\"d-block w-100 card-img-top\" alt=\"package\">\n                                <div class=\"carousel-caption\">\n                                    <h3 style=\"color:red;margin-top:-200px;\"><b>WELCOME TO OUR PACKAGES</b></h3>\n                                        <!-- <button type=\"button\" class=\"btn btn-danger\">Read More</button> -->\n                                </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let package_data of package_data;let index=index\">\n                                <img src=\"{{package_data.image_url}}\" class=\"d-block\" alt=\"{{package_data.package_name}}\" style=\"padding-left:0;padding-right:0;padding-bottom:0;width:1000px\">\n                                <div class=\"carousel-caption\">\n                                    <img src=\"https://www.ceylontours.com/images/day.png\">\n                                    <h3 style=\"color:red\"><b>{{package_data.no_of_days}} Days</b></h3>\n                                    <a href=\"inbound-packages/{{package_data.package_id}}\" class=\"btn btn-danger\">Read More</a>\n                                </div>\n                            </div>           \n                        </div>\n                        <div *ngFor=\"let package_data of package_data;let index=index\">\n                            <a class=\"carousel-control-prev\" href=\"#carouselExampleControls1\" role=\"button\" data-slide=\"prev\">\n                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n                                <span class=\"sr-only\">Previous</span>\n                            </a>\n                            <a class=\"carousel-control-next\" href=\"#carouselExampleControls1\" role=\"button\" data-slide=\"next\">\n                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n                                <span class=\"sr-only\">Next</span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>               \n    </div>\n    <div class=\"col-md-4 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#E74C3C\">\n            <h4 class=\"card-title\" align=\"center\" style=\"color:white\"><b>DISCOVER THE WORLD</b></h4>\n            <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/discover-the-world.jpg\" alt=\"Card image cap\">\n            <div class=\"card-body\" style=\"height:152px\">\n                <p class=\"card-text\" style=\"font-size: 16px;color:white;margin-top:20px\">If you were looking for a holiday, we have the perfect agenda for you</p>\n                <div class=\"row\" id=\"discover_row\" style=\"margin-top:-2px\">\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/discover-world\" id=\"dis_btn\" class=\"btn btn-primary\" style=\"margin-left:-15px;margin-top:-6px\"><b>READ MORE</b></a>    \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>     \n\n<div class=\"row row-center\">\n    <div class=\"col-md-12 col-sm-12\">\n        <div class=\"card\" id=\"news_feed_card\" style=\"height:90px;\">\n            <div class=\"row row-center\">\n                <div class=\"col-md-4 col-12 rect\">\n                    <div class=\"row\" style=\"padding-left:10px\">\n                        <i class=\"fa fa-newspaper-o fa-5x\" style=\"margin-top:10px\" aria-hidden=\"true\"></i>\n                        <div style=\"float:left;margin-left:20px;margin-top:-8px\">\n                            <h4><b style=\"font-family: serif;color:white\">NEWS FEED</b></h4>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-md-8 col-12 news-container\" id=\"news_containers\">  \n                    <div id=\"carouselExampleControls2\" class=\"carousel slide\" data-ride=\"carousel\" *ngIf=\"news_feed_data_array.length>0\">\n                        <div class=\"carousel-inner\">\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/blank.png\" style=\"height:80px;\" class=\"d-block w-100\" alt=\"...\">\n                                <div class=\"carousel-caption\" style=\"height:80px;\">\n                                    <!-- <h4 style=\"color:red;margin-top:0px;padding-left:0;\"><b>News</b></h4> -->\n                                    <p id=\"news_feed_title\" style=\"text-align:justify;margin-left:-60px;margin-top:-5px\"><a href=\"/news-events/{{news_feed_data_array[0].id}}\">{{news_feed_data_array[0].title}}</a></p>\n                                    <p id=\"news_feed-data\" style=\"text-align:justify;margin-left:-60px;margin-top:-15px\">{{news_feed_data_array[0].news}}</p>\n                                </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let news of news_feed_data_array;let index=index\">\n                                <img src=\"assets/img/blank.png\" class=\"d-block w-100\" style=\"height:80px;\" alt=\"...\">\n                                <div class=\"carousel-caption\" style=\"height:80px;\">\n                                    <!-- <h4 style=\"color:red;margin-top:0px;padding-left:0;\"><b>News</b></h4> -->\n                                    <p id=\"news_feed_title1\" style=\"text-align:justify;margin-left:-60px;margin-top:-5px\"><a href=\"/news-events/{{news.id}}\">{{news.title}}</a></p>\n                                    <p id=\"news_feed-data1\" style=\"text-align:justify;margin-left:-60px;margin-top:-15px\">{{news.news}}</p>\n                                </div>\n                            </div>\n                            <!-- <div class=\"carousel-item\">\n                                <img src=\"assets/img/blank.png\" style=\"height:80px;\" class=\"d-block w-100\" alt=\"...\">\n                                <div class=\"carousel-caption d-none d-md-block\" style=\"height:80px;\">\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0\"><a href=\"\">Hello Tilt</a></p>\n                                    <p id=\"news_feed\" style=\"text-align:justify;padding-left:0;margin-top:-15px\">A religious festival celebrated by Hindus across Sri Lanka, Maha Sivaratri Festival is observed in the month of February on the 14th night of the new moon. With its name translating to &ldquo;Great</p>\n                                </div>\n                            </div> -->\n                        </div>\n                        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"prev\">\n                            <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                        <a class=\"carousel-control-next\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"next\">\n                            <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                            <!-- <span class=\"carousel-control-next-icon news\" aria-hidden=\"true\" style=\"background-color:black\"></span>\n                            <span class=\"sr-only\">Next</span> -->\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row row-center\">\n    <div class=\"col-md-4 col-sm-12\">\n        <div class=\"card\" style=\"background-color:#23a516\">\n            <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/faq.jpg\" height=\"320px\" alt=\"Card image cap\">\n            <div class=\"card-body\" id=\"faq_body\" style=\"height:134px\">\n                <h4 class=\"card-title\" style=\"margin-top:-13px;color:white\"><b>FAQ</b></h4>\n                <p class=\"card-text\" style=\"font-size: 16px;color:white;margin-top:-5px\">“Have some question? We'll help you to solve them”</p>\n                <div class=\"row\" id=\"faq_row\" style=\"margin-top:-27px;padding-right:6px\">\n                    <!-- <a href=\"/faq\" class=\"btn btn-primary\" align=\"right\" style=\"margin-top:-18px\"><b>READ MORE</b></a> -->\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/faq\" id=\"faq_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-4\">\n        <div class=\"card\" style=\"background-color:#ffb000\">\n            <img class=\"card-img-top\" src=\"assets/img/transfers/transfer12.jpg\" height=\"320px\" alt=\"Card image cap\">\n            <div class=\"card-body\" id=\"transfer_body\" style=\"height:134px\">\n                <h4 class=\"card-title\" style=\"margin-top:-13px;color:white\"><b>TRANSFERS</b></h4>\n                <p class=\"card-text\" style=\"font-size:16px;color:white;margin-top:-5px\">“Let us take you there, where you can leave your footprints”</p>\n                <div class=\"row\" id=\"transfer_row\" style=\"margin-top:-27px;padding-right:6px\">\n                    <!-- <a href=\"/transfers\" class=\"btn btn-primary\" style=\"margin-top:-18px;\"><b>READ MORE</b></a> -->\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/transfers\" id=\"transfer_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-4\">\n        <!-- <div style=\"height:260px\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"background-image: url('assets/img/bg.jpg');\">\n                    <img class=\"card-img-top\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n                    <h4 class=\"card-title\">ACCOMODATION</h4>\n                    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n                    <a href=\"#\" class=\"btn btn-primary\">Read More</a>\n                </div>\n            </div>\n        </div> -->\n        <!-- <div style=\"height:260px\"> -->\n        <div class=\"card\">\n            <div class=\"card-body\" style=\"background-color:#04558b;height:454px;\">\n                <div class=\"row\" style=\"margin-top:-15px\">\n                    <div id=\"carouselExampleControls3\" class=\"carousel slide\" data-ride=\"carousel\">\n                        <div class=\"carousel-inner\">\n                            <div class=\"carousel-item active\">\n                                <img src=\"assets/img/background_sky.jpg\" class=\"d-block w-100\" alt=\"testimonials\" style=\"height:415px;padding-left:0;padding-right:0\">\n                                    <div class=\"carousel-caption d-none d-md-block\">\n                                        <p style=\"text-align:justify;color:black;margin-top:-300px\"><i class=\"fa fa-comments fa-2x\" aria-hidden=\"true\"></i><b style=\"padding-left:10px;font-size:20px;\">TESTIMONIALS</b></p>\n                                        <p style=\"text-align:justify;margin-top:10px;margin-left:50px\">Hello Mrs.Perera</p>\n                                    </div>\n                            </div>\n                            <div class=\"carousel-item\" *ngFor=\"let news of news_feed_data_array;let index=index\">\n                                <img src=\"assets/img/background_sky.jpg\" class=\"d-block w-100\" style=\"height:415px;padding-left:0;padding-right:0\" alt=\"testimonials\">\n                            </div>\n                        </div>\n                        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls3\" role=\"button\" data-slide=\"prev\">\n                            <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                        <a class=\"carousel-control-next\" href=\"#carouselExampleControls3\" role=\"button\" data-slide=\"next\">\n                            <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n                        </a>\n                    </div>\n                </div>\n                <div class=\"row row-center\" id=\"testimonials_row\" style=\"margin-top:-9px;padding-left:2px\">\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\"></div>\n                    <div class=\"col-4 col-md-4\">\n                        <a href=\"/testimonials\" id=\"testi_btn\" class=\"btn btn-primary\"><b>READ MORE</b></a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- </div> -->\n    </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -7758,7 +7776,7 @@ module.exports = "\n    <div id=\"carouselExampleControls_home\" class=\"carouse
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".block {\n  height: 100px;\n  width: 400px;\n  background-color: yellow; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0; }\n\nimg.d-block {\n  height: 400px;\n  padding-left: 10px;\n  padding-right: 10px; }\n\n.zoom {\n  -webkit-transition: -webkit-transform .2s;\n  transition: -webkit-transform .2s;\n  transition: transform .2s;\n  transition: transform .2s, -webkit-transform .2s; }\n\n.zoom:hover {\n  /* IE 9 */\n  -webkit-transform: scale(0);\n  /* Safari 3-8 */\n  transform: scale(0.9); }\n\nh2 {\n  color: black;\n  margin: 0 auto;\n  white-space: nowrap;\n  overflow: hidden;\n  width: 12em;\n  -webkit-animation: type 4s steps(60, end);\n          animation: type 4s steps(60, end); }\n\nh2:nth-child(2) {\n  -webkit-animation: type2 8s steps(60, end);\n          animation: type2 8s steps(60, end); }\n\nspan {\n  -webkit-animation: blink 1s infinite;\n          animation: blink 1s infinite; }\n\n@-webkit-keyframes type {\n  from {\n    width: 0; } }\n\n@keyframes type {\n  from {\n    width: 0; } }\n\n@-webkit-keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@-webkit-keyframes blink {\n  to {\n    opacity: .0; } }\n\n@keyframes blink {\n  to {\n    opacity: .0; } }\n\n::-moz-selection {\n  background: black; }\n\n::selection {\n  background: black; }\n\n.heading {\n  width: 100%;\n  height: 90px;\n  background-color: lightblue; }\n\n.rect {\n  width: 100%;\n  background-color: #ff7400;\n  height: 90px; }\n\n.carousel .carousal-item {\n  height: 90px; }\n\n.carousal-item img {\n  position: absolute;\n  min-height: 90px; }\n\n.news {\n  width: 10%;\n  -webkit-box-pack: left;\n          justify-content: left;\n  align-content: left !important; }\n\n.carousel-control-prev {\n  width: 5%; }\n\n.carousel-control-next {\n  width: 5%; }\n\n#news_feed {\n  margin-left: -75px; }\n\n#txt {\n  font-family: 'Open Sans',sans-serif; }\n\nh4 {\n  font-family: 'Open Sans',sans-serif; }\n\nh3 {\n  font-family: sans-serif; }\n\np {\n  font-family: sans-serif; }\n\n#news_feed {\n  font-family: sans-serif; }\n\n.news-container {\n  padding: 0 0; }\n\n.loader {\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  padding-left: 50px;\n  border-top: 16px solid green;\n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  /* Safari */\n  animation: spin 2s linear infinite; }\n\n/* Safari */\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY3VzdG9tZXItaG9tZS9jdXN0b21lci1ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXVCQTtFQUNJLGFBQWE7RUFDYixZQUFXO0VBQ1gsd0JBQXVCLEVBQUE7O0FBUTNCO0VBQ0ksY0FBYztFQUNkLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxhQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLG1CQUFrQixFQUFBOztBQVN0QjtFQUVJLHlDQUF5QjtFQUF6QixpQ0FBeUI7RUFBekIseUJBQXlCO0VBQXpCLGdEQUF5QixFQUFBOztBQUk3QjtFQUMrQixTQUFBO0VBQzNCLDJCQUE2QjtFQUFFLGVBQUE7RUFDL0IscUJBQXFCLEVBQUE7O0FBSXpCO0VBQ0MsWUFBWTtFQUdaLGNBQWM7RUFFZCxtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCx5Q0FBaUM7VUFBakMsaUNBQWlDLEVBQUE7O0FBR2xDO0VBQ0ksMENBQWtDO1VBQWxDLGtDQUFrQyxFQUFBOztBQUd0QztFQUNFLG9DQUE0QjtVQUE1Qiw0QkFBNEIsRUFBQTs7QUFHOUI7RUFDSTtJQUFPLFFBQVEsRUFBQSxFQUFBOztBQURuQjtFQUNJO0lBQU8sUUFBUSxFQUFBLEVBQUE7O0FBR25CO0VBQ0k7SUFBRyxRQUFRLEVBQUE7RUFDWDtJQUFJLFFBQVEsRUFBQTtFQUNaO0lBQU0sVUFBVSxFQUFBLEVBQUE7O0FBSHBCO0VBQ0k7SUFBRyxRQUFRLEVBQUE7RUFDWDtJQUFJLFFBQVEsRUFBQTtFQUNaO0lBQU0sVUFBVSxFQUFBLEVBQUE7O0FBR3BCO0VBQ0k7SUFBRyxXQUFXLEVBQUEsRUFBQTs7QUFEbEI7RUFDSTtJQUFHLFdBQVcsRUFBQSxFQUFBOztBQUdsQjtFQUNJLGlCQUFpQixFQUFBOztBQURyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLFdBQVU7RUFDVixZQUFXO0VBQ1gsMkJBQTBCLEVBQUE7O0FBRzlCO0VBQ0ksV0FBVztFQUNYLHlCQUErQjtFQUMvQixZQUFXLEVBQUE7O0FBR2Y7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksa0JBQWtCO0VBQ2xCLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFVBQVM7RUFDVCxzQkFBb0I7VUFBcEIscUJBQW9CO0VBQ3BCLDhCQUE2QixFQUFBOztBQUlqQztFQUNJLFNBQVEsRUFBQTs7QUFHWjtFQUNJLFNBQVMsRUFBQTs7QUFHYjtFQUNJLGtCQUFpQixFQUFBOztBQUdyQjtFQUNJLG1DQUFtQyxFQUFBOztBQUd2QztFQUNJLG1DQUFtQyxFQUFBOztBQUd2QztFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDSSwwQkFBMEI7RUFDMUIsa0JBQWtCO0VBQ2xCLGtCQUFpQjtFQUNqQiw0QkFBNEI7RUFDNUIsWUFBWTtFQUNaLGFBQWE7RUFDYiwwQ0FBMEM7RUFBRSxXQUFBO0VBQzVDLGtDQUFrQyxFQUFBOztBQUdwQyxXQUFBOztBQUNBO0VBQ0U7SUFBSywrQkFBK0IsRUFBQTtFQUNwQztJQUFPLGlDQUFpQyxFQUFBLEVBQUE7O0FBRzFDO0VBQ0U7SUFBSywrQkFBdUI7WUFBdkIsdUJBQXVCLEVBQUE7RUFDNUI7SUFBTyxpQ0FBeUI7WUFBekIseUJBQXlCLEVBQUEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY3VzdG9tZXItaG9tZS9jdXN0b21lci1ob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gLnRyYW5zZmVye1xuLy8gICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG4vLyAgICAgaGVpZ2h0OiAyMTJweDtcbi8vICAgICBiYWNrZ3JvdW5kLWNvbG9yOnllbGxvdztcbi8vIH1cblxuLy8gLnRyYW5zZmVyLCAuYWNjb21tb2RhdGlvbiwgLmZhcSB7XG4vLyAgICAgY29sb3I6ICNGRkY7XG4vLyB9XG5cbi8vICoge1xuLy8gICAgIHBhZGRpbmc6IDA7XG4vLyAgICAgbWFyZ2luOiAwO1xuLy8gICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XG4vLyB9XG5cblxuLy8gKiB7XG4vLyAgICAgLXdlYmtpdC1ib3gtc2l6aW5nOiBib3JkZXItYm94O1xuLy8gICAgIC1tb3otYm94LXNpemluZzogYm9yZGVyLWJveDtcbi8vICAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuLy8gfVxuXG4uYmxvY2sge1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgd2lkdGg6NDAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjp5ZWxsb3c7XG59XG5cbi8vIC5yb3d7XG4vLyAgICAgbWFyZ2luLWxlZnQ6IDA7XG4vLyAgICAgbWFyZ2luLXJpZ2h0OiAwO1xuLy8gfVxuXG4ucm93LWNlbnRlcntcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXJnaW4tcmlnaHQ6IDA7ICBcbn1cblxuaW1nLmQtYmxvY2t7XG4gICAgaGVpZ2h0OiA0MDBweDtcbiAgICBwYWRkaW5nLWxlZnQ6MTBweDtcbiAgICBwYWRkaW5nLXJpZ2h0OjEwcHg7XG59XG5cbi8vIC5teUhhbGZDb2wgLmNvbC1tZC02e1xuLy8gICAgIHBhZGRpbmc6MCAxMHB4O1xuLy8gICAgIHdpZHRoOjEwMCU7XG4vLyAgICAgbWFyZ2luOjAgMSUgXG4vLyB9XG5cbi56b29tIHtcbiAgXG4gICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIC4ycztcbiAgIFxuICB9XG4gIFxuLnpvb206aG92ZXIge1xuICAgIC1tcy10cmFuc2Zvcm06IHNjYWxlKDAuOSk7IC8qIElFIDkgKi9cbiAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMC4wKTsgLyogU2FmYXJpIDMtOCAqL1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMC45KTsgXG59XG5cbiAgXG5oMntcbiBjb2xvcjogYmxhY2s7IFxuLy8gIGZvbnQtZmFtaWx5OiBcIkNvdXJpZXJcIjtcbi8vICBmb250LXNpemU6IDIwcHg7XG4gbWFyZ2luOiAwIGF1dG87XG4vLyAgdGV4dC1hbGlnbjogY2VudGVyO1xuIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gb3ZlcmZsb3c6IGhpZGRlbjtcbiB3aWR0aDogMTJlbTtcbiBhbmltYXRpb246IHR5cGUgNHMgc3RlcHMoNjAsIGVuZCk7IFxufVxuICBcbmgyOm50aC1jaGlsZCgyKXtcbiAgICBhbmltYXRpb246IHR5cGUyIDhzIHN0ZXBzKDYwLCBlbmQpO1xufVxuICBcbnNwYW57XG4gIGFuaW1hdGlvbjogYmxpbmsgMXMgaW5maW5pdGU7XG59XG4gIFxuQGtleWZyYW1lcyB0eXBleyBcbiAgICBmcm9tIHsgd2lkdGg6IDA7IH0gXG59IFxuICBcbkBrZXlmcmFtZXMgdHlwZTJ7XG4gICAgMCV7d2lkdGg6IDA7fVxuICAgIDUwJXt3aWR0aDogMDt9XG4gICAgMTAwJXsgd2lkdGg6IDEwMDsgfSBcbn0gXG4gIFxuQGtleWZyYW1lcyBibGlua3tcbiAgICB0b3tvcGFjaXR5OiAuMDt9XG59XG4gIFxuOjpzZWxlY3Rpb257XG4gICAgYmFja2dyb3VuZDogYmxhY2s7XG59XG5cbi5oZWFkaW5ne1xuICAgIHdpZHRoOjEwMCU7XG4gICAgaGVpZ2h0OjkwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjpsaWdodGJsdWU7XG59XG5cbi5yZWN0e1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6cmdiKDI1NSwxMTYsMCk7XG4gICAgaGVpZ2h0OjkwcHg7XG59XG5cbi5jYXJvdXNlbCAuY2Fyb3VzYWwtaXRlbSB7XG4gICAgaGVpZ2h0OiA5MHB4O1xuICB9XG4gIFxuLmNhcm91c2FsLWl0ZW0gaW1nIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgbWluLWhlaWdodDogOTBweDtcbn1cblxuLm5ld3N7XG4gICAgd2lkdGg6MTAlO1xuICAgIGp1c3RpZnktY29udGVudDpsZWZ0O1xuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQhaW1wb3J0YW50O1xuICAgIC8vIG1hcmdpbi1sZWZ0Oi01MHB4XG59XG5cbi5jYXJvdXNlbC1jb250cm9sLXByZXZ7XG4gICAgd2lkdGg6NSU7XG59XG5cbi5jYXJvdXNlbC1jb250cm9sLW5leHR7XG4gICAgd2lkdGg6IDUlO1xufVxuXG4jbmV3c19mZWVke1xuICAgIG1hcmdpbi1sZWZ0Oi03NXB4O1xufVxuXG4jdHh0e1xuICAgIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJyxzYW5zLXNlcmlmO1xufVxuXG5oNHtcbiAgICBmb250LWZhbWlseTogJ09wZW4gU2Fucycsc2Fucy1zZXJpZjtcbn1cblxuaDN7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbnB7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbiNuZXdzX2ZlZWR7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7O1xufVxuXG4ubmV3cy1jb250YWluZXJ7XG4gICAgcGFkZGluZzogMCAwO1xufVxuXG4ubG9hZGVyIHtcbiAgICBib3JkZXI6IDE2cHggc29saWQgI2YzZjNmMztcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgcGFkZGluZy1sZWZ0OjUwcHg7XG4gICAgYm9yZGVyLXRvcDogMTZweCBzb2xpZCBncmVlbjtcbiAgICB3aWR0aDogMTIwcHg7XG4gICAgaGVpZ2h0OiAxMjBweDtcbiAgICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7IC8qIFNhZmFyaSAqL1xuICAgIGFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7XG4gIH1cbiAgXG4gIC8qIFNhZmFyaSAqL1xuICBALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7XG4gICAgMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyB9XG4gICAgMTAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxuICB9XG4gIFxuICBAa2V5ZnJhbWVzIHNwaW4ge1xuICAgIDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cbiAgICAxMDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxuICB9XG5cbi8vICAgLmNpcmNsZSB7XG4vLyAgICAgaGVpZ2h0OiAyMDBweDtcbi8vICAgICB3aWR0aDogMjAwcHg7XG4vLyAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xuLy8gICAgIGJvcmRlcjoxcHggc29saWQgcmVkOyAgICBcbi8vICAgfVxuXG4vLyAgIC5icmFuZF9sb2dvX2NvbnRhaW5lciB7XG4vLyAgICAgcG9zaXRpb246IGFic29sdXRlO1xuLy8gICAgIGhlaWdodDogMTcwcHg7XG4vLyAgICAgd2lkdGg6IDE3MHB4O1xuLy8gICAgIHRvcDogLTc1cHg7XG4vLyAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xuLy8gICAgIGJhY2tncm91bmQ6IHllbGxvdztcbi8vICAgICBwYWRkaW5nOiAxMHB4O1xuLy8gICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbi8vICAgICBib3JkZXI6NXB4IHNvbGlkIGJsYWNrO1xuLy8gfVxuLy8gLmJyYW5kX2xvZ28ge1xuLy8gICAgIG1hcmdpbi10b3A6LTE1cHg7XG4vLyAgICAgaGVpZ2h0OiAxNTBweDtcbi8vICAgICB3aWR0aDogMTUwcHg7XG4vLyAgICAgLy8gYm9yZGVyLXJhZGl1czogNTAlO1xuLy8gICAgIC8vIGJvcmRlcjogMnB4IHNvbGlkIHdoaXRlO1xuLy8gfVxuIl19 */"
+module.exports = ".block {\n  height: 100px;\n  width: 400px;\n  background-color: yellow; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0; }\n\nimg.d-block {\n  height: 400px;\n  padding-left: 10px;\n  padding-right: 10px; }\n\n.zoom {\n  -webkit-transition: -webkit-transform .2s;\n  transition: -webkit-transform .2s;\n  transition: transform .2s;\n  transition: transform .2s, -webkit-transform .2s; }\n\n.zoom:hover {\n  /* IE 9 */\n  -webkit-transform: scale(0);\n  /* Safari 3-8 */\n  transform: scale(0.9); }\n\n.trans {\n  color: black;\n  margin: 0 auto;\n  white-space: nowrap;\n  overflow: hidden;\n  width: 12em;\n  -webkit-animation: type 4s steps(60, end);\n          animation: type 4s steps(60, end); }\n\nh2:nth-child(2) {\n  -webkit-animation: type2 8s steps(60, end);\n          animation: type2 8s steps(60, end); }\n\nspan {\n  -webkit-animation: blink 1s infinite;\n          animation: blink 1s infinite; }\n\n@-webkit-keyframes type {\n  from {\n    width: 0; } }\n\n@keyframes type {\n  from {\n    width: 0; } }\n\n@-webkit-keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@-webkit-keyframes blink {\n  to {\n    opacity: .0; } }\n\n@keyframes blink {\n  to {\n    opacity: .0; } }\n\n::-moz-selection {\n  background: black; }\n\n::selection {\n  background: black; }\n\n.heading {\n  width: 100%;\n  height: 90px;\n  background-color: lightblue; }\n\n.rect {\n  width: 100%;\n  background-color: #ff7400;\n  height: 90px; }\n\n.carousel .carousal-item {\n  height: 90px; }\n\n.carousal-item img {\n  position: absolute;\n  min-height: 90px; }\n\n.news {\n  width: 10%;\n  -webkit-box-pack: left;\n          justify-content: left;\n  align-content: left !important; }\n\n.carousel-control-prev {\n  width: 5%; }\n\n.carousel-control-next {\n  width: 5%; }\n\n#news_feed {\n  margin-left: -75px; }\n\n#txt {\n  font-family: 'Open Sans',sans-serif; }\n\nh4 {\n  font-family: 'Open Sans',sans-serif; }\n\nh3 {\n  font-family: sans-serif; }\n\np {\n  font-family: sans-serif; }\n\n#news_feed {\n  font-family: sans-serif; }\n\n.news-container {\n  padding: 0 0; }\n\n.loader {\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  padding-left: 50px;\n  border-top: 16px solid green;\n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  /* Safari */\n  animation: spin 2s linear infinite; }\n\n/* Safari */\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n.btn-primary {\n  padding: 5px 5px 5px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvY3VzdG9tZXItaG9tZS9jdXN0b21lci1ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXVCQTtFQUNJLGFBQWE7RUFDYixZQUFXO0VBQ1gsd0JBQXVCLEVBQUE7O0FBUTNCO0VBQ0ksY0FBYztFQUNkLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxhQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLG1CQUFrQixFQUFBOztBQVN0QjtFQUVJLHlDQUF5QjtFQUF6QixpQ0FBeUI7RUFBekIseUJBQXlCO0VBQXpCLGdEQUF5QixFQUFBOztBQUk3QjtFQUMrQixTQUFBO0VBQzNCLDJCQUE2QjtFQUFFLGVBQUE7RUFDL0IscUJBQXFCLEVBQUE7O0FBSXpCO0VBQ0MsWUFBWTtFQUdaLGNBQWM7RUFFZCxtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCx5Q0FBaUM7VUFBakMsaUNBQWlDLEVBQUE7O0FBR2xDO0VBQ0ksMENBQWtDO1VBQWxDLGtDQUFrQyxFQUFBOztBQUd0QztFQUNFLG9DQUE0QjtVQUE1Qiw0QkFBNEIsRUFBQTs7QUFHOUI7RUFDSTtJQUFPLFFBQVEsRUFBQSxFQUFBOztBQURuQjtFQUNJO0lBQU8sUUFBUSxFQUFBLEVBQUE7O0FBR25CO0VBQ0k7SUFBRyxRQUFRLEVBQUE7RUFDWDtJQUFJLFFBQVEsRUFBQTtFQUNaO0lBQU0sVUFBVSxFQUFBLEVBQUE7O0FBSHBCO0VBQ0k7SUFBRyxRQUFRLEVBQUE7RUFDWDtJQUFJLFFBQVEsRUFBQTtFQUNaO0lBQU0sVUFBVSxFQUFBLEVBQUE7O0FBR3BCO0VBQ0k7SUFBRyxXQUFXLEVBQUEsRUFBQTs7QUFEbEI7RUFDSTtJQUFHLFdBQVcsRUFBQSxFQUFBOztBQUdsQjtFQUNJLGlCQUFpQixFQUFBOztBQURyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLFdBQVU7RUFDVixZQUFXO0VBQ1gsMkJBQTBCLEVBQUE7O0FBRzlCO0VBQ0ksV0FBVztFQUNYLHlCQUErQjtFQUMvQixZQUFXLEVBQUE7O0FBR2Y7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksa0JBQWtCO0VBQ2xCLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFVBQVM7RUFDVCxzQkFBb0I7VUFBcEIscUJBQW9CO0VBQ3BCLDhCQUE2QixFQUFBOztBQUlqQztFQUNJLFNBQVEsRUFBQTs7QUFHWjtFQUNJLFNBQVMsRUFBQTs7QUFHYjtFQUNJLGtCQUFpQixFQUFBOztBQUdyQjtFQUNJLG1DQUFtQyxFQUFBOztBQUd2QztFQUNJLG1DQUFtQyxFQUFBOztBQUd2QztFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDSSwwQkFBMEI7RUFDMUIsa0JBQWtCO0VBQ2xCLGtCQUFpQjtFQUNqQiw0QkFBNEI7RUFDNUIsWUFBWTtFQUNaLGFBQWE7RUFDYiwwQ0FBMEM7RUFBRSxXQUFBO0VBQzVDLGtDQUFrQyxFQUFBOztBQUdwQyxXQUFBOztBQUNBO0VBQ0U7SUFBSywrQkFBK0IsRUFBQTtFQUNwQztJQUFPLGlDQUFpQyxFQUFBLEVBQUE7O0FBRzFDO0VBQ0U7SUFBSywrQkFBdUI7WUFBdkIsdUJBQXVCLEVBQUE7RUFDNUI7SUFBTyxpQ0FBeUI7WUFBekIseUJBQXlCLEVBQUEsRUFBQTs7QUE2QnBDO0VBQ0ksd0JBQXVCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bGVzL0N1c3RvbWVyL2N1c3RvbWVyLWhvbWUvY3VzdG9tZXItaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIC50cmFuc2Zlcntcbi8vICAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xuLy8gICAgIGhlaWdodDogMjEycHg7XG4vLyAgICAgYmFja2dyb3VuZC1jb2xvcjp5ZWxsb3c7XG4vLyB9XG5cbi8vIC50cmFuc2ZlciwgLmFjY29tbW9kYXRpb24sIC5mYXEge1xuLy8gICAgIGNvbG9yOiAjRkZGO1xuLy8gfVxuXG4vLyAqIHtcbi8vICAgICBwYWRkaW5nOiAwO1xuLy8gICAgIG1hcmdpbjogMDtcbi8vICAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuLy8gfVxuXG5cbi8vICoge1xuLy8gICAgIC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDtcbi8vICAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4vLyAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbi8vIH1cblxuLmJsb2NrIHtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOjQwMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6eWVsbG93O1xufVxuXG4vLyAucm93e1xuLy8gICAgIG1hcmdpbi1sZWZ0OiAwO1xuLy8gICAgIG1hcmdpbi1yaWdodDogMDtcbi8vIH1cblxuLnJvdy1jZW50ZXJ7XG4gICAgbWFyZ2luLWxlZnQ6IDA7XG4gICAgbWFyZ2luLXJpZ2h0OiAwOyAgXG59XG5cbmltZy5kLWJsb2Nre1xuICAgIGhlaWdodDogNDAwcHg7XG4gICAgcGFkZGluZy1sZWZ0OjEwcHg7XG4gICAgcGFkZGluZy1yaWdodDoxMHB4O1xufVxuXG4vLyAubXlIYWxmQ29sIC5jb2wtbWQtNntcbi8vICAgICBwYWRkaW5nOjAgMTBweDtcbi8vICAgICB3aWR0aDoxMDAlO1xuLy8gICAgIG1hcmdpbjowIDElIFxuLy8gfVxuXG4uem9vbSB7XG4gIFxuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAuMnM7XG4gICBcbiAgfVxuICBcbi56b29tOmhvdmVyIHtcbiAgICAtbXMtdHJhbnNmb3JtOiBzY2FsZSgwLjkpOyAvKiBJRSA5ICovXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDAuMCk7IC8qIFNhZmFyaSAzLTggKi9cbiAgICB0cmFuc2Zvcm06IHNjYWxlKDAuOSk7IFxufVxuXG4gIFxuLnRyYW5ze1xuIGNvbG9yOiBibGFjazsgXG4vLyAgZm9udC1mYW1pbHk6IFwiQ291cmllclwiO1xuLy8gIGZvbnQtc2l6ZTogMjBweDtcbiBtYXJnaW46IDAgYXV0bztcbi8vICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiBvdmVyZmxvdzogaGlkZGVuO1xuIHdpZHRoOiAxMmVtO1xuIGFuaW1hdGlvbjogdHlwZSA0cyBzdGVwcyg2MCwgZW5kKTsgXG59XG4gIFxuaDI6bnRoLWNoaWxkKDIpe1xuICAgIGFuaW1hdGlvbjogdHlwZTIgOHMgc3RlcHMoNjAsIGVuZCk7XG59XG4gIFxuc3BhbntcbiAgYW5pbWF0aW9uOiBibGluayAxcyBpbmZpbml0ZTtcbn1cbiAgXG5Aa2V5ZnJhbWVzIHR5cGV7IFxuICAgIGZyb20geyB3aWR0aDogMDsgfSBcbn0gXG4gIFxuQGtleWZyYW1lcyB0eXBlMntcbiAgICAwJXt3aWR0aDogMDt9XG4gICAgNTAle3dpZHRoOiAwO31cbiAgICAxMDAleyB3aWR0aDogMTAwOyB9IFxufSBcbiAgXG5Aa2V5ZnJhbWVzIGJsaW5re1xuICAgIHRve29wYWNpdHk6IC4wO31cbn1cbiAgXG46OnNlbGVjdGlvbntcbiAgICBiYWNrZ3JvdW5kOiBibGFjaztcbn1cblxuLmhlYWRpbmd7XG4gICAgd2lkdGg6MTAwJTtcbiAgICBoZWlnaHQ6OTBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOmxpZ2h0Ymx1ZTtcbn1cblxuLnJlY3R7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjU1LDExNiwwKTtcbiAgICBoZWlnaHQ6OTBweDtcbn1cblxuLmNhcm91c2VsIC5jYXJvdXNhbC1pdGVtIHtcbiAgICBoZWlnaHQ6IDkwcHg7XG4gIH1cbiAgXG4uY2Fyb3VzYWwtaXRlbSBpbWcge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBtaW4taGVpZ2h0OiA5MHB4O1xufVxuXG4ubmV3c3tcbiAgICB3aWR0aDoxMCU7XG4gICAganVzdGlmeS1jb250ZW50OmxlZnQ7XG4gICAgYWxpZ24tY29udGVudDogbGVmdCFpbXBvcnRhbnQ7XG4gICAgLy8gbWFyZ2luLWxlZnQ6LTUwcHhcbn1cblxuLmNhcm91c2VsLWNvbnRyb2wtcHJldntcbiAgICB3aWR0aDo1JTtcbn1cblxuLmNhcm91c2VsLWNvbnRyb2wtbmV4dHtcbiAgICB3aWR0aDogNSU7XG59XG5cbiNuZXdzX2ZlZWR7XG4gICAgbWFyZ2luLWxlZnQ6LTc1cHg7XG59XG5cbiN0eHR7XG4gICAgZm9udC1mYW1pbHk6ICdPcGVuIFNhbnMnLHNhbnMtc2VyaWY7XG59XG5cbmg0e1xuICAgIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJyxzYW5zLXNlcmlmO1xufVxuXG5oM3tcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbn1cblxucHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbn1cblxuI25ld3NfZmVlZHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjs7XG59XG5cbi5uZXdzLWNvbnRhaW5lcntcbiAgICBwYWRkaW5nOiAwIDA7XG59XG5cbi5sb2FkZXIge1xuICAgIGJvcmRlcjogMTZweCBzb2xpZCAjZjNmM2YzO1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICBwYWRkaW5nLWxlZnQ6NTBweDtcbiAgICBib3JkZXItdG9wOiAxNnB4IHNvbGlkIGdyZWVuO1xuICAgIHdpZHRoOiAxMjBweDtcbiAgICBoZWlnaHQ6IDEyMHB4O1xuICAgIC13ZWJraXQtYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTsgLyogU2FmYXJpICovXG4gICAgYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTtcbiAgfVxuICBcbiAgLyogU2FmYXJpICovXG4gIEAtd2Via2l0LWtleWZyYW1lcyBzcGluIHtcbiAgICAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cbiAgICAxMDAlIHsgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XG4gIH1cbiAgXG4gIEBrZXlmcmFtZXMgc3BpbiB7XG4gICAgMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsgfVxuICAgIDEwMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XG4gIH1cblxuLy8gICAuY2lyY2xlIHtcbi8vICAgICBoZWlnaHQ6IDIwMHB4O1xuLy8gICAgIHdpZHRoOiAyMDBweDtcbi8vICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4vLyAgICAgYm9yZGVyOjFweCBzb2xpZCByZWQ7ICAgIFxuLy8gICB9XG5cbi8vICAgLmJyYW5kX2xvZ29fY29udGFpbmVyIHtcbi8vICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4vLyAgICAgaGVpZ2h0OiAxNzBweDtcbi8vICAgICB3aWR0aDogMTcwcHg7XG4vLyAgICAgdG9wOiAtNzVweDtcbi8vICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4vLyAgICAgYmFja2dyb3VuZDogeWVsbG93O1xuLy8gICAgIHBhZGRpbmc6IDEwcHg7XG4vLyAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuLy8gICAgIGJvcmRlcjo1cHggc29saWQgYmxhY2s7XG4vLyB9XG4vLyAuYnJhbmRfbG9nbyB7XG4vLyAgICAgbWFyZ2luLXRvcDotMTVweDtcbi8vICAgICBoZWlnaHQ6IDE1MHB4O1xuLy8gICAgIHdpZHRoOiAxNTBweDtcbi8vICAgICAvLyBib3JkZXItcmFkaXVzOiA1MCU7XG4vLyAgICAgLy8gYm9yZGVyOiAycHggc29saWQgd2hpdGU7XG4vLyB9XG5cbi5idG4tcHJpbWFyeXtcbiAgICBwYWRkaW5nOjVweCA1cHggNXB4IDVweDtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -7946,7 +7964,7 @@ var DestinationsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  discover-world works!\n</p>\n"
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-12 col-md-12\" style=\"background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>Travel the world with best Sri Lanka outbound tour operators</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-md-12 col-sm-12\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"color:#3498db;padding-left:15px\"><b style=\"color:#3498db\">ABR TOURS</b> - World Wide Travel Expert</h4>\n      <div class=\"card-body\">\n        <p>If you were looking for a holiday, we have the perfect agenda for you. Whether your budget is low or maybe not so low, whether you know what you want or do not, and especially if you do not have the time to plan the perfect holiday, we are here to help you make it happen. With our world wide travel experience, we will present you with your dream travel agenda to meet your budget, expectations and much more.</p>\n        <p>With being the most experienced Sri Lanka outbound tour operators, Ceylon Tours is the ideal choice of travel agency to cater to your every need from the moment you purchase the ticket, to handling your Visauntil you are back inside the comfort of your own home.</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row3\">\n  <div class=\"col-12 col-md-4\">\n    <div class=\"card\" style=\"background-color:#428bca\">\n      <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/travel/air4.jpg\" height=\"250px\" alt=\"Card image cap\">\n      <div class=\"card-body\" style=\"margin-top:-23px\">\n        <h4><b>TICKETING</b></h4>\n        <p style=\"color:white\">ABR Tours will handle all your airline reservations and ticketing needs to any destination...</p>\n        <div class=\"row\" style=\"margin-top:-20px\">\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\">\n            <a href=\"/ticketing\" class=\"btn btn-primary\" style=\"padding:5px 5px 5px 5px\"><b>READ MORE</b></a>\n          </div> \n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-12 col-md-4\">\n    <div class=\"card\" style=\"background-color:#23a516;\">\n      <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/travel/passport.jpg\" height=\"250px\" alt=\"Card image cap\">\n      <div class=\"card-body\" style=\"margin-top:-23px\">\n        <h4><b>VISA HANDLING</b></h4>\n        <p style=\"color:white\">ABR Tours will advise you on visa formalities and regulations...</p>\n        <div class=\"row\" style=\"margin-top:-20px\">\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\">\n            <a href=\"/visa-handling\" class=\"btn btn-primary\" style=\"padding:5px 5px 5px 5px\"><b>READ MORE</b></a>\n          </div> \n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-12 col-md-4\">\n    <div class=\"card\" style=\"background-color:#ffb000\">\n      <img class=\"card-img-top\" src=\"https://www.ceylontours.com/images/travel/travel-insurance.jpg\" height=\"250px\" alt=\"Card image cap\">\n      <div class=\"card-body\" style=\"margin-top:-23px\">\n        <h4><b>TRAVEL INSURANCE</b></h4>\n        <p style=\"color:white\">With our partnership with a worldwide leading International Insurance...</p>\n        <div class=\"row\" style=\"margin-top:-20px\">\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\"></div>\n          <div class=\"col-4 col-md-4\">\n            <a href=\"/travel-insurance\" class=\"btn btn-primary\" style=\"padding:5px 5px 5px 5px\"><b>READ MORE</b></a>\n          </div> \n        </div>\n      </div> \n    </div>\n  </div>\n</div>\n\n\n  "
 
 /***/ }),
 
@@ -7957,7 +7975,7 @@ module.exports = "<p>\n  discover-world works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvZGlzY292ZXItd29ybGQvZGlzY292ZXItd29ybGQuY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\np {\n  font-family: sans-serif;\n  text-align: justify;\n  word-spacing: -1px; }\n\nh4 {\n  font-family: sans-serif;\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvZGlzY292ZXItd29ybGQvZGlzY292ZXItd29ybGQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBdUIsRUFBQTs7QUFHM0I7RUFDSSxjQUFjO0VBQ2QsZUFBZTtFQUNmLDhCQUE4QixFQUFBOztBQUdsQztFQUNJLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsa0JBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvZGlzY292ZXItd29ybGQvZGlzY292ZXItd29ybGQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoM3tcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbn1cblxuLnJvdy1jZW50ZXJ7XG4gICAgbWFyZ2luLWxlZnQ6IDA7XG4gICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgIHBhZGRpbmc6IDEwcHggMTAwcHggMjBweCAxMDBweDtcbn1cblxucHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICAgIHdvcmQtc3BhY2luZzotMXB4O1xufVxuXG5oNHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgICBjb2xvcjp3aGl0ZTtcbn1cblxuIl19 */"
 
 /***/ }),
 
@@ -7973,12 +7991,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiscoverWorldComponent", function() { return DiscoverWorldComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../scripts/frontend/mobile_view.js */ "./src/scripts/frontend/mobile_view.js");
+
 
 
 var DiscoverWorldComponent = /** @class */ (function () {
     function DiscoverWorldComponent() {
     }
     DiscoverWorldComponent.prototype.ngOnInit = function () {
+        Object(_scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__["adjust_mobile_view_discoverWorld"])();
     };
     DiscoverWorldComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -8142,10 +8163,10 @@ var EnquiryComponent = /** @class */ (function () {
         var keywords = this.form.controls['keywords'].value;
         var refferal = this.form.controls['refferal'].value;
         var description = this.form.controls['description'].value;
-        console.log(country);
+        // console.log(country);
         var aifareRadio = this.airfare_check;
-        console.log(accomodations);
-        console.log(aifareRadio);
+        // console.log(accomodations)
+        // console.log(aifareRadio)
         var interest_in_travel = this.travel_interest_check;
         if (other_link != null)
             this.search_engines.push(other_link);
@@ -8199,7 +8220,7 @@ var EnquiryComponent = /** @class */ (function () {
             var search_engine = (document.getElementById(id).checked);
             if (!search_engine)
                 search_count++;
-            console.log((document.getElementById(id).value));
+            // console.log(((<HTMLInputElement>document.getElementById(id)).value))
             if (search_engine) {
                 this.search_engines.push((document.getElementById(id).value));
                 this.search_engines_string += document.getElementById(id).value + " / ";
@@ -8238,7 +8259,7 @@ var EnquiryComponent = /** @class */ (function () {
             "<tr><td><b>Sun Activities :</b></td><td>" + this.sun_activities_string + "</td></tr>" +
             "<tr><td><b>Specific Interests :</b></td><td>" + this.specific_interests_string + "</td></tr>" +
             "</table></div></body></html>";
-        console.log(search_count + "->S");
+        // console.log(search_count+"->S")
         if (search_count == 4 || interest_count == 14 || activity_count == 9)
             this.isSelected = false;
         var date = new Date();
@@ -8253,14 +8274,14 @@ var EnquiryComponent = /** @class */ (function () {
             airfare_check: aifareRadio, interest_in_travel: interest_in_travel, physical_activities: this.physical_activities, specific_interests: this.specific_interests,
             search_engines: this.search_engines, date: today, id: hash, view: false, adventure_activities: this.adventure_activities, sun_activities: this.sun_activities, referral: refferal };
         this.data_obj_array.push(user_enquiry);
-        console.log(this.data_obj_array[0].tour_name);
+        // console.log(this.data_obj_array[0].tour_name)
         var _this = this;
         this._db.collection('enquiry').doc(hash).set(user_enquiry).then(function () {
-            _this.sendEmail(message);
+            _this.sendEmail(message, email);
             _this._snackbar.open("Successfully Submitted!", "OK", {
                 duration: 300
             });
-            console.log(user_enquiry);
+            // console.log(user_enquiry)
         }).catch(function (err) {
             alert("Error Submitting");
         });
@@ -8268,7 +8289,7 @@ var EnquiryComponent = /** @class */ (function () {
     };
     EnquiryComponent.prototype.radioCheck1 = function (event) {
         this.airfare_check = event.target.value;
-        console.log(this.airfare_check);
+        // console.log(this.airfare_check)
     };
     EnquiryComponent.prototype.radioCheck2 = function (event) {
         this.travel_interest_check = event.target.value;
@@ -8339,12 +8360,12 @@ var EnquiryComponent = /** @class */ (function () {
             pdf.save(pdf_name); // Generated PDF   
         });
     };
-    EnquiryComponent.prototype.sendEmail = function (message) {
+    EnquiryComponent.prototype.sendEmail = function (message, email) {
         var _this_1 = this;
-        console.log(message);
+        // console.log(message)
         var email_message = {
-            to: 'benuraab@gmail.com',
-            from: 'developerbenura@gmail.com',
+            to: 'abrceylon@gmail.com',
+            from: email,
             subject: 'User Enquiry',
             text: message,
             html: message,
@@ -8461,7 +8482,7 @@ var FaqComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-md-12\" style=\"height:65px;background-color:green;\">\n    <h2 class=\"card-title\" style=\"margin:auto;padding:10px;\" *ngFor=\"let package_data of package_data\">{{package_data.package_name}}</h2>\n  </div>\n    <!-- <div class=\"heading\" align=\"center\">\n        <h2 align=\"center\" id=\"txt\" *ngFor=\"let package_data of package_data\"><b>{{package_data.package_name}}</b></h2>\n    </div> -->\n</div>  \n\n\n<div class=\"row row-center\" style=\"margin-top:10px\" id=\"row2\">\n  <div class=\"col-md-8\">\n    <div class=\"row row-center\">\n      <table class=\"table table-striped table-dark\">\n        <thead>\n          <tr>\n            <th scope=\"col\" style=\"font-family:sans-serif;\"><b>Destination</b></th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">{{destination_string}}</th>\n          </tr>\n          <tr>\n            <th scope=\"col\" style=\"font-family:sans-serif;\"><b>Duration</b></th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">\n              <img src=\"https://www.ceylontours.com/images/day.png\">{{duration}}\n              <img src=\"https://www.ceylontours.com/images/night.png\">{{duration-1}}\n            </th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">\n                <a href=\"/enquiry/{{package_name}}\" mat-raised-button class=\"btn btn-danger\"><b>ENQUIRY</b></a>\n            </th>\n          </tr>\n        </thead>\n      </table>\n    </div>\n    <div class=\"row row-center\" *ngFor=\"let package_data of package_data;\">\n      <div class=\"card\" *ngFor=\"let details of package_data.details;let index=index\">\n        <h4 class=\"card-title font\" style=\"background-color: blue;margin-top:0px\"><b>Day {{details.day}}</b></h4>\n          <div class=\"card-body\" *ngFor=\"let destinations of details.destination_drive\">\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <b>Destination : {{destinations.destination}}</b>\n              </div>\n              <div class=\"col-md-6\">\n                <b>Drive : {{destinations.drive}}</b>\n              </div>\n            </div>\n            <p class=\"card-text\" style=\"margin-top:20px;margin-left:20px\">{{destinations.description}}</p>\n              <div class=\"row\">\n                <div class=\"col-md-12\">\n                  <b>Overnight Stay : {{details.overnight_stay}}</b>\n                </div>\n              </div>\n          </div>\n      </div>         \n    </div>\n  </div>\n  <div class=\"col-12 col-md-4\" style=\"width:20rem;\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px\"><b>TOUR CATEGORIES</b></h4>\n      <div class=\"card-body\">\n        <ul class=\"list-group\">\n          <a href=\"package-category/{{category}}\" *ngFor=\"let category of package_category_array\"><li class=\"list-group-item\">{{category}}</li></a>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n"
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-md-12\" style=\"height:65px;background-color:green;\">\n    <h2 class=\"card-title\" style=\"margin:auto;padding:10px;\" *ngFor=\"let package_data of package_data\">{{package_data.package_name}}</h2>\n  </div>\n    <!-- <div class=\"heading\" align=\"center\">\n        <h2 align=\"center\" id=\"txt\" *ngFor=\"let package_data of package_data\"><b>{{package_data.package_name}}</b></h2>\n    </div> -->\n</div>  \n\n<div class=\"row row-center\" style=\"margin-top:20px\" *ngIf=\"!isLoaded\">\n  <div class=\"col-md-4 col-sm-4\"></div>\n  <div class=\"col-md-4 col-sm-4\" style=\"padding-left:120px\">\n      <div class=\"loader\"></div>\n      <span style=\"color:red\"><b>LOADING PACKAGE</b></span>\n  </div>\n</div>\n\n<div class=\"row row-center\" style=\"margin-top:10px\" id=\"row2\" *ngIf=\"isLoaded\">\n  <div class=\"col-md-8\">\n    <div class=\"row row-center\">\n      <table class=\"table table-striped table-dark\">\n        <thead>\n          <tr>\n            <th scope=\"col\" style=\"font-family:sans-serif;\"><b>Destination</b></th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">{{destination_string}}</th>\n          </tr>\n          <tr>\n            <th scope=\"col\" style=\"font-family:sans-serif;\"><b>Duration</b></th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">\n              <img src=\"https://www.ceylontours.com/images/day.png\">{{duration}}\n              <img src=\"https://www.ceylontours.com/images/night.png\">{{duration-1}}\n            </th>\n            <th scope=\"col\" style=\"font-family:sans-serif;\">\n                <a href=\"/enquiry/{{package_name}}\" mat-raised-button class=\"btn btn-danger\"><b>ENQUIRY</b></a>\n            </th>\n          </tr>\n        </thead>\n      </table>\n    </div>\n    <div class=\"row row-center\" *ngFor=\"let package_data of package_data;\">\n      <div class=\"card\" *ngFor=\"let details of package_data.details;let index=index\">\n        <h4 class=\"card-title font\" style=\"background-color: blue;margin-top:0px\"><b>Day {{details.day}}</b></h4>\n          <div class=\"card-body\" *ngFor=\"let destinations of details.destination_drive\">\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <b>Destination : {{destinations.destination}}</b>\n              </div>\n              <div class=\"col-md-6\">\n                <b>Drive : {{destinations.drive}}</b>\n              </div>\n            </div>\n            <p class=\"card-text\" style=\"margin-top:20px;margin-left:20px\">{{destinations.description}}</p>\n              <div class=\"row\">\n                <div class=\"col-md-12\">\n                  <b>Overnight Stay : {{details.overnight_stay}}</b>\n                </div>\n              </div>\n              <hr *ngIf=\"details.destination_drive.length>1\">\n          </div>\n      </div>         \n    </div>\n  </div>\n  <div class=\"col-12 col-md-4\" style=\"width:20rem;\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"font-family:'Times New Roman', Times, serif;margin-top:3px;margin-left:15px\"><b>TOUR CATEGORIES</b></h4>\n      <div class=\"card-body\">\n        <ul class=\"list-group\">\n          <a href=\"package-category/{{category}}\" *ngFor=\"let category of package_category_array\"><li class=\"list-group-item\">{{category}}</li></a>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -8472,7 +8493,7 @@ module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h2 {\n  color: black;\n  margin: 0 auto;\n  text-align: left;\n  white-space: nowrap;\n  overflow: hidden;\n  width: 11em;\n  -webkit-animation: type 4s steps(60, end);\n          animation: type 4s steps(60, end);\n  font-family: sans-serif; }\n\nh2:nth-child(2) {\n  -webkit-animation: type2 8s steps(60, end);\n          animation: type2 8s steps(60, end); }\n\nspan {\n  -webkit-animation: blink 1s infinite;\n          animation: blink 1s infinite; }\n\n@-webkit-keyframes type {\n  from {\n    width: 0; } }\n\n@keyframes type {\n  from {\n    width: 0; } }\n\n@-webkit-keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@-webkit-keyframes blink {\n  to {\n    opacity: .0; } }\n\n@keyframes blink {\n  to {\n    opacity: .0; } }\n\n::-moz-selection {\n  background: black; }\n\n::selection {\n  background: black; }\n\n.heading {\n  width: 100%;\n  height: 120px;\n  background-color: chartreuse; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0; }\n\n.font {\n  font-family: sans-serif; }\n\na {\n  text-decoration: none;\n  color: black;\n  font-family: sans-serif;\n  background-color: greenyellow; }\n\nli:hover {\n  background-color: greenyellow; }\n\nb {\n  font-family: sans-serif; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvaW5ib3VuZC1wYWNrYWdlcy9pbmJvdW5kLXBhY2thZ2VzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBWTtFQUdaLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gseUNBQWlDO1VBQWpDLGlDQUFpQztFQUNqQyx1QkFBdUIsRUFBQTs7QUFHeEI7RUFDSSwwQ0FBa0M7VUFBbEMsa0NBQWtDLEVBQUE7O0FBR3RDO0VBQ0Usb0NBQTRCO1VBQTVCLDRCQUE0QixFQUFBOztBQUc5QjtFQUNJO0lBQU8sUUFBUSxFQUFBLEVBQUE7O0FBRG5CO0VBQ0k7SUFBTyxRQUFRLEVBQUEsRUFBQTs7QUFHbkI7RUFDSTtJQUFHLFFBQVEsRUFBQTtFQUNYO0lBQUksUUFBUSxFQUFBO0VBQ1o7SUFBTSxVQUFVLEVBQUEsRUFBQTs7QUFIcEI7RUFDSTtJQUFHLFFBQVEsRUFBQTtFQUNYO0lBQUksUUFBUSxFQUFBO0VBQ1o7SUFBTSxVQUFVLEVBQUEsRUFBQTs7QUFHcEI7RUFDSTtJQUFHLFdBQVcsRUFBQSxFQUFBOztBQURsQjtFQUNJO0lBQUcsV0FBVyxFQUFBLEVBQUE7O0FBR2xCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBRHJCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksV0FBVTtFQUNWLGFBQVk7RUFDWiw0QkFBNEIsRUFBQTs7QUFHbkM7RUFDSSxjQUFjO0VBQ2QsZUFBZSxFQUFBOztBQUluQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHFCQUFxQjtFQUNyQixZQUFXO0VBQ1gsdUJBQXVCO0VBQ3ZCLDZCQUE2QixFQUFBOztBQUdqQztFQUNJLDZCQUE2QixFQUFBOztBQUdqQztFQUNJLHVCQUF1QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvTW9kdWxlcy9DdXN0b21lci9pbmJvdW5kLXBhY2thZ2VzL2luYm91bmQtcGFja2FnZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMntcbiAgICBjb2xvcjogYmxhY2s7IFxuICAgLy8gIGZvbnQtZmFtaWx5OiBcIkNvdXJpZXJcIjtcbiAgIC8vICBmb250LXNpemU6IDIwcHg7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgd2lkdGg6IDExZW07XG4gICAgYW5pbWF0aW9uOiB0eXBlIDRzIHN0ZXBzKDYwLCBlbmQpOyBcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgIH1cbiAgICAgXG4gICBoMjpudGgtY2hpbGQoMil7XG4gICAgICAgYW5pbWF0aW9uOiB0eXBlMiA4cyBzdGVwcyg2MCwgZW5kKTtcbiAgIH1cbiAgICAgXG4gICBzcGFue1xuICAgICBhbmltYXRpb246IGJsaW5rIDFzIGluZmluaXRlO1xuICAgfVxuICAgICBcbiAgIEBrZXlmcmFtZXMgdHlwZXsgXG4gICAgICAgZnJvbSB7IHdpZHRoOiAwOyB9IFxuICAgfSBcbiAgICAgXG4gICBAa2V5ZnJhbWVzIHR5cGUye1xuICAgICAgIDAle3dpZHRoOiAwO31cbiAgICAgICA1MCV7d2lkdGg6IDA7fVxuICAgICAgIDEwMCV7IHdpZHRoOiAxMDA7IH0gXG4gICB9IFxuICAgICBcbiAgIEBrZXlmcmFtZXMgYmxpbmt7XG4gICAgICAgdG97b3BhY2l0eTogLjA7fVxuICAgfVxuICAgICBcbiAgIDo6c2VsZWN0aW9ue1xuICAgICAgIGJhY2tncm91bmQ6IGJsYWNrO1xuICAgfVxuICAgXG4gICAuaGVhZGluZ3tcbiAgICAgICB3aWR0aDoxMDAlO1xuICAgICAgIGhlaWdodDoxMjBweDtcbiAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjaGFydHJldXNlO1xuICAgfVxuXG4ucm93LWNlbnRlcntcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgLy8gcGFkZGluZzogMTBweCAxMDBweCAyMHB4IDEwMHB4O1xufVxuXG4uZm9udHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbn1cblxuYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgY29sb3I6YmxhY2s7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW55ZWxsb3c7XG59XG5cbmxpOmhvdmVye1xuICAgIGJhY2tncm91bmQtY29sb3I6IGdyZWVueWVsbG93O1xufVxuXG5ie1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xufVxuXG4iXX0= */"
+module.exports = "h2 {\n  color: black;\n  margin: 0 auto;\n  text-align: left;\n  white-space: nowrap;\n  overflow: hidden;\n  width: 11em;\n  -webkit-animation: type 4s steps(60, end);\n          animation: type 4s steps(60, end);\n  font-family: sans-serif; }\n\nh2:nth-child(2) {\n  -webkit-animation: type2 8s steps(60, end);\n          animation: type2 8s steps(60, end); }\n\nspan {\n  -webkit-animation: blink 1s infinite;\n          animation: blink 1s infinite; }\n\n@-webkit-keyframes type {\n  from {\n    width: 0; } }\n\n@keyframes type {\n  from {\n    width: 0; } }\n\n@-webkit-keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@keyframes type2 {\n  0% {\n    width: 0; }\n  50% {\n    width: 0; }\n  100% {\n    width: 100; } }\n\n@-webkit-keyframes blink {\n  to {\n    opacity: .0; } }\n\n@keyframes blink {\n  to {\n    opacity: .0; } }\n\n::-moz-selection {\n  background: black; }\n\n::selection {\n  background: black; }\n\n.heading {\n  width: 100%;\n  height: 120px;\n  background-color: chartreuse; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0; }\n\n.font {\n  font-family: sans-serif; }\n\na {\n  text-decoration: none;\n  color: black;\n  font-family: sans-serif;\n  background-color: greenyellow; }\n\nli:hover {\n  background-color: greenyellow; }\n\nb {\n  font-family: sans-serif; }\n\n.loader {\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  padding-left: 50px;\n  border-top: 16px solid blue;\n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  /* Safari */\n  animation: spin 2s linear infinite; }\n\n/* Safari */\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvaW5ib3VuZC1wYWNrYWdlcy9pbmJvdW5kLXBhY2thZ2VzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBWTtFQUdaLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gseUNBQWlDO1VBQWpDLGlDQUFpQztFQUNqQyx1QkFBdUIsRUFBQTs7QUFHeEI7RUFDSSwwQ0FBa0M7VUFBbEMsa0NBQWtDLEVBQUE7O0FBR3RDO0VBQ0Usb0NBQTRCO1VBQTVCLDRCQUE0QixFQUFBOztBQUc5QjtFQUNJO0lBQU8sUUFBUSxFQUFBLEVBQUE7O0FBRG5CO0VBQ0k7SUFBTyxRQUFRLEVBQUEsRUFBQTs7QUFHbkI7RUFDSTtJQUFHLFFBQVEsRUFBQTtFQUNYO0lBQUksUUFBUSxFQUFBO0VBQ1o7SUFBTSxVQUFVLEVBQUEsRUFBQTs7QUFIcEI7RUFDSTtJQUFHLFFBQVEsRUFBQTtFQUNYO0lBQUksUUFBUSxFQUFBO0VBQ1o7SUFBTSxVQUFVLEVBQUEsRUFBQTs7QUFHcEI7RUFDSTtJQUFHLFdBQVcsRUFBQSxFQUFBOztBQURsQjtFQUNJO0lBQUcsV0FBVyxFQUFBLEVBQUE7O0FBR2xCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBRHJCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksV0FBVTtFQUNWLGFBQVk7RUFDWiw0QkFBNEIsRUFBQTs7QUFHbkM7RUFDSSxjQUFjO0VBQ2QsZUFBZSxFQUFBOztBQUluQjtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLHFCQUFxQjtFQUNyQixZQUFXO0VBQ1gsdUJBQXVCO0VBQ3ZCLDZCQUE2QixFQUFBOztBQUdqQztFQUNJLDZCQUE2QixFQUFBOztBQUdqQztFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLDBCQUEwQjtFQUMxQixrQkFBa0I7RUFDbEIsa0JBQWlCO0VBQ2pCLDJCQUEyQjtFQUMzQixZQUFZO0VBQ1osYUFBYTtFQUNiLDBDQUEwQztFQUFFLFdBQUE7RUFDNUMsa0NBQWtDLEVBQUE7O0FBR3BDLFdBQUE7O0FBQ0E7RUFDRTtJQUFLLCtCQUErQixFQUFBO0VBQ3BDO0lBQU8saUNBQWlDLEVBQUEsRUFBQTs7QUFHMUM7RUFDRTtJQUFLLCtCQUF1QjtZQUF2Qix1QkFBdUIsRUFBQTtFQUM1QjtJQUFPLGlDQUF5QjtZQUF6Qix5QkFBeUIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvTW9kdWxlcy9DdXN0b21lci9pbmJvdW5kLXBhY2thZ2VzL2luYm91bmQtcGFja2FnZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMntcbiAgICBjb2xvcjogYmxhY2s7IFxuICAgLy8gIGZvbnQtZmFtaWx5OiBcIkNvdXJpZXJcIjtcbiAgIC8vICBmb250LXNpemU6IDIwcHg7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgd2lkdGg6IDExZW07XG4gICAgYW5pbWF0aW9uOiB0eXBlIDRzIHN0ZXBzKDYwLCBlbmQpOyBcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgIH1cbiAgICAgXG4gICBoMjpudGgtY2hpbGQoMil7XG4gICAgICAgYW5pbWF0aW9uOiB0eXBlMiA4cyBzdGVwcyg2MCwgZW5kKTtcbiAgIH1cbiAgICAgXG4gICBzcGFue1xuICAgICBhbmltYXRpb246IGJsaW5rIDFzIGluZmluaXRlO1xuICAgfVxuICAgICBcbiAgIEBrZXlmcmFtZXMgdHlwZXsgXG4gICAgICAgZnJvbSB7IHdpZHRoOiAwOyB9IFxuICAgfSBcbiAgICAgXG4gICBAa2V5ZnJhbWVzIHR5cGUye1xuICAgICAgIDAle3dpZHRoOiAwO31cbiAgICAgICA1MCV7d2lkdGg6IDA7fVxuICAgICAgIDEwMCV7IHdpZHRoOiAxMDA7IH0gXG4gICB9IFxuICAgICBcbiAgIEBrZXlmcmFtZXMgYmxpbmt7XG4gICAgICAgdG97b3BhY2l0eTogLjA7fVxuICAgfVxuICAgICBcbiAgIDo6c2VsZWN0aW9ue1xuICAgICAgIGJhY2tncm91bmQ6IGJsYWNrO1xuICAgfVxuICAgXG4gICAuaGVhZGluZ3tcbiAgICAgICB3aWR0aDoxMDAlO1xuICAgICAgIGhlaWdodDoxMjBweDtcbiAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjaGFydHJldXNlO1xuICAgfVxuXG4ucm93LWNlbnRlcntcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgLy8gcGFkZGluZzogMTBweCAxMDBweCAyMHB4IDEwMHB4O1xufVxuXG4uZm9udHtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbn1cblxuYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgY29sb3I6YmxhY2s7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW55ZWxsb3c7XG59XG5cbmxpOmhvdmVye1xuICAgIGJhY2tncm91bmQtY29sb3I6IGdyZWVueWVsbG93O1xufVxuXG5ie1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xufVxuXG4ubG9hZGVyIHtcbiAgICBib3JkZXI6IDE2cHggc29saWQgI2YzZjNmMztcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgcGFkZGluZy1sZWZ0OjUwcHg7XG4gICAgYm9yZGVyLXRvcDogMTZweCBzb2xpZCBibHVlO1xuICAgIHdpZHRoOiAxMjBweDtcbiAgICBoZWlnaHQ6IDEyMHB4O1xuICAgIC13ZWJraXQtYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTsgLyogU2FmYXJpICovXG4gICAgYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTtcbiAgfVxuICBcbiAgLyogU2FmYXJpICovXG4gIEAtd2Via2l0LWtleWZyYW1lcyBzcGluIHtcbiAgICAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cbiAgICAxMDAlIHsgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XG4gIH1cbiAgXG4gIEBrZXlmcmFtZXMgc3BpbiB7XG4gICAgMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsgfVxuICAgIDEwMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XG4gIH1cblxuXG4iXX0= */"
 
 /***/ }),
 
@@ -8503,6 +8524,7 @@ var InboundPackagesComponent = /** @class */ (function () {
         this._db = _db;
         this.route = route;
         this.package_data = [];
+        this.isLoaded = false;
         this.destination_string = "";
         this.destination_details = [];
         this.package_category_array = [];
@@ -8523,14 +8545,14 @@ var InboundPackagesComponent = /** @class */ (function () {
             _this.package_data.push(doc.data());
             _this.duration = doc.data().no_of_days;
             _this.package_name = doc.data().package_name;
-            _this.filter_destination_details(_this.package_data);
+            _this.filter_destination_details(_this.package_data, _this);
             Object(_scripts_frontend_mobile_view__WEBPACK_IMPORTED_MODULE_5__["adjust_mobile_view_inbound_packages"])();
         }).catch(function (ex) {
             alert("Error");
             //  console.log(ex);
         });
     };
-    InboundPackagesComponent.prototype.filter_destination_details = function (package_data) {
+    InboundPackagesComponent.prototype.filter_destination_details = function (package_data, _this) {
         var length = package_data.length;
         // console.log(length)
         for (var i = 0; i < length; i++) {
@@ -8545,6 +8567,7 @@ var InboundPackagesComponent = /** @class */ (function () {
                 }
             }
         }
+        _this.isLoaded = true;
     };
     InboundPackagesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -8555,6 +8578,65 @@ var InboundPackagesComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], InboundPackagesComponent);
     return InboundPackagesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/insurance/insurance.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/Modules/Customer/insurance/insurance.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-12 col-md-12\" style=\"background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>TRAVEL INSURANCE</b></h3>\n  </div>\n</div>  \n  \n<div class=\"row row-center\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\">\n      <ul class=\"list-group list-group-flush\">\n        <li class=\"list-group-item\">★ With our partnership with a worldwide leading International Insurance and Financial Services Organization,Chartis Insurance Limited (formerly AIG Insurance) which caters to over 130 countries and more, ABR Tours presents you with Travel Insurance for a pleasant and safe trip that you can enjoy carefree</li>\n      </ul>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/insurance/insurance.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/Modules/Customer/insurance/insurance.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\np {\n  font-family: sans-serif;\n  text-align: justify;\n  word-spacing: -1px; }\n\nh4 {\n  font-family: sans-serif;\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvaW5zdXJhbmNlL2luc3VyYW5jZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLGNBQWM7RUFDZCxlQUFlO0VBQ2YsOEJBQThCLEVBQUE7O0FBR2xDO0VBQ0ksdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixrQkFBaUIsRUFBQTs7QUFHckI7RUFDSSx1QkFBdUI7RUFDdkIsWUFBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvTW9kdWxlcy9DdXN0b21lci9pbnN1cmFuY2UvaW5zdXJhbmNlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDN7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbi5yb3ctY2VudGVye1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIG1hcmdpbi1yaWdodDogMDtcbiAgICBwYWRkaW5nOiAxMHB4IDEwMHB4IDIwcHggMTAwcHg7XG59XG5cbnB7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgICB3b3JkLXNwYWNpbmc6LTFweDtcbn1cblxuaDR7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgY29sb3I6d2hpdGU7XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/insurance/insurance.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/Modules/Customer/insurance/insurance.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: InsuranceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InsuranceComponent", function() { return InsuranceComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../scripts/frontend/mobile_view.js */ "./src/scripts/frontend/mobile_view.js");
+
+
+
+var InsuranceComponent = /** @class */ (function () {
+    function InsuranceComponent() {
+    }
+    InsuranceComponent.prototype.ngOnInit = function () {
+        Object(_scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__["adjust_mobile_view_insurance"])();
+    };
+    InsuranceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-insurance',
+            template: __webpack_require__(/*! ./insurance.component.html */ "./src/app/Modules/Customer/insurance/insurance.component.html"),
+            styles: [__webpack_require__(/*! ./insurance.component.scss */ "./src/app/Modules/Customer/insurance/insurance.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], InsuranceComponent);
+    return InsuranceComponent;
 }());
 
 
@@ -8837,6 +8919,65 @@ var TestimonialsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Modules/Customer/ticketing/ticketing.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/Modules/Customer/ticketing/ticketing.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-12 col-md-12\" style=\"background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>TICKETING</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\">\n      <ul class=\"list-group list-group-flush\">\n        <li class=\"list-group-item\">★ ABR Tours will handle all your airline reservations and ticketing needs to any destination in the world and keep you updated to date with the booking status</li>\n        <li class=\"list-group-item\">★ We will match your needs and requirements with the best possible ticket pricing, continually peruse alternative airlines, routes and fare structures to provide you with informed decisions. ABR Tours provides you fast, reliable and accurate ticketing services through our vast global network of travel agents</li>\n        <li class=\"list-group-item\">★ ABR Tours goes the extra mile and delivers your ticket to your doorstep, if you desire it</li>\n      </ul>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/ticketing/ticketing.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/Modules/Customer/ticketing/ticketing.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\np {\n  font-family: sans-serif;\n  text-align: justify;\n  word-spacing: -1px; }\n\nh4 {\n  font-family: sans-serif;\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvdGlja2V0aW5nL3RpY2tldGluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUF1QixFQUFBOztBQUczQjtFQUNJLGNBQWM7RUFDZCxlQUFlO0VBQ2YsOEJBQThCLEVBQUE7O0FBR2xDO0VBQ0ksdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixrQkFBaUIsRUFBQTs7QUFHckI7RUFDSSx1QkFBdUI7RUFDdkIsWUFBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvTW9kdWxlcy9DdXN0b21lci90aWNrZXRpbmcvdGlja2V0aW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDN7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbi5yb3ctY2VudGVye1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIG1hcmdpbi1yaWdodDogMDtcbiAgICBwYWRkaW5nOiAxMHB4IDEwMHB4IDIwcHggMTAwcHg7XG59XG5cbnB7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgICB3b3JkLXNwYWNpbmc6LTFweDtcbn1cblxuaDR7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgY29sb3I6d2hpdGU7XG59XG5cbi8vIGxpe1xuLy8gICAgIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG4vLyAgICAgZm9udC1mYW1pbHk6IEZvbnRBd2Vzb21lO1xuLy8gICAgIHRvcDogMDtcbi8vICAgICBsZWZ0OiAtNXB4O1xuLy8gICAgIGNvbnRlbnQ6IFwiXFxmMDA1IFwiO1xuLy8gICAgIGNvbG9yOiAjOWI1OWI2O1xuLy8gfSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/ticketing/ticketing.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/Modules/Customer/ticketing/ticketing.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: TicketingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketingComponent", function() { return TicketingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../scripts/frontend/mobile_view.js */ "./src/scripts/frontend/mobile_view.js");
+
+
+
+var TicketingComponent = /** @class */ (function () {
+    function TicketingComponent() {
+    }
+    TicketingComponent.prototype.ngOnInit = function () {
+        Object(_scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__["adjust_mobile_view_ticketing"])();
+    };
+    TicketingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-ticketing',
+            template: __webpack_require__(/*! ./ticketing.component.html */ "./src/app/Modules/Customer/ticketing/ticketing.component.html"),
+            styles: [__webpack_require__(/*! ./ticketing.component.scss */ "./src/app/Modules/Customer/ticketing/ticketing.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], TicketingComponent);
+    return TicketingComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Modules/Customer/transfer-contact-us/transfer-contact-us.component.html":
 /*!*****************************************************************************************!*\
   !*** ./src/app/Modules/Customer/transfer-contact-us/transfer-contact-us.component.html ***!
@@ -8907,7 +9048,7 @@ var TransferContactUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-md-12\" style=\"height:65px;background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>TRANSPORT FACILITIES</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">\n          Explore the surrounding beauty in the island of Sri Lanka with best  Transport facilities by ABR Tours. During recent times, Sri Lanka has made rapid progress with the Development projects that are continuously developing roads and infrastructure facilities around the country. As a result, the country has become a favourable place for worldwide tourists. \n        </p>\n        <p class=\"card-text\">\n          We offer you an array of transport facilities to travel on land and water. We also offer helicopter and plane transfers, air taxies and hot air balloon rides. You can arrange a luxurious bus or cars or train rides with us without a hassle. Simple contact us and make early arrangements in a jiffy.\n        </p>\n        <!-- <a href=\"#\" class=\"card-link\">Card link</a>\n        <a href=\"#\" class=\"card-link\">Another link</a> -->\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row3\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\" style=\"background-color:#3498db;\">\n      <div class=\"row\">\n        <div class=\"col-md-7\">\n          <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\"  style=\"margin-top:0\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <img src=\"assets/img/transfers/transfer.jpg\" style=\"height:400px;\" class=\"d-block w-100\" alt=\"...\">\n              </div>\n              <div class=\"carousel-item\" *ngFor=\"let i of [].constructor(13);let index=index\">\n                <img src=\"assets/img/transfers/transfer{{index+1}}.jpg\" class=\"d-block w-100\" style=\"height:400px;\" alt=\"...\">\n              </div>\n              <!-- <div class=\"carousel-item\">\n                <img src=\"assets/img/bg.jpg\" style=\"height:400px;\" class=\"d-block w-100\" alt=\"...\">\n              </div> -->\n            </div>\n            <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n              <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n              <span class=\"sr-only\">Previous</span>\n            </a>\n            <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n              <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n              <span class=\"sr-only\">Next</span>\n            </a>\n          </div>\n          <!-- <img src=\"assets/img/bg.jpg\"> -->\n        </div>\n        <div class=\"col-md-5\">\n          <div class=\"row\">\n            <p style=\"text-align: justify;padding-right:15px;padding-top:80px;color:white\">\n              Let us take you there, where you can leave your footprints in white velvet sands, rock gently in sparkling turquoise waves, and walk through the grand ruins of ancient kingdoms, feed orphaned baby elephants, sip the world's finest tea and explore precious gem mines.\n            </p>\n            <p style=\"text-align: justify;font-size:20px;padding-right:15px\">\n              <b style=\"color:white\">Your dream holiday isn't far, it's just a click away...</b>\n            </p>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-4 col-md-4\"></div>\n            <div class=\"col-4 col-md-4\"></div>\n            <div class=\"col-4 col-md-4\">\n              <a href=\"/transfer-contactUs/Transfers\" id=\"enquiry\" class=\"btn btn-primary\"><b>ENQUIRY</b></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div> \n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row4\">\n  <div class=\"col-md-6\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" id=\"transfers_title\" style=\"background-color: blue;margin-top:0;text-align:left;\"><b style=\"text-transform: uppercase;color:white;padding-left:10px\">travelling across the island </b></h4>\n      <div class=\"card-body\">\n        <p style=\"text-align: justify;\">Travelling across the island can be done via many modes of transport, but why not indulge in it in comfort. Ceylon Tours brings you their travel transport fleet for your selection, amongst other modes of transport for your convenience. From airport pickup at the Bandaranaike International Airport (BIA) to your hotel destination and all other travel needs are, we can cater to your travel plans in Sri Lanka.</p>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6\">\n    <div class=\"card\" style=\"height:265px\">\n      <h4 class=\"card-title\" style=\"background-color:orange;margin-top:0\"><b style=\"text-transform: uppercase;color:white;padding-left:10px\">vehicle fleet</b></h4>\n      <div class=\"card-body\">\n        <p style=\"text-align: justify;\">The ABR Tours vehicle fleet includes a fine array of luxury sedan cars, vans, and coaches that can accommodate your needs and requirement in comfort. Whether you are looking for a VIP treatment, or a means of leisurely travel, the Ceylon Tours means of transport is fit for any holiday you are planning in the isle of Sri Lanka.</p>\n      </div>\n    </div>\n  </div>\n</div> \n\n<div class=\"row row-center\" id=\"row4\">\n  <!-- <div class=\"col-12 col-md-12\"> -->\n      <table class=\"table table-striped table-dark\">\n          <thead>\n            <tr>\n              <th scope=\"col-md-6\"><b>Passengers</b></th>\n              <th scope=\"col-md-6\"><b>Vehicle</b></th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th scope=\"row\">1 to 2 Passengers</th>\n              <td>Sedan Car</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">3 to 6 Passengers</th>\n              <td>Family Van</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">7 to 10 Passengers</th>\n              <td>Mini Coach</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">11 to 18 Passengers</th>\n              <td>Medium Coach</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">19 to 35 Passengers</th>\n              <td>Large Coach</td>\n            </tr>\n          </tbody>\n        </table>\n  <!-- </div> -->\n</div>\n\n<!-- <div class=\"row row-center\">\n  <div class=\"col-md-12\">\n    <div id=\"carouselExampleControls2\" class=\"carousel slide\" data-ride=\"carousel\"  style=\"margin-top:-20px\">\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <div class=\"row row-center\">\n            <div class=\"col-md-6\" style=\"padding-right:0;\">\n              <div class=\"card\">\n                <div class=\"row\">\n                  <div class=\"col-md-5\">\n                    <img src=\"assets/img/bg.jpg\">\n                  </div>\n                  <div class=\"col-md-7\">\n                    <p style=\"text-align: justify;\">Hello</p>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-md-6\" style=\"padding-left:0\">\n              <div class=\"card\">\n                <div class=\"row\">\n                  <div class=\"col-md-5\">\n                    <img src=\"assets/img/bg.jpg\">\n                  </div>\n                  <div class=\"col-md-7\">\n                    <p style=\"text-align: justify;\">Hello</p>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <a class=\"carousel-control-prev\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"prev\">\n        <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"carousel-control-next\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"next\">\n        <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n      </a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\">\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color: blue;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">AIR TRAVEL</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color:orange;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">TRANSPORT VIA BOAT</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color:maroon;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">TRAIN TRANSPORT</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<button (click)=\"send_email()\">rk</button> -->\n"
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col-md-12\" style=\"background-color:green;\">\n    <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>TRANSPORT FACILITIES</b></h3>\n  </div>\n</div>  \n\n<div class=\"row row-center\" id=\"row2\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">\n          Explore the surrounding beauty in the island of Sri Lanka with best  Transport facilities by ABR Tours. During recent times, Sri Lanka has made rapid progress with the Development projects that are continuously developing roads and infrastructure facilities around the country. As a result, the country has become a favourable place for worldwide tourists. \n        </p>\n        <p class=\"card-text\">\n          We offer you an array of transport facilities to travel on land and water. We also offer helicopter and plane transfers, air taxies and hot air balloon rides. You can arrange a luxurious bus or cars or train rides with us without a hassle. Simple contact us and make early arrangements in a jiffy.\n        </p>\n        <!-- <a href=\"#\" class=\"card-link\">Card link</a>\n        <a href=\"#\" class=\"card-link\">Another link</a> -->\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row3\">\n  <div class=\"col-12 col-md-12\">\n    <div class=\"card\" style=\"background-color:#3498db;\">\n      <div class=\"row\">\n        <div class=\"col-md-7\">\n          <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\"  style=\"margin-top:0\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <img src=\"assets/img/transfers/transfer.jpg\" style=\"height:400px;\" class=\"d-block w-100\" alt=\"...\">\n              </div>\n              <div class=\"carousel-item\" *ngFor=\"let i of [].constructor(13);let index=index\">\n                <img src=\"assets/img/transfers/transfer{{index+1}}.jpg\" class=\"d-block w-100\" style=\"height:400px;\" alt=\"...\">\n              </div>\n              <!-- <div class=\"carousel-item\">\n                <img src=\"assets/img/bg.jpg\" style=\"height:400px;\" class=\"d-block w-100\" alt=\"...\">\n              </div> -->\n            </div>\n            <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n              <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n              <span class=\"sr-only\">Previous</span>\n            </a>\n            <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n              <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n              <span class=\"sr-only\">Next</span>\n            </a>\n          </div>\n          <!-- <img src=\"assets/img/bg.jpg\"> -->\n        </div>\n        <div class=\"col-md-5\">\n          <div class=\"row\">\n            <p id=\"transfer_txt1\" style=\"text-align: justify;padding-left:15px;padding-right:15px;padding-top:80px;color:white\">\n              Let us take you there, where you can leave your footprints in white velvet sands, rock gently in sparkling turquoise waves, and walk through the grand ruins of ancient kingdoms, feed orphaned baby elephants, sip the world's finest tea and explore precious gem mines.\n            </p>\n            <p id=\"transfer_txt2\" style=\"text-align: justify;font-size:20px;padding-right:15px;padding-left:15px\">\n              <b style=\"color:white\">Your dream holiday isn't far, it's just a click away...</b>\n            </p>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-4 col-md-4\"></div>\n            <div class=\"col-4 col-md-4\"></div>\n            <div class=\"col-4 col-md-4\">\n              <a href=\"/transfer-contactUs/Transfers\" id=\"enquiry\" class=\"btn btn-primary\"><b>ENQUIRY</b></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div> \n  </div>\n</div>\n\n<div class=\"row row-center\" id=\"row4\">\n  <div class=\"col-md-6\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" id=\"transfers_title\" style=\"background-color: blue;margin-top:0;text-align:left;\"><b style=\"text-transform: uppercase;color:white;padding-left:10px\">travelling across the island </b></h4>\n      <div class=\"card-body\">\n        <p style=\"text-align: justify;\">Travelling across the island can be done via many modes of transport, but why not indulge in it in comfort. Ceylon Tours brings you their travel transport fleet for your selection, amongst other modes of transport for your convenience. From airport pickup at the Bandaranaike International Airport (BIA) to your hotel destination and all other travel needs are, we can cater to your travel plans in Sri Lanka.</p>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6\">\n    <div class=\"card\" style=\"height:265px\">\n      <h4 class=\"card-title\" style=\"background-color:orange;margin-top:0\"><b style=\"text-transform: uppercase;color:white;padding-left:10px\">vehicle fleet</b></h4>\n      <div class=\"card-body\">\n        <p style=\"text-align: justify;\">The ABR Tours vehicle fleet includes a fine array of luxury sedan cars, vans, and coaches that can accommodate your needs and requirement in comfort. Whether you are looking for a VIP treatment, or a means of leisurely travel, the Ceylon Tours means of transport is fit for any holiday you are planning in the isle of Sri Lanka.</p>\n      </div>\n    </div>\n  </div>\n</div> \n\n<div class=\"row row-center\" id=\"row4\">\n  <!-- <div class=\"col-12 col-md-12\"> -->\n      <table class=\"table table-striped table-dark\">\n          <thead>\n            <tr>\n              <th scope=\"col-md-6\"><b>Passengers</b></th>\n              <th scope=\"col-md-6\"><b>Vehicle</b></th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th scope=\"row\">1 to 2 Passengers</th>\n              <td>Sedan Car</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">3 to 6 Passengers</th>\n              <td>Family Van</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">7 to 10 Passengers</th>\n              <td>Mini Coach</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">11 to 18 Passengers</th>\n              <td>Medium Coach</td>\n            </tr>\n            <tr>\n              <th scope=\"row\">19 to 35 Passengers</th>\n              <td>Large Coach</td>\n            </tr>\n          </tbody>\n        </table>\n  <!-- </div> -->\n</div>\n\n<!-- <div class=\"row row-center\">\n  <div class=\"col-md-12\">\n    <div id=\"carouselExampleControls2\" class=\"carousel slide\" data-ride=\"carousel\"  style=\"margin-top:-20px\">\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <div class=\"row row-center\">\n            <div class=\"col-md-6\" style=\"padding-right:0;\">\n              <div class=\"card\">\n                <div class=\"row\">\n                  <div class=\"col-md-5\">\n                    <img src=\"assets/img/bg.jpg\">\n                  </div>\n                  <div class=\"col-md-7\">\n                    <p style=\"text-align: justify;\">Hello</p>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-md-6\" style=\"padding-left:0\">\n              <div class=\"card\">\n                <div class=\"row\">\n                  <div class=\"col-md-5\">\n                    <img src=\"assets/img/bg.jpg\">\n                  </div>\n                  <div class=\"col-md-7\">\n                    <p style=\"text-align: justify;\">Hello</p>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <a class=\"carousel-control-prev\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"prev\">\n        <i class=\"fa fa-chevron-left fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"carousel-control-next\" href=\"#carouselExampleControls2\" role=\"button\" data-slide=\"next\">\n        <i class=\"fa fa-chevron-right fa-2x\" style=\"color:black\" aria-hidden=\"true\"></i>\n      </a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row row-center\">\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color: blue;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">AIR TRAVEL</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color:orange;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">TRANSPORT VIA BOAT</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <div class=\"card\">\n      <h4 class=\"card-title\" style=\"background-color:maroon;margin-top:0;height:50px;padding-left:10px\"><b style=\"color:white\">TRAIN TRANSPORT</b></h4>\n      <img class=\"card-img-top\" style=\"margin-top:-12px;\" src=\"assets/img/bg.jpg\" alt=\"Card image cap\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<button (click)=\"send_email()\">rk</button> -->\n"
 
 /***/ }),
 
@@ -8918,7 +9059,7 @@ module.exports = "<div class=\"row row-center\" id=\"row1\">\n  <div class=\"col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  font-family: Arial, Helvetica, sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\nth {\n  font-family: 'Times New Roman', Times, serif; }\n\ntd {\n  font-family: 'Times New Roman', Times, serif; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvdHJhbnNmZXJzL3RyYW5zZmVycy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHlDQUF5QyxFQUFBOztBQUc3QztFQUNJLGNBQWM7RUFDZCxlQUFlO0VBQ2YsOEJBQThCLEVBQUE7O0FBR2xDO0VBQ0ksNENBQTRDLEVBQUE7O0FBR2hEO0VBQ0ksNENBQTRDLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bGVzL0N1c3RvbWVyL3RyYW5zZmVycy90cmFuc2ZlcnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoM3tcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcbn1cblxuLnJvdy1jZW50ZXJ7XG4gICAgbWFyZ2luLWxlZnQ6IDA7XG4gICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgIHBhZGRpbmc6IDEwcHggMTAwcHggMjBweCAxMDBweDtcbn1cblxudGh7XG4gICAgZm9udC1mYW1pbHk6ICdUaW1lcyBOZXcgUm9tYW4nLCBUaW1lcywgc2VyaWY7XG59XG5cbnRke1xuICAgIGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgVGltZXMsIHNlcmlmO1xufVxuIl19 */"
+module.exports = "h3 {\n  font-family: Arial, Helvetica, sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\nth {\n  font-family: 'Times New Roman', Times, serif; }\n\ntd {\n  font-family: 'Times New Roman', Times, serif; }\n\n.btn-primary {\n  padding: 8px 8px 8px 8px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvdHJhbnNmZXJzL3RyYW5zZmVycy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHlDQUF5QyxFQUFBOztBQUc3QztFQUNJLGNBQWM7RUFDZCxlQUFlO0VBQ2YsOEJBQThCLEVBQUE7O0FBR2xDO0VBQ0ksNENBQTRDLEVBQUE7O0FBR2hEO0VBQ0ksNENBQTRDLEVBQUE7O0FBR2hEO0VBQ0ksd0JBQXVCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bGVzL0N1c3RvbWVyL3RyYW5zZmVycy90cmFuc2ZlcnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoM3tcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcbn1cblxuLnJvdy1jZW50ZXJ7XG4gICAgbWFyZ2luLWxlZnQ6IDA7XG4gICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgIHBhZGRpbmc6IDEwcHggMTAwcHggMjBweCAxMDBweDtcbn1cblxudGh7XG4gICAgZm9udC1mYW1pbHk6ICdUaW1lcyBOZXcgUm9tYW4nLCBUaW1lcywgc2VyaWY7XG59XG5cbnRke1xuICAgIGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgVGltZXMsIHNlcmlmO1xufVxuXG4uYnRuLXByaW1hcnl7XG4gICAgcGFkZGluZzo4cHggOHB4IDhweCA4cHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -8953,6 +9094,65 @@ var TransfersComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], TransfersComponent);
     return TransfersComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/visa-handling/visa-handling.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/Modules/Customer/visa-handling/visa-handling.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row row-center\" id=\"row1\">\n    <div class=\"col-12 col-md-12\" style=\"background-color:green;\">\n      <h3 class=\"card-title\" style=\"padding:10px;color:white\"><b>VISA HANDLING</b></h3>\n    </div>\n  </div>  \n  \n  <div class=\"row row-center\" id=\"row2\">\n    <div class=\"col-12 col-md-12\">\n      <div class=\"card\">\n        <ul class=\"list-group list-group-flush\">\n          <li class=\"list-group-item\">★ ABR Tours will advise you on visa formalities and regulations</li>\n          <li class=\"list-group-item\">★ You can also acquire necessary documents and visa forms from the ABR Tours office</li>\n        </ul>\n      </div>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/visa-handling/visa-handling.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/Modules/Customer/visa-handling/visa-handling.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "h3 {\n  font-family: sans-serif; }\n\n.row-center {\n  margin-left: 0;\n  margin-right: 0;\n  padding: 10px 100px 20px 100px; }\n\np {\n  font-family: sans-serif;\n  text-align: justify;\n  word-spacing: -1px; }\n\nh4 {\n  font-family: sans-serif;\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JlbnVyYS9EZXNrdG9wL0hvdGVsLU1hbmFnZW1lbnQvSG90ZWwtTWFuYWdlbWVudC9zcmMvYXBwL01vZHVsZXMvQ3VzdG9tZXIvdmlzYS1oYW5kbGluZy92aXNhLWhhbmRsaW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksY0FBYztFQUNkLGVBQWU7RUFDZiw4QkFBOEIsRUFBQTs7QUFHbEM7RUFDSSx1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLGtCQUFpQixFQUFBOztBQUdyQjtFQUNJLHVCQUF1QjtFQUN2QixZQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bGVzL0N1c3RvbWVyL3Zpc2EtaGFuZGxpbmcvdmlzYS1oYW5kbGluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImgze1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xufVxuXG4ucm93LWNlbnRlcntcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgcGFkZGluZzogMTBweCAxMDBweCAyMHB4IDEwMHB4O1xufVxuXG5we1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gICAgd29yZC1zcGFjaW5nOi0xcHg7XG59XG5cbmg0e1xuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgIGNvbG9yOndoaXRlO1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/Modules/Customer/visa-handling/visa-handling.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/Modules/Customer/visa-handling/visa-handling.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: VisaHandlingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisaHandlingComponent", function() { return VisaHandlingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../scripts/frontend/mobile_view.js */ "./src/scripts/frontend/mobile_view.js");
+
+
+
+var VisaHandlingComponent = /** @class */ (function () {
+    function VisaHandlingComponent() {
+    }
+    VisaHandlingComponent.prototype.ngOnInit = function () {
+        Object(_scripts_frontend_mobile_view_js__WEBPACK_IMPORTED_MODULE_2__["adjust_mobile_view_visaHandling"])();
+    };
+    VisaHandlingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-visa-handling',
+            template: __webpack_require__(/*! ./visa-handling.component.html */ "./src/app/Modules/Customer/visa-handling/visa-handling.component.html"),
+            styles: [__webpack_require__(/*! ./visa-handling.component.scss */ "./src/app/Modules/Customer/visa-handling/visa-handling.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], VisaHandlingComponent);
+    return VisaHandlingComponent;
 }());
 
 
@@ -9018,487 +9218,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "country_array", function() { return country_array; });
 
 var country_array = ["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Barbuda", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Trty.", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Caicos Islands", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo, Democratic Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories", "Futuna Islands", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard", "Herzegovina", "Holy See", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Jan Mayen Islands", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea", "Korea (Democratic)", "Kuwait", "Kyrgyzstan", "Lao", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "McDonald Islands", "Mexico", "Micronesia", "Miquelon", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "Nevis", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Palestinian Territory, Occupied", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Principe", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Barthelemy", "Saint Helena", "Saint Kitts", "Saint Lucia", "Saint Martin (French part)", "Saint Pierre", "Saint Vincent", "Samoa", "San Marino", "Sao Tome", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia", "South Sandwich Islands", "Spain", "Sri Lanka", "Sudan", "Suriname", "Svalbard", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "The Grenadines", "Timor-Leste", "Tobago", "Togo", "Tokelau", "Tonga", "Trinidad", "Tunisia", "Turkey", "Turkmenistan", "Turks Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "US Minor Outlying Islands", "Uzbekistan", "Vanuatu", "Vatican City State", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (US)", "Wallis", "Western Sahara", "Yemen", "Zambia", "Zimbabwe"];
-
-/***/ }),
-
-/***/ "./src/scripts/frontend/mobile_view.js":
-/*!*********************************************!*\
-  !*** ./src/scripts/frontend/mobile_view.js ***!
-  \*********************************************/
-/*! exports provided: adjust_mobile_view_about_us, adjust_mobile_view_destination, adjust_mobile_view_testimonials, adjust_mobile_view_transfers, adjust_mobile_view_contact_us, adjust_mobile_view_enquiry, adjust_mobile_view_faq, adjust_mobile_view_home, adjust_mobile_view_inbound_packages, adjust_mobile_view_inbound_package_category */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_about_us", function() { return adjust_mobile_view_about_us; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_destination", function() { return adjust_mobile_view_destination; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_testimonials", function() { return adjust_mobile_view_testimonials; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_transfers", function() { return adjust_mobile_view_transfers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_contact_us", function() { return adjust_mobile_view_contact_us; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_enquiry", function() { return adjust_mobile_view_enquiry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_faq", function() { return adjust_mobile_view_faq; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_home", function() { return adjust_mobile_view_home; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_inbound_packages", function() { return adjust_mobile_view_inbound_packages; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adjust_mobile_view_inbound_package_category", function() { return adjust_mobile_view_inbound_package_category; });
-
-function adjust_mobile_view_about_us(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        $('#row3').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-    //    $('#title-container').removeClass('title-container');
-    //    $('#title-container').attr('style','height:auto');
-    //    $('#title-container').attr('style','background-color:lightblue');
-    }
-    else{
-       $('#row1').addClass('row-center');
-       $('#row2').addClass('row-center');
-       $('#row3').addClass('row-center');
-       $('#row1').removeAttr('style'); 
-       $('#row2').removeAttr('style'); 
-       $('#row3').removeAttr('style'); 
-    }
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row3').removeClass('row-center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:20px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row3').addClass('row-center');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-            $('#row3').removeAttr('style'); 
-        }
-    })
-}
-
-
-
-function adjust_mobile_view_destination(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        // $('#dest_title').removeClass('title-css');
-        // $('#dest_title').attr('style','height:70px');
-        // $('#dest_title').attr('style','background-color:lightblue');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        // $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-    //    $('#title-container').removeClass('title-container');
-    //    $('#title-container').attr('style','height:auto');
-    //    $('#title-container').attr('style','background-color:lightblue');
-    }
-    else{
-       $('#row1').addClass('row-center');
-       $('#row2').addClass('row-center');
-    //    $('#dest_title').removeAttr('style');
-    //    $('#dest_title').addClass('title-css');
-    //    $('#row3').addClass('row-center');
-       $('#row1').removeAttr('style'); 
-       $('#row2').removeAttr('style'); 
-    //    $('#row3').removeAttr('style'); 
-    }
-    $(window).resize(function(){
-        if(this.innerWidth<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        // $('#dest_title').removeClass('title-css');
-        // $('#dest_title').attr('style','height:70px');
-        // $('#dest_title').attr('style','background-color:lightblue');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            // $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            // $('#dest_title').removeAttr('style');
-            // $('#dest_title').addClass('title-css');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-        }
-    })
-}
-
-
-
-
-function adjust_mobile_view_testimonials(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        $('#testimonial_carousal').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-     
-    }
-    else{
-       $('#row1').addClass('row-center');
-       $('#row2').addClass('row-center');
-       $('#row1').removeAttr('style'); 
-       $('#row2').removeAttr('style'); 
-       $('#testimonial_carousal').addClass('row-center');
-    //    $('#row3').removeAttr('style'); 
-    }
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        $('#testimonial_carousal').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            // $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-            $('#testimonial_carousal').addClass('row-center');
-        }
-    })
-}
-
-function adjust_mobile_view_transfers(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        $('#row3').removeClass('row-center');
-        $('#row4').removeClass('row-center');
-        $('#transfers_title').attr('style','background-color: blue;margin-top:0;text-align:center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row4').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#enquiry').attr('style','margin:0 0;margin-left:-70px');
-    }
-    else{
-       $('#row1').addClass('row-center');
-       $('#row2').addClass('row-center');
-       $('#row3').addClass('row-center');
-       $('#row4').addClass('row-center');
-       $('#row1').removeAttr('style'); 
-       $('#row2').removeAttr('style'); 
-       $('#row3').removeAttr('style'); 
-       $('#row4').removeAttr('style'); 
-       $('#transfers_title').attr('style','background-color: blue;margin-top:0');
-       $('#enquiry').attr('style','margin:30px 1px');
-    //    $('#testimonial_carousal').addClass('row-center');
-    //    $('#row3').removeAttr('style'); 
-    }
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row3').removeClass('row-center');
-            $('#row4').removeClass('row-center');
-            $('#transfers_title').attr('style','background-color: blue;margin-top:0;text-align:center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row4').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#enquiry').attr('style','margin:0 0;margin-left:-70px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row3').addClass('row-center');
-            $('#row4').addClass('row-center');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-            $('#row3').removeAttr('style'); 
-            $('#row4').removeAttr('style'); 
-            $('#transfers_title').attr('style','background-color: blue;margin-top:0;');
-            $('#enquiry').attr('style','margin:30px 1px');
-        }
-    })
-}
-
-
-
-function adjust_mobile_view_contact_us(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-        $('#row1').removeClass('row-center');
-        $('#row2').removeClass('row-center');
-        $('#row3').removeClass('row-center');
-        $('#gmap_canvas').removeClass('gmap_canvas');
-        $('#gmap_canvas').addClass('row-center');
-        $('iframe').attr('width:300px');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-    }
-    else{
-       $('#row1').addClass('row-center');
-       $('#row2').addClass('row-center');
-       $('#row3').addClass('row-center');
-       $('#gmap_canvas').addClass('gmap_canvas');
-       $('#gmap_canvas').removeClass('row-center');
-       $('#row1').removeAttr('style'); 
-       $('#row2').removeAttr('style'); 
-       $('#row3').removeAttr('style'); 
-    }
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row3').removeClass('row-center');
-            $('#gmap_canvas').removeClass('gmap_canvas');
-            $('#gmap_canvas').addClass('row-center');
-            $('iframe').attr('width:300px');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row3').addClass('row-center');
-            $('#gmap_canvas').addClass('gmap_canvas');
-            $('#gmap_canvas').removeClass('row-center');
-            $('iframe').attr('width:500px');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-            $('#row3').removeAttr('style'); 
-        }
-    })
-}
-
-
-
-function adjust_mobile_view_enquiry(){
-    var screen_size=$(window).width();
-    if(screen_size<900){
-        $('#row1').removeClass('row-center'); 
-        $('#row2').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-    }
-    else{
-        $('#row1').addClass('row-center'); 
-        $('#row2').addClass('row-center');
-        $('#row1').removeAttr('style'); 
-        $('#row2').removeAttr('style'); 
-    }
-
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row1').removeAttr('style'); 
-            $('#row2').removeAttr('style'); 
-        }
-    })
-
-}
-
-
-
-function adjust_mobile_view_faq(){
-    var scree_size=$(window).width();
-    if(scree_size<900){
-       for(var i=1;i<=15;i++){
-           var row_id="#row"+i;
-           $(row_id).removeClass('row-center');
-           $("#card-title").attr('style','background-color:green');
-           $(row_id).attr('style','margin-left:0;margin-right:0;margin-top:5px');
-        //    $("h5").removeClass('faq-height');
-       }
-    }
-    else{
-        for(var i=3;i<=15;i++){
-            var row_id="#row"+i;
-            $(row_id).addClass('row-center');
-            $("#row1").addClass('row-center');
-            $("#row2").addClass('row-center');
-            $("#card-title").attr('style','background-color:green');
-            $(row_id).removeAttr('style');
-            // $("h5").addClass('faq-height');
-        }
-    }
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            for(var i=1;i<=15;i++){
-                var row_id="#row"+i;
-                $(row_id).removeClass('row-center');
-                $("#card-title").attr('style','background-color:green');
-                $(row_id).attr('style','margin-left:0;margin-right:0;margin-top:10px');
-                // $("h5").removeClass('faq-height');
-            }
-        }
-        else{
-            for(var i=3;i<=15;i++){
-                var row_id="#row"+i;
-                $("#row1").addClass('row-center');
-                $("#row2").addClass('row-center');
-                $(row_id).addClass('row-center');
-                $("#card-title").attr('style','background-color:green')
-                $(row_id).removeAttr('style');
-                // $("h5").addClass('faq-height');
-            }
-        }
-    })
-}
-
-
-
-function adjust_mobile_view_home(){
-    var scree_size=$(window).width();
-    if(scree_size<920){
-      $('#news_containers').removeClass('news_container');
-      $('#news_containers').attr('style','margin-top:20px');
-      $('#dis_btn').attr('style','margin-top:-18px;margin-left:-50px');
-      $("#faq_btn").attr('style','margin-left:-45px');
-      $("#transfer_btn").attr('style','margin-left:-45px');
-      $("#testi_btn").attr('style','margin-left:-45px');
-    //   $("#faq_row").removeAttr('style');
-    //   $("#faq_row").attr('style','padding-left:296px;padding-right:0');
-      $("#faq_body").removeAttr('style');
-      $("#faq_body").attr('style','height:134px');
-
-    //   $("#transfer_row").removeAttr('style');
-    //   $("#transfer_row").attr('style','padding-left:296px;padding-right:0');
-    }
-    else{
-        $('#news_containers').addClass('news-container');
-        $('#news_containers').removeAttr('style');
-        $('#dis_btn').attr('style','margin-left:-15px;margin-top:-10px');
-        // $("#faq_row").removeAttr('style');
-        // $("#faq_row").attr('style','padding-left:275px;padding-right:0');
-        $("#faq_body").removeAttr('style');
-        $("#faq_body").attr('style','height:134px');
-        $("#faq_btn").attr('style','margin-left:0px');
-        $("#transfer_btn").attr('style','margin-left:0px');
-        $("#testi_btn").attr('style','margin-left:0px');
-        // $("#transfer_row").removeAttr('style');
-        // $("#transfer_row").attr('style','padding-left:275px;padding-right:0');
-    }
-    $(window).resize(function(){
-        //  this.alert(this.innerWidth)
-        if(this.innerWidth<920){
-            // $("#faq_row").removeAttr('style');
-            // $("#faq_row").attr('style','padding-left:296px;padding-right:0');
-            $("#faq_body").removeAttr('style');
-            $("#faq_body").attr('style','height:134px');
-            $("#faq_btn").attr('style','margin-left:-45px');
-            $('#dis_btn').attr('style','margin-top:-18px;margin-left:-50px');
-            $("#transfer_btn").attr('style','margin-left:-45px');
-            $("#testi_btn").attr('style','margin-left:-45px');
-            // $("#transfer_row").removeAttr('style');
-            // $("#transfer_row").attr('style','padding-left:296px;padding-right:0');
-        }
-        else{
-            // $("#faq_row").removeAttr('style');
-            // $("#faq_row").attr('style','padding-left:275px;padding-right:0');
-            $("#faq_body").removeAttr('style');
-            $("#faq_body").attr('style','height:134px');
-            $('#dis_btn').attr('style','margin-left:-15px;margin-top:-10px');
-            $("#faq_btn").attr('style','margin-left:0px');
-            $("#transfer_btn").attr('style','margin-left:0px');
-            $("#testi_btn").attr('style','margin-left:0px');
-            // $("#transfer_row").removeAttr('style');
-            // $("#transfer_row").attr('style','padding-left:275px;padding-right:0');
-        }
-    })
-}
-
-
-function adjust_mobile_view_inbound_packages(){
-    var screen_size=$(window).width();
-    if(screen_size<900){
-        $('#row1').removeClass('row-center'); 
-        $('#row2').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-    }
-    else{
-        $('#row1').addClass('row-center'); 
-        $('#row2').addClass('row-center');
-        $('#row1').attr('style','margin-top:20px'); 
-        $('#row2').attr('style','margin-top:20px'); 
-    }
-
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row1').attr('style','margin-top:20px'); 
-            $('#row2').attr('style','margin-top:20px'); 
-        }
-    })
-}
-
-
-function adjust_mobile_view_inbound_package_category(){
-    var screen_size=$(window).width();
-    if(screen_size<900){
-        $('#row1').removeClass('row-center'); 
-        $('#row2').removeClass('row-center');
-        $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-        $('#category').attr('style','margin-top:50px;width:20rem');
-    }
-    else{
-        $('#row1').addClass('row-center'); 
-        $('#row2').addClass('row-center');
-        $('#row1').attr('style','margin-top:20px'); 
-        $('#row2').attr('style','margin-top:20px');
-        $('#category').attr('style','width:20rem'); 
-    }
-
-    $(window).resize(function(){
-        // this.alert(this.innerWidth)
-        if(this.innerWidth<900){
-            $('#row1').removeClass('row-center');
-            $('#row2').removeClass('row-center');
-            $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#category').attr('style','margin-top:50px;width:20rem');
-        }
-        else{
-            $('#row1').addClass('row-center');
-            $('#row2').addClass('row-center');
-            $('#row1').attr('style','margin-top:20px'); 
-            $('#row2').attr('style','margin-top:20px'); 
-            $('#category').attr('style','width:20rem'); 
-        }
-    })
-}
-
-
 
 /***/ })
 

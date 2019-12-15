@@ -48,7 +48,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n    <div class=\"sidebar\" data-color=\"red\">\n        <app-sidebar></app-sidebar>\n    </div>\n    <div class=\"main-panel\">\n        <app-navbar></app-navbar>\n        <router-outlet></router-outlet>\n        <app-footer></app-footer>\n    </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" id=\"wrapper_admin\">\n    <div class=\"sidebar\" data-color=\"red\">\n        <app-sidebar></app-sidebar>\n    </div>\n    <div class=\"main-panel\">\n        <app-navbar></app-navbar>\n        <router-outlet></router-outlet>\n        <app-footer></app-footer>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -80,6 +80,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_frontend_disable_enable_search_bar_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../scripts/frontend/disable_enable_search_bar.js */ "./src/scripts/frontend/disable_enable_search_bar.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var perfect_scrollbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! perfect-scrollbar */ "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js");
+/* harmony import */ var angular_user_idle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular-user-idle */ "./node_modules/angular-user-idle/fesm5/angular-user-idle.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+
+
 
 
 
@@ -88,9 +92,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AdminLayoutComponent = /** @class */ (function () {
-    function AdminLayoutComponent(location, router) {
+    function AdminLayoutComponent(location, router, userIdle, auth) {
         this.location = location;
         this.router = router;
+        this.userIdle = userIdle;
+        this.auth = auth;
         this.yScrollStack = [];
     }
     AdminLayoutComponent.prototype.ngOnInit = function () {
@@ -131,9 +137,51 @@ var AdminLayoutComponent = /** @class */ (function () {
             var ps = new perfect_scrollbar__WEBPACK_IMPORTED_MODULE_6__["default"](elemMainPanel);
             ps = new perfect_scrollbar__WEBPACK_IMPORTED_MODULE_6__["default"](elemSidebar);
         }
+        this.userIdle.startWatching();
+        this.userIdle.onTimerStart().subscribe(function (count) {
+            // console.log(count);
+            var eventList = ['click', 'mouseover', 'keydown', 'DOMMouseScroll', 'mousewheel', 'mousedown', 'touchstart', 'touchmove', 'scroll', 'keyup'];
+            for (var _i = 0, eventList_1 = eventList; _i < eventList_1.length; _i++) {
+                var event_1 = eventList_1[_i];
+                document.getElementById('wrapper_admin').addEventListener(event_1, function () { return _this.userIdle.resetTimer(); });
+            }
+        });
+        this.userIdle.onTimeout().subscribe(function () {
+            _this.auth.auth.signOut();
+            localStorage.removeItem('login');
+            alert('Your Session has been Expired');
+            _this.router.navigate(['login']);
+            localStorage.setItem('session', 'timeout');
+        });
+        // this.userIdle.onTimerStart().subscribe(count =>{
+        //   console.log(count);
+        //   var eventList= ['click', 'mouseover','keydown','DOMMouseScroll','mousewheel','mousedown','touchstart','touchmove','scroll','keyup'];
+        //     for(let event of eventList) {
+        //     document.getElementById('wrapper_admin').addEventListener(event, () =>this.userIdle.resetTimer());
+        //     }
+        // })
+        // this.userIdle.onTimeout().subscribe(() =>{
+        //   this.auth.auth.signOut();
+        //   localStorage.removeItem('login');
+        //   alert('Your Session has been Expired');
+        //   this.router.navigate(['login']);
+        //   localStorage.setItem('session','timeout');
+        // });
     };
     AdminLayoutComponent.prototype.ngAfterViewInit = function () {
         this.runOnRouteChange();
+    };
+    AdminLayoutComponent.prototype.stop = function () {
+        this.userIdle.stopTimer();
+    };
+    AdminLayoutComponent.prototype.stopWatching = function () {
+        this.userIdle.stopWatching();
+    };
+    AdminLayoutComponent.prototype.startWatching = function () {
+        this.userIdle.startWatching();
+    };
+    AdminLayoutComponent.prototype.restart = function () {
+        this.userIdle.resetTimer();
     };
     AdminLayoutComponent.prototype.isMaps = function (path) {
         var titlee = this.location.prepareExternalUrl(this.location.path());
@@ -193,7 +241,7 @@ var AdminLayoutComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./admin-layout.component.html */ "./src/app/Layouts/admin-layout/admin-layout.component.html"),
             styles: [__webpack_require__(/*! ./admin-layout.component.scss */ "./src/app/Layouts/admin-layout/admin-layout.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], angular_user_idle__WEBPACK_IMPORTED_MODULE_7__["UserIdleService"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuth"]])
     ], AdminLayoutComponent);
     return AdminLayoutComponent;
 }());
@@ -265,7 +313,7 @@ var CustomerLayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"limiter\">\n\t<div class=\"container-login100\" style=\"background-image: url('assets/img/img-01.jpg');\">\n\t\t<div class=\"wrap-login100 p-t-190 p-b-30\">\n\t\t\t<form class=\"login100-form validate-form\" style=\"padding-top:0\">\n\t\t\t\t<div class=\"login100-form-avatar\">\n\t\t\t\t\t<img src=\"assets/img/ABR.png\" alt=\"ABR-LOGO\">\n\t\t\t\t</div>\n\t\t\t\t<span class=\"login100-form-title p-t-20 p-b-45\">\n\t\t\t\t\t\tABR TOURS\n                </span>\n          <div class=\"alert alert-danger\" style=\"display:none\" id=\"warning_message\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n            </button>\n            <span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i> Login Unsuccessfull</span>\n          </div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Username is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"text\" name=\"username\" placeholder=\"Username\" id=\"user_name\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-user\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Password is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"password\" name=\"pass\" placeholder=\"Password\" id=\"user_password\" (keyup.enter)=\"submit_form()\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-lock\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"container-login100-form-btn p-t-10\">\n\t\t\t\t\t\t<button class=\"login100-form-btn\" type=\"button\" (click)=\"submit_form()\">\n\t\t\t\t\t\t\tLogin\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<!-- <div class=\"text-center w-full p-t-25 p-b-230\">\n\t\t\t\t\t\t<a href=\"#\" class=\"txt1\">\n\t\t\t\t\t\t\tForgot Username / Password?\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t\t<!-- <div class=\"text-center w-full\">\n\t\t\t\t\t\t<a class=\"txt1\" href=\"#\">\n\t\t\t\t\t\t\tCreate new account\n\t\t\t\t\t\t\t<i class=\"fa fa-long-arrow-right\"></i>\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n<a href=\"/dashboard\" id=\"redirect_to_admin\" style=\"display: none;\"></a>"
+module.exports = "<div class=\"limiter\">\n\t<div class=\"container-login100\" style=\"background-image: url('assets/img/img-01.jpg');\">\n\t\t<div class=\"wrap-login100 p-t-190 p-b-30\">\n\t\t\t<form class=\"login100-form validate-form\" style=\"padding-top:0\">\n\t\t\t\t<div class=\"login100-form-avatar\">\n\t\t\t\t\t<img src=\"assets/img/ABR.png\" alt=\"ABR-LOGO\">\n\t\t\t\t</div>\n\t\t\t\t<span class=\"login100-form-title p-t-20 p-b-45\">\n\t\t\t\t\t\tABR TOURS\n                </span>\n          <div class=\"alert alert-danger\" style=\"display:none\" id=\"warning_message\">\n            <span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i> Login Unsuccessfull</span>\n\t\t  </div>\n\t\t  \n\t\t    <div class=\"alert alert-danger\" style=\"display:none\" id=\"warning_message\">\n\t\t\t\t<button type=\"button\" aria-hidden=\"true\" class=\"close\">\n\t\t\t\t  <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n\t\t\t\t</button>\n\t\t\t\t<span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i> Login Unsuccessfull</span>\n\t\t\t</div>\n\t\t\t\n\t\t\t<div class=\"alert alert-danger\" *ngIf=\"session\">\n\t\t\t\t<button type=\"button\" aria-hidden=\"true\" class=\"close\">\n\t\t\t\t\t<i class=\"now-ui-icons ui-1_simple-remove\"></i>\n\t\t\t\t</button>\n\t\t\t\t<span style=\"width:350px\"><i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i>Session Expired !</span>\n\t\t\t</div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Username is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"text\" name=\"username\" placeholder=\"Username\" id=\"user_name\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-user\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"wrap-input100 validate-input m-b-10\" data-validate = \"Password is required\">\n\t\t\t\t\t\t<input class=\"input100\" type=\"password\" name=\"pass\" placeholder=\"Password\" id=\"user_password\" (keyup.enter)=\"submit_form()\">\n\t\t\t\t\t\t<span class=\"focus-input100\"></span>\n\t\t\t\t\t\t<span class=\"symbol-input100\">\n\t\t\t\t\t\t\t<i class=\"fa fa-lock\"></i>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"container-login100-form-btn p-t-10\">\n\t\t\t\t\t\t<button class=\"login100-form-btn\" type=\"button\" (click)=\"submit_form()\">\n\t\t\t\t\t\t\tLogin\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<!-- <div class=\"text-center w-full p-t-25 p-b-230\">\n\t\t\t\t\t\t<a href=\"#\" class=\"txt1\">\n\t\t\t\t\t\t\tForgot Username / Password?\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t\t<!-- <div class=\"text-center w-full\">\n\t\t\t\t\t\t<a class=\"txt1\" href=\"#\">\n\t\t\t\t\t\t\tCreate new account\n\t\t\t\t\t\t\t<i class=\"fa fa-long-arrow-right\"></i>\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div> -->\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n<a href=\"/dashboard\" id=\"redirect_to_admin\" style=\"display: none;\"></a>"
 
 /***/ }),
 
@@ -310,8 +358,11 @@ var LoginComponent = /** @class */ (function () {
         this._db = _db;
         this._auth = _auth;
         this.service = service;
+        this.session = false;
     }
     LoginComponent.prototype.ngOnInit = function () {
+        if (localStorage.getItem('session') === 'timeout')
+            this.session = true;
         // this.form=new FormGroup({
         //   user_name:new FormControl('',[Validators.required,Validators.email]),
         //   user_password:new FormControl('',[Validators.required])
@@ -331,11 +382,13 @@ var LoginComponent = /** @class */ (function () {
                     if (doc.data().password == hash) {
                         // console.log("Hello")
                         localStorage.setItem('login', 'true');
+                        if (_this.session === true)
+                            localStorage.removeItem('session');
                         _this._auth.auth.signInWithEmailAndPassword(email, hash).then(function (value) {
                             // alert(value.user.metadata.lastSignInTime);
                             var message = "Last Login : " + value.user.metadata.lastSignInTime;
                             var email_message = {
-                                to: 'benuraab@gmail.com',
+                                to: 'abrceylon@gmail.com',
                                 from: 'developerbenura@gmail.com',
                                 subject: 'User Login monitored',
                                 text: message,
@@ -350,7 +403,7 @@ var LoginComponent = /** @class */ (function () {
                                     alert('Notification Sending Failed!');
                             });
                         }).catch(function (err) {
-                            alert("Error");
+                            alert(err);
                             // console.log(err);
                         });
                     }
@@ -523,6 +576,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_customer_navbar_customer_navbar_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/customer-navbar/customer-navbar.component */ "./src/app/components/customer-navbar/customer-navbar.component.ts");
 /* harmony import */ var _services_AuthGuardCustomer_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/AuthGuardCustomer.service */ "./src/app/services/AuthGuardCustomer.service.ts");
 /* harmony import */ var _components_customer_footer_customer_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/customer-footer/customer-footer.component */ "./src/app/components/customer-footer/customer-footer.component.ts");
+/* harmony import */ var angular_user_idle__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! angular-user-idle */ "./node_modules/angular-user-idle/fesm5/angular-user-idle.js");
+
 
 
 
@@ -571,6 +626,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"],
                 ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrModule"].forRoot(),
+                angular_user_idle__WEBPACK_IMPORTED_MODULE_23__["UserIdleModule"].forRoot({ idle: 1800, timeout: 120, ping: 120 }),
                 // admin.initializeApp(),
                 _angular_fire__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(firebaseConfig),
                 _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__["AngularFirestoreModule"].enablePersistence(),
@@ -584,10 +640,7 @@ var AppModule = /** @class */ (function () {
                 _Modules_Admin_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
                 _Modules_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_19__["PageNotFoundComponent"],
                 _components_customer_navbar_customer_navbar_component__WEBPACK_IMPORTED_MODULE_20__["CustomerNavbarComponent"],
-                _components_customer_footer_customer_footer_component__WEBPACK_IMPORTED_MODULE_22__["CustomerFooterComponent"]
-                // FilterDataComponent
-                // DestinationsComponent,
-                // CustomerHomeComponent
+                _components_customer_footer_customer_footer_component__WEBPACK_IMPORTED_MODULE_22__["CustomerFooterComponent"],
             ],
             providers: [_services_AuthGuardAdmin_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardAdminService"], _services_AuthGuardCustomer_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardCustomerService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
@@ -938,7 +991,7 @@ module.exports = "a:hover{\n    color:red;\n}\n/*# sourceMappingURL=data:applica
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n            <div class=\"navbar-toggle\">\n                <button type=\"button\" class=\"navbar-toggler\" (click)=\"sidebarToggle()\">\n                    <span class=\"navbar-toggler-bar bar1\"></span>\n                    <span class=\"navbar-toggler-bar bar2\"></span>\n                    <span class=\"navbar-toggler-bar bar3\"></span>\n                </button>\n            </div>\n            <a class=\"navbar-brand\" href=\"#pablo\"><b>{{getTitle()}}</b></a>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" (click)=\"collapse()\"\n          [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n          <form>\n            <div class=\"input-group no-border\">\n              <input type=\"text\" value=\"\" id=\"search_bar\" [(ngModel)]=\"search_text\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control\" placeholder=\"Search...\" (keyup.enter)=\"search()\">\n              <div class=\"input-group-append\">\n                <div class=\"input-group-text\">\n                  <a href=\"#\" (click)=\"search()\" id=\"search_text\"><i class=\"now-ui-icons ui-1_zoom-bold\"></i></a>\n                </div>\n              </div>\n            </div>\n          </form>\n          <ul class=\"navbar-nav\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"now-ui-icons media-2_sound-wave\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Stats</span>\n                </p>\n              </a>\n            </li>\n            <!-- <li class=\"nav-item\" ngbDropdown>\n              <a class=\"nav-link\" href=\"#\" id=\"dropdownBasic1\" ngbDropdownToggle>\n                <i class=\"now-ui-icons location_world\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                </p>\n              </a>\n              <div class=\"dropdown-menu dropdown-menu-right\" ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n                <a class=\"dropdown-item\" href=\"#\">Action</a>\n                <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n              </div>\n            </li> -->\n            <li class=\"nav-item\" ngbDropdown>\n              <a class=\"nav-link\" href=\"#pablo\" id=\"dropdownBasic2\" ngbDropdownToggle>\n                <i class=\"now-ui-icons users_single-02\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Account</span>\n                </p>\n              </a>\n              <div class=\"dropdown-menu dropdown-menu-right\" ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n                <a class=\"dropdown-item\" href=\"/settings\" id=\"user_profile\"><i class=\"fa fa-cog\" aria-hidden=\"true\"></i> Settings</a>\n                <a class=\"dropdown-item\" href=\"/login\" id=\"signout\" (click)=\"signout()\"><i class=\"fa fa-power-off\" aria-hidden=\"true\"></i> Sign Out</a>\n              </div>\n            </li>\n          </ul>\n        </div>\n    </div>\n</nav>\n"
+module.exports = "\n<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n            <div class=\"navbar-toggle\">\n                <button type=\"button\" class=\"navbar-toggler\" (click)=\"sidebarToggle()\">\n                    <span class=\"navbar-toggler-bar bar1\"></span>\n                    <span class=\"navbar-toggler-bar bar2\"></span>\n                    <span class=\"navbar-toggler-bar bar3\"></span>\n                </button>\n            </div>\n            <a class=\"navbar-brand\" href=\"#pablo\"><b>{{getTitle()}}</b></a>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" (click)=\"collapse()\"\n          [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n          <form>\n            <div class=\"input-group no-border\">\n              <input type=\"text\" value=\"\" id=\"search_bar\" [(ngModel)]=\"search_text\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control\" placeholder=\"Search...\" (keyup.enter)=\"search()\">\n              <div class=\"input-group-append\">\n                <div class=\"input-group-text\">\n                  <a href=\"#\" (click)=\"search()\" id=\"search_text\"><i class=\"now-ui-icons ui-1_zoom-bold\"></i></a>\n                </div>\n              </div>\n            </div>\n          </form>\n          <ul class=\"navbar-nav\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"/settings\">\n                <i class=\"now-ui-icons media-2_sound-wave\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Stats</span>\n                </p>\n              </a>\n            </li>\n            <!-- <li class=\"nav-item\" ngbDropdown>\n              <a class=\"nav-link\" href=\"#\" id=\"dropdownBasic1\" ngbDropdownToggle>\n                <i class=\"now-ui-icons location_world\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                </p>\n              </a>\n              <div class=\"dropdown-menu dropdown-menu-right\" ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n                <a class=\"dropdown-item\" href=\"#\">Action</a>\n                <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n              </div>\n            </li> -->\n            <li class=\"nav-item\" ngbDropdown>\n              <a class=\"nav-link\" href=\"#pablo\" id=\"dropdownBasic2\" ngbDropdownToggle>\n                <i class=\"now-ui-icons users_single-02\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Account</span>\n                </p>\n              </a>\n              <div class=\"dropdown-menu dropdown-menu-right\" ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n                <a class=\"dropdown-item\" href=\"/settings\" id=\"user_profile\"><i class=\"fa fa-cog\" aria-hidden=\"true\"></i> Settings</a>\n                <a class=\"dropdown-item\" href=\"/login\" id=\"signout\" (click)=\"signout()\"><i class=\"fa fa-power-off\" aria-hidden=\"true\"></i> Sign Out</a>\n              </div>\n            </li>\n          </ul>\n        </div>\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -1301,6 +1354,12 @@ var AuthGuardCustomerService = /** @class */ (function () {
         else if (path.indexOf("/transfer-contactUs") > -1)
             return true;
         else if (path === "/destinations")
+            return true;
+        else if (path === "/ticketing")
+            return true;
+        else if (path === "/travel-insurance")
+            return true;
+        else if (path === "/visa-handling")
             return true;
         else if (path.indexOf("/news-events") > -1)
             return true;
