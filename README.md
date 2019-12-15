@@ -3,14 +3,6 @@
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)
 
 
-**Example Pages**
-We wanted to fully display the power of this dashboard, so the kit comes packed with examples showing you how to use the components. Inside the product you will find:
-
-## Links:
-
-+ [Live Preview](https://creativetimofficial.github.io/now-ui-dashboard-angular)
-
-
 
 ### What's included
 
