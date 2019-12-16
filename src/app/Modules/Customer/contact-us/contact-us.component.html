@@ -25,7 +25,7 @@
         </p>
         <p><b>WHATSAPP</b></p>
         <p>
-          <i class="fa fa-fax" aria-hidden="true"></i>
+          <i class="fa fa-whatsapp" style="color:green" aria-hidden="true"></i>
           <span>
             (+49)  15739497155 
           </span>
@@ -64,7 +64,7 @@
       <div class="card-body">
         <form [formGroup]="form">
           <div class="row">
-            <div class="col-12 col-md-6" style="padding-left:0">
+            <div class="col-12 col-md-6" style="padding-left:2">
               <div class="form-group" [ngClass]="{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
                 <label>Subject</label>
                 <input type="text" id="subject" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
