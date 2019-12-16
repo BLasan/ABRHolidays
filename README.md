@@ -103,16 +103,6 @@ Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
 
 Social Media:
 
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
-
 [CHANGELOG]: ./CHANGELOG.md
 [LICENSE]: ./LICENSE
 [version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
