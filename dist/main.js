@@ -811,7 +811,7 @@ var ComponentsModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/contact-us\">\n            ABR HOLIDAYS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            ABOUT US\n          </a>\n        </li>\n        <li>\n          <a href=\"/home\">\n            BLOG\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174; Coded by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174;\n    </div>\n  </div>\n</footer>\n"
+module.exports = "\n<footer class=\"footer\" style=\"background-color:grey\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"/contact-us\">\n            ABR HOLIDAYS\n          </a>\n        </li>\n        <li>\n          <a href=\"/about-us\">\n            ABOUT US\n          </a>\n        </li>\n        <li>\n          <a href=\"/contact-us\">\n            CONTACT US\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174; Coded by\n      <a href=\"#\" target=\"_blank\">Fire</a>&#174;\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -1399,7 +1399,8 @@ __webpack_require__.r(__webpack_exports__);
 var SendMailService = /** @class */ (function () {
     function SendMailService(http) {
         this.http = http;
-        this._url = "http://ec2-34-227-161-44.compute-1.amazonaws.com:80";
+        // private _url="http://ec2-34-227-161-44.compute-1.amazonaws.com:80";
+        this._url = "http://localhost:4600";
     }
     SendMailService.prototype.sendEmail = function (email_message) {
         // SendGrid.MailService.setApiKey("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");

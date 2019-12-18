@@ -10,7 +10,7 @@
   <div class="col-md-4" *ngFor="let news_feed of news_feed_array;let i=index">
     <div class="card">
       <h4 class="card-title" style="padding-left:17px;padding-right:0;margin-top:10px"><b>{{news_feed.title}}</b></h4>
-      <img class="card-img-top" src="assets/img/bg.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{{news_feed.image_url}}" alt="Card image cap" height="250px">
         <div class="card-body" style="height:150px">
           <p class="card-text" >{{news_feeds[i]}}</p>
           <div class="row" style="margin-top:10px">
