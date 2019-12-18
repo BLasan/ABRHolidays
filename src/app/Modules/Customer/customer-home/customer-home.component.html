@@ -58,7 +58,7 @@
                         <div class="carousel-inner">
                             <!-- <div > -->
                             <div class="carousel-item active">
-                                <img src="assets/img/bg.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;" class="d-block w-100 card-img-top" alt="package">
+                                <img src="assets/img/bg.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package">
                                 <div class="carousel-caption">
                                     <h3 style="color:red;margin-top:-200px;"><b>WELCOME TO OUR PACKAGES</b></h3>
                                         <!-- <button type="button" class="btn btn-danger">Read More</button> -->
@@ -119,22 +119,22 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-12 news-container" id="news_containers">  
-                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel" *ngIf="news_feed_data_array.length>0">
+                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="assets/img/blank.png" style="height:80px;" class="d-block w-100" alt="...">
-                                <div class="carousel-caption" style="height:80px;">
+                                <img src="assets/img/bg.jpg" style="height:90px;padding:0 0 0 0" class="d-block w-100" alt="...">
+                                <div class="carousel-caption" style="height:80px">
                                     <!-- <h4 style="color:red;margin-top:0px;padding-left:0;"><b>News</b></h4> -->
-                                    <p id="news_feed_title" style="text-align:justify;margin-left:-60px;margin-top:-5px"><a href="/news-events/{{news_feed_data_array[0].id}}">{{news_feed_data_array[0].title}}</a></p>
-                                    <p id="news_feed-data" style="text-align:justify;margin-left:-60px;margin-top:-15px">{{news_feed_data_array[0].news}}</p>
+                                    <!-- <p id="news_feed_title" style="text-align:justify;margin-left:-65px;margin-top:2px"><a href="/news-events/{{news_feed_data_array[0].id}}">{{news_feed_data_array[0].title}}</a></p> -->
+                                    <h3 id="news_feed_data" style="text-align:justify;margin-left:30px;margin-top:20px"><b style="color:red">WELCOME TO THE NEWS FEED</b></h3>
                                 </div>
                             </div>
                             <div class="carousel-item" *ngFor="let news of news_feed_data_array;let index=index">
-                                <img src="assets/img/blank.png" class="d-block w-100" style="height:80px;" alt="...">
+                                <img src="assets/img/blank.png" class="d-block w-100" style="height:90px;padding:0 0 0 0" alt="...">
                                 <div class="carousel-caption" style="height:80px;">
                                     <!-- <h4 style="color:red;margin-top:0px;padding-left:0;"><b>News</b></h4> -->
-                                    <p id="news_feed_title1" style="text-align:justify;margin-left:-60px;margin-top:-5px"><a href="/news-events/{{news.id}}">{{news.title}}</a></p>
-                                    <p id="news_feed-data1" style="text-align:justify;margin-left:-60px;margin-top:-15px">{{news.news}}</p>
+                                    <p id="news_feed_title1" style="text-align:justify;margin-left:-60px;margin-top:2px"><a href="/news-events/{{news.id}}">{{news.title}}</a></p>
+                                    <p id="news_feed-data1" style="text-align:justify;margin-left:-60px;margin-top:-15px">{{news_feed_news[index]}}</p>
                                 </div>
                             </div>
                             <!-- <div class="carousel-item">

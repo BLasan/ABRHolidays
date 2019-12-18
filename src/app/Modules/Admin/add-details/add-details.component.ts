@@ -188,7 +188,7 @@ export class AddDetailsComponent implements OnInit {
      var date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
      var package_id=this.generate_package_id(package_name,category,today);
      this.upload_image(package_id);
-     let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date,views:0};
+     let docs={package_id:package_id,package_name:package_name,package_category:category,no_of_days:no_of_days,details:this.package_details_array,date:date,status:'Active'};
      this._db.collection("packages").doc(package_id).set(docs).then(function(doc){
        form.reset();
        remove_image.remove_image();

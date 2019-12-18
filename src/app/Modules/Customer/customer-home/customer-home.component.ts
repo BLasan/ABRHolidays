@@ -15,6 +15,7 @@ export class CustomerHomeComponent implements OnInit {
   news_feed_data_array:any=[];
   image_carousal_array:any=[];
   _init_image:any;
+  news_feed_news:any=[];
   first_image_url:String="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_package%2Fbg.jpg?alt=media&token=cd6eb9a2-ff27-464a-8194-e6c0def3046f";
   constructor(private _db:AngularFirestore) { }
 
@@ -65,6 +66,15 @@ export class CustomerHomeComponent implements OnInit {
         // console.log(doc.id, '=>', doc.data());
         if(doc.data().status==''){
           _this.news_feed_data_array.push(doc.data());
+          let string=doc.data().news.substr(0,281);
+          let lastIndex=string.lastIndexOf(".");
+          if(lastIndex<0){
+            lastIndex=string.lastIndexOf("");
+            if(lastIndex<0) lastIndex=string.lastIndexOf(",");
+          }
+          // console.log(lastIndex)
+          let substring=string.substr(0,lastIndex)+"  ........";
+          _this.news_feed_news.push(substring);
         }
       });
 

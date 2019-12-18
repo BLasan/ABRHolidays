@@ -366,10 +366,10 @@ export function adjust_mobile_view_home(){
     var scree_size=$(window).width();
     if(scree_size<766){
         $('#news_feed_card').removeAttr('style');
-        $('#news_feed_title').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
-        $('#news_feed_title1').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
-        $('#news_feed-data').attr('style','margin-top:-5px;margin-left:-60px');
-        $('#news_feed-data1').attr('style','margin-top:-5px;margin-left:-60px');
+        // $('#news_feed_title').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
+        $('#news_feed_title1').attr('style','margin-top:-3px;text-align:justify;margin-left:15px');
+        $('#news_feed-data').attr('style','margin-top:-5px;margin-left:15px');
+        $('#news_feed-data1').attr('style','margin-top:-5px;margin-left:15px');
     }
     if((scree_size<766 || scree_size>=814) && scree_size<920){
       $('#news_containers').removeClass('news_container');
@@ -389,7 +389,7 @@ export function adjust_mobile_view_home(){
     }
     else if(scree_size>766 && scree_size<814){
         $('#news_feed_card').attr('style','height:90px');
-        $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
+        // $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
         $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
         $('#news_feed-data').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
         $('#news_feed-data1').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
@@ -406,8 +406,8 @@ export function adjust_mobile_view_home(){
     }
     else{
         $('#news_feed_card').attr('style','height:90px');
-        $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
-        $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
+        // $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:2px');
+        $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:2px');
         $('#news_feed-data').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
         $('#news_feed-data1').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
         $('#news_containers').addClass('news-container');
@@ -428,7 +428,7 @@ export function adjust_mobile_view_home(){
     $(window).resize(function(){
         if(this.innerWidth<766){
             $('#news_feed_card').removeAttr('style');
-            $('#news_feed_title').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
+            // $('#news_feed_title').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
             $('#news_feed_title1').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
             $('#news_feed-data').attr('style','margin-top:-5px;margin-left:-60px');
         }
@@ -450,7 +450,7 @@ export function adjust_mobile_view_home(){
         }
         else if(this.innerWidth>766 && this.innerWidth<814){
             $('#news_feed_card').attr('style','height:90px');
-            $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
+            // $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
             $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
             $('#news_feed-data').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
             $('#news_feed-data1').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
@@ -467,8 +467,8 @@ export function adjust_mobile_view_home(){
         }
         else{
             $('#news_feed_card').attr('style','height:90px');
-            $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
-            $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:-5px');
+            // $('#news_feed_title').attr('style','text-align:justify;margin-left:-60px;margin-top:2px');
+            $('#news_feed_title1').attr('style','text-align:justify;margin-left:-60px;margin-top:2px');
             $('#news_feed-data').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
             $('#news_feed-data1').attr('style','text-align:justify;margin-left:-60px;margin-top:-15px');
             $('#news_containers').addClass('news-container');
@@ -662,6 +662,9 @@ export function adjust_mobile_view_insurance(){
 
 export function adjust_mobile_view_discoverWorld(){
     var screen_size=$(window).width();
+    if(window.navigator.userAgent.indexOf("Firefox")>0){
+        document.getElementById('ticketing').innerHTML="ABR Tours will handle all your airline reservations and ticketing.......";
+    }
     if(screen_size<900){
         $('#row1').removeClass('row-center'); 
         $('#row2').removeClass('row-center');

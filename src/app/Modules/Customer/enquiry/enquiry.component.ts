@@ -72,8 +72,11 @@ export class EnquiryComponent implements OnInit {
         refferal:new FormControl('',[Validators.required]),
         description:new FormControl('',[Validators.required])
       });
-      adjust_mobile_view_enquiry();
     });
+  }
+
+  ngAfterViewNInit(){
+    adjust_mobile_view_enquiry();
   }
 
   onSubmit(){
