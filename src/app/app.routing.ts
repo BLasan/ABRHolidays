@@ -12,6 +12,7 @@ import { CustomerLayoutComponent } from './Layouts/customer-layout/customer-layo
 import { AuthGuardCustomerService } from './services/AuthGuardCustomer.service';
 import { CustomerHomeComponent } from './Modules/Customer/customer-home/customer-home.component';
 
+
 const routes: Routes =[
   {
     path: '',
