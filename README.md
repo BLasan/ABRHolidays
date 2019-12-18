@@ -97,9 +97,4 @@ Now Ui Dashboard
 ├── tsconfig.json
 ├── tslint.json
 └── typings
-```
-
-Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
-
-Social Media:
 
