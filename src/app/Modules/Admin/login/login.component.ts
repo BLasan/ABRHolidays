@@ -53,14 +53,15 @@ export class LoginComponent implements OnInit {
             html: '<strong>'+message+'</strong>'+'<p>'+"Take necessary actions if this is not you."+'</p>',
           }
          
-          _this.service.sendEmail(email_message).subscribe(data=>{
-            _this.data=data;
-            // console.log(_this.data.success)
-            if(_this.data.success)
-            redirect_to_admin();
-            else
-            alert('Notification Sending Failed!')
-          });
+          // _this.service.sendEmail(email_message).subscribe(data=>{
+          //   _this.data=data;
+          //   // console.log(_this.data.success)
+          //   if(_this.data.success)
+          //   redirect_to_admin();
+          //   else
+          //   alert('Notification Sending Failed!')
+          // });
+          redirect_to_admin();
     
         }).catch(err=>{
           alert(err);
