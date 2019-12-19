@@ -18,8 +18,8 @@ export class SendMailService {
       //   throw err;
       // })
       //console.log(email_message.to)
-      //let headers=new HttpHeaders({'Content-Type':'application/json','Access-Control-Allow-Origin':'*',"Access-Control-Allow-Headers":["Origin,X-Requested-With, Content-Type, Accept"]});
-     return this.http.post(`${this._url}/send_mail`,[email_message.to,email_message.from,email_message.subject,email_message.text,email_message.html]);
+     let headers=new HttpHeaders({'Content-Type':'application/json','Access-Control-Allow-Origin':'*'});
+     return this.http.post(`${this._url}/send_mail`,[email_message.to,email_message.from,email_message.subject,email_message.text,email_message.html],{headers:headers});
   }
 
   
