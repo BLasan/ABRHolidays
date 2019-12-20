@@ -47,7 +47,7 @@ import { TicketingComponent } from './Modules/Customer/ticketing/ticketing.compo
 import { VisaHandlingComponent } from './Modules/Customer/visa-handling/visa-handling.component';
 import { InsuranceComponent } from './Modules/Customer/insurance/insurance.component';
 import { UserIdleModule } from 'angular-user-idle';
-import {enableProdMode} from '@angular/core';
+
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
   authDomain: "hotel-management-5b661.firebaseapp.com",
@@ -58,8 +58,6 @@ const firebaseConfig = {
   appId: "1:337942867698:web:760aa0a20effceef066a6b",
   measurementId: "G-VGP3TWJ9K7"
 };
-
-enableProdMode();
 
 @NgModule({
   imports: [
