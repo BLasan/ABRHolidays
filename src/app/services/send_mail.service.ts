@@ -21,6 +21,4 @@ export class SendMailService {
      let headers=new HttpHeaders({'Content-Type':'application/json','Access-Control-Allow-Origin':'*'});
      return this.http.post(`${this._url}/send_mail`,[email_message.to,email_message.from,email_message.subject,email_message.text,email_message.html],{headers:headers});
   }
-
-  
 }
