@@ -394,14 +394,15 @@ var LoginComponent = /** @class */ (function () {
                                 text: message,
                                 html: '<strong>' + message + '</strong>' + '<p>' + "Take necessary actions if this is not you." + '</p>',
                             };
-                            _this.service.sendEmail(email_message).subscribe(function (data) {
-                                _this.data = data;
-                                // console.log(_this.data.success)
-                                if (_this.data.success)
-                                    Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["redirect_to_admin"])();
-                                else
-                                    alert('Notification Sending Failed!');
-                            });
+                            // _this.service.sendEmail(email_message).subscribe(data=>{
+                            //   _this.data=data;
+                            //   // console.log(_this.data.success)
+                            //   if(_this.data.success)
+                            //   redirect_to_admin();
+                            //   else
+                            //   alert('Notification Sending Failed!')
+                            // });
+                            Object(_scripts_frontend_redirect_to_dashboard__WEBPACK_IMPORTED_MODULE_4__["redirect_to_admin"])();
                         }).catch(function (err) {
                             alert(err);
                             // console.log(err);
@@ -601,6 +602,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var firebaseConfig = {
     apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",
     authDomain: "hotel-management-5b661.firebaseapp.com",
@@ -611,6 +613,7 @@ var firebaseConfig = {
     appId: "1:337942867698:web:760aa0a20effceef066a6b",
     measurementId: "G-VGP3TWJ9K7"
 };
+Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["enableProdMode"])();
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1194,7 +1197,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"logo\" style=\"background-color:grey;\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/ABR.png?alt=media&token=647fc424-f023-4ed5-810f-93449e53ebbe\"/>\n      </div>\n    </a>\n    <a href=\"#\" class=\"simple-text logo-normal\">\n        <b>Hotel</b>\n    </a>\n</div>\n<div class=\"sidebar-wrapper\" style=\"background-color:grey;\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a [routerLink]=\"[menuItem.path]\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p><b style=\"color:black\">{{menuItem.title}}</b></p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
+module.exports = "\n<div class=\"logo\" style=\"background-color:grey;\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/ABR.png?alt=media&token=647fc424-f023-4ed5-810f-93449e53ebbe\"/>\n      </div>\n    </a>\n    <a href=\"#\" class=\"simple-text logo-normal\">\n        <b>ABR HOLIDAYS</b>\n    </a>\n</div>\n<div class=\"sidebar-wrapper\" style=\"background-color:grey;\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a [routerLink]=\"[menuItem.path]\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p><b style=\"color:black\">{{menuItem.title}}</b></p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
 
 /***/ }),
 
@@ -1397,10 +1400,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SendMailService = /** @class */ (function () {
+    // private _url="http://localhost:4600"
     function SendMailService(http) {
         this.http = http;
-        // private _url="http://ec2-34-227-161-44.compute-1.amazonaws.com:80";
-        this._url = "http://localhost:4600";
+        this._url = "https://76011fbd.ngrok.io";
     }
     SendMailService.prototype.sendEmail = function (email_message) {
         // SendGrid.MailService.setApiKey("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");
@@ -1410,8 +1413,8 @@ var SendMailService = /** @class */ (function () {
         //   throw err;
         // })
         //console.log(email_message.to)
-        //let headers=new HttpHeaders({'Content-Type':'application/json','Access-Control-Allow-Origin':'*',"Access-Control-Allow-Headers":["Origin,X-Requested-With, Content-Type, Accept"]});
-        return this.http.post(this._url + "/send_mail", [email_message.to, email_message.from, email_message.subject, email_message.text, email_message.html]);
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+        return this.http.post(this._url + "/send_mail", [email_message.to, email_message.from, email_message.subject, email_message.text, email_message.html], { headers: headers });
     };
     SendMailService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
