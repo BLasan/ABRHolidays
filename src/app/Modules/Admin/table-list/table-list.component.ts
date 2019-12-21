@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { disable_delete_package} from '../../../../scripts/frontend/disable_href_links';
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-table-list',
   templateUrl: './table-list.component.html',
@@ -11,7 +12,7 @@ export class TableListComponent implements OnInit {
 
   package_data:any=[];
   filtered_data:any=[];
-  constructor(private _db:AngularFirestore) { }
+  constructor(private _db:AngularFirestore,private auth:AngularFireAuth) { }
 
   ngOnInit() {
     enable_search_bar();

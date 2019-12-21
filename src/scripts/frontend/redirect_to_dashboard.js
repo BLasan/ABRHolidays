@@ -3,5 +3,5 @@ export function redirect_to_admin(){
 }
 
 export function warning_message(){
-    $('#warning_message').removeAttr('style')
+    $('#warning_message').removeAttr('style');
 }

@@ -161,9 +161,10 @@ export class NavbarComponent implements OnInit {
 
     signout(){
       // alert(this.auth.auth.currentUser)
-      // alert(this.auth.auth.currentUser.displayName)
+     // alert(this.auth.auth.currentUser.email)
       this.auth.auth.signOut();
       localStorage.removeItem('login');
+      localStorage.removeItem('token')
     }
 
     search(){

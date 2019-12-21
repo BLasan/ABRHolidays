@@ -37,12 +37,16 @@ export class LoginComponent implements OnInit {
     var docRef=this._db.firestore.collection('admin').doc(email)
     docRef.get().then(async function(doc){
       // console.log(doc.data().password===hash && doc.data().active)
-      if(doc.data().password==hash){
+      if(doc.data().password===hash && doc.data().active===true){
         // console.log("Hello")
         localStorage.setItem('login','true');
         if(_this.session===true)
         localStorage.removeItem('session')
         _this._auth.auth.signInWithEmailAndPassword(email,hash).then(value=>{
+          value.user.getIdToken().then(token=>{
+            localStorage.setItem('token',token);
+            //console.log(token)
+          });
           // alert(value.user.metadata.lastSignInTime);
           const message="Last Login : "+value.user.metadata.lastSignInTime;
           const email_message={

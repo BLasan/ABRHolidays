@@ -8,6 +8,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import {file_array} from '../../../../scripts/frontend/image_uploader';
 import { parse } from 'url';
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-dashboard',
@@ -67,12 +68,16 @@ export class DashboardComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor(private storage:AngularFireStorage,private _db:AngularFirestore) { }
+  constructor(private storage:AngularFireStorage,private _db:AngularFirestore,private auth:AngularFireAuth) { }
 
   ngOnInit() {
     disable_image_slider();
     disable_search_bar();
-    // localStorage.setItem('remove_count',this.remove_count.toString())
+    // alert(localStorage.getItem('token'));
+    // this.auth.auth.onAuthStateChanged((user)=>{
+    //   if(user) alert("Success"+user.email);
+    //   else alert("Unsuccess"+user)
+    // })
     this.chartColor = "#FFFFFF";
     this.canvas = document.getElementById("bigDashboardChart");
     this.ctx = this.canvas.getContext("2d");

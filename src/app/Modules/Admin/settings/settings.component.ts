@@ -35,7 +35,7 @@ export class SettingsComponent implements OnInit {
     let password=(<HTMLInputElement>document.getElementById('new_password')).value;
     var hash= CryptoJS.SHA256(password).toString();
     // console.log(hash);
-    let docs={user_email:this.admin_user_name,password:hash,active:true};
+    let docs={user_email:email,password:hash,active:true};
     this._db.collection('admin').doc(email).set(docs).then(function(docs){
       // console.log("Done");
       _this._db.collection('admin').doc(_this.admin_user_name).update({active:false});
@@ -125,18 +125,35 @@ export class SettingsComponent implements OnInit {
 
   changeCredentials(email,hash){
     var _this=this;
-    this.auth.auth.currentUser.updateEmail(email).then(()=>{
-      _this.auth.auth.currentUser.updatePassword(hash).then(()=>{
-        _this.auth.auth.signOut();
-        _this.router.navigate(['/login']);
-      }).catch(err=>{
-        alert("Error");
-        // console.log(err);
-      })
-    }).catch(err=>{
-      alert("Error");
-      // console.log(err);
+  //  console.log(this.auth.auth.currentUser);
+    this.auth.auth.onAuthStateChanged((user)=>{
+      if(user){
+        user.updateEmail(email).then(()=>{
+          user.updatePassword(hash).then(()=>{
+            localStorage.removeItem('token');
+            this.auth.auth.signOut();
+            this.router.navigate(['/login']);
+          }).catch(err=>{
+            console.log(err)
+          })
+        }).catch(err=>{
+          console.log(err);
+        })
+      }
     })
+
+    // this.auth.auth.currentUser.updateEmail(email).then(()=>{
+    //   _this.auth.auth.currentUser.updatePassword(hash).then(()=>{
+    //     _this.auth.auth.signOut();
+    //     _this.router.navigate(['/login']);
+    //   }).catch(err=>{
+    //     alert("Error");
+    //     // console.log(err);
+    //   })
+    // }).catch(err=>{
+    //   alert("Error");
+    //   // console.log(err);
+    // })
   
     this.auth.auth.currentUser.updateProfile({displayName:'Ravindu'});
     // console.log(this.auth.auth.currentUser);
