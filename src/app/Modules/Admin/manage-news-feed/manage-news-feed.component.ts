@@ -55,7 +55,7 @@ export class ManageNewsFeedComponent implements OnInit {
     var _this=this;
     storageRef.put(this.file_list.item(0)).then(function(snapshot){
       storageRef.getDownloadURL().subscribe(url=>{
-      let news_details={news:news,date:date,title:title,id:id,status:"",image_url:url};
+      let news_details={news:news,date:date,title:title,id:id,status:"Active",image_url:url};
 
       _this._db.collection('news_feed').doc(id).set(news_details).then(function(docs){
           console.log("Done");

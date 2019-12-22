@@ -85,7 +85,7 @@ export class CustomerHomeComponent implements OnInit {
 
       snapshot.forEach(doc => {
         // console.log(doc.id, '=>', doc.data());
-        if(doc.data().status=='' && doc.id!==_this._init_news_id){
+        if(doc.data().status!=='deleted' && doc.id!==_this._init_news_id){
           _this.news_feed_data_array.push(doc.data());
           let string=doc.data().news.substr(0,281);
           let lastIndex=string.lastIndexOf(".");
@@ -124,6 +124,8 @@ export class CustomerHomeComponent implements OnInit {
           // console.log(doc.data().fileUrl)
           _this.image_carousal_array.push(doc.data());
         }
+        else
+        _this._init_image=doc.data().fileUrl;
       });
 
       }).catch(err => {
