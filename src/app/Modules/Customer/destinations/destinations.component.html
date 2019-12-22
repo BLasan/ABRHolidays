@@ -5,15 +5,45 @@
 </div> 
 
 <div class="row row-center" id="row2">
-  <div class="col-md-12">
+  <div class="col-md-4 col-12" *ngFor="let destinations of destination_array">
     <div class="card">
+      <div class="card-title"><h4 style="color:white;margin-top:0;padding-left:10px" [style.background-color]="destinations.color"><b>{{destinations.title}}</b></h4></div>
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <p class="card-text">{{destinations.description}}</p>
+        <a href="#" class="card-link"><b>READ MORE</b></a>
     </div>
     </div>
   </div>
+</div>
+
+<div class="row row-center" *ngIf="destination_array.length>0">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div>
+    <ul>
+      <li>
+        <a href="destinations/{{page_no-1}}" *ngIf="page_no!=1">«</a>
+      </li>
+      <li class="active">
+        <a href="destinations/1">1</a>
+      </li>
+      <li>
+        <a href="destinations/2">2</a>
+      </li>
+      <li>
+        <a href="destinations/3">3</a>
+      </li>
+      <li>
+        <a href="destinations/4">4</a>
+      </li>
+      <li>
+        <a href="destinations/5">5</a>
+      </li>
+      <li>
+        <a href="destinations/{{page_no+1}}">»</a>
+      </li>
+    </ul>  
+  </div>              
 </div>
 
 

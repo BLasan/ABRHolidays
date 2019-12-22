@@ -32,7 +32,7 @@ export const CustomerLayoutRoutes: Routes = [
     { path:'package-category/:category',component:PackageCategoryComponent},
     { path: 'transfers',component:TransfersComponent},
     { path: 'testimonials',component:TestimonialsComponent},
-    { path:'destinations',component:DestinationsComponent},
+    { path:'destinations/:page_no',component:DestinationsComponent},
     { path: 'enquiry/:package' ,component:EnquiryComponent},
     { path: 'transfer-contactUs/:transfers' , component:TransferContactUsComponent}
 ];

@@ -2,26 +2,24 @@
     <div id="carouselExampleControls_home" class="carousel slide" data-ride="carousel" style="margin-top:-20px;">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://firebasestorage.googleapis.com/v0/b/hotel-management-5b661.appspot.com/o/image_carousal%2Fimage0?alt=media&token=43f566ce-0750-499a-a87c-de91bccba93e" style="height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;" class="d-block w-100" alt="image">
-            </div>
+                <img src="{{_init_image}}" style="height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;" class="d-block w-100" alt="image">
+            </div> 
             <div class="carousel-item" *ngFor="let images of image_carousal_array">
                 <img [src]="images.fileUrl" class="d-block w-100" style="height:500px;padding-left:0;padding-right:0;" alt="...">
-            </div>           
+            </div> 
+            <a class="carousel-control-prev" href="#carouselExampleControls_home" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls_home" role="button" data-slide="next" id="carousal_home">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>          
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls_home" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls_home" role="button" data-slide="next" id="carousal_home">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+    </div> 
 
 
-
-
-<div class="row row-center" *ngIf="image_carousal_array.length==0">
+ <div class="row row-center" *ngIf="image_carousal_array.length==0">
     <div class="col-md-4 col-sm-4"></div>
     <div class="col-md-4 col-sm-4" style="padding-left:120px">
         <div class="loader"></div>
@@ -39,21 +37,21 @@
 
 <div class="row row-center" style="margin-top:20px">
     <div class="col-md-8 col-sm-12">
-        <div class="card" style="background-color:#3498db!important">
+        <div class="card" style="background-color:#3498db!important" >
             <h4 class="card-title" style="padding-left:50px;color:white"><b>INBOUND PACKAGES</b></h4>
             <div class="card-body card-img-top">
                 <div class="row" style="margin-top:-13px">
-                    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="margin-bottom:-15px;">
+                    <div id="carouselExampleControlsInbound" class="carousel slide" data-ride="carousel" style="margin-bottom:-15px;">
                         <div class="carousel-inner">
-                            <!-- <div > -->
                             <div class="carousel-item active">
-                                <img src="assets/img/bg.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package">
+                                <img src="{{_init_package_image}}" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package">
                                 <div class="carousel-caption">
-                                    <h3 style="color:red;margin-top:-200px;"><b>WELCOME TO OUR PACKAGES</b></h3>
-                                        <!-- <button type="button" class="btn btn-danger">Read More</button> -->
+                                    <img src="https://www.ceylontours.com/images/day.png">
+                                    <h3 style="color:red"><b>{{_init_day_count}} Days</b></h3>
+                                    <a href="inbound-packages/{{_init_package_id}}" class="btn btn-danger">Read More</a>
                                 </div>
                             </div>
-                            <div class="carousel-item" *ngFor="let package_data of package_data;let index=index">
+                            <div class="carousel-item" *ngFor="let package_data of package_data">
                                 <img src="{{package_data.image_url}}" class="d-block" alt="{{package_data.package_name}}" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px">
                                 <div class="carousel-caption">
                                     <img src="https://www.ceylontours.com/images/day.png">
@@ -63,11 +61,11 @@
                             </div>           
                         </div>
                         <div *ngFor="let package_data of package_data;let index=index">
-                            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselExampleControlsInbound" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carouselExampleControlsInbound" role="button" data-slide="next" id="package_next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -95,7 +93,7 @@
     </div>
 </div>     
 
-<div class="row row-center">
+ <div class="row row-center">
     <div class="col-md-12 col-sm-12">
         <div class="card" id="news_feed_card" style="height:90px;">
             <div class="row row-center">
@@ -111,15 +109,15 @@
                     <div id="carouselExampleControls6" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="assets/img/bg.jpg" style="height:90px;padding:0 0 0 0" class="d-block w-100" alt="...">
-                                <div class="carousel-caption" style="height:80px">
-                                    <h3 id="news_feed_data" style="text-align:justify;margin-left:30px;margin-top:20px"><b style="color:red">WELCOME TO THE NEWS FEED</b></h3>
+                                <img src="assets/img/blank.png" style="height:80px;" class="d-block w-100" alt="...">
+                                <div class="carousel-caption" style="height:80px;">
+                                    <p id="news_feed_title" style="text-align:justify;margin-left:-60px;margin-top:2px"><a href="/news-events/{{_init_news_id}}">{{_init_news_title}}</a></p>
+                                    <p id="news_feed-data" style="text-align:justify;margin-left:-60px;margin-top:-15px">{{_init_news}}</p>
                                 </div>
                             </div>
                             <div class="carousel-item" *ngFor="let news of news_feed_data_array;let index=index">
                                 <img src="assets/img/blank.png" class="d-block w-100" style="height:90px;padding:0 0 0 0" alt="...">
                                 <div class="carousel-caption" style="height:80px;">
-                                    
                                     <p id="news_feed_title1" style="text-align:justify;margin-left:-60px;margin-top:2px"><a href="/news-events/{{news.id}}">{{news.title}}</a></p>
                                     <p id="news_feed-data1" style="text-align:justify;margin-left:-60px;margin-top:-15px">{{news_feed_news[index]}}</p>
                                 </div>
@@ -136,7 +134,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 
 <div class="row row-center">
     <div class="col-md-4 col-sm-12">
@@ -162,7 +160,6 @@
                 <h4 class="card-title" style="margin-top:-13px;color:white"><b>TRANSFERS</b></h4>
                 <p class="card-text" style="font-size:16px;color:white;margin-top:-5px">“Let us take you there, where you can leave your footprints”</p>
                 <div class="row" id="transfer_row" style="margin-top:-27px;padding-right:6px">
-                    <!-- <a href="/transfers" class="btn btn-primary" style="margin-top:-18px;"><b>READ MORE</b></a> -->
                     <div class="col-4 col-md-4"></div>
                     <div class="col-4 col-md-4"></div>
                     <div class="col-4 col-md-4">

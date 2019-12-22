@@ -39,7 +39,17 @@ export class ManageNewsFeedComponent implements OnInit {
     let today=new Date();
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     // console.log(date);
+    let string=news.substr(0,220);
     let id=this.generate_news_feed_id(date,title);
+    let lastIndex=string.lastIndexOf(".");
+    if(lastIndex<0){
+      lastIndex=string.lastIndexOf("");
+      if(lastIndex<0) lastIndex=string.lastIndexOf(",");
+    }
+    let substring=string.substr(0,lastIndex)+"  ........";
+    localStorage.setItem('news_title',title);
+    localStorage.setItem('news',substring);
+    localStorage.setItem('news_id',id);
     var imageId="news_feed/image"+today.getTime();
     let storageRef=this.storage.ref(imageId);
     var _this=this;
@@ -128,7 +138,17 @@ export class ManageNewsFeedComponent implements OnInit {
   edit_news_feed(){
     let id=this.news_feed_id;
     let news=(<HTMLInputElement>document.getElementById('edit_news')).value;
-    let title=(<HTMLInputElement>document.getElementById('edit_title')).value;
+    let title=(<HTMLInputElement>document.getElementById('edit_title')).value;   
+    let string=news.substr(0,221);
+    let lastIndex=string.lastIndexOf(".");
+    if(lastIndex<0){
+      lastIndex=string.lastIndexOf("");
+      if(lastIndex<0) lastIndex=string.lastIndexOf(",");
+    }
+    let substring=string.substr(0,lastIndex)+"  ........";
+    localStorage.setItem('news_title',title);
+    localStorage.setItem('news',substring);
+    localStorage.setItem('news_id',id);
     let today=new Date();
     let date=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+(today.getDate());
     let obj={news:news,date:date,title:title};

@@ -88,6 +88,7 @@ export class AddDetailsComponent implements OnInit {
         // let fileSize=snapshot.metadata.size;
         // let fileUrl=url;
         // let fileTimeCreated=snapshot.metadata.timeCreated;
+        localStorage.setItem('package_init',url);
         database.collection('packages').doc(id).update({image_url:url});
         });
       });
@@ -110,6 +111,7 @@ export class AddDetailsComponent implements OnInit {
     let category=(<HTMLInputElement>document.getElementById("category")).value;
    //  console.log(category)
     let no_of_days=this.day_count;
+    localStorage.setItem('day_count',no_of_days.toString());
  
     for(var i=0;i<this.day_count;i++){
       var day_id="day"+i;
@@ -228,6 +230,7 @@ export class AddDetailsComponent implements OnInit {
 
   generate_package_id(package_name:string,package_category:string,date:any){
     var hash= CryptoJS.SHA256(package_category+"@"+package_name+"@"+date).toString();
+    localStorage.setItem('package_id',hash);
     return hash;
   }
 

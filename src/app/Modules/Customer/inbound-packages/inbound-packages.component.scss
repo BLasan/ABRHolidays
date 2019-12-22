@@ -1,23 +1,27 @@
+// h2{
+//     color: black; 
+//    //  font-family: "Courier";
+//    //  font-size: 20px;
+//     margin: 0 auto;
+//     text-align: left;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     width: 11em;
+//     animation: type 4s steps(60, end); 
+//     font-family: sans-serif;
+//    }
+     
+//    h2:nth-child(2){
+//        animation: type2 8s steps(60, end);
+//    }
+     
+//    span{
+//      animation: blink 1s infinite;
+//    }
+
 h2{
-    color: black; 
-   //  font-family: "Courier";
-   //  font-size: 20px;
-    margin: 0 auto;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 11em;
-    animation: type 4s steps(60, end); 
     font-family: sans-serif;
-   }
-     
-   h2:nth-child(2){
-       animation: type2 8s steps(60, end);
-   }
-     
-   span{
-     animation: blink 1s infinite;
-   }
+}
      
    @keyframes type{ 
        from { width: 0; } 
