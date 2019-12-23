@@ -588,7 +588,7 @@ export function adjust_mobile_view_inbound_package_category(){
         $('#category').attr('style','width:20rem'); 
         $('#image_pkg').addClass('img_class');
         $('#image_pkg').removeAttr('style');
-        $('#pkg_loader').attr('style','padding-left:120px')
+        $('#pkg_loader').attr('style','padding-left:120px');
     }
 
     $(window).resize(function(){
