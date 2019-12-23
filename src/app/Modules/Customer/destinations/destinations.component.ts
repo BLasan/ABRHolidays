@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DestinationsComponent implements OnInit {
 
-  destination_array:Array<{title:string,description:string,color:string,image:string}>=[];
+  destination_array:Array<{title:string,description:string,color:string,image:string,id:string}>=[];
   description_text:string="";
   page_no:any;
   constructor(private route:ActivatedRoute) { }
@@ -55,7 +55,7 @@ export class DestinationsComponent implements OnInit {
       // }
       // let substring=string.substr(0,lastIndex)+"  ........";
       this.description_text+=".................";
-      var obj={title:destinations[i].title,description:this.description_text,color:destinations[i].color,image:destinations[i].image};
+      var obj={title:destinations[i].title,description:this.description_text,color:destinations[i].color,image:destinations[i].image,id:destinations[i].id};
       this.destination_array.push(obj);
       this.description_text="";
     }

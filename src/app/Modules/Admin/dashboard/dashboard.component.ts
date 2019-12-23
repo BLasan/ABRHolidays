@@ -431,6 +431,18 @@ export class DashboardComponent implements OnInit {
    
   }
 
+  deletePrevious(){
+    for(var i=0;i<10;i++){
+      var image_path="/image_carousal/image"+i;
+      this.storage.storage.ref().child(image_path).delete().then(()=>{
+       // console.log("Deleted");
+      }).catch(err=>{
+        //console.log(err)
+      })
+    }
+    //this.storage.storage.refFromURL('image_carousal').delete();
+  }
+
   get_files(event){
   //  console.log(event.target.files);
    this.file_list=event.target.files;
@@ -439,6 +451,7 @@ export class DashboardComponent implements OnInit {
   }
 
   upload_images(){
+    this.deletePrevious();
     let database=this._db;
     let this_function=this;
     let count=0;

@@ -1,9 +1,17 @@
-<div *ngIf="package_data.length==0">
+<div *ngIf="package_data.length==0 && isLoaded">
   <h1 style="color:red"><b>NO PACKAGES FOUND</b></h1>
 </div>
 
+<div class="row row-center" style="margin-top:20px" *ngIf="!isLoaded">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" id="pkg_loader" style="padding-left:120px">
+        <div class="loader"></div>
+        <span style="color:red"><b>LOADING PACKAGES</b></span>
+    </div>
+  </div>
 
-<div *ngIf="package_data.length>0">
+
+<div *ngIf="package_data.length>0 && isLoaded">
   <!-- <div class="row row-center" id="row1">
     <div class="col-md-12" style="height:60px;background-color:green;">
       <h3 class="card-title" style="margin:auto;padding:10px;" *ngFor="let package_data of package_data">{{package_data.package_category}}</h3>
@@ -14,9 +22,9 @@
     <div class="col-12 col-md-8">
       <div class="row row-center"  *ngFor="let package_data of package_data" style="margin-top:10px;margin-bottom:20px">
           <div class="col-md-5">
-              <img src="{{package_data.image_url}}" alt="Card image cap">
+              <img src="{{package_data.image_url}}" class="img_class" alt="Card image cap" id="image_pkg">
           </div>
-            <div class="col-md-7 padding-right">
+            <div class="col-12 col-md-7 padding-right">
               <div class="rectangle">
                 <h3 style="background-color: blue;margin-top:0px"><b>{{package_data.package_name}}</b></h3>
                 <div class="row">

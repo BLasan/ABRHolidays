@@ -15,6 +15,7 @@ export class PackageCategoryComponent implements OnInit {
   destination_string:String="";
   package_category_array:any=[];
   destination_string_array:any=[];
+  isLoaded:boolean=false;
   constructor(private route:ActivatedRoute,private _db:AngularFirestore) { }
 
   ngOnInit() {
@@ -56,6 +57,7 @@ export class PackageCategoryComponent implements OnInit {
           // }
           }
         });
+        _this.isLoaded=true;
       }
     })
   }

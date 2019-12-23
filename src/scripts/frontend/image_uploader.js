@@ -60,6 +60,7 @@ export function image_slider_uploader(){
 
       reader.onload = function (e) {
         image_src.setAttribute('src',e.target.result);
+        image_src.setAttribute('style','width:300px');
         var image_id="image"+i;
         image_src.setAttribute('id',image_id);
         column.appendChild(image_src);

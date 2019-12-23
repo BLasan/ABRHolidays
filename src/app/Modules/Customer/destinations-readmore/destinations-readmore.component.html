@@ -1,0 +1,22 @@
+<div class="row row-center" id="row1">
+  <div class="col-12 col-md-12" style="height:65px;background-color:#7E5390;">
+    <h2 class="card-title" style="margin:auto;padding:10px;color:white" id="title"><b>{{destinations_title}}</b></h2>
+  </div>
+</div>  
+
+<div class="row row-center" id="row2">
+    <div class="col-12 col-md-12">
+        <div class="card" *ngIf="destinations_array.length>0">
+          <div class="card-body">
+            <div class="row" *ngFor="let destinations of destinations_array">
+              <div class="col-md-4">
+                <img src="{{destinations.image}}">
+              </div>
+              <div class="col-md-8" style="padding-left:0;">
+                <p style="text-align: justify;padding-left:5px;padding-right:10px;">{{destinations.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

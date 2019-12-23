@@ -23,6 +23,7 @@ import { TransferContactUsComponent } from '../../Modules/Customer/transfer-cont
 import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.component';
 import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
 import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
+import { DestinationsReadmoreComponent } from '../../Modules/Customer/destinations-readmore/destinations-readmore.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -50,7 +51,8 @@ import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.c
     TransferContactUsComponent,
     TicketingComponent,
     VisaHandlingComponent,
-    InsuranceComponent
+    InsuranceComponent,
+    DestinationsReadmoreComponent
   ],
 })
 export class CustomerLayoutModule { }

@@ -16,6 +16,7 @@ import { TransferContactUsComponent } from '../../Modules/Customer/transfer-cont
 import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.component';
 import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
 import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
+import { DestinationsReadmoreComponent } from '../../Modules/Customer/destinations-readmore/destinations-readmore.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -33,6 +34,7 @@ export const CustomerLayoutRoutes: Routes = [
     { path: 'transfers',component:TransfersComponent},
     { path: 'testimonials',component:TestimonialsComponent},
     { path:'destinations/:page_no',component:DestinationsComponent},
+    { path:'destinations_readmore/:title',component:DestinationsReadmoreComponent},
     { path: 'enquiry/:package' ,component:EnquiryComponent},
     { path: 'transfer-contactUs/:transfers' , component:TransferContactUsComponent}
 ];
