@@ -232,11 +232,13 @@ export function adjust_mobile_view_contact_us(){
         $('#row1').removeClass('row-center');
         $('#row2').removeClass('row-center');
         $('#row3').removeClass('row-center');
-        $('#gmap_canvas').removeClass('gmap_canvas');
-        $('#gmap_canvas').addClass('row-center');
-        $('iframe').attr('width:300px');
+        $('#google_maps').removeClass('google-maps');
+        $('#google_maps').attr('style','position:relative;padding-bottom:100%;height:0;overflow:hidden;margin-left:0;');
+        // $('#gmap_canvas').addClass('row-center');
         $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        // $('iframe').attr('width','500px');
+        // $('iframe').attr('style','margin-left:-10px');
         $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
     }
     else{
@@ -255,12 +257,14 @@ export function adjust_mobile_view_contact_us(){
             $('#row1').removeClass('row-center');
             $('#row2').removeClass('row-center');
             $('#row3').removeClass('row-center');
-            $('#gmap_canvas').removeClass('gmap_canvas');
-            $('#gmap_canvas').addClass('row-center');
-            $('iframe').attr('width:300px');
+            // $('#gmap_canvas').removeClass('gmap_canvas');
+            // $('#gmap_canvas').addClass('row-center');
+            // $('iframe').attr('width:300px');
+            $('#google_maps').removeClass('google-maps');
+            $('#google_maps').attr('style','position:relative;padding-bottom:100%;height:0;overflow:hidden;margin-left:0;');
             $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
             $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-            $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+            // $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         }
         else{
             $('#row1').addClass('row-center');
@@ -271,7 +275,7 @@ export function adjust_mobile_view_contact_us(){
             $('iframe').attr('width:500px');
             $('#row1').removeAttr('style'); 
             $('#row2').removeAttr('style'); 
-            $('#row3').removeAttr('style'); 
+            // $('#row3').removeAttr('style'); 
         }
     })
 }
@@ -365,7 +369,6 @@ export function adjust_mobile_view_faq(){
 export function adjust_mobile_view_home(){
     var scree_size=$(window).width();
     if(scree_size<766){
-        alert("LLL")
         $('#news_feed_card').removeAttr('style');
         // $('#news_feed_title').attr('style','margin-top:-3px;text-align:justify;margin-left:-20px');
         $('#news_feed_title1').attr('style','margin-top:-3px;text-align:justify;margin-left:15px');

@@ -5,7 +5,7 @@
 </div>  
 
 <div class="row row-center" id="row2">
-  <div class="col-md-6">
+  <div class="col-md-6 col-12">
     <div class="card color-card">
       <div class="card-body">
         <p><b>CEYLON TOURS LIMITED</b></p>
@@ -38,23 +38,13 @@
       </div>
     </div>  
   </div>
-  <!-- <div class="col-md-6">
-    <div class="mapouter">
-      <div class="gmap_canvas" id="gmap_canvas1">
-      <iframe height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=gampaha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2" scrolling="no" marginheight="0" marginwidth="0">
-      </iframe>
-      <a href="https://www.embedgooglemap.net/blog/booking.com-coupon/">
-      </a>
-      </div>
-    </div>
-  </div> -->
-  <div class="col-md-6">
-    <div class="mapouter">
-      <div class="gmap_canvas" id="gmap_canvas1">
+  <div class="col-md-6 col-12">
+    <!-- <div class="mapouter"> -->
+      <div class="google-maps" id="google_maps">
         <iframe height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=No%201%2F1%2C%20Embaraluwa%20North%20%2C%20Weliveriya%20-%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/"></a>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 
@@ -64,7 +54,7 @@
       <div class="card-body">
         <form [formGroup]="form">
           <div class="row">
-            <div class="col-12 col-md-6" style="padding-left:2">
+            <div class="col-12 col-md-6" style="padding-left:2px">
               <div class="form-group" [ngClass]="{'has-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'has-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
                 <label>Subject</label>
                 <input type="text" id="subject" class="form-control" placeholder="Subject" required formControlName="subject" [ngClass]="{'form-control-success':form.controls.subject.valid && (form.controls.subject.dirty || form.controls.subject.touched),'form-control-danger':form.controls.subject.invalid && (form.controls.subject.dirty || form.controls.subject.touched)}">
