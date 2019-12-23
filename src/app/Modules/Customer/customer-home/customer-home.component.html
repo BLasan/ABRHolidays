@@ -1,17 +1,17 @@
 
-    <div id="carouselExampleControls_home" class="carousel slide" data-ride="carousel" style="margin-top:-20px;">
+    <div id="carouselExampleControls_home1" class="carousel slide" data-ride="carousel" style="margin-top:-20px;">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{{_init_image}}" style="height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;" class="d-block w-100" alt="image">
             </div> 
-            <div class="carousel-item" *ngFor="let images of iamge_carousal_array">
+            <div class="carousel-item" *ngFor="let images of image_carousal_array">
                 <img [src]="images.fileUrl" class="d-block w-100" style="height:500px;padding-left:0;padding-right:0;" alt="...">
             </div> 
-            <a class="carousel-control-prev" href="#carouselExampleControls_home" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControls_home1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls_home" role="button" data-slide="next" id="carousal_home">
+            <a class="carousel-control-next" href="#carouselExampleControls_home1" role="button" data-slide="next" id="carousal_home">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>          

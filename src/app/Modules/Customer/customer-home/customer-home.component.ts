@@ -30,18 +30,26 @@ export class CustomerHomeComponent implements OnInit {
     // load_hotel_name()
     //lazy_load();
     //console.log(localStorage.getItem('package_init'))
-    this._init_package_image=localStorage.getItem('package_init');
-    this._init_image=localStorage.getItem('image_carousal_init');
-    this._init_day_count=localStorage.getItem('day_count');
-    this._init_package_id=localStorage.getItem('package_id');
-    this._init_news=localStorage.getItem('news');
-    this._init_news_id=localStorage.getItem('news_id');
-    this._init_news_title=localStorage.getItem('news_title');
-    console.log(this._init_news_title)
-    adjust_mobile_view_home();
-    this.load_image_carousal();
-    this.load_inbound_data();
-    this.load_news_feed();
+    // this._init_package_image=localStorage.getItem('package_init');
+    //this._init_image=localStorage.getItem('image_carousal_init');
+    // this._init_day_count=localStorage.getItem('day_count');
+    // this._init_package_id=localStorage.getItem('package_id');
+    // this._init_news=localStorage.getItem('news');
+    // this._init_news_id=localStorage.getItem('news_id');
+    // this._init_news_title=localStorage.getItem('news_title');
+    // console.log(this._init_news_title)
+    this.image_carousal(()=>{
+      console.log("Loaded1");
+      adjust_mobile_view_home();
+    });
+    this.inbound_data_variable(()=>{
+      console.log("Loaded2");
+      adjust_mobile_view_home();
+    })
+    this.news_feed(()=>{
+      console.log("Loaded3");
+      adjust_mobile_view_home();
+    })
 
   }
 
@@ -50,8 +58,9 @@ export class CustomerHomeComponent implements OnInit {
     // click_carousal_button();
   }
 
-  load_inbound_data(){
+  inbound_data_variable=function load_inbound_data(callback){
     var _this=this;
+    var count=0;
     var doc_inbound=this._db.firestore.collection('packages');
     doc_inbound.get().then(snapshot=>{
       if (snapshot.empty) {
@@ -62,19 +71,28 @@ export class CustomerHomeComponent implements OnInit {
 
       snapshot.forEach(doc => {
         // console.log(doc.id, '=>', doc.data());
-        if(doc.data().status!='deleted' && doc.id!==_this._init_package_id){
-          if(doc.data().image_url!=_this._init_package_image)
+        count++;
+        if(doc.data().status!='deleted' && count!==1){
+          // if(doc.data().image_url!=_this._init_package_image)
           _this.package_data.push(doc.data());
         }
+        else if(doc.data().status!='deleted' && count===1){
+          _this._init_package_image=doc.data().image_url;
+          _this._init_package_id=doc.id;
+          _this._init_day_count=doc.data().no_of_days;
+        }
+
       });
+      callback();
       }).catch(err => {
         alert("Error");
         // console.log('Error getting documents', err);
       });
   }
 
-  load_news_feed(){
+  news_feed=function load_news_feed(callback){
     var _this=this;
+    var count=0;
     var doc_newsFeed=this._db.firestore.collection('news_feed');
     doc_newsFeed.get().then(snapshot=>{
       if (snapshot.empty) {
@@ -84,8 +102,9 @@ export class CustomerHomeComponent implements OnInit {
       }  
 
       snapshot.forEach(doc => {
+        count++;
         // console.log(doc.id, '=>', doc.data());
-        if(doc.data().status!=='deleted' && doc.id!==_this._init_news_id){
+        if(doc.data().status!=='deleted' && count!==1){
           _this.news_feed_data_array.push(doc.data());
           let string=doc.data().news.substr(0,281);
           let lastIndex=string.lastIndexOf(".");
@@ -97,7 +116,20 @@ export class CustomerHomeComponent implements OnInit {
           let substring=string.substr(0,lastIndex)+"  ........";
           _this.news_feed_news.push(substring);
         }
+        else if(doc.data().status!=='deleted' && count===1){
+          let string=doc.data().news.substr(0,281);
+          let lastIndex=string.lastIndexOf(".");
+          if(lastIndex<0){
+            lastIndex=string.lastIndexOf("");
+            if(lastIndex<0) lastIndex=string.lastIndexOf(",");
+          }
+          // console.log(lastIndex)
+          _this._init_news=string.substr(0,lastIndex)+"  ........";
+          _this._init_news_id=doc.id;
+          _this._init_news_title=doc.data().title;
+        }
       });
+      callback();
 
       // if(this.image_carousal_array.length>0)
       // click_carousal_button();
@@ -108,7 +140,7 @@ export class CustomerHomeComponent implements OnInit {
       });
   }
 
-  load_image_carousal(){
+  image_carousal=function load_image_carousal(callback){
     var _this=this;
     var doc_image_carousal=this._db.firestore.collection('image_carousals');
     doc_image_carousal.get().then(snapshot=>{
@@ -127,15 +159,11 @@ export class CustomerHomeComponent implements OnInit {
         else
         _this._init_image=doc.data().fileUrl;
       });
-
+      callback();
       }).catch(err => {
         alert(err);
         // console.log('Error getting documents', err);
       });
-  }
-
-  printH(){
-    return "Hello";
   }
 
 }
