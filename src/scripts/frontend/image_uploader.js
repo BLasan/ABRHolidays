@@ -41,6 +41,7 @@ export function image_slider_uploader(){
       // overlay.setAttribute('class','overlays');
 
       var column=document.createElement("div");
+      row.setAttribute('style','margin-top:5px');
       column.setAttribute('class','col-md-4');
       column.setAttribute('id',column_id);
       // var container=document.createElement("div");
@@ -60,7 +61,7 @@ export function image_slider_uploader(){
 
       reader.onload = function (e) {
         image_src.setAttribute('src',e.target.result);
-        image_src.setAttribute('style','width:300px');
+        image_src.setAttribute('style','height:300px');
         var image_id="image"+i;
         image_src.setAttribute('id',image_id);
         column.appendChild(image_src);
