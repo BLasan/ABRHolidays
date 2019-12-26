@@ -152,11 +152,11 @@ export class CustomerHomeComponent implements OnInit {
 
       snapshot.forEach(doc => {
         // console.log(doc.id, '=>', doc.data());
-        if(doc.id!="image0"){
+        // if(doc.id!="image0"){
           // console.log(doc.data().fileUrl)
           _this.image_carousal_array.push(doc.data());
-        }
-        else
+        // }
+        // else
         _this._init_image=doc.data().fileUrl;
       });
       callback();

@@ -461,8 +461,9 @@ export class DashboardComponent implements OnInit {
       let storageRef=this.storage.ref(imageId);
       storageRef.put(this.file_list.item(i)).then(function(snapshot){
         storageRef.getDownloadURL().subscribe(url=>{
-          count++;
-          if(count===1) localStorage.setItem('image_carousal_init',url);
+          console.log(snapshot.metadata.name)
+          // count++;
+          // if(count===1) localStorage.setItem('image_carousal_init',url);
           // document.querySelector('img').src = url;
           let fileName=snapshot.metadata.name;
           let fileContentType=snapshot.metadata.contentType;
