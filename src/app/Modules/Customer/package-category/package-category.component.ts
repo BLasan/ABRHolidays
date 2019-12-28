@@ -12,7 +12,7 @@ export class PackageCategoryComponent implements OnInit {
 
   package_category:any;
   package_data:any=[];
-  destination_string:String="";
+  destination_string:string="";
   package_category_array:any=[];
   destination_string_array:any=[];
   isLoaded:boolean=false;

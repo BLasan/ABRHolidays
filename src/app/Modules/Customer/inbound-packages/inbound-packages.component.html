@@ -31,7 +31,7 @@
               <img src="https://www.ceylontours.com/images/night.png">{{duration-1}}
             </th>
             <th scope="col" style="font-family:sans-serif;">
-                <a href="/enquiry/{{package_name}}" mat-raised-button class="btn btn-danger"><b>ENQUIRY</b></a>
+                <a href="/enquiry/{{package_name}}" class="btn btn-primary"><b>ENQUIRY</b></a>
             </th>
           </tr>
         </thead>
@@ -39,7 +39,7 @@
     </div>
     <div class="row row-center" *ngFor="let package_data of package_data;">
       <div class="card" *ngFor="let details of package_data.details;let index=index">
-        <h4 class="card-title font" style="background-color: blue;margin-top:0px"><b>Day {{details.day}}</b></h4>
+        <h4 class="card-title font" style="background-color:#3498db;margin-top:0px"><b>Day {{details.day}}</b></h4>
           <div class="card-body" *ngFor="let destinations of details.destination_drive">
             <div class="row">
               <div class="col-md-6">

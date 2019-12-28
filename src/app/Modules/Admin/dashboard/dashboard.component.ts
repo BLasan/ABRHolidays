@@ -9,6 +9,7 @@ import {file_array} from '../../../../scripts/frontend/image_uploader';
 import { parse } from 'url';
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MAT_HAMMER_OPTIONS } from '@angular/material';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,6 +18,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class DashboardComponent implements OnInit {
   public file_list:FileList;
+  public image_obj_array:any=[];
   public remove_count:number=0;
   public lineBigDashboardChartType;
   public gradientStroke;
@@ -452,31 +454,29 @@ export class DashboardComponent implements OnInit {
 
   upload_images(){
     this.deletePrevious();
-    let database=this._db;
     let this_function=this;
     let count=0;
+    let database=this._db;
     let collection=database.collection('image_carousals');
+    var _this=this;
     for(var i=0;i<this.file_list.length;i++){
       var imageId="image_carousal/image"+i;
       let storageRef=this.storage.ref(imageId);
       storageRef.put(this.file_list.item(i)).then(function(snapshot){
         storageRef.getDownloadURL().subscribe(url=>{
           console.log(snapshot.metadata.name)
-          // count++;
-          // if(count===1) localStorage.setItem('image_carousal_init',url);
-          // document.querySelector('img').src = url;
           let fileName=snapshot.metadata.name;
           let fileContentType=snapshot.metadata.contentType;
           let fileSize=snapshot.metadata.size;
           let fileUrl=url;
           let fileTimeCreated=snapshot.metadata.timeCreated;
           let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
-          collection.doc(snapshot.metadata.name).set(obj).then(function(docs){
-            // console.log("Success");
+          collection.doc(fileName).set(obj).then(function(docs){
+            console.log(docs)
           }).catch(function(error){
             alert("Error");
-            // console.log(error)
           })
+          console.log(_this.image_obj_array)
         })
       }  
       ).catch(function(error){
@@ -484,6 +484,17 @@ export class DashboardComponent implements OnInit {
         // console.log(error)
       })
     }
+    //console.log(this.image_obj_array.length)
+
+    // for(var i=0;i<this.image_obj_array.length;i++){
+    //   console.log(doc_name)
+    //   var doc_name=this.image_obj_array[i].fileName;
+    //   collection.doc(doc_name).set(this.image_obj_array[i]).then(function(docs){
+  
+    //   }).catch(function(error){
+    //     alert("Error");
+    //   })
+    // }
     this.remove_images();
   }
 
@@ -493,7 +504,7 @@ export class DashboardComponent implements OnInit {
     // console.log(this.file_list.length);
     remove_image_slider(this.file_list.length);
     this.file_list=null;
-    localStorage.removeItem('file_size')
+    localStorage.removeItem('file_size');
   }
 
 }

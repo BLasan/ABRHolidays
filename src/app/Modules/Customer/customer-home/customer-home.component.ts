@@ -64,7 +64,7 @@ export class CustomerHomeComponent implements OnInit {
     var doc_inbound=this._db.firestore.collection('packages');
     doc_inbound.get().then(snapshot=>{
       if (snapshot.empty) {
-        alert("Empty Data");
+        // alert("Empty Data");
         // console.log('No matching documents.');
         return;
       }  
@@ -85,7 +85,7 @@ export class CustomerHomeComponent implements OnInit {
       });
       callback();
       }).catch(err => {
-        alert("Error");
+        // alert("Error");
         // console.log('Error getting documents', err);
       });
   }
@@ -96,7 +96,7 @@ export class CustomerHomeComponent implements OnInit {
     var doc_newsFeed=this._db.firestore.collection('news_feed');
     doc_newsFeed.get().then(snapshot=>{
       if (snapshot.empty) {
-        alert("Empty Data");
+        // alert("Empty Data");
         // console.log('No matching documents.');
         return;
       }  
@@ -135,7 +135,7 @@ export class CustomerHomeComponent implements OnInit {
       // click_carousal_button();
 
       }).catch(err => {
-        alert(err);
+        // alert(err);
         // console.log('Error getting documents', err);
       });
   }
@@ -145,7 +145,7 @@ export class CustomerHomeComponent implements OnInit {
     var doc_image_carousal=this._db.firestore.collection('image_carousals');
     doc_image_carousal.get().then(snapshot=>{
       if (snapshot.empty) {
-        alert("Empty Data");
+        // alert("Empty Data");
         // console.log('No matching documents.');
         return;
       }  
@@ -161,7 +161,7 @@ export class CustomerHomeComponent implements OnInit {
       });
       callback();
       }).catch(err => {
-        alert(err);
+        // alert(err);
         // console.log('Error getting documents', err);
       });
   }
