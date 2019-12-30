@@ -81,5 +81,9 @@ li:hover{
     100% { transform: rotate(360deg); }
   }
 
-
+  @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+      #image_col{
+          padding-left:0px;
+      }
+  }
 

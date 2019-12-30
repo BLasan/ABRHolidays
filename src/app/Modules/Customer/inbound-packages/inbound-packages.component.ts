@@ -26,6 +26,7 @@ export class InboundPackagesComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.package_id=params.code;
       this.load_package_data(this.package_id);
+      adjust_mobile_view_inbound_packages();
     });
 
     this.package_category_array=categories;
@@ -43,7 +44,8 @@ export class InboundPackagesComponent implements OnInit {
     }).catch(function(ex){
       alert("Error");
       //  console.log(ex);
-    })
+    });
+    adjust_mobile_view_inbound_packages();
   }
 
   filter_destination_details(package_data,_this){
@@ -60,6 +62,7 @@ export class InboundPackagesComponent implements OnInit {
           // console.log(this.destination_string)
         }
       }
+      adjust_mobile_view_inbound_packages();
     }
   _this.isLoaded=true;
   }

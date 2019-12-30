@@ -21,7 +21,7 @@
   <div class="row row-center" style="margin-top:20px" id="row2">
     <div class="col-12 col-md-8">
       <div class="row row-center"  *ngFor="let package_data of package_data;let index=index" style="margin-top:10px;margin-bottom:20px">
-          <div class="col-md-5">
+          <div class="col-md-5" id="image_col">
               <img src="{{package_data.image_url}}" class="img_class" alt="Card image cap" id="image_pkg">
           </div>
             <div class="col-12 col-md-7 padding-right">
