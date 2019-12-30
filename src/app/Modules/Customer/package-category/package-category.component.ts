@@ -68,12 +68,14 @@ export class PackageCategoryComponent implements OnInit {
     collection.get().then(snapshot=>{
       // adjust_mobile_view_inbound_package_category();
       if (snapshot.empty) {
+        _this.isLoaded=true;
         alert("Empty Data");
         // console.log('No matching documents.');
         return;
       }  
   
       snapshot.forEach(doc => {
+        _this.isLoaded=true;
         console.log(doc.id, '=>', doc.data().package_category);
         if(doc.data().status!='deleted' && doc.data().package_category==category){
           _this.package_data.push(doc.data());  
