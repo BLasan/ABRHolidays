@@ -8,6 +8,7 @@
   <div class="col-md-4 col-12" *ngFor="let destinations of destination_array">
     <div class="card">
       <div class="card-title"><h4 style="color:white;margin-top:0;padding-left:10px" [style.background-color]="destinations.color"><b>{{destinations.title}}</b></h4></div>
+      <img src="{{destinations.image}}" style="margin-top:-15px" class="card-img-top" height="200px">
       <div class="card-body">
         <p class="card-text">{{destinations.description}}</p>
         <a href="destinations_readmore/{{destinations.id}}" class="card-link"><b>READ MORE</b></a>

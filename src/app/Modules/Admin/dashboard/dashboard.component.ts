@@ -10,6 +10,7 @@ import { parse } from 'url';
 import { enable_search_bar,disable_search_bar} from '../../../../scripts/frontend/disable_enable_search_bar.js';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { MAT_HAMMER_OPTIONS } from '@angular/material';
+import { database } from 'firebase';
 
 @Component({
   selector: 'app-dashboard',
@@ -436,12 +437,19 @@ export class DashboardComponent implements OnInit {
   deletePrevious(){
     for(var i=0;i<10;i++){
       var image_path="/image_carousal/image"+i;
+      var image="image"+i;
+      this._db.collection('image_carousals').doc(image).delete().then(()=>{
+        console.log("DONE")
+      }).catch(err=>{
+        console.log(err)
+      })
       this.storage.storage.ref().child(image_path).delete().then(()=>{
        // console.log("Deleted");
       }).catch(err=>{
         //console.log(err)
       })
     }
+    
     //this.storage.storage.refFromURL('image_carousal').delete();
   }
 
@@ -472,11 +480,11 @@ export class DashboardComponent implements OnInit {
           let fileTimeCreated=snapshot.metadata.timeCreated;
           let obj={fileName:fileName,contentType:fileContentType,fileSize:fileSize,fileUrl:fileUrl,fileTimeCreated:fileTimeCreated};
           collection.doc(fileName).set(obj).then(function(docs){
-            console.log(docs)
+            //console.log(docs)
           }).catch(function(error){
             alert("Error");
           })
-          console.log(_this.image_obj_array)
+          //console.log(_this.image_obj_array)
         })
       }  
       ).catch(function(error){

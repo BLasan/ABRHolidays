@@ -25,7 +25,7 @@ export class DestinationsReadmoreComponent implements OnInit {
   filter_destination(id:string){
     this.destinations_array=destinations.filter(x=> x.id===id);
     this.destinations_title=this.destinations_array[0].title;
-    console.log(this.destinations_title)
+   // console.log(this.destinations_title);
   }
 
 }

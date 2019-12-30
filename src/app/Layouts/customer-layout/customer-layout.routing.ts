@@ -36,5 +36,5 @@ export const CustomerLayoutRoutes: Routes = [
     { path:'destinations/:page_no',component:DestinationsComponent},
     { path:'destinations_readmore/:title',component:DestinationsReadmoreComponent},
     { path: 'enquiry/:package' ,component:EnquiryComponent},
-    { path: 'transfer-contactUs/:transfers' , component:TransferContactUsComponent}
+    { path: 'transfer-contactUs/:type/:id' , component:TransferContactUsComponent}
 ];

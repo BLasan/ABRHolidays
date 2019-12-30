@@ -9,12 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 export class TransferContactUsComponent implements OnInit {
 
   subject:any;
+  type:any;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
   
     this.route.params.subscribe(params => {
-      this.subject=params.transfers;
+      this.subject=params.id;
+      this.type=params.type;
+      // console.log(this.subject)
     });
   }
 

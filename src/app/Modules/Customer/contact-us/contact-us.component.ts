@@ -13,6 +13,7 @@ import { adjust_mobile_view_contact_us} from '../../../../scripts/frontend/mobil
 })
 export class ContactUsComponent implements OnInit {
   @Input() subject:string;
+  @Input() type:string;
   form:any;
   country_array_list:any=[];
   data:any;
@@ -20,21 +21,42 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit() {
     adjust_mobile_view_contact_us();
-    this.form=new FormGroup({
-      subject:new FormControl(this.subject,Validators.required),
-      f_name:new FormControl('',Validators.required),
-      l_name:new FormControl('',Validators.required),
-      message:new FormControl('',Validators.required),
-      email:new FormControl('',Validators.required),
-      tel:new FormControl('',[Validators.required]),
-      // package_category:new FormControl('',Validators.required),
-      // day_counts:new FormControl('',Validators.required),
-      // day_no:new FormControl('',Validators.required),
-      // destination:new FormControl('',Validators.required),
-      // overnight:new FormControl('',Validators.required),
-      // drive:new FormControl('',Validators.required),
-      // description:new FormControl('',Validators.required),
-    });
+    if(this.type==='destinations'){
+      let destinations="Destination =>"+this.subject;
+      this.form=new FormGroup({
+        subject:new FormControl(destinations,Validators.required),
+        f_name:new FormControl('',Validators.required),
+        l_name:new FormControl('',Validators.required),
+        message:new FormControl('',Validators.required),
+        email:new FormControl('',Validators.required),
+        tel:new FormControl('',[Validators.required]),
+        // package_category:new FormControl('',Validators.required),
+        // day_counts:new FormControl('',Validators.required),
+        // day_no:new FormControl('',Validators.required),
+        // destination:new FormControl('',Validators.required),
+        // overnight:new FormControl('',Validators.required),
+        // drive:new FormControl('',Validators.required),
+        // description:new FormControl('',Validators.required),
+      });
+    }
+    else if(this.type==='transfers'){
+      this.form=new FormGroup({
+        subject:new FormControl(this.subject,Validators.required),
+        f_name:new FormControl('',Validators.required),
+        l_name:new FormControl('',Validators.required),
+        message:new FormControl('',Validators.required),
+        email:new FormControl('',Validators.required),
+        tel:new FormControl('',[Validators.required]),
+        // package_category:new FormControl('',Validators.required),
+        // day_counts:new FormControl('',Validators.required),
+        // day_no:new FormControl('',Validators.required),
+        // destination:new FormControl('',Validators.required),
+        // overnight:new FormControl('',Validators.required),
+        // drive:new FormControl('',Validators.required),
+        // description:new FormControl('',Validators.required),
+      }); 
+    }
+
 
     this.country_array_list=country_array;
   }

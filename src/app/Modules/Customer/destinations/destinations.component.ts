@@ -25,22 +25,22 @@ export class DestinationsComponent implements OnInit {
   short_text(page_no){
     if(page_no==1){
       var begin=0;
-      var end=begin+10;
+      var end=begin+9;
     }
     else if(page_no==2){
-      var begin=10;
-      var end=begin+10;
+      var begin=9;
+      var end=begin+9;
     }
     else if(page_no==3){
-      var begin=20;
-      var end=begin+10;
+      var begin=18;
+      var end=begin+9;
     }
     else if(page_no==4){
-      var begin=30;
-      var end=begin+10;
+      var begin=27;
+      var end=begin+9;
     }
     else if(page_no==5){
-      var begin=40;
+      var begin=36;
       var end=destinations.length;
     }
     for(var i=begin;i<end;i++){
@@ -57,6 +57,7 @@ export class DestinationsComponent implements OnInit {
       this.description_text+=".................";
       var obj={title:destinations[i].title,description:this.description_text,color:destinations[i].color,image:destinations[i].image,id:destinations[i].id};
       this.destination_array.push(obj);
+      console.log(obj)
       this.description_text="";
     }
   }

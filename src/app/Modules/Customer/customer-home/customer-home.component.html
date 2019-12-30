@@ -4,9 +4,9 @@
             <div class="carousel-item active">
                 <!-- <img src="{{_init_image}}" style="height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;" class="d-block w-100" alt="image"> -->
                 <img src="assets/img/Beach.jpg" style="height:500px;margin-left:0;margin-right:0;padding-left:0;padding-right:0;" class="d-block w-100" alt="image">
-                <div class="carousel-caption">
+                <!-- <div class="carousel-caption">
                     <h3 style="color:red;margin-top:-200px"><b>WELCOME TO ABR HOLIDAYS</b></h3>
-                </div>
+                </div> -->
             </div> 
             <div class="carousel-item" *ngFor="let images of image_carousal_array">
                 <img [src]="images.fileUrl" class="d-block w-100" style="height:500px;padding-left:0;padding-right:0;" alt="...">
@@ -49,13 +49,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- <img src="{{_init_package_image}}" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package"> -->
-                                <img src="assets/img/bg.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package">
-                                <div class="carousel-caption">
+                                <img src="assets/img/Beach.jpg" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px" class="d-block" alt="package">
+                                <!-- <div class="carousel-caption">
                                     <h3 style="color:red;margin-top:-200px"><b>WELCOME TO ABR PACKAGES</b></h3>
-                                    <!-- <img src="https://www.ceylontours.com/images/day.png">
-                                    <h3 style="color:red"><b>{{_init_day_count}} Days</b></h3>
-                                    <a href="inbound-packages/{{_init_package_id}}" class="btn btn-danger">Read More</a> -->
-                                </div>
+                                </div> -->
                             </div>
                             <div class="carousel-item" *ngFor="let package_data of package_data">
                                 <img src="{{package_data.image_url}}" class="d-block" alt="{{package_data.package_name}}" style="padding-left:0;padding-right:0;padding-bottom:0;width:1000px">
