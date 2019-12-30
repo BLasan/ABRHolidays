@@ -147,7 +147,7 @@ export function adjust_mobile_view_transfers(){
         $('#row4').removeClass('row-center');
         $('#transfer_txt1').attr('style','text-align: justify;padding-right:20px;padding-left:20px;padding-top:40px;color:white');
         $('#transfer_txt2').attr('style','font-size:20px;text-align: justify;padding-right:20px;padding-left:20px;color:white');
-        $('#transfers_title').attr('style','background-color: blue;margin-top:0;text-align:center');
+        $('#transfers_title').attr('style','background-color:#3498db;margin-top:0;text-align:center');
         $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
@@ -165,7 +165,7 @@ export function adjust_mobile_view_transfers(){
         $('#row2').removeAttr('style'); 
         $('#row3').removeAttr('style'); 
         $('#row4').removeAttr('style'); 
-        $('#transfers_title').attr('style','background-color: blue;margin-top:0');
+        $('#transfers_title').attr('style','background-color:#3498db;margin-top:0');
         $('#enquiry').attr('style','margin-top:30px;margin-left:-25px');
     }
     else{
@@ -179,7 +179,7 @@ export function adjust_mobile_view_transfers(){
        $('#row2').removeAttr('style'); 
        $('#row3').removeAttr('style'); 
        $('#row4').removeAttr('style'); 
-       $('#transfers_title').attr('style','background-color: blue;margin-top:0');
+       $('#transfers_title').attr('style','background-color:#3498db;margin-top:0');
        $('#enquiry').attr('style','margin:30px 1px');
     //    $('#testimonial_carousal').addClass('row-center');
     //    $('#row3').removeAttr('style'); 
@@ -193,7 +193,7 @@ export function adjust_mobile_view_transfers(){
             $('#row4').removeClass('row-center');
             $('#transfer_txt1').attr('style','text-align: justify;padding-right:20px;padding-left:20px;padding-top:40px;color:white');
             $('#transfer_txt2').attr('style','font-size:20px;text-align: justify;padding-right:20px;padding-left:20px;color:white');
-            $('#transfers_title').attr('style','background-color: blue;margin-top:0;text-align:center');
+            $('#transfers_title').attr('style','background-color:#3498db;margin-top:0;text-align:center');
             $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
             $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
             $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
@@ -211,7 +211,7 @@ export function adjust_mobile_view_transfers(){
             $('#row2').removeAttr('style'); 
             $('#row3').removeAttr('style'); 
             $('#row4').removeAttr('style'); 
-            $('#transfers_title').attr('style','background-color: blue;margin-top:0');
+            $('#transfers_title').attr('style','background-color:#3498db;margin-top:0');
             $('#enquiry').attr('style','margin-top:30px;margin-left:-25px');
         }
         else{
@@ -225,7 +225,7 @@ export function adjust_mobile_view_transfers(){
             $('#row2').removeAttr('style'); 
             $('#row3').removeAttr('style'); 
             $('#row4').removeAttr('style'); 
-            $('#transfers_title').attr('style','background-color: blue;margin-top:0;');
+            $('#transfers_title').attr('style','background-color:#3498db;margin-top:0;');
             $('#enquiry').attr('style','margin:30px 1px');
         }
     })
