@@ -31,26 +31,33 @@ export class PackageCategoryComponent implements OnInit {
 
   ngAfterViewInit(){
     var _this=this;
+   // console.log("AFTER")
     //this.load_packages(this.package_category);
     this._db.firestore.collection('packages').where('package_category','==',this.package_category).where('status','==','Active').get().then(snapshot=>{
-      if(snapshot.empty) alert("Empty Data");
+      if(snapshot.empty){
+        _this.isLoaded=true;
+        //alert("Empty Data");
+      } 
       else{
         snapshot.forEach(docs=>{
-          if(snapshot.empty) alert("Empty Data");
+          if(snapshot.empty){
+            _this.isLoaded=true;
+            console.log("Empty Data");
+          } 
           else{
-            console.log(_this.package_category);
+           // console.log(_this.package_category);
             //if(_this.package_category===docs.data().package_category && docs.data().status!=='deleted'){
-            console.log(docs.data().details);
+           // console.log(docs.data().details);
             _this.package_data.push(docs.data());
             var length=docs.data().details.length;
-            console.log(length);
+           // console.log(length);
             for(var i=0;i<length;i++){
               var destination_length=docs.data().details[i].destination_drive.length;
-              console.log(destination_length)
+            //  console.log(destination_length)
               for(var j=0;j<destination_length;j++){
                 _this.destination_string+=docs.data().details[i].destination_drive[j].destination+" /";
               }
-              console.log(_this.destination_string);
+            //  console.log(_this.destination_string);
               _this.destination_string_array.push(_this.destination_string);
               _this.destination_string="";
             }
@@ -58,45 +65,46 @@ export class PackageCategoryComponent implements OnInit {
           }
         });
         _this.isLoaded=true;
+       // console.log(this.isLoaded);
       }
     })
   }
 
-  load_packages(category){
-    var _this=this;
-    var collection=this._db.firestore.collection('packages');
-    collection.get().then(snapshot=>{
-      // adjust_mobile_view_inbound_package_category();
-      if (snapshot.empty) {
-        _this.isLoaded=true;
-        alert("Empty Data");
-        // console.log('No matching documents.');
-        return;
-      }  
+  // load_packages(category){
+  //   var _this=this;
+  //   var collection=this._db.firestore.collection('packages');
+  //   collection.get().then(snapshot=>{
+  //     // adjust_mobile_view_inbound_package_category();
+  //     if (snapshot.empty) {
+  //       _this.isLoaded=true;
+  //       alert("Empty Data");
+  //       // console.log('No matching documents.');
+  //       return;
+  //     }  
   
-      snapshot.forEach(doc => {
-        _this.isLoaded=true;
-        console.log(doc.id, '=>', doc.data().package_category);
-        if(doc.data().status!='deleted' && doc.data().package_category==category){
-          _this.package_data.push(doc.data());  
-          console.log(doc.data().details)
-          var length=doc.data().details.length;
-          console.log(length)
-          // for(var j=0;j<length;j++){
-          //   var des_len=doc.data().details[j].destination_drive.length;
-          //   for(var k=0;k<des_len;k++){
-          //     _this.destination_string+=doc.data().details[j].destination_drive[k].destination+" / ";
-          //   }
-          // }
-          _this.destination_string_array.push(_this.destination_string);
-          console.log(_this.destination_string_array);
-        }
-      });
+  //     snapshot.forEach(doc => {
+  //       _this.isLoaded=true;
+  //       console.log(doc.id, '=>', doc.data().package_category);
+  //       if(doc.data().status!='deleted' && doc.data().package_category==category){
+  //         _this.package_data.push(doc.data());  
+  //         console.log(doc.data().details)
+  //         var length=doc.data().details.length;
+  //         console.log(length)
+  //         // for(var j=0;j<length;j++){
+  //         //   var des_len=doc.data().details[j].destination_drive.length;
+  //         //   for(var k=0;k<des_len;k++){
+  //         //     _this.destination_string+=doc.data().details[j].destination_drive[k].destination+" / ";
+  //         //   }
+  //         // }
+  //         _this.destination_string_array.push(_this.destination_string);
+  //         console.log(_this.destination_string_array);
+  //       }
+  //     });
 
-      }).catch(err => {
-        alert("Error");
-        // console.log('Error getting documents', err);
-      });
-  }
+  //     }).catch(err => {
+  //       alert("Error");
+  //       // console.log('Error getting documents', err);
+  //     });
+  // }
 
 }

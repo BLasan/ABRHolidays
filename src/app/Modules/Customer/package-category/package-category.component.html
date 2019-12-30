@@ -2,7 +2,7 @@
   <h1 style="color:red"><b>NO PACKAGES FOUND</b></h1>
 </div>
 
-<div class="row row-center" style="margin-top:20px" *ngIf="!isLoaded">
+<div class="row row-center" style="margin-top:20px" *ngIf="package_data.length==0 && !isLoaded">
     <div class="col-md-4"></div>
     <div class="col-md-4" id="pkg_loader" style="padding-left:120px">
         <div class="loader"></div>
