@@ -24,6 +24,7 @@ import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.c
 import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
 import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
 import { DestinationsReadmoreComponent } from '../../Modules/Customer/destinations-readmore/destinations-readmore.component';
+import { ToursComponent } from '../../Modules/Customer/tours/tours.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -52,7 +53,8 @@ import { DestinationsReadmoreComponent } from '../../Modules/Customer/destinatio
     TicketingComponent,
     VisaHandlingComponent,
     InsuranceComponent,
-    DestinationsReadmoreComponent
+    DestinationsReadmoreComponent,
+    ToursComponent
   ],
 })
 export class CustomerLayoutModule { }

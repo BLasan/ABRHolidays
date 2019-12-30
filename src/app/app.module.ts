@@ -48,6 +48,7 @@ import { VisaHandlingComponent } from './Modules/Customer/visa-handling/visa-han
 import { InsuranceComponent } from './Modules/Customer/insurance/insurance.component';
 import { UserIdleModule } from 'angular-user-idle';
 import { DestinationsReadmoreComponent } from './Modules/Customer/destinations-readmore/destinations-readmore.component';
+import { ToursComponent } from './Modules/Customer/tours/tours.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCce9qtAWZZNhKLUlOlgasnehPPm3haBgI",

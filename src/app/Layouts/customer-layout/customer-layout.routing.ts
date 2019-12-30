@@ -17,6 +17,7 @@ import { TicketingComponent } from '../../Modules/Customer/ticketing/ticketing.c
 import { InsuranceComponent } from '../../Modules/Customer/insurance/insurance.component';
 import { VisaHandlingComponent } from '../../Modules/Customer/visa-handling/visa-handling.component';
 import { DestinationsReadmoreComponent } from '../../Modules/Customer/destinations-readmore/destinations-readmore.component';
+import { ToursComponent } from '../../Modules/Customer/tours/tours.component';
 
 export const CustomerLayoutRoutes: Routes = [
     { path: 'home',component:CustomerHomeComponent},
@@ -32,6 +33,7 @@ export const CustomerLayoutRoutes: Routes = [
     { path:'inbound-packages/:code',component:InboundPackagesComponent},
     { path:'package-category/:category',component:PackageCategoryComponent},
     { path: 'transfers',component:TransfersComponent},
+    { path: 'tours',component:ToursComponent},
     { path: 'testimonials',component:TestimonialsComponent},
     { path:'destinations/:page_no',component:DestinationsComponent},
     { path:'destinations_readmore/:title',component:DestinationsReadmoreComponent},

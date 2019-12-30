@@ -44,6 +44,8 @@ export class AuthGuardCustomerService implements CanActivate {
     return true;
     else if(path==="/visa-handling")
     return true;
+    else if(path==="/tours")
+    return true;
     else if(path.indexOf("/news-events")>-1)
     return true;
     else if(path=="/" || path=="/home")

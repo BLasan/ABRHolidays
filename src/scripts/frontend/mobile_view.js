@@ -99,9 +99,10 @@ export function adjust_mobile_view_testimonials(){
         $('#row1').removeClass('row-center');
         $('#row2').removeClass('row-center');
         $('#testimonial_carousal').removeClass('row-center');
+        // $('#testimonial_carousal1').removeClass('row-center');
+        $('#testimonial_carousal2').removeClass('row-center');
         $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
-     
     }
     else{
        $('#row1').addClass('row-center');
@@ -109,6 +110,8 @@ export function adjust_mobile_view_testimonials(){
        $('#row1').removeAttr('style'); 
        $('#row2').removeAttr('style'); 
        $('#testimonial_carousal').addClass('row-center');
+    //    $('#testimonial_carousal1').removeClass('row-center');
+       $('#testimonial_carousal2').addClass('row-center');
     //    $('#row3').removeAttr('style'); 
     }
     $(window).resize(function(){
@@ -119,6 +122,8 @@ export function adjust_mobile_view_testimonials(){
         $('#testimonial_carousal').removeClass('row-center');
         $('#row1').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         $('#row2').attr('style','margin-left:0;margin-right:0;margin-top:10px');
+        // $('#testimonial_carousal1').removeClass('row-center');
+        $('#testimonial_carousal2').removeClass('row-center');
             // $('#row3').attr('style','margin-left:0;margin-right:0;margin-top:10px');
         }
         else{
@@ -127,6 +132,8 @@ export function adjust_mobile_view_testimonials(){
             $('#row1').removeAttr('style'); 
             $('#row2').removeAttr('style'); 
             $('#testimonial_carousal').addClass('row-center');
+            // $('#testimonial_carousal1').removeClass('row-center');
+            $('#testimonial_carousal2').addClass('row-center');
         }
     })
 }
@@ -793,6 +800,56 @@ export function adjust_mobile_view_add_pkgBtn(){
             $('#add_pkgBtn').removeAttr('style');
             // $('#add_pkgBtn').addClass('add-more');
             $('#add_destBtn').attr('style','margin-left:180px');
+        }
+    });
+}
+
+export function adjust_mobile_view_tours(){
+    var screen_size=$(window).width();
+    if((screen_size<766 || screen_size>=1178) && screen_size<1200){
+        $('#row1').removeClass('row-center');
+        $('#row1').attr('style','margin-left:5px;margin-right:5px');
+        $('#row2').removeClass('row-center');
+        $('#row2').attr('style','margin-left:5px;margin-right:5px;margin-top:5px');
+        $('.card-body').removeAttr('style');
+    }
+    else if(screen_size>766 && screen_size<1178){
+        $('#row1').addClass('row-center');
+        $('#row1').removeAttr('style');
+        $('#row2').addClass('row-center');
+        $('#row2').removeAttr('style');
+        $('.card-body').attr('style','height:50px');
+    }
+    else{
+        $('#row1').addClass('row-center');
+        $('#row1').removeAttr('style');
+        $('#row2').addClass('row-center');
+        $('#row2').removeAttr('style');
+        $('.card-body').attr('style','height:50px')
+    }
+
+    $(window).resize(function(){
+        // this.alert(this.innerWidth)
+        if((this.innerWidth<756 || this.innerWidth>=1178) && this.innerWidth<1200){
+            $('#row1').removeClass('row-center');
+            $('#row1').attr('style','margin-left:5px;margin-right:5px');
+            $('#row2').removeClass('row-center');
+            $('#row2').attr('style','margin-left:5px;margin-right:5px;margin-top:5px');
+            $('.card-body').removeAttr('style')
+        }
+        else if(this.innerWidth>756 && this.innerWidth<1178){
+            $('#row1').addClass('row-center');
+            $('#row1').removeAttr('style');
+            $('#row2').addClass('row-center');
+            $('#row2').removeAttr('style');
+            $('.card-body').attr('style','height:50px')
+        }
+        else{
+            $('#row1').addClass('row-center');
+            $('#row1').removeAttr('style');
+            $('#row2').addClass('row-center');
+            $('#row2').removeAttr('style');
+            $('.card-body').attr('style','height:50px')
         }
     });
 }
