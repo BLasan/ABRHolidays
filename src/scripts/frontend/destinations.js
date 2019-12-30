@@ -51,7 +51,7 @@ export var destinations=[
     {
         title: "BUNDALA",
         id: "bundala",
-        description: "Dambadeniya is an ancient city located in the North Western Province of Sri Lanka. It was once considered as the capital of Sri Lanka, where you will still see the remains of the rock fortress that served as the king’s operational hub in the mid-13th century. The closing stages of its time as a capital, marked an important point in Sri Lanka’s history, as it was due to the foreign invasion, which led the royals to transfer to the South west to protect the country in an efficient manner. What’s left of the rock fortress can be seen at Dambadeniya Pass. The Dambadeniya period is called the golden era of Sinhala literature.",
+        description: "As one of the biodiversity hot spots in Sri Lanka, Bundala National Park is the first Ramsar site that is spread in an area of 6,216ha. The unique and complex wetland system attracts the wintering birds that fly to escape the freezing climate and to rest their weather beaten bodies. Hence Bundala is the ideal grounds to observe the colourful migratory and local air dominators, out of which greater flamingo takes the hotspot. Bundala is also one of 3 wetlands in the island so if you're lucky enough, you will get a chance to behold a salt water crocodile or a deer. The national park is surrounded by five lagoons namely, Bundala lagoon, Embilikala lagoon, Malala lagoon, Koholankala lagoon and the Mahalewaya lagoon. It has a total of 383 plant species.",
         color: "#23a516",
         image: 'assets/img/DestinationImages/bundala.jpg'    
     },

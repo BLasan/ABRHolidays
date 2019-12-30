@@ -67,9 +67,9 @@ export class EnquiryComponent implements OnInit {
         nationality:new FormControl('',[Validators.required]),
         email:new FormControl('',[Validators.required,Validators.email]),
         other_link:new FormControl('',[]),
-        website_link:new FormControl('',[Validators.required]),
-        keywords:new FormControl('',[Validators.required]),
-        refferal:new FormControl('',[Validators.required]),
+        // website_link:new FormControl('',[Validators.required]),
+        // keywords:new FormControl('',[Validators.required]),
+        // refferal:new FormControl('',[Validators.required]),
         description:new FormControl('',[Validators.required])
       });
     });
@@ -102,9 +102,9 @@ export class EnquiryComponent implements OnInit {
     let nationality=this.form.controls['nationality'].value;
     let email=this.form.controls['email'].value;
     let other_link=this.form.controls['other_link'].value;
-    let website_link=this.form.controls['website_link'].value;
-    let keywords=this.form.controls['keywords'].value;
-    let refferal=this.form.controls['refferal'].value;
+    // let website_link=this.form.controls['website_link'].value;
+    // let keywords=this.form.controls['keywords'].value;
+    // let refferal=this.form.controls['refferal'].value;
     let description=this.form.controls['description'].value;
     // console.log(country);
     let aifareRadio=this.airfare_check;
@@ -193,9 +193,9 @@ export class EnquiryComponent implements OnInit {
     "<tr><td><b>Special Occasions :</b></td><td>"+special_occasion+"</td></tr>"+
     "<tr><td><b>Special Requirements :</b></td><td>"+special_requirements+"</td></tr>"+
     "<tr><td><b>Search Engines :</b></td><td>"+this.search_engines_string+"</td></tr>"+
-    "<tr><td><b>Website Link :</b></td><td>"+website_link+"</td></tr>"+
-    "<tr><td><b>KeyWords :</b></td><td>"+keywords+"</td></tr>"+
-    "<tr><td><b>Referral :</b></td><td>"+refferal+"</td></tr>"+
+    // "<tr><td><b>Website Link :</b></td><td>"+website_link+"</td></tr>"+
+    // "<tr><td><b>KeyWords :</b></td><td>"+keywords+"</td></tr>"+
+    // "<tr><td><b>Referral :</b></td><td>"+refferal+"</td></tr>"+
     "<tr><td><b>Description :</b></td><td>"+description+"</td></tr>"+
     "<tr><td><b>Desired Physical Activities :</b></td><td>"+this.physical_activities_string+"</td></tr>"+
     "<tr><td><b>Adventure Activities :</b></td><td>"+this.adventure_activities_string+"</td></tr>"+
@@ -214,9 +214,9 @@ export class EnquiryComponent implements OnInit {
     let user_enquiry={tour_name:tour_name,arrival:arrival,departure:departure,no_of_adults:no_of_adults,no_of_children:no_of_children,accomodations:accomodations,
                       meals:meals,destinations_experience:destinations_experience,special_occasion:special_occasion,special_requirements:special_requirements,first_name:first_name,
                       second_name:second_name,address:address,city:city,state:state,dob:dob,country:country,phone:phone,budget:budget,
-                      nationality:nationality,email:email,website_link:website_link,keywords:keywords,refferal:refferal,description:description,
+                      nationality:nationality,email:email,description:description,
                       airfare_check:aifareRadio,interest_in_travel:interest_in_travel,physical_activities:this.physical_activities,specific_interests:this.specific_interests,
-                      search_engines:this.search_engines,date:today,id:hash,view:false,adventure_activities:this.adventure_activities,sun_activities:this.sun_activities,referral:refferal};
+                      search_engines:this.search_engines,date:today,id:hash,view:false,adventure_activities:this.adventure_activities,sun_activities:this.sun_activities};
     this.data_obj_array.push(user_enquiry);
     // console.log(this.data_obj_array[0].tour_name)
     var _this=this;
@@ -261,9 +261,9 @@ export class EnquiryComponent implements OnInit {
     ((<HTMLInputElement>document.getElementById('nationality')).value)="";
     ((<HTMLInputElement>document.getElementById('email')).value)="";
     ((<HTMLInputElement>document.getElementById('other_link')).value)="";
-    ((<HTMLInputElement>document.getElementById('website_link')).value)="";
-    ((<HTMLInputElement>document.getElementById('keywords')).value)="";
-    ((<HTMLInputElement>document.getElementById('refferal')).value)="";
+    // ((<HTMLInputElement>document.getElementById('website_link')).value)="";
+    // ((<HTMLInputElement>document.getElementById('keywords')).value)="";
+    // ((<HTMLInputElement>document.getElementById('refferal')).value)="";
     ((<HTMLInputElement>document.getElementById('description')).value)="";
     ((<HTMLInputElement>document.getElementById('country')).value)=this.country_array[0];
     ((<HTMLInputElement>document.getElementById('airfare_Radios_yes')).checked)=true;

@@ -31,7 +31,7 @@
       <li>
         <a href="destinations/2">2</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="destinations/3">3</a>
       </li>
       <li>
@@ -39,9 +39,9 @@
       </li>
       <li>
         <a href="destinations/5">5</a>
-      </li>
+      </li> -->
       <li>
-        <a href="destinations/{{page_no+1}}">»</a>
+        <a href="destinations/{{page_no+1}}" *ngIf="page_no<2">»</a>
       </li>
     </ul>  
   </div>              
