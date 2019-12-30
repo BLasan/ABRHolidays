@@ -815,21 +815,30 @@ export function adjust_mobile_view_tours(){
         $('#row1').attr('style','margin-left:5px;margin-right:5px');
         $('#row2').removeClass('row-center');
         $('#row2').attr('style','margin-left:5px;margin-right:5px;margin-top:5px');
-        $('.card-body').removeAttr('style');
+        for(var i=1;i<=8;i++){
+            var id="#body"+i;
+            $(id).removeAttr('style');
+        }
     }
     else if(screen_size>766 && screen_size<1178){
         $('#row1').addClass('row-center');
         $('#row1').removeAttr('style');
         $('#row2').addClass('row-center');
         $('#row2').removeAttr('style');
-        $('.card-body').attr('style','height:50px');
+        for(var i=1;i<=8;i++){
+            var id="#body"+i;
+            $(id).attr('style','height:50px');
+        }
     }
     else{
         $('#row1').addClass('row-center');
         $('#row1').removeAttr('style');
         $('#row2').addClass('row-center');
         $('#row2').removeAttr('style');
-        $('.card-body').attr('style','height:50px')
+        for(var i=1;i<=8;i++){
+            var id="#body"+i;
+            $(id).attr('style','height:50px');
+        }
     }
 
     $(window).resize(function(){
@@ -839,21 +848,30 @@ export function adjust_mobile_view_tours(){
             $('#row1').attr('style','margin-left:5px;margin-right:5px');
             $('#row2').removeClass('row-center');
             $('#row2').attr('style','margin-left:5px;margin-right:5px;margin-top:5px');
-            $('.card-body').removeAttr('style')
+            for(var i=1;i<=8;i++){
+                var id="#body"+i;
+                $(id).removeAttr('style');
+            }
         }
         else if(this.innerWidth>756 && this.innerWidth<1178){
             $('#row1').addClass('row-center');
             $('#row1').removeAttr('style');
             $('#row2').addClass('row-center');
             $('#row2').removeAttr('style');
-            $('.card-body').attr('style','height:50px')
+            for(var i=1;i<=8;i++){
+                var id="#body"+i;
+                $(id).attr('style','height:50px');
+            }
         }
         else{
             $('#row1').addClass('row-center');
             $('#row1').removeAttr('style');
             $('#row2').addClass('row-center');
             $('#row2').removeAttr('style');
-            $('.card-body').attr('style','height:50px')
+            for(var i=1;i<=8;i++){
+                var id="#body"+i;
+                $(id).attr('style','height:50px');
+            }
         }
     });
 }

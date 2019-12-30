@@ -215,3 +215,27 @@ p{
 .btn-primary{
     padding:5px 5px 5px 5px;
 }
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    #news_feed_title1{
+        margin-top:-3px;
+        text-align:justify;
+        margin-left:15px
+    }
+    #news_feed_title{
+        margin-top:-3px;
+        text-align:justify;
+        margin-left:15px
+    }
+    #news_feed_data1{
+        margin-top:-15px;
+        text-align:justify;
+        margin-left:15px
+    }
+    #news_feed_data{
+        margin-top:-15px;
+        text-align:justify;
+        margin-left:15px
+    }
+
+}

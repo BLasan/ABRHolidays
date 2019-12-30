@@ -39,15 +39,15 @@ export class CustomerHomeComponent implements OnInit {
     // this._init_news_title=localStorage.getItem('news_title');
     // console.log(this._init_news_title)
     this.image_carousal(()=>{
-      console.log("Loaded1");
+     // console.log("Loaded1");
       adjust_mobile_view_home();
     });
     this.inbound_data_variable(()=>{
-      console.log("Loaded2");
+     // console.log("Loaded2");
       adjust_mobile_view_home();
     })
     this.news_feed(()=>{
-      console.log("Loaded3");
+     // console.log("Loaded3");
       adjust_mobile_view_home();
     })
 
