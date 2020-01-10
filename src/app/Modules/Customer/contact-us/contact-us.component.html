@@ -50,7 +50,7 @@
 
 <div class="row row-center" id="row3">
   <div class="col-12 col-md-12">
-    <div class="card" style="background-color:black;">
+    <div class="card" style="background-color:#3498db!important;">
       <div class="card-body">
         <form [formGroup]="form">
           <div class="row">
@@ -69,8 +69,8 @@
               </div>
               <div class="form-group">
                 <label for="email">Country</label>
-                <select name="country" id="country" class="form-control" style="height:38px;color:white">
-                  <option *ngFor="let category of country_array_list" value="{{category}}">{{category}}</option>
+                <select name="country" id="country" class="form-control" style="height:38px;color:black">
+                  <option *ngFor="let category of country_array_list" value="{{category}}" style="color:black">{{category}}</option>
                 </select>
               </div>
               <div class="form-group" [ngClass]="{'has-success':form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched),'has-danger':form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)}">

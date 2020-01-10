@@ -20,6 +20,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private _db:AngularFirestore,private service:SendMailService,private _snackbar:MatSnackBar) { }
 
   ngOnInit() {
+    //alert(this.type);
     adjust_mobile_view_contact_us();
     if(this.type==='destinations'){
       let destinations="Destination =>"+this.subject;
@@ -42,6 +43,23 @@ export class ContactUsComponent implements OnInit {
     else if(this.type==='transfers'){
       this.form=new FormGroup({
         subject:new FormControl(this.subject,Validators.required),
+        f_name:new FormControl('',Validators.required),
+        l_name:new FormControl('',Validators.required),
+        message:new FormControl('',Validators.required),
+        email:new FormControl('',Validators.required),
+        tel:new FormControl('',[Validators.required]),
+        // package_category:new FormControl('',Validators.required),
+        // day_counts:new FormControl('',Validators.required),
+        // day_no:new FormControl('',Validators.required),
+        // destination:new FormControl('',Validators.required),
+        // overnight:new FormControl('',Validators.required),
+        // drive:new FormControl('',Validators.required),
+        // description:new FormControl('',Validators.required),
+      }); 
+    }
+    else{
+      this.form=new FormGroup({
+        subject:new FormControl('',Validators.required),
         f_name:new FormControl('',Validators.required),
         l_name:new FormControl('',Validators.required),
         message:new FormControl('',Validators.required),
