@@ -6,7 +6,6 @@ import { HttpClient,HttpHeaders} from '@angular/common/http';
 export class SendMailService {
 
   private _url="https://server.abrholidays.com";
-  // private _url="http://localhost:4600"
   
   constructor(private http: HttpClient) { }
 
