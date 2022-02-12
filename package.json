@@ -29,7 +29,7 @@
     "@angular/router": "8.2.12",
     "@ng-bootstrap/ng-bootstrap": "4.0.2",
     "@types/crypto-js": "^3.1.45",
-    "ajv": "6.7.0",
+    "ajv": "6.12.3",
     "ajv-keywords": "3.3.0",
     "angular-popper": "^2.0.1",
     "angular-user-idle": "^2.2.2",
